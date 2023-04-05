@@ -1,0 +1,637 @@
+/****************************************************************************************************************************************************************************/
+/*cusInputs_RoClass highlight focus*/
+const highlightInWrap = (inputs_Param, fontColorValue) =>{
+	inputs_Param.parentNode.style.borderColor = fontColorValue;
+	inputs_Param.parentNode.children[1].style.color = fontColorValue;
+}
+
+const lowlightInWrap = (inputs_Param, fontColorValue) =>{
+	if(inputs_Param.value==""){
+		inputs_Param.parentNode.style.borderColor = fontColorValue;
+		inputs_Param.parentNode.children[1].style.color = fontColorValue;
+	}
+}
+/*cusInputs_RoClass highlight focus*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Display current date*/
+
+if(document.getElementsByClassName("currentDate_RoClass").length != 0){
+	/*_currentDate_RoClass Element where to display current date*/
+	const currentDate_RoClass_Rogrid = document.getElementsByClassName("currentDate_RoClass")[0];
+
+	const dateInstance_Rogrid = new Date();
+
+	currentDate_RoClass_Rogrid.innerText = dateInstance_Rogrid.toDateString();
+	/*_currentDate_RoClass Element where to display current date*/
+}
+
+/*Display current date*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Check and uncheck Custom Checkbox*/
+
+const checkCusCheckBox = (realCheckboxElem_Param) =>{
+	const checkImageElem_Rogrid = realCheckboxElem_Param.previousElementSibling.children[0].children[0]; /*check image element*/
+	if(realCheckboxElem_Param.checked === true){
+		checkImageElem_Rogrid.style.visibility = "visible";
+	}else if(realCheckboxElem_Param.checked === false){
+		checkImageElem_Rogrid.style.visibility = "hidden";
+	}
+}
+
+/*Check and uncheck Custom Checkbox*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Show and Close Custom Modal*/
+
+
+/*_Function to show blurrer only*/
+const showBlurrerOnly = () =>{
+	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
+	thisIsJapan_Class_Rogrid.style.display = "block";
+}
+/*_Function to show blurrer only*/
+
+
+/*_Function to show modal*/
+const showMyMod = (blurrerClass_Param, modalClass_Param, modalInt_Param) =>{
+	const thisIsJapan_Class_Rogrid = document.getElementsByClassName(blurrerClass_Param)[0];
+	const modal_Class_Rogrid = document.getElementsByClassName(modalClass_Param)[modalInt_Param];
+	thisIsJapan_Class_Rogrid.style.display = "block";
+	modal_Class_Rogrid.style.display = "block";
+	asyncDelayModal(modalClass_Param, modalInt_Param);
+}
+/*_Function to show modal*/
+
+
+/*Async function to delay the animation for showing modal*/
+async function asyncDelayModal(demodalClass_Param, demodalInt_Param){
+	const demodal_Class_Rogrid = document.getElementsByClassName(demodalClass_Param)[demodalInt_Param];
+
+	const promiseAnimateMod_Obj = new Promise((delayAnimateMod_Resolve) => {
+		setTimeout(function(){
+			demodal_Class_Rogrid.style.top = "50%";			
+			delayAnimateMod_Resolve();
+		}, 1);		
+	});
+	await promiseAnimateMod_Obj;
+}
+/*Async function to delay the animation for showing modal*/
+
+
+/*Function to close modal*/
+function closeMyMod(closeBlurrerClass_Param, closeModalClass_Param, closeModalInt_Param){
+	const closeThisIsJapan_Class_Rogrid = document.getElementsByClassName(closeBlurrerClass_Param)[0];
+	const closeModal_Class_Rogrid = document.getElementsByClassName(closeModalClass_Param)[closeModalInt_Param];
+
+	closeThisIsJapan_Class_Rogrid.style.display = "none";
+	closeModal_Class_Rogrid.style.display = "none";
+	closeModal_Class_Rogrid.style.top = "40%";
+}
+/*Function to close modal*/
+
+/*Show and Close Custom Modal*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Spinning Loading*/
+
+/*_Function for showing the spinner loading*/
+const showSpinningLoad = () => {
+	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
+	const spinnerLoad_RoClass_Rogrid = document.getElementsByClassName("spinnerLoad_RoClass")[0];
+
+	spinnerLoad_RoClass_Rogrid.style.display = "block";
+	thisIsJapan_Class_Rogrid.style.display = "block";
+}
+/*_Function for showing the spinner loading*/
+
+
+/*_Function for closing the spinner loading*/
+const removeSpinningLoad = () => {
+	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
+	const spinnerLoad_RoClass_Rogrid = document.getElementsByClassName("spinnerLoad_RoClass")[0];
+
+	spinnerLoad_RoClass_Rogrid.style.display = "none";
+	thisIsJapan_Class_Rogrid.style.display = "none";
+}
+/*_Function for closing the spinner loading*/
+
+/*Spinning Loading*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Function for removing notification box*/
+const removeNotiBox = (notiBoxCloseImg_Rogrid_Param) =>{
+	const notiBoxElem_Rogrid = notiBoxCloseImg_Rogrid_Param.parentNode.parentNode;
+	notiBoxElem_Rogrid.remove();
+}
+/*Function for removing notification box*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Function to auto remove the Notification Box*/
+async function removeNotiBox_Timeout(notiboxImg_Param){	
+
+	const promiseRemoveNotibox_Obj = new Promise((removeNotiBox_Resolve) => {
+		setTimeout(function(){
+			removeNotiBox(notiboxImg_Param);
+		}, 3000);		
+	});
+
+	await promiseRemoveNotibox_Obj;
+}
+/*Function to auto remove the Notification Box*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Function for creating notification box with auto close*/
+const notifyNodeBox = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
+	const notifBoxWrapperId_Rogrid = document.getElementById(wrapperId_Param);
+
+	if(resultBool_Param == true){
+		/*_<div class="notifyFlex_Suc_RoClass">*/
+		const notifyFlex_Suc_RoClass_Rogrid = document.createElement("div");
+		notifyFlex_Suc_RoClass_Rogrid.className = "notifyFlex_Suc_RoClass";
+		/*_<div class="notifyFlex_Suc_RoClass">*/
+
+
+		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+		const notifyMessItem_Suc_RoClass_Rogrid = document.createElement("div");
+		notifyMessItem_Suc_RoClass_Rogrid.className = "notifyMessItem_Suc_RoClass";
+
+		const notifyMessBoldTag_Rogrid = document.createElement("b");
+		const notifyMessBoldTag_InnerTEXT = document.createTextNode("SUCCESS! ");
+		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
+
+		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
+
+		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
+		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMess_InnerText);
+		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+
+
+		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+		const notifyCloseItem_Suc_RoClass_Rogrid = document.createElement("div");
+		notifyCloseItem_Suc_RoClass_Rogrid.className = "notifyCloseItem_Suc_RoClass";
+		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+
+
+		/*_<img src="./src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+		const closeNotiBoxImg_Suc_Rogrid = document.createElement("img");
+		closeNotiBoxImg_Suc_Rogrid.setAttribute("src", "./src/closeModIcon_Suc.png");
+		closeNotiBoxImg_Suc_Rogrid.addEventListener("click", function(){
+			removeNotiBox(this); /*From framework*/
+		});
+		/*_<img src="./src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+
+
+		/*_Append*/
+		notifyCloseItem_Suc_RoClass_Rogrid.appendChild(closeNotiBoxImg_Suc_Rogrid);
+		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyMessItem_Suc_RoClass_Rogrid);
+		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyCloseItem_Suc_RoClass_Rogrid);
+		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Suc_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
+		/*_Append*/
+
+
+		/*_Execute Notification Box Timeout*/
+		removeNotiBox_Timeout(closeNotiBoxImg_Suc_Rogrid);
+		/*_Execute Notification Box Timeout*/
+
+	}else if(resultBool_Param == false){
+		/*_<div class="notifyFlex_Failed_RoClass">*/
+		const notifyFlex_Failed_RoClass_Rogrid = document.createElement("div");
+		notifyFlex_Failed_RoClass_Rogrid.className = "notifyFlex_Failed_RoClass";
+		/*_<div class="notifyFlex_Failed_RoClass">*/
+
+
+		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+		const notifyMessItem_Failed_RoClass_Rogrid = document.createElement("div");
+		notifyMessItem_Failed_RoClass_Rogrid.className = "notifyMessItem_Failed_RoClass";
+
+		const notifyMessBoldTag_Rogrid = document.createElement("b");
+		const notifyMessBoldTag_InnerTEXT = document.createTextNode("Failed! ");
+		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
+
+		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
+
+		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
+		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMess_InnerText);
+		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+
+
+		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+		const notifyCloseItem_Failed_RoClass_Rogrid = document.createElement("div");
+		notifyCloseItem_Failed_RoClass_Rogrid.className = "notifyCloseItem_Failed_RoClass";
+		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+
+
+		/*_<img src="./src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+		const closeNotiBoxImg_Failed_Rogrid = document.createElement("img");
+		closeNotiBoxImg_Failed_Rogrid.setAttribute("src", "./src/closeModIcon_Failed.png");
+		closeNotiBoxImg_Failed_Rogrid.addEventListener("click", function(){
+			removeNotiBox(this); /*From framework*/
+		});
+		/*_<img src="./src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+
+
+		/*_Append*/
+		notifyCloseItem_Failed_RoClass_Rogrid.appendChild(closeNotiBoxImg_Failed_Rogrid);
+		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyMessItem_Failed_RoClass_Rogrid);
+		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyCloseItem_Failed_RoClass_Rogrid);
+		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Failed_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
+		/*_Append*/
+		
+
+
+		/*_Execute Notification Box Timeout*/
+		removeNotiBox_Timeout(closeNotiBoxImg_Failed_Rogrid);
+		/*_Execute Notification Box Timeout*/
+	}
+}
+/*Function for creating notification box with auto close*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Function for creating notification box without auto close*/
+const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
+	const notifBoxWrapperId_Rogrid = document.getElementById(wrapperId_Param);
+
+	if(resultBool_Param == true){
+		/*_<div class="notifyFlex_Suc_RoClass">*/
+		const notifyFlex_Suc_RoClass_Rogrid = document.createElement("div");
+		notifyFlex_Suc_RoClass_Rogrid.className = "notifyFlex_Suc_RoClass";
+		/*_<div class="notifyFlex_Suc_RoClass">*/
+
+
+		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+		const notifyMessItem_Suc_RoClass_Rogrid = document.createElement("div");
+		notifyMessItem_Suc_RoClass_Rogrid.className = "notifyMessItem_Suc_RoClass";
+
+		const notifyMessBoldTag_Rogrid = document.createElement("b");
+		const notifyMessBoldTag_InnerTEXT = document.createTextNode("SUCCESS! ");
+		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
+
+		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
+
+		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
+		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMess_InnerText);
+		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+
+
+		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+		const notifyCloseItem_Suc_RoClass_Rogrid = document.createElement("div");
+		notifyCloseItem_Suc_RoClass_Rogrid.className = "notifyCloseItem_Suc_RoClass";
+		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+
+
+		/*_<img src="./src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+		const closeNotiBoxImg_Suc_Rogrid = document.createElement("img");
+		closeNotiBoxImg_Suc_Rogrid.setAttribute("src", "./src/closeModIcon_Suc.png");
+		closeNotiBoxImg_Suc_Rogrid.addEventListener("click", function(){
+			removeNotiBox(this); /*From framework*/
+		});
+		/*_<img src="./src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+
+
+		/*_Append*/
+		notifyCloseItem_Suc_RoClass_Rogrid.appendChild(closeNotiBoxImg_Suc_Rogrid);
+		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyMessItem_Suc_RoClass_Rogrid);
+		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyCloseItem_Suc_RoClass_Rogrid);
+		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Suc_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
+		/*_Append*/
+	}else if(resultBool_Param == false){
+		/*_<div class="notifyFlex_Failed_RoClass">*/
+		const notifyFlex_Failed_RoClass_Rogrid = document.createElement("div");
+		notifyFlex_Failed_RoClass_Rogrid.className = "notifyFlex_Failed_RoClass";
+		/*_<div class="notifyFlex_Failed_RoClass">*/
+
+
+		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+		const notifyMessItem_Failed_RoClass_Rogrid = document.createElement("div");
+		notifyMessItem_Failed_RoClass_Rogrid.className = "notifyMessItem_Failed_RoClass";
+
+		const notifyMessBoldTag_Rogrid = document.createElement("b");
+		const notifyMessBoldTag_InnerTEXT = document.createTextNode("Failed! ");
+		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
+
+		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
+
+		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
+		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMess_InnerText);
+		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+
+
+		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+		const notifyCloseItem_Failed_RoClass_Rogrid = document.createElement("div");
+		notifyCloseItem_Failed_RoClass_Rogrid.className = "notifyCloseItem_Failed_RoClass";
+		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+
+
+		/*_<img src="./src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+		const closeNotiBoxImg_Failed_Rogrid = document.createElement("img");
+		closeNotiBoxImg_Failed_Rogrid.setAttribute("src", "./src/closeModIcon_Failed.png");
+		closeNotiBoxImg_Failed_Rogrid.addEventListener("click", function(){
+			removeNotiBox(this); /*From framework*/
+		});
+		/*_<img src="./src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+
+
+		/*_Append*/
+		notifyCloseItem_Failed_RoClass_Rogrid.appendChild(closeNotiBoxImg_Failed_Rogrid);
+		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyMessItem_Failed_RoClass_Rogrid);
+		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyCloseItem_Failed_RoClass_Rogrid);
+		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Failed_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
+		/*_Append*/
+	}
+}
+/*Function for creating notification box without auto close*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/
+/*Function for checking and unchecking custom radio button*/
+const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
+	const origRadioBtnName_Rogrid = origRadioBtn_Elem.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
+
+	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
+
+	for(let index=0; origRadioBtnColl_Rogrid.length > index; index++){
+		const customRadioCircleBtn_Rogrid = origRadioBtnColl_Rogrid[index].previousElementSibling; /*Get the customized radio button or the label elem Section.*/		
+
+		/*_Checking which radio button is selected and design its customized radio button*/
+		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){
+			customRadioCircleBtn_Rogrid.style.boxShadow = "0px 0px 15px "+innerCircleColor;
+			customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = innerCircleColor;
+		}else if(origRadioBtnColl_Rogrid[index] !== origRadioBtn_Elem){
+			customRadioCircleBtn_Rogrid.style.boxShadow = "none";
+			customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = "transparent";
+		}
+		/*_Checking which radio button is selected and design its customized radio button*/
+	}
+}
+
+
+const radioCheckSelected = (origRadioBtn_Elem) =>{
+	const origRadioBtnName_Rogrid = origRadioBtn_Elem.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
+
+	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
+	
+
+	/*_Checking which radio button is selected and make the customized check visible*/
+	for(let index=0; origRadioBtnColl_Rogrid.length > index; index++){
+		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){						
+			origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "visible";							
+		}else if(origRadioBtnColl_Rogrid[index] !== origRadioBtn_Elem){
+			origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "hidden";
+		}
+	}
+	/*_Checking which radio button is selected and make the customized check visible*/
+}
+/*Function for checking and unchecking custom radio button*/
+/****************************************************************************************************************************************************************************/
+
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Adding function to customized dropdown menu (Front-End listing)*/
+
+function createCusDropOptRogrid(scdropdownSelBox_Param){
+
+	const scdropdownSelBox_Rogrid = scdropdownSelBox_Param;
+	const scdropSelected_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSelected_RoClass");
+	const scdropSearchboxWrap_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSearchboxWrap_RoClass");
+	const dropdownSearchInput_Rogrid = scdropSearchboxWrap_Rogrid.children[0];
+	const scdropOptionCon_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropOptionCon_RoClass");
+	const scdropOption_Rogrid = scdropOptionCon_Rogrid.querySelectorAll(".scdropOption_RoClass");
+	const scDropdownVal_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scDropdownVal_RoClass");
+
+
+
+	/*_Function for searching option Here*/
+	const filterList_Rogrid = (searchTerm_Param, scdropOption_RogridParam) => {
+		searchTerm_Param = searchTerm_Param.toLowerCase();		
+		
+		scdropOption_RogridParam.forEach(perOptionForSearch => {
+			let doptionInnerTxt_Rogrid = perOptionForSearch.querySelector("label").innerText.toLowerCase();
+			if(doptionInnerTxt_Rogrid.indexOf(searchTerm_Param) != -1){
+				perOptionForSearch.style.display = "block";
+			}else if(doptionInnerTxt_Rogrid.indexOf(searchTerm_Param) == -1){
+				perOptionForSearch.style.display = "none";
+			}
+		});		
+	}
+	/*_Function for searching option*/
+
+
+
+
+
+	/*_Show and hide options*/
+	scdropSelected_Rogrid.addEventListener("click", () => {
+		dropdownSearchInput_Rogrid.value = "";			
+
+		scdropOptionCon_Rogrid.classList.add("scdropOptionConActive_RoClass");
+
+		scdropSearchboxWrap_Rogrid.classList.add("scdropSearchboxWrapActive_RoClass");
+
+		if(scdropOptionCon_Rogrid.classList.contains("scdropOptionConActive_RoClass")){
+			filterList_Rogrid("", scdropOption_Rogrid);
+			dropdownSearchInput_Rogrid.focus();
+		}
+	});		
+	/*_Show and hide options*/
+
+
+
+
+
+	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
+	scdropOption_Rogrid.forEach(perOptionForSel => {
+		perOptionForSel.addEventListener("click", () => {
+			scdropSelected_Rogrid.setAttribute("title", perOptionForSel.querySelector("label").innerText);
+			
+			scdropSelected_Rogrid.innerText = perOptionForSel.querySelector("label").innerText;
+
+			scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
+
+			scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
+
+			scDropdownVal_Rogrid.value = perOptionForSel.querySelector("input").value;				
+		})
+	});
+	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
+
+
+
+
+	/*_Search in dropdown list*/		
+	dropdownSearchInput_Rogrid.addEventListener("keyup", function(e){
+		filterList_Rogrid(e.target.value, scdropOption_Rogrid);			
+	});
+	/*_Search in dropdown list*/
+
+
+
+
+	/*_Hide Search and Option list when focus out*/
+	dropdownSearchInput_Rogrid.addEventListener("focusout", () => {
+		scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
+
+		scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
+	});
+	/*_Hide Search and Option list when focus out*/
+}
+
+
+/*Adding function to customized dropdown menu (Front-End listing)*/
+/****************************************************************************************************************************************************************************/ 
+
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Adding function to customized dropdown menu (Back-End list)*/
+
+function createCusDropOptWoRogrid(scdropdownSelBox_Param){
+
+	const scdropdownSelBox_Rogrid = scdropdownSelBox_Param;
+	const scdropSelected_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSelected_RoClass");
+	const scdropSearchboxWrap_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSearchboxWrap_RoClass");
+	const dropdownSearchInput_Rogrid = scdropSearchboxWrap_Rogrid.children[0];
+	const scdropOptionCon_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropOptionCon_RoClass");
+	const scdropOption_Rogrid = scdropOptionCon_Rogrid.querySelectorAll(".scdropOption_RoClass");
+	const scDropdownVal_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scDropdownVal_RoClass");
+	
+
+
+	/*_Show and hide options*/
+	scdropSelected_Rogrid.addEventListener("click", () => {
+		dropdownSearchInput_Rogrid.value = "";			
+
+		scdropOptionCon_Rogrid.classList.add("scdropOptionConActive_RoClass");
+
+		scdropSearchboxWrap_Rogrid.classList.add("scdropSearchboxWrapActive_RoClass");
+
+		if(scdropOptionCon_Rogrid.classList.contains("scdropOptionConActive_RoClass")){			
+			dropdownSearchInput_Rogrid.focus();
+		}
+	});		
+	/*_Show and hide options*/
+
+
+
+	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
+	scdropOption_Rogrid.forEach(perOptionForSel => {		
+		perOptionForSel.addEventListener("click", () => {
+			scdropSelected_Rogrid.setAttribute("title", perOptionForSel.querySelector("label").innerText);
+
+			scdropSelected_Rogrid.innerText = perOptionForSel.querySelector("label").innerText;
+
+			scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
+
+			scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
+
+			scDropdownVal_Rogrid.value = perOptionForSel.querySelector("input").value;				
+		})
+	});
+	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
+	
+
+
+
+	/*_Hide Search and Option list when focus out*/
+	dropdownSearchInput_Rogrid.addEventListener("focusout", () => {
+		scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
+
+		scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
+	});
+	/*_Hide Search and Option list when focus out*/
+}
+
+
+/*Adding function to customized dropdown menu (Back-End list)*/
+/****************************************************************************************************************************************************************************/ 
+
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Capture webpage*/
+const capturePage = (captureElemId_Param, thisElem_Param) => {
+	
+	window.scrollTo(0, 0);
+	
+	html2canvas(document.getElementById(captureElemId_Param)).then(function (canvas) {		
+		canvas.toBlob(function(canvasBlob){
+			saveAs(canvasBlob, thisElem_Param.value);	
+		});
+	});	
+}
+/*Capture webpage*/
+/****************************************************************************************************************************************************************************/ 
+
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
+const showActionButtons = (masterBtnWrap) =>{	
+	masterBtnWrap.classList.toggle("masterBtnWrap_Animate_Class");
+
+	if(masterBtnWrap.classList.contains("masterBtnWrap_Animate_Class") === true){
+		masterBtnWrap.children[1].children[0].src = "./src/Chevron Up.png"; /*Editable action button arrow icon*/
+
+		masterBtnWrap.nextElementSibling.style.display = "block";
+	}else if(masterBtnWrap.classList.contains("masterBtnWrap_Animate_Class") === false){
+		masterBtnWrap.children[1].children[0].src = "./src/Chevron Down.png"; /*Editable action button arrow icon*/
+
+		masterBtnWrap.nextElementSibling.style.display = "none";
+	}	
+}
+/*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
+/****************************************************************************************************************************************************************************/ 

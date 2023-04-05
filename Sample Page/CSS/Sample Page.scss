@@ -1,0 +1,225 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+@import "../../Rogrid/Styles/RoStrap_Mixin";
+@import "Sample Page_Mixin";
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root{
+	/*Navigation*/
+	--navpaddtop: 12px;	
+	--navpaddright: 12px;
+	--navpaddbottom: 12px;
+	--navpaddleft: 30px;
+	--naviconSize: 20px;
+	--navFSize: 12px;
+	--navFcolor: #ffffff;
+	--navBgColorha: blue;
+	--navFcolorha: yellow;
+	--navArrowSize: 12px;
+	/*Navigation*/
+
+	/*Custom input element*/
+	--customInputColor: #ffffff;
+	/*Custom input element*/
+
+	/*Current Date*/
+	--currDateFStyle: normal;
+	--currDateFWeight: bold;
+	--currDateFMTsize: 12px;
+	--currDateFLDsize: 14px;
+	--currDateFColor: #ffffff;
+	/*Current Date*/
+
+	/*Custom checkbox*/
+	--cusCheckboxFStyle: normal;
+	--cusCheckboxFWeight: normal;
+	--custCheckboxFMTSize: 12px;
+	--cusCheckboxFLDSize: 14px;
+	--cusCheckboxColor: #ffffff;
+	--cusCheckboxColor: #ffffff;
+	--cusCheckboxMTWidth: 12px;
+	--cusCheckboxLDWidth: 14px;
+	--cusCheckboxMTHeight: 12px;
+	--cusCheckboxLDHeight: 14px;
+	--cusCheckboxBorderWidth: 1px;
+	--cusCheckboxBorderColor: #ffffff;
+	/*Custom checkbox*/
+
+	/*Modal*/
+	--modalMobileWidth: 350px;
+	--modalMobileHeight: auto;
+	--modalTabletWidth: 350px;
+	--modalTabletHeight: auto;
+	--modalLaptopWidth: 350px;
+	--modalLaptopHeight: auto;
+	--modalDesktopWidth: 350px;
+	--modalDesktopHeight: auto;		
+	--modalBorderColor: blue;
+	--modalBodyBgColor: transparent;
+	--modalHeaderBgColor: #ffffff;
+	--modalHeaderFMTSize: 12px;
+	--modalHeaderFLDSize: 14px;
+	--modalHeaderFColor: black;
+	/*Modal*/
+
+	/*Spinner*/
+	--spinnerWidth: 64px;
+	--spinnerHeight: 64px;
+	/*Spinner*/
+
+	/*Footer*/
+	--footerBgColor: #2E88DB;
+	--footerFMTSize: 12px;
+	--footerFLDSize: 14px;
+	--footerFColor: #ffffff;
+	/*Footer*/
+
+	/*search input*/
+	--inputSearchMobileWidth: 100%;
+	--inputSearchTabletWidth: 100%;
+	--inputSearchLaptopWidth: 100%;
+	--inputSearchDesktopWidth: 100%;
+	--inputSearchTopPadding: 8px;
+	--inputSearchRightPadding: 8px;
+	--inputSearchBottomPadding: 8px;
+	--inputSearchLeftPadding: 26px;
+	--inputSearchBorderColor: #ffffff;
+	--inputSearchBorderRadius: 7px;	
+	--inputSearchIconHori: 4px;
+	--inputSearchIconSize: 22px;
+	--inputSearchFSize: 16px;
+	--inputSearchFColor: #ffffff;
+	/*search input*/
+
+	/*Normal button*/
+	--normBtnMWidth: auto;
+	--normBtnTWidth: auto;
+	--normBtnLWidth: auto;
+	--normBtnDWidth: auto;
+	--normBtnPadding: 5px;
+	--normBtnBorderWidth: 3px;
+	--normBtnBorderColor: #ffffff;
+	--normBtnRadius: 4px;
+	--normBtnFWeight: normal;
+	--normBtnFMTSize: 12px;
+	--normBtnFLDSize: 14px;		
+	--normBtnBgColor: blue;
+	--normBtnFcolor: #ffffff;
+	--normBtnHovActFColor: red;
+	--normBtnHovActBgColor: green;
+	/*Normal button*/
+
+	/*Icon button*/
+	--iconBtnWidth: 50px;
+	--iconBtnHeight: 50px;
+	--iconBtnBgColor: green;
+	--iconBtnBgSize: 40px;
+	--iconBtnBorderWidth: 3px;
+	--iconBtnBorderColor: blue;
+	--iconBtnBorderRadius: 4px;
+	/*Icon button*/
+
+	/*Radio button*/
+	--cusRadioBorderWidth: 3px;
+	--cusRadioBorderColor: blue;
+	--cusRadioWidth: 35px;
+	--cusRadioHeight: 35px;
+	--cusRadioBgColor: #ffffff;
+
+	--cusRadioFWeight: normal;
+	--cusRadioFsize: 14px;
+	--cusRadioFColor: #ffffff;
+
+	--radioIconLabelWidth: 85px;
+	--radioIconLabelHeight: 85px;
+	/*Radio button*/
+
+	/*Dropdown menu*/
+	--cusDropBorderWidth: 1px;
+	--cusDropBorderColor: #ffffff;
+	--cusDropBgColor: transparent;
+	--cusDropSelFColor: #ffffff;
+	--cusDropSearchBorderWidth: 1px;
+	--cusDropSearchBorderColor: #ffffff;
+	--cusDropSearchFColor: black;
+	--cusDropSearchBgColor: #ffffff;
+	--cusDropOptWrapBorderWidth: 1px;
+	--cusDropOptWrapBorderColor: green;
+	--cusDropOptWrapBgColor: transparent;
+	--cusDropOptWrapHeight: 250px;
+	--cusDropOptWrapScrollColor: blue;
+	--cusDropOptWrapScrollHovColor: yellow;
+	--cusDropOptLabColor: #ffffff;
+	--cusDropOptHovLabBgColor: blue;	
+	/*Dropdown menu*/
+
+	/*Dropdown button list*/
+	--droplistBtnBorderWidth: 1px;
+	--droplistBtnBorderColor: #ffffff;
+	--droplistBtnBgColor: blue;
+	--droplistBtnFColor: #ffffff;
+	--droplistBtnWidth: 120px;
+	--dropListBtnFSize: 12px;
+	--dropListBtnIconSize: 15px;
+	--dropListBorderRadius: 5px;
+	--droplistBtnPadding: 5.5px;
+	--listBtnBorderWidth: 1px;
+	--listBtnBorderColor: gray;
+	--listBtnBgColorha: yellow;
+	--listBtnFColorha: blue; 
+	/*Dropdown button list*/
+}
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Section Comment Name*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Style Here*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	/*Style Here*/
+}
+/*Laptop*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1601px){
+	/*Style Here*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Section Comment Name*/
+/***********************************************************************************************************************************************************************************************************/

@@ -1,0 +1,54 @@
+Updates(03/21/2022)
+1. Body responsiveness is provided but remains static value.
+2. Mixin styles is provided for Body.
+
+
+Updates(03/22/2022)
+1. Editing Rostrap Rules; added 22.2 and moved previous 22.2 to 22.3 on "How to use Custom Dropdown".
+2. Updated number 22 Structure (Custom Dropdown Menu); "scdropdown_RoClass" is removed as wrapper.
+3. Font size for cusDropdownSelected_MT_RoStyle(LD) is changed from 14px & 16px to 12px to 14px.
+4. Padding for cusDropdownSelected_MT_RoStyle(LD) is changed.
+5. cusDropdownSelArrow_MT_RoStyle(LD) width & height is changed.
+
+
+Updates(03/31/2022)
+1. Change notifyNodeBoxStay note comment "Function for creating notification box without auto close Section"
+
+
+Updates(04/01/2022)
+1. Updated "notifyFlex_Suc_RoClass" with additional @include notiBoxSuccessBg_RoStyle.
+2. Updated createCusDropOptWoRogrid function & createCusDropOptRogrid function with adding title attribute to scdropSelected_Rogrid
+3. Updated note comment of scdropOption_Rogrid.forEach()
+
+
+Updates(04/12/2022)
+1. navMenu_RoClass and navMenuActive_RoClass's color-property value updated to dynamic (For non-collapsable).
+2. Active Collapsable and Non-Active Collapsable's color-property value updated to dynamic.
+3. naviconcolld_RoStyle, naviconcollr_RoStyle, naviconcollrha_RoStyle, and naviconcolldha_RoStyle are depreciated.
+
+
+Updates(10/11/2022)
+1. Bookmark RoStyle is now not limited only to <a> element.
+2. --roMarkSelf_BgColor is added on Bookmark RoStyle for bg color of the bookmark itself.
+3. Custom Dropdown List Button is now included.
+
+
+Updates(10/24/2022)
+1. Populating ph locations is removed with its server side folder.
+2. Rogrid Index has been removed.
+
+Updates(01/17/2023)
+1. Removed declaration of font with bookmark font.
+
+Updates(02/28/2023)
+1. Updated docs. (2. How to use Layout one Design)
+2. HTML Template and CSS Template are included.
+
+Updates(03/01/2023)
+1. Updated docs. (* How to use navigation link with collapse and navigation link)
+2. Updated docs. (* How to use input RoStrap Style)
+3. Update docs (* How to use current day and date RogridNodeScript)
+4. Update docs (* How to use Custom Checkbox RoStrap Style)
+
+Updates(03/07/2023)
+1. Update docs (All)
