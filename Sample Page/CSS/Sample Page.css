@@ -850,7 +850,7 @@
     box-sizing: border-box;
     overflow: visible;
     width: auto;
-    white-space: nowrap;
+    white-space: normal;
     cursor: pointer;
     font-family: calibri;
     font-style: var(--cusCheckboxFStyle);
@@ -899,7 +899,7 @@
     box-sizing: border-box;
     overflow: visible;
     width: auto;
-    white-space: nowrap;
+    white-space: normal;
     cursor: pointer;
     font-family: calibri;
     font-style: var(--cusCheckboxFStyle);
@@ -948,7 +948,7 @@
     box-sizing: border-box;
     overflow: visible;
     width: auto;
-    white-space: nowrap;
+    white-space: normal;
     cursor: pointer;
     font-family: calibri;
     font-style: var(--cusCheckboxFStyle);
@@ -997,7 +997,7 @@
     box-sizing: border-box;
     overflow: visible;
     width: auto;
-    white-space: nowrap;
+    white-space: normal;
     cursor: pointer;
     font-family: calibri;
     font-style: var(--cusCheckboxFStyle);
@@ -3791,8 +3791,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -3806,7 +3806,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -3891,7 +3891,6 @@
     /*To be changed*/
     right: 10px;
     background-image: var(--cusDropSelArrowDownIcon);
-    /*url("../../src/Chevron Down.png"); Editable dropdown menu icon, to change the icon of dropdown*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -3968,8 +3967,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -3983,7 +3982,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4068,7 +4067,6 @@
     /*To be changed*/
     right: 10px;
     background-image: var(--cusDropSelArrowDownIcon);
-    /*url("../../src/Chevron Down.png"); Editable dropdown menu icon, to change the icon of dropdown*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -4145,8 +4143,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -4160,7 +4158,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4245,7 +4243,6 @@
     /*changed*/
     right: 10px;
     background-image: var(--cusDropSelArrowDownIcon);
-    /*Editable dropdown menu icon, to change the icon of dropdown*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -4322,8 +4319,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -4337,7 +4334,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4422,7 +4419,6 @@
     /*changed*/
     right: 10px;
     background-image: var(--cusDropSelArrowDownIcon);
-    /*Editable dropdown menu icon, to change the icon of dropdown*/
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;

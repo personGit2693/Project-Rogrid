@@ -435,105 +435,23 @@ const radioCheckSelected = (origRadioBtn_Elem) =>{
 
 
 /****************************************************************************************************************************************************************************/ 
-/*Adding function to customized dropdown menu (Front-End listing)*/
-
-function createCusDropOptRogrid(scdropdownSelBox_Param){
-
-	const scdropdownSelBox_Rogrid = scdropdownSelBox_Param;
-	const scdropSelected_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSelected_RoClass");
-	const scdropSearchboxWrap_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSearchboxWrap_RoClass");
-	const dropdownSearchInput_Rogrid = scdropSearchboxWrap_Rogrid.children[0];
-	const scdropOptionCon_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropOptionCon_RoClass");
-	const scdropOption_Rogrid = scdropOptionCon_Rogrid.querySelectorAll(".scdropOption_RoClass");
-	const scDropdownVal_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scDropdownVal_RoClass");
-
-
-
-	/*_Function for searching option Here*/
-	const filterList_Rogrid = (searchTerm_Param, scdropOption_RogridParam) => {
-		searchTerm_Param = searchTerm_Param.toLowerCase();		
-		
-		scdropOption_RogridParam.forEach(perOptionForSearch => {
-			let doptionInnerTxt_Rogrid = perOptionForSearch.querySelector("label").innerText.toLowerCase();
-			if(doptionInnerTxt_Rogrid.indexOf(searchTerm_Param) != -1){
-				perOptionForSearch.style.display = "block";
-			}else if(doptionInnerTxt_Rogrid.indexOf(searchTerm_Param) == -1){
-				perOptionForSearch.style.display = "none";
-			}
-		});		
-	}
-	/*_Function for searching option*/
-
-
-
-
-
-	/*_Show and hide options*/
-	scdropSelected_Rogrid.addEventListener("click", () => {
-		dropdownSearchInput_Rogrid.value = "";			
-
-		scdropOptionCon_Rogrid.classList.add("scdropOptionConActive_RoClass");
-
-		scdropSearchboxWrap_Rogrid.classList.add("scdropSearchboxWrapActive_RoClass");
-
-		if(scdropOptionCon_Rogrid.classList.contains("scdropOptionConActive_RoClass")){
-			filterList_Rogrid("", scdropOption_Rogrid);
-			dropdownSearchInput_Rogrid.focus();
-		}
-	});		
-	/*_Show and hide options*/
-
-
-
-
-
-	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
-	scdropOption_Rogrid.forEach(perOptionForSel => {
-		perOptionForSel.addEventListener("click", () => {
-			scdropSelected_Rogrid.setAttribute("title", perOptionForSel.querySelector("label").innerText);
-			
-			scdropSelected_Rogrid.innerText = perOptionForSel.querySelector("label").innerText;
-
-			scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
-
-			scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
-
-			scDropdownVal_Rogrid.value = perOptionForSel.querySelector("input").value;				
-		})
-	});
-	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
-
-
-
-
-	/*_Search in dropdown list*/		
-	dropdownSearchInput_Rogrid.addEventListener("keyup", function(e){
-		filterList_Rogrid(e.target.value, scdropOption_Rogrid);			
-	});
-	/*_Search in dropdown list*/
-
-
-
-
-	/*_Hide Search and Option list when focus out*/
-	dropdownSearchInput_Rogrid.addEventListener("focusout", () => {
-		scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
-
-		scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
-	});
-	/*_Hide Search and Option list when focus out*/
-}
-
-
-/*Adding function to customized dropdown menu (Front-End listing)*/
-/****************************************************************************************************************************************************************************/ 
-
-
-
-
-
-/****************************************************************************************************************************************************************************/ 
 /*Adding function to customized dropdown menu (Back-End list)*/
+
+
+/*_Function for clearing the event of scdropSelected_Rogrid*/
+const showOptionsWithClass = (dropdownSearchInput, scdropOptionCon, scdropSearchboxWrap) => {
+	dropdownSearchInput.value = "";			
+
+	scdropOptionCon.classList.add("scdropOptionConActive_RoClass");
+
+	scdropSearchboxWrap.classList.add("scdropSearchboxWrapActive_RoClass");
+
+	if(scdropOptionCon.classList.contains("scdropOptionConActive_RoClass")){			
+		dropdownSearchInput.focus();
+	}
+}
+/*_Function for clearing the event of scdropSelected_Rogrid*/
+
 
 function createCusDropOptWoRogrid(scdropdownSelBox_Param){
 
@@ -548,17 +466,9 @@ function createCusDropOptWoRogrid(scdropdownSelBox_Param){
 
 
 	/*_Show and hide options*/
-	scdropSelected_Rogrid.addEventListener("click", () => {
-		dropdownSearchInput_Rogrid.value = "";			
+	scdropSelected_Rogrid.removeEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});		
 
-		scdropOptionCon_Rogrid.classList.add("scdropOptionConActive_RoClass");
-
-		scdropSearchboxWrap_Rogrid.classList.add("scdropSearchboxWrapActive_RoClass");
-
-		if(scdropOptionCon_Rogrid.classList.contains("scdropOptionConActive_RoClass")){			
-			dropdownSearchInput_Rogrid.focus();
-		}
-	});		
+	scdropSelected_Rogrid.addEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});		
 	/*_Show and hide options*/
 
 

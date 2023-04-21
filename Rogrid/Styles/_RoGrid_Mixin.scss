@@ -1850,8 +1850,8 @@
 	position: absolute;
 	display: block;
 	box-sizing: border-box;
-	overflow-y: hidden;
-	overflow-x: hidden;
+	overflow: auto;
+	visibility: hidden;
 	border-width: var(--cusDropOptWrapBorderWidth);
 	border-style: solid;
 	border-color: var(--cusDropOptWrapBorderColor);
@@ -1868,7 +1868,7 @@
 
 
 @mixin cusDropdownOptionWrapperActive_RoStyle{
-	overflow-y: auto;
+	visibility: hidden;
 	opacity: 1;	
 	height: var(--cusDropOptWrapHeight);				
 }

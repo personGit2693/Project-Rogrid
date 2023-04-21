@@ -3791,8 +3791,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -3806,7 +3806,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -3967,8 +3967,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -3982,7 +3982,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4143,8 +4143,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -4158,7 +4158,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
@@ -4319,8 +4319,8 @@
     position: absolute;
     display: block;
     box-sizing: border-box;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: auto;
+    visibility: hidden;
     border-width: var(--cusDropOptWrapBorderWidth);
     border-style: solid;
     border-color: var(--cusDropOptWrapBorderColor);
@@ -4334,7 +4334,7 @@
     transition: all 0.4s; }
 
   .scdropdownSelBox_RoClass > .scdropOptionConActive_RoClass {
-    overflow-y: auto;
+    visibility: hidden;
     opacity: 1;
     height: var(--cusDropOptWrapHeight); }
 
