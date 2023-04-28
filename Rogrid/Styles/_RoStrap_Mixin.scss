@@ -482,14 +482,21 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	/*_Blurrer*/
+	/*Blurrer*/
 	.thisIsJapan_RoClass{
 		@include blurrer_RoStyle;
 	}
-	/*_Blurrer*/
+	/*Blurrer*/
 
 
-	/*_Custom Modal itself*/
+	/*Modal Container*/
+	.modalmeCon_RoClass{
+		@include modalmeCon_Style;
+	}
+	/*Modal Container*/
+
+
+	/*Custom Modal itself*/
 	.modalme_RoClass{
 		@include modalItself_Mobile_RoStyle;
 	}
@@ -533,7 +540,7 @@
 	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
 		@include modalCloseIcon_RoStyle;
 	}
-	/*_Custom Modal itself*/
+	/*Custom Modal itself*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -541,14 +548,21 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
-	/*_Blurrer*/
+	/*Blurrer*/
 	.thisIsJapan_RoClass{
 		@include blurrer_RoStyle;
 	}
-	/*_Blurrer*/
+	/*Blurrer*/
 
 
-	/*_Custom Modal*/
+	/*Modal Container*/
+	.modalmeCon_RoClass{
+		@include modalmeCon_Style;
+	}
+	/*Modal Container*/
+
+
+	/*Custom Modal*/
 	.modalme_RoClass{
 		@include modalItself_Tablet_RoStyle;
 	}	
@@ -592,7 +606,7 @@
 	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
 		@include modalCloseIcon_RoStyle;
 	}
-	/*_Custom Modal*/
+	/*Custom Modal*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -600,14 +614,21 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width:1081px) and (max-width:1600px){
-	/*_Blurrer*/
+	/*Blurrer*/
 	.thisIsJapan_RoClass{
 		@include blurrer_RoStyle;
 	}
-	/*_Blurrer*/
+	/*Blurrer*/
 
 
-	/*_Custom Modal*/
+	/*Modal Container*/
+	.modalmeCon_RoClass{
+		@include modalmeCon_Style;
+	}
+	/*Modal Container*/
+
+
+	/*Custom Modal*/
 	.modalme_RoClass{
 		@include modalItself_Laptop_RoStyle;
 	}
@@ -651,7 +672,7 @@
 	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
 		@include modalCloseIcon_RoStyle;
 	}
-	/*_Custom Modal*/
+	/*Custom Modal*/
 }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -659,14 +680,21 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width:1601px){
-	/*_Blurrer*/
+	/*Blurrer*/
 	.thisIsJapan_RoClass{
 		@include blurrer_RoStyle;
 	}
-	/*_Blurrer*/
+	/*Blurrer*/
 
 
-	/*_Custom Modal*/
+	/*Modal Container*/
+	.modalmeCon_RoClass{
+		@include modalmeCon_Style;
+	}
+	/*Modal Container*/
+
+
+	/*Custom Modal*/
 	.modalme_RoClass{
 		@include modalItself_Desktop_RoStyle;
 	}
@@ -710,7 +738,7 @@
 	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
 		@include modalCloseIcon_RoStyle;
 	}
-	/*_Custom Modal*/
+	/*Custom Modal*/
 }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/

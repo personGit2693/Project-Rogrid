@@ -48,7 +48,7 @@
 			
 			<div style="position: relative;">
 				<div class="cusInputs_RoClass">					
-					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showSpinningLoad()" onfocus="highlightInWrap(this, 'green')" required>
+					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showSpinningLoad(), showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0)" onfocus="highlightInWrap(this, 'green')" required>
 					<div class="placeholdme_RoClass">Some text here</div>
 				</div>
 
@@ -188,19 +188,72 @@
 	</div>
 
 
-	<div class="thisIsJapan_RoClass" style="--putOnTop: 0;"></div>
+	<div class="modalmeCon_RoClass" style="--topOnBlurrer: 1;">
+		<div class="modalme_RoClass">
+			<div class="modalHeader_RoClass">
+				<div class="modalHeadTxt_RoClass">Modal head text</div>
+				<div class="modalHeadClose_RoClass" onclick="closeMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0)"><img src="../../src/closeModIcon.png"></div>
+			</div>
+			<div class="modalBody_RoClass">
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+				Modal body here
+			</div>			
+		</div>	
+	</div>
 
-	<div class="modalme_RoClass" style="--topOnBlurrer: 0;">
-		<div class="modalHeader_RoClass">
-			<div class="modalHeadTxt_RoClass">Modal head text</div>
-			<div class="modalHeadClose_RoClass" onclick="closeMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0)"><img src="../../src/closeModIcon.png"></div>
-		</div>
-		<div class="modalBody_RoClass">
-			Modal body here
-		</div>			
-	</div>	
 
-	<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 0;">
+	<div class="thisIsJapan_RoClass" style="--putOnTop: 0;"></div>	
+
+
+	<div class="spinnerLoad_RoClass" style="--topSpinBlurrer: 2;">
 		<img src="../../src/Spinner.gif">
 	</div>
 

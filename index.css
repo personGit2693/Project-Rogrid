@@ -1039,7 +1039,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width: 641px) {
-  /*_Blurrer*/
+  /*Blurrer*/
   .thisIsJapan_RoClass {
     position: fixed;
     display: none;
@@ -1051,8 +1051,21 @@
     opacity: 0.5;
     z-index: var(--putOnTop); }
 
-  /*_Blurrer*/
-  /*_Custom Modal itself*/
+  /*Blurrer*/
+  /*Modal Container*/
+  .modalmeCon_RoClass {
+    position: fixed;
+    display: none;
+    overflow: auto;
+    box-sizing: border-box;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: var(--topOnBlurrer); }
+
+  /*Modal Container*/
+  /*Custom Modal itself*/
   .modalme_RoClass {
     position: absolute;
     display: none;
@@ -1068,7 +1081,6 @@
     border-style: solid;
     border-color: var(--modalBorderColor);
     background-color: var(--modalBodyBgColor);
-    z-index: var(--topOnBlurrer);
     transition: top 0.5s ease-out 0s; }
 
   .modalme_RoClass > .modalHeader_RoClass {
@@ -1147,13 +1159,13 @@
     width: 100%;
     height: 100%; }
 
-  /*_Custom Modal itself*/ }
+  /*Custom Modal itself*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width: 642px) and (max-width: 1080px) {
-  /*_Blurrer*/
+  /*Blurrer*/
   .thisIsJapan_RoClass {
     position: fixed;
     display: none;
@@ -1165,8 +1177,21 @@
     opacity: 0.5;
     z-index: var(--putOnTop); }
 
-  /*_Blurrer*/
-  /*_Custom Modal*/
+  /*Blurrer*/
+  /*Modal Container*/
+  .modalmeCon_RoClass {
+    position: fixed;
+    display: none;
+    overflow: auto;
+    box-sizing: border-box;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: var(--topOnBlurrer); }
+
+  /*Modal Container*/
+  /*Custom Modal*/
   .modalme_RoClass {
     position: absolute;
     display: none;
@@ -1182,7 +1207,6 @@
     border-style: solid;
     border-color: var(--modalBorderColor);
     background-color: var(--modalBodyBgColor);
-    z-index: var(--topOnBlurrer);
     transition: top 0.5s ease-out 0s; }
 
   .modalme_RoClass > .modalHeader_RoClass {
@@ -1261,13 +1285,13 @@
     width: 100%;
     height: 100%; }
 
-  /*_Custom Modal*/ }
+  /*Custom Modal*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Laptop*/
 @media all and (min-width: 1081px) and (max-width: 1600px) {
-  /*_Blurrer*/
+  /*Blurrer*/
   .thisIsJapan_RoClass {
     position: fixed;
     display: none;
@@ -1279,8 +1303,21 @@
     opacity: 0.5;
     z-index: var(--putOnTop); }
 
-  /*_Blurrer*/
-  /*_Custom Modal*/
+  /*Blurrer*/
+  /*Modal Container*/
+  .modalmeCon_RoClass {
+    position: fixed;
+    display: none;
+    overflow: auto;
+    box-sizing: border-box;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: var(--topOnBlurrer); }
+
+  /*Modal Container*/
+  /*Custom Modal*/
   .modalme_RoClass {
     position: absolute;
     display: none;
@@ -1296,7 +1333,6 @@
     border-style: solid;
     border-color: var(--modalBorderColor);
     background-color: var(--modalBodyBgColor);
-    z-index: var(--topOnBlurrer);
     transition: top 0.5s ease-out 0s; }
 
   .modalme_RoClass > .modalHeader_RoClass {
@@ -1375,13 +1411,13 @@
     width: 100%;
     height: 100%; }
 
-  /*_Custom Modal*/ }
+  /*Custom Modal*/ }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
 @media all and (min-width: 1601px) {
-  /*_Blurrer*/
+  /*Blurrer*/
   .thisIsJapan_RoClass {
     position: fixed;
     display: none;
@@ -1393,8 +1429,21 @@
     opacity: 0.5;
     z-index: var(--putOnTop); }
 
-  /*_Blurrer*/
-  /*_Custom Modal*/
+  /*Blurrer*/
+  /*Modal Container*/
+  .modalmeCon_RoClass {
+    position: fixed;
+    display: none;
+    overflow: auto;
+    box-sizing: border-box;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: var(--topOnBlurrer); }
+
+  /*Modal Container*/
+  /*Custom Modal*/
   .modalme_RoClass {
     position: absolute;
     display: none;
@@ -1410,7 +1459,6 @@
     border-style: solid;
     border-color: var(--modalBorderColor);
     background-color: var(--modalBodyBgColor);
-    z-index: var(--topOnBlurrer);
     transition: top 0.5s ease-out 0s; }
 
   .modalme_RoClass > .modalHeader_RoClass {
@@ -1489,7 +1537,7 @@
     width: 100%;
     height: 100%; }
 
-  /*_Custom Modal*/ }
+  /*Custom Modal*/ }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 /*Custom Modal RoStrap Mixin*/

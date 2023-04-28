@@ -74,6 +74,7 @@ const showMyMod = (blurrerClass_Param, modalClass_Param, modalInt_Param) =>{
 	const thisIsJapan_Class_Rogrid = document.getElementsByClassName(blurrerClass_Param)[0];
 	const modal_Class_Rogrid = document.getElementsByClassName(modalClass_Param)[modalInt_Param];
 	thisIsJapan_Class_Rogrid.style.display = "block";
+	modal_Class_Rogrid.parentNode.style.display = "block";
 	modal_Class_Rogrid.style.display = "block";
 	asyncDelayModal(modalClass_Param, modalInt_Param);
 }

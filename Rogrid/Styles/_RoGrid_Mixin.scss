@@ -464,6 +464,20 @@
 
 
 /*_Modal*/
+@mixin modalmeCon_Style{
+	position: fixed;
+	display: none;
+	overflow: auto;
+	box-sizing: border-box;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;	
+	z-index: var(--topOnBlurrer);
+}
+
+
+
 @mixin modalItself_Mobile_RoStyle{
 	position: absolute;
 	display: none;
@@ -479,7 +493,6 @@
 	border-style: solid;
 	border-color: var(--modalBorderColor);
 	background-color: var(--modalBodyBgColor);
-	z-index: var(--topOnBlurrer);
 	transition: top 0.5s ease-out 0s;
 }
 
@@ -498,7 +511,6 @@
 	border-style: solid;
 	border-color: var(--modalBorderColor);
 	background-color: var(--modalBodyBgColor);
-	z-index: var(--topOnBlurrer);
 	transition: top 0.5s ease-out 0s;
 }
 
@@ -517,7 +529,6 @@
 	border-style: solid;
 	border-color: var(--modalBorderColor);
 	background-color: var(--modalBodyBgColor);
-	z-index: var(--topOnBlurrer);
 	transition: top 0.5s ease-out 0s;
 }
 
@@ -536,7 +547,6 @@
 	border-style: solid;
 	border-color: var(--modalBorderColor);
 	background-color: var(--modalBodyBgColor);
-	z-index: var(--topOnBlurrer);
 	transition: top 0.5s ease-out 0s;
 }
 

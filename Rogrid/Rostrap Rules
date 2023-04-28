@@ -201,14 +201,16 @@ Modal Note: Invoke "showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)" 
 		• " --modalHeaderFLDSize: value " (Provide the modal header font size for laptop and desktop) (For modalHeadTxt_RoClass)
 		• " --modalHeaderFColor: value " (Provide the modal header font color) (For modalHeadTxt_RoClass)
 	• Structure
-		<div class="modalme_RoClass" style=" --topOnBlurrer: integer; ">
-			<div class="modalHeader_RoClass">
-				<div class="modalHeadTxt_RoClass">Value</div>
-				<div class="modalHeadClose_RoClass" onclick="closeMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)"><img src="../../src/closeModIcon.png"></div>
+		<div class="modalmeCon_RoClass" style=" --topOnBlurrer: integer; ">
+			<div class="modalme_RoClass">
+				<div class="modalHeader_RoClass">
+					<div class="modalHeadTxt_RoClass">Value</div>
+					<div class="modalHeadClose_RoClass" onclick="closeMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)"><img src="../../src/closeModIcon.png"></div>
+				</div>
+				<div class="modalBody_RoClass">
+					<!--Content Here-->
+				</div>			
 			</div>
-			<div class="modalBody_RoClass">
-				<!--Content Here-->
-			</div>			
 		</div>
 
 Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner and "removeSpinningLoad()" to stop spinner.
