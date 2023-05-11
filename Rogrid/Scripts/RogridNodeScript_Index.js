@@ -458,6 +458,7 @@ function createCusDropOptWoRogrid(scdropdownSelBox_Param){
 
 	const scdropdownSelBox_Rogrid = scdropdownSelBox_Param;
 	const scdropSelected_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSelected_RoClass");
+	const scdropSelectedVal_Rogrid = scdropSelected_Rogrid.querySelector(".scdropSelectedVal_RoClass");
 	const scdropSearchboxWrap_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSearchboxWrap_RoClass");
 	const dropdownSearchInput_Rogrid = scdropSearchboxWrap_Rogrid.children[0];
 	const scdropOptionCon_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropOptionCon_RoClass");
@@ -479,7 +480,7 @@ function createCusDropOptWoRogrid(scdropdownSelBox_Param){
 		perOptionForSel.addEventListener("click", () => {
 			scdropSelected_Rogrid.setAttribute("title", perOptionForSel.querySelector("label").innerText);
 
-			scdropSelected_Rogrid.innerText = perOptionForSel.querySelector("label").innerText;
+			scdropSelectedVal_Rogrid.innerText = perOptionForSel.querySelector("label").innerText;
 
 			scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
 

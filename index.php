@@ -160,7 +160,7 @@
 							<label for="bgHere3">Option three</label>
 						</div>
 					</div>
-					<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('./src/Chevron Down.png');"></span>Selected Here</div>
+					<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('./src/Chevron Down.png');"></span><span class="scdropSelectedVal_RoClass">Selected Here</span></div>
 					<div class="scdropSearchboxWrap_RoClass">
 						<input type="text" placeholder="Start Typing...">
 					</div>

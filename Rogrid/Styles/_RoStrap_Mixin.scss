@@ -1918,11 +1918,11 @@
 		@include cusDropdownSelected_MT_RoStyle;	
 	}
 
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span{
+	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
 		@include cusDropdownSelArrow_MT_RoStyle;
 	}
 
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span{
+	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
 		transform: rotateX(180deg);
 	}
 	/*_Dropdown Selected*/
@@ -2025,11 +2025,11 @@
 		@include cusDropdownSelected_MT_RoStyle;		
 	}
 
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span{
+	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
 		@include cusDropdownSelArrow_MT_RoStyle;
 	}
 
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span{
+	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
 		transform: rotateX(180deg);
 	}
 	/*_Dropdown Selected*/
@@ -2132,11 +2132,11 @@
 		@include cusDropdownSelected_LD_RoStyle;		
 	}
 
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span{
+	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
 		@include cusDropdownSelArrow_LD_RoStyle;
 	}
 
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span{
+	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
 		transform: rotateX(180deg);
 	}
 	/*_Dropdown Selected*/
@@ -2239,11 +2239,11 @@
 		@include cusDropdownSelected_LD_RoStyle;		
 	}
 
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span{
+	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
 		@include cusDropdownSelArrow_LD_RoStyle;
 	}
 
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span{
+	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
 		transform: rotateX(180deg);
 	}
 	/*_Dropdown Selected*/
