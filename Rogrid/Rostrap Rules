@@ -456,7 +456,7 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 					<label for="bgHere1">Bahay toro</label>
 				</div>
 			</div>
-			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span>Baranggay</div> <--Selected Area
+			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span><span class="scdropSelectedVal_RoClass">Selected Value</span>Baranggay</div> <--Selected Area
 			<div class="scdropSearchboxWrap_RoClass"> <--Search Area Wrapper
 				<input type="text" placeholder="Start Typing..."> <--Search Input Section
 			</div>
