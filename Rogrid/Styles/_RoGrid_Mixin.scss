@@ -1728,7 +1728,8 @@
 	border-color: var(--cusDropBorderColor);
 	flex-flow: column nowrap;	
 	border-radius: 7px;	
-	background-color: var(--cusDropBgColor);	
+	background-color: var(--cusDropBgColor);
+	z-index: var(--cusDropZIndex);	
 }
 
 
@@ -1814,6 +1815,7 @@
 	opacity: 0;
 	pointer-events: none;
 	transition: all 0.4s;
+	z-index: var(--cusDropZIndex);
 }
 
 
@@ -1871,6 +1873,7 @@
 	background-color: var(--cusDropOptWrapBgColor);
 	order: 2;
 	transition: all 0.4s;
+	z-index: var(--cusDropZIndex);
 }
 
 

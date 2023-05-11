@@ -447,6 +447,7 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 		• " --cusDropOptLabColor: value " (Provide options label font color) (For scdropOption_RoClass>label)
 		• " --cusDropOptHovLabBgColor: value " (Provide option hovered background color) (For scdropOption_RoClass>label)
 		• " --cusDropSelArrowDownIcon: value " (Provide down arrow icon) (For scdropSelected_RoClass)
+		• " --cusDropZIndex: value " (Provide z-index for per custom dropdown element. NOTE: Use this property with cusDropdownVisibleWrap_RoStyle I.D) (For cusDropdownVisibleWrap_RoStyle, cusDropdownSearchBoxWrap_RoStyle, cusDropdownOptionWrapper_RoStyle)
 	• Structure						
 		<div class="scdropdownSelBox_RoClass"> <--Customized Dropdown Element itself
 			<div class="scdropOptionCon_RoClass"> <--Options Container
@@ -455,7 +456,7 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 					<label for="bgHere1">Bahay toro</label>
 				</div>
 			</div>
-			<div class="scdropSelected_RoClass">Baranggay</div> <--Selected Area
+			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span>Baranggay</div> <--Selected Area
 			<div class="scdropSearchboxWrap_RoClass"> <--Search Area Wrapper
 				<input type="text" placeholder="Start Typing..."> <--Search Input Section
 			</div>
