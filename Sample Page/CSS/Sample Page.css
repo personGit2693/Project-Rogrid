@@ -1106,9 +1106,7 @@ button.iconBtn_RoClass {
 
 .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > input {
   position: absolute;
-  display: block;
-  visibility: hidden;
-  width: 100%; }
+  display: none; }
 
 .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > label {
   position: relative;

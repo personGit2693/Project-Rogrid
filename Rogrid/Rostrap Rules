@@ -262,7 +262,7 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 * How to use customized normal button RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file.
 	• Codes needed
-		• " --normBtnWidth: value " (Provide the button width)
+		• " --normBtnWidth: value " (Provide the button width) (For normButton_RoClass)
 		• " --normBtnPadding: value " (Provide the button padding) (For normButton_RoClass)
 		• " --normBtnBorderWidth: value " (Provide the button border thickness) (For normButton_RoClass)
 		• " --normBtnBorderColor: value " (Provide the button border color) (For normButton_RoClass)
