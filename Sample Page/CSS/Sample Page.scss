@@ -26,66 +26,57 @@
 	/*Navigation*/
 
 	/*Custom input element*/
+	--customInputFSize: 12px;
+	--customInputAnimFSize: 9px;
 	--customInputColor: #ffffff;
 	/*Custom input element*/
 
 	/*Current Date*/
 	--currDateFStyle: normal;
 	--currDateFWeight: bold;
-	--currDateFMTsize: 12px;
-	--currDateFLDsize: 14px;
+	--currDateFsize: 12px;
 	--currDateFColor: #ffffff;
 	/*Current Date*/
 
 	/*Custom checkbox*/
 	--cusCheckboxFStyle: normal;
 	--cusCheckboxFWeight: normal;
-	--custCheckboxFMTSize: 12px;
-	--cusCheckboxFLDSize: 14px;
+	--custCheckboxFSize: 12px;
 	--cusCheckboxColor: #ffffff;
-	--cusCheckboxColor: #ffffff;
-	--cusCheckboxMTWidth: 12px;
-	--cusCheckboxLDWidth: 14px;
-	--cusCheckboxMTHeight: 12px;
-	--cusCheckboxLDHeight: 14px;
+	--cusCheckboxWidthHeight: 12px;	
 	--cusCheckboxBorderWidth: 1px;
 	--cusCheckboxBorderColor: #ffffff;
 	/*Custom checkbox*/
 
 	/*Modal*/
-	--modalMobileWidth: 350px;
-	--modalMobileHeight: auto;
-	--modalTabletWidth: 350px;
-	--modalTabletHeight: auto;
-	--modalLaptopWidth: 350px;
-	--modalLaptopHeight: auto;
-	--modalDesktopWidth: 350px;
-	--modalDesktopHeight: auto;		
+	--modalWidth: 350px;
+	--modalHeight: auto;
 	--modalBorderColor: blue;
 	--modalBodyBgColor: transparent;
 	--modalHeaderBgColor: #ffffff;
-	--modalHeaderFMTSize: 12px;
-	--modalHeaderFLDSize: 14px;
+	--modalHeaderFSize: 12px;
 	--modalHeaderFColor: black;
+	--modalCloseIconSize: 14px;
 	/*Modal*/
 
 	/*Spinner*/
-	--spinnerWidth: 64px;
-	--spinnerHeight: 64px;
+	--spinnerWidthHeight: 64px;
 	/*Spinner*/
+
+	/*Calendar Lite*/
+	--calendarHeadTxtFSize: 14px;
+	--calendarHeadBtnWidthHeight: 16px;
+	--calendarDayTxtFSize: 12px;
+	/*Calendar Lite*/
 
 	/*Footer*/
 	--footerBgColor: #2E88DB;
-	--footerFMTSize: 12px;
-	--footerFLDSize: 14px;
+	--footerFSize: 12px;
 	--footerFColor: #ffffff;
 	/*Footer*/
 
 	/*search input*/
-	--inputSearchMobileWidth: 100%;
-	--inputSearchTabletWidth: 100%;
-	--inputSearchLaptopWidth: 100%;
-	--inputSearchDesktopWidth: 100%;
+	--inputWidth: 100%;
 	--inputSearchTopPadding: 8px;
 	--inputSearchRightPadding: 8px;
 	--inputSearchBottomPadding: 8px;
@@ -99,17 +90,13 @@
 	/*search input*/
 
 	/*Normal button*/
-	--normBtnMWidth: auto;
-	--normBtnTWidth: auto;
-	--normBtnLWidth: auto;
-	--normBtnDWidth: auto;
+	--normBtnWidth: auto;	
 	--normBtnPadding: 5px;
 	--normBtnBorderWidth: 3px;
 	--normBtnBorderColor: #ffffff;
 	--normBtnRadius: 4px;
 	--normBtnFWeight: normal;
-	--normBtnFMTSize: 12px;
-	--normBtnFLDSize: 14px;		
+	--normBtnFSize: 12px;		
 	--normBtnBgColor: blue;
 	--normBtnFcolor: #ffffff;
 	--normBtnHovActFColor: red;
@@ -129,16 +116,14 @@
 	/*Radio button*/
 	--cusRadioBorderWidth: 3px;
 	--cusRadioBorderColor: blue;
-	--cusRadioWidth: 35px;
-	--cusRadioHeight: 35px;
+	--cusRadioWidthHeight: 35px;
 	--cusRadioBgColor: #ffffff;
 
 	--cusRadioFWeight: normal;
 	--cusRadioFsize: 14px;
 	--cusRadioFColor: #ffffff;
 
-	--radioIconLabelWidth: 85px;
-	--radioIconLabelHeight: 85px;
+	--radioIconLabelWidthHeight: 85px;
 	/*Radio button*/
 
 	/*Dropdown menu*/
@@ -157,7 +142,9 @@
 	--cusDropOptWrapScrollColor: blue;
 	--cusDropOptWrapScrollHovColor: yellow;
 	--cusDropOptLabColor: #ffffff;
-	--cusDropOptHovLabBgColor: blue;	
+	--cusDropOptHovLabBgColor: blue;
+	--cusDropFsize: 14px;
+	--cusDropArrowWidthHeight: 16px;	
 	/*Dropdown menu*/
 
 	/*Dropdown button list*/

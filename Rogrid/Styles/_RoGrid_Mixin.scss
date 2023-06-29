@@ -89,27 +89,17 @@
 
 
 /*_Inputs themselves*/
-@mixin customInputs_MT_RoStyle{
+@mixin customInputs_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing:border-box;
 	width: 100%;
 	border: none;
 	outline: none;
-	font: normal normal 14px calibri; /*To be changed*/	
-	background: transparent;
-	color: var(--customInputColor);
-}
-
-
-@mixin customInputs_LD_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing:border-box;
-	width: 100%;
-	border:none;
-	outline: none;
-	font: normal normal 16px calibri; /*changed*/	
+	font-family: calibri;
+	font-weight: normal;
+	font-style: normal;
+	font-size: var(--customInputFSize);
 	background: transparent;
 	color: var(--customInputColor);
 }
@@ -118,7 +108,7 @@
 
 
 /*_Default Placehoder properties*/
-@mixin customInputsPlace_Mobile_RoStyle{
+@mixin customInputsPlace_RoStyle{
 	position: absolute;
 	display: block;
 	box-sizing: border-box;
@@ -130,64 +120,7 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 12px; /*To be changed animation*/ /*To be changed*/
-	color: var(--customInputColor); /*To be changed animation*/
-	z-index: -1;
-	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
-	text-overflow: ellipsis;
-}
-
-@mixin customInputsPlace_Tablet_RoStyle{
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 95%;
-	top:50%; /*To be changed animation*/
-	transform: translateY(-50%); /*To be changed animation*/	
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px; /*To be changed animation*/ /*To be changed*/
-	color: var(--customInputColor); /*To be changed animation*/
-	z-index: -1;
-	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
-	text-overflow: ellipsis;
-}
-
-@mixin customInputsPlace_Laptop_RoStyle{
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 95%;
-	top:50%; /*To be changed animation*/
-	transform: translateY(-50%); /*To be changed animation*/	
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px; /*To be changed animation*/ /*changed*/
-	color: var(--customInputColor); /*To be changed animation*/
-	z-index: -1;
-	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
-	text-overflow: ellipsis;
-}
-
-@mixin customInputsPlace_Desktop_RoStyle{
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 95%;
-	top:50%; /*To be changed animation*/
-	transform: translateY(-50%); /*To be changed animation*/	
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px; /*To be changed animation*/ /*changed*/
+	font-size: var(--customInputFSize);; /*To be changed animation*/
 	color: var(--customInputColor); /*To be changed animation*/
 	z-index: -1;
 	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
@@ -198,7 +131,7 @@
 
 
 /*_Default Placehoder(For Date & Drowpdown) properties*/
-@mixin customInputsPlaceUp_Mobile_RoStyle{
+@mixin customInputsPlaceUp_RoStyle{
 	position: absolute;
 	display: block;
 	box-sizing: border-box;
@@ -210,64 +143,7 @@
 	font-family: calibri;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 12px; /*To be changed animation*/ /*To be changed*/
-	color: var(--customInputColor); /*To be changed animation*/
-	z-index: -1;
-	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
-	text-overflow: ellipsis;
-}
-
-@mixin customInputsPlaceUp_Tablet_RoStyle{
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 95%;
-	top:33%; /*To be changed animation*/  /*To be changed*/
-	transform: translateY(-50%); /*To be changed animation*/	
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px; /*To be changed animation*/ /*To be changed*/
-	color: var(--customInputColor); /*To be changed animation*/
-	z-index: -1;
-	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
-	text-overflow: ellipsis;
-}
-
-@mixin customInputsPlaceUp_Laptop_RoStyle{
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 95%;
-	top:25%; /*To be changed animation*/ /*changed*/
-	transform: translateY(-50%); /*To be changed animation*/	
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px; /*To be changed animation*/ /*changed*/
-	color: var(--customInputColor); /*To be changed animation*/
-	z-index: -1;
-	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
-	text-overflow: ellipsis;
-}
-
-@mixin customInputsPlaceUp_Desktop_RoStyle{
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 95%;
-	top:25%; /*To be changed animation*/  /*changed*/
-	transform: translateY(-50%); /*To be changed animation*/	
-	font-family: calibri;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 14px; /*To be changed animation*/ /*changed*/
+	font-size: var(--customInputFSize); /*To be changed animation*/
 	color: var(--customInputColor); /*To be changed animation*/
 	z-index: -1;
 	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
@@ -278,31 +154,10 @@
 
 
 /*_Animated Placeholder*/
-@mixin customInputsPlaceAnimate_Mobile_RoStyle{
+@mixin customInputsPlaceAnimate_RoStyle{
 	top: 0px; /*changed animation*/
 	transform: none; /*changed animation*/
-	font-size: 10px; /*changed animation*/ /*To be changed*/
-}
-
-@mixin customInputsPlaceAnimate_Tablet_RoStyle{
-	top: 0px; /*changed animation*/
-	transform: none; /*changed animation*/
-	font-size: 10px; /*changed animation*/ /*To be changed*/
-	
-}
-
-@mixin customInputsPlaceAnimate_Laptop_RoStyle{
-	top: 0px; /*changed animation*/
-	transform: none; /*changed animation*/
-	font-size: 12px; /*changed animation*/ /*changed*/
-	
-}
-
-@mixin customInputsPlaceAnimate_Desktop_RoStyle{
-	top: 0px; /*changed animation*/
-	transform: none; /*changed animation*/
-	font-size: 12px; /*changed animation*/ /*changed*/
-	
+	font-size: var(--customInputAnimFSize); /*changed animation*/
 }
 /*_Animated Placeholder*/
 
@@ -315,7 +170,7 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Current Date Rogrid Mixin*/
-@mixin currentDate_MT_RoStyle{
+@mixin currentDate_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
@@ -324,21 +179,7 @@
 	word-break: keep-all;
 	font-style: var(--currDateFStyle);
 	font-weight: var(--currDateFWeight);
-	font-size: var(--currDateFMTsize);
-	font-family: calibri;
-	color: var(--currDateFColor);
-}
-
-@mixin currentDate_LD_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	font-style: var(--currDateFStyle);
-	font-weight: var(--currDateFWeight);
-	font-size: var(--currDateFLDsize);
+	font-size: var(--currDateFsize);
 	font-family: calibri;
 	color: var(--currDateFColor);
 }
@@ -360,7 +201,7 @@
 
 
 
-@mixin cusCheckboxLabel_MT_RoStyle{
+@mixin cusCheckboxLabel_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
@@ -368,51 +209,22 @@
 	width: auto;
 	white-space: normal;
 	cursor: pointer;
-	font-family:calibri;
+	font-family: calibri;
 	font-style: var(--cusCheckboxFStyle);
 	font-weight: var(--cusCheckboxFWeight);
-	font-size: var(--custCheckboxFMTSize);
-	color: var(--cusCheckboxColor);
-}
-
-@mixin cusCheckboxLabel_LD_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: visible;
-	width: auto;
-	white-space: normal;
-	cursor: pointer;
-	font-family:calibri;
-	font-style: var(--cusCheckboxFStyle);
-	font-weight: var(--cusCheckboxFWeight);
-	font-size: var(--cusCheckboxFLDSize);
+	font-size: var(--custCheckboxFSize);
 	color: var(--cusCheckboxColor);
 }
 
 
 
-@mixin cusCheckbox_MT_RoStyle{
+@mixin cusCheckbox_RoStyle{
 	position: relative;
 	display: inline-block;
 	box-sizing: border-box;
 	overflow: visible;
-	width: var(--cusCheckboxMTWidth);
-	height: var(--cusCheckboxMTHeight);
-	margin-left: 4px;
-	border-width: var(--cusCheckboxBorderWidth);
-	border-style: solid;
-	border-color: var(--cusCheckboxBorderColor);
-	vertical-align: bottom;
-}
-
-@mixin cusCheckbox_LD_RoStyle{
-	position: relative;
-	display: inline-block;
-	box-sizing: border-box;
-	overflow: visible;
-	width: var(--cusCheckboxLDWidth);
-	height: var(--cusCheckboxLDHeight);
+	width: var(--cusCheckboxWidthHeight);
+	height: var(--cusCheckboxWidthHeight);
 	margin-left: 4px;
 	border-width: var(--cusCheckboxBorderWidth);
 	border-style: solid;
@@ -478,67 +290,13 @@
 
 
 
-@mixin modalItself_Mobile_RoStyle{
+@mixin modalItself_RoStyle{
 	position: absolute;
 	display: none;
 	box-sizing: border-box;
 	overflow: hidden;
-	width: var(--modalMobileWidth);
-	height: var(--modalMobileHeight);
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 7px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: var(--modalBorderColor);
-	background-color: var(--modalBodyBgColor);
-	transition: top 0.5s ease-out 0s;
-}
-
-@mixin modalItself_Tablet_RoStyle{
-	position: absolute;
-	display: none;
-	box-sizing: border-box;
-	overflow: hidden;
-	width: var(--modalTabletWidth);
-	height: var(--modalTabletHeight);
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 7px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: var(--modalBorderColor);
-	background-color: var(--modalBodyBgColor);
-	transition: top 0.5s ease-out 0s;
-}
-
-@mixin modalItself_Laptop_RoStyle{
-	position: absolute;
-	display: none;
-	box-sizing: border-box;
-	overflow: hidden;
-	width: var(--modalLaptopWidth);
-	height: var(--modalLaptopHeight);
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 7px;
-	border-width: 1px;
-	border-style: solid;
-	border-color: var(--modalBorderColor);
-	background-color: var(--modalBodyBgColor);
-	transition: top 0.5s ease-out 0s;
-}
-
-@mixin modalItself_Desktop_RoStyle{
-	position: absolute;
-	display: none;
-	box-sizing: border-box;
-	overflow: hidden;
-	width: var(--modalDesktopWidth);
-	height: var(--modalDesktopHeight);
+	width: var(--modalWidth);
+	height: var(--modalHeight);
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -593,7 +351,7 @@
 
 
 
-@mixin modalHeaderTxt_MT_RoStyle{
+@mixin modalHeaderTxt_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
@@ -604,83 +362,23 @@
 	flex-grow: 0;
 	font-style: normal;
 	font-weight: bold;
-	font-size: var(--modalHeaderFMTSize);
+	font-size: var(--modalHeaderFSize);
 	font-family: calibri;
 	color: var(--modalHeaderFColor); 
 	text-align: center;	
 	align-self: center;	
 }
 
-@mixin modalHeaderTxt_LD_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	width: 100%;
-	flex-shrink: 1;
-	flex-grow: 0;
-	font-style: normal;
-	font-weight: bold;
-	font-size: var(--modalHeaderFLDSize);
-	font-family: calibri;
-	color: var(--modalHeaderFColor);
-	text-align: center;
-	align-self: center;	
-}
 
 
-
-@mixin modalHeaderCloser_Mobile_RoStyle{
+@mixin modalHeaderCloser_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: nowrap;
-	width: 19px; /*To be changed*/
-	height: 19px; /*To be changed*/
-	align-self: flex-start;
-	flex-shrink: 0;
-	flex-grow: 0;
-	cursor: pointer;
-}
-
-@mixin modalHeaderCloser_Tablet_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: nowrap;
-	width: 21px; /*changed*/
-	height: 21px; /*changed*/
-	align-self: flex-start;
-	flex-shrink: 0;
-	flex-grow: 0;
-	cursor: pointer;
-}
-
-@mixin modalHeaderCloser_Laptop_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: nowrap;
-	width: 22px; /*changed*/
-	height: 22px; /*changed*/
-	align-self: flex-start;
-	flex-shrink: 0;
-	flex-grow: 0;
-	cursor: pointer;
-}
-
-@mixin modalHeaderCloser_Desktop_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: nowrap;
-	width: 23px; /*changed*/
-	height: 23px; /*changed*/
+	width: var(--modalCloseIconSize);
+	height: var(--modalCloseIconSize);
 	align-self: flex-start;
 	flex-shrink: 0;
 	flex-grow: 0;
@@ -727,8 +425,8 @@
 	left: 50%;
 	transform: translate(-50%,-50%);
 	z-index: var(--topSpinBlurrer);
-	width: var(--spinnerWidth);
-	height: var(--spinnerHeight);
+	width: var(--spinnerWidthHeight);
+	height: var(--spinnerWidthHeight);
 }
 /*Spinner Loading RoGrid Mixin*/
 /***********************************************************************************************************************************************************************************************************/
@@ -736,83 +434,11 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Search Input with Style RoGrid Mixin*/
-@mixin searchInput_Mobile_Style{
+@mixin searchInput_Style{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
-	width: var(--inputSearchMobileWidth);
-	padding-top: var(--inputSearchTopPadding);
-	padding-right: var(--inputSearchRightPadding);
-	padding-bottom: var(--inputSearchBottomPadding);
-	padding-left: var(--inputSearchLeftPadding);
-	border-style: solid;
-	border-width: 1px;
-	border-color: var(--inputSearchBorderColor);
-	border-radius: var(--inputSearchBorderRadius);
-	outline: none;
-	background: transparent var(--inputSearchIcon) var(--inputSearchIconHori) center no-repeat; 
-	background-size: var(--inputSearchIconSize);
-	background-origin: padding-box;
-	font-style: normal;
-	font-weight: normal;
-	font-family: calibri;
-	font-size: var(--inputSearchFSize);
-	color: var(--inputSearchFColor);
-}
-
-@mixin searchInput_Tablet_Style{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	width: var(--inputSearchTabletWidth);
-	padding-top: var(--inputSearchTopPadding);
-	padding-right: var(--inputSearchRightPadding);
-	padding-bottom: var(--inputSearchBottomPadding);
-	padding-left: var(--inputSearchLeftPadding);
-	border-style: solid;
-	border-width: 1px;
-	border-color: var(--inputSearchBorderColor);
-	border-radius: var(--inputSearchBorderRadius);
-	outline: none;
-	background: transparent var(--inputSearchIcon) var(--inputSearchIconHori) center no-repeat; 
-	background-size: var(--inputSearchIconSize);
-	background-origin: padding-box;
-	font-style: normal;
-	font-weight: normal;
-	font-family: calibri;
-	font-size: var(--inputSearchFSize);
-	color: var(--inputSearchFColor);
-}
-
-@mixin searchInput_Laptop_Style{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	width: var(--inputSearchLaptopWidth);
-	padding-top: var(--inputSearchTopPadding);
-	padding-right: var(--inputSearchRightPadding);
-	padding-bottom: var(--inputSearchBottomPadding);
-	padding-left: var(--inputSearchLeftPadding);
-	border-style: solid;
-	border-width: 1px;
-	border-color: var(--inputSearchBorderColor);
-	border-radius: var(--inputSearchBorderRadius);
-	outline: none;
-	background: transparent var(--inputSearchIcon) var(--inputSearchIconHori) center no-repeat; 
-	background-size: var(--inputSearchIconSize);
-	background-origin: padding-box;
-	font-style: normal;
-	font-weight: normal;
-	font-family: calibri;
-	font-size: var(--inputSearchFSize);
-	color: var(--inputSearchFColor);
-}
-
-@mixin searchInput_Desktop_Style{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	width: var(--inputSearchDesktopWidth);
+	width: var(--inputSearchWidth);
 	padding-top: var(--inputSearchTopPadding);
 	padding-right: var(--inputSearchRightPadding);
 	padding-bottom: var(--inputSearchBottomPadding);
@@ -865,49 +491,18 @@
 
 
 
-@mixin notiBoxMessItem_Mobile_RoStyle{
+@mixin notiBoxMessItem_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: hidden;
 	white-space: normal;
 	word-break: keep-all;
 	flex-shrink: 1;
-	width: 100%;		
-	font: normal normal 16px calibri; /*To be changed*/
-}
-
-@mixin notiBoxMessItem_Tablet_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	flex-shrink: 1;
-	width: 100%;		
-	font: normal normal 17px calibri; /*changed*/
-}
-
-@mixin notiBoxMessItem_Laptop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	flex-shrink: 1;
-	width: 100%;		
-	font: normal normal 18px calibri; /*changed*/
-	
-}
-
-@mixin notiBoxMessItem_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	flex-shrink: 1;
-	width: 100%;		
-	font: normal normal 21px calibri; /*changed*/	
+	width: 100%;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--notiFSize);
 }
 
 
@@ -924,43 +519,13 @@
 
 
 
-@mixin notiBoxCloseIconItemWrap_Mobile_RoStyle{
+@mixin notiBoxCloseIconItemWrap_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	flex-shrink: 0;
-	width: 16px; /*To be changed*/
-	height: 16px; /*To be changed*/
-	cursor: pointer;
-}
-
-@mixin notiBoxCloseIconItemWrap_Tablet_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	flex-shrink: 0;
-	width: 17px; /*changed*/
-	height: 17px; /*changed*/
-	cursor: pointer;
-}
-
-@mixin notiBoxCloseIconItemWrap_Laptop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	flex-shrink: 0;
-	width: 18px; /*changed*/
-	height: 18px; /*changed*/
-	cursor: pointer;
-}
-
-@mixin notiBoxCloseIconItemWrap_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	flex-shrink: 0;
-	width: 21px; /*changed*/
-	height: 21px; /*changed*/
+	width: var(--notiCloseIconWidthHeight);
+	height: var(--notiCloseIconWidthHeight);
 	cursor: pointer;
 }
 /*Notification Box Rogrid Mixin*/
@@ -972,14 +537,14 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Customized Normal Button Rogrid Mixin*/
-@mixin normalBtn_Mobile_RoStyle{
+@mixin normalBtn_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
 	overflow: hidden;
 	white-space: normal;
 	word-break: keep-all;
-	width: var(--normBtnMWidth);
+	width: var(--normBtnWidth);
 	padding: var(--normBtnPadding);
 	border-style: solid;
 	border-width: var(--normBtnBorderWidth);
@@ -989,82 +554,11 @@
 	font-style: normal;
 	font-weight: var(--normBtnFWeight);
 	font-family: calibri;
-	font-size: var(--normBtnFMTSize);
+	font-size: var(--normBtnFSize);
 	background-color: var(--normBtnBgColor);
 	color: var(--normBtnFcolor);	
 	cursor: pointer;
 }
-
-@mixin normalBtn_Tablet_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	width: var(--normBtnTWidth);
-	padding: var(--normBtnPadding);
-	border-style: solid;
-	border-width: var(--normBtnBorderWidth);
-	border-color: var(--normBtnBorderColor);
-	border-radius: var(--normBtnRadius);
-	outline: none;
-	font-style: normal;
-	font-weight: var(--normBtnFWeight);
-	font-family: calibri;
-	font-size: var(--normBtnFMTSize);
-	background-color: var(--normBtnBgColor);
-	color: var(--normBtnFcolor);	
-	cursor: pointer;
-}
-
-@mixin normalBtn_Laptop_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	width: var(--normBtnLWidth);
-	padding: var(--normBtnPadding);
-	border-style: solid;
-	border-width: var(--normBtnBorderWidth);
-	border-color: var(--normBtnBorderColor);
-	border-radius: var(--normBtnRadius);
-	outline: none;
-	font-style: normal;
-	font-weight: var(--normBtnFWeight);
-	font-family: calibri;
-	font-size: var(--normBtnFLDSize);
-	background-color: var(--normBtnBgColor);
-	color: var(--normBtnFcolor);	
-	cursor: pointer;
-}
-
-@mixin normalBtn_Desktop_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;
-	width: var(--normBtnDWidth);
-	padding: var(--normBtnPadding);
-	border-style: solid;
-	border-width: var(--normBtnBorderWidth);
-	border-color: var(--normBtnBorderColor);
-	border-radius: var(--normBtnRadius);
-	outline: none;
-	font-style: normal;
-	font-weight: var(--normBtnFWeight);
-	font-family: calibri;
-	font-size: var(--normBtnFLDSize);
-	background-color: var(--normBtnBgColor);
-	color: var(--normBtnFcolor);	
-	cursor: pointer;
-}
-
-
 
 
 
@@ -1213,205 +707,6 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
-/*For Bookmark Rogrid Mixin*/
-@mixin normalBookSelf_MT_RoStyle{
-	position: relative;
-	display: flex;
-	box-sizing: border-box;
-	overflow: hidden;
-	border: 1px solid transparent;
-	flex-flow: row nowrap;
-	align-items: stretch;	
-	width: 100%; /*To be changed*/	
-	border: 1px solid transparent;
-	background-color: var(--roMarkSelf_BgColor);
-	border-radius: 4px;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-@mixin normalBookSelf_Laptop_RoStyle{
-	position: relative;
-	display: flex;
-	box-sizing: border-box;
-	overflow: hidden;
-	border: 1px solid transparent;
-	flex-flow: row nowrap;	
-	align-items: stretch;	
-	width: 225px; /*changed*/	
-	border: 1px solid transparent;
-	background-color: var(--roMarkSelf_BgColor);
-	border-radius: 4px;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-@mixin normalBookSelf_Desktop_RoStyle{
-	position: relative;
-	display: flex;
-	box-sizing: border-box;
-	overflow: hidden;
-	border: 1px solid transparent;
-	flex-flow: row nowrap;
-	align-items: stretch;	
-	width: 240px; /*changed*/	
-	border: 1px solid transparent;
-	background-color: var(--roMarkSelf_BgColor);
-	border-radius: 4px;
-	text-decoration: none;
-	cursor: pointer;
-}
-
-
-
-@mixin normalBookPoint_MT_RoStyle{
-	position: absolute;
-	box-sizing: border-box;
-	overflow: hidden;
-	border-top: 20px solid transparent; /*To be changed*/		
-	border-left-width: 10px;
-	border-left-style: solid;
-	border-left-color: var(--roMarkPoint_Color);
-	border-bottom: 20px solid transparent; /*To be changed*/
-	left: 38px; /*To be changed*/
-	z-index: 2;
-	height: 100%;
-}
-
-@mixin normalBookPoint_Laptop_RoStyle{
-	position: absolute;
-	box-sizing: border-box;
-	overflow: hidden;
-	border-top: 21px solid transparent; /*changed*/		
-	border-left-width: 10px;
-	border-left-style: solid;
-	border-left-color: var(--roMarkPoint_Color);
-	border-bottom: 21px solid transparent; /*changed*/
-	left: 42px; /*changed*/
-	z-index: 2;
-	height: 100%;
-}
-
-@mixin normalBookPoint_Desktop_RoStyle{
-	position: absolute;
-	box-sizing: border-box;
-	overflow: hidden;
-	border-top: 22px solid transparent; /*changed*/		
-	border-left-width: 11px;
-	border-left-style: solid;
-	border-left-color: var(--roMarkPoint_Color);
-	border-bottom: 22px solid transparent; /*changed*/
-	left: 43px; /*changed*/
-	z-index: 2;
-	height: 100%;
-}
-
-
-
-@mixin normalBookLeftSide_MT_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	border: 1px solid transparent;
-	flex-shrink: 0;	
-	width: 40px; /*To be changed*/
-	height: auto;
-	background-color: var(--roLeftMark_BgColor);
-	background-image: var(--roMark_Image);
-	background-position: 12px center;
-	background-repeat: no-repeat;		
-	background-size: 20px 20px; /*To be changed*/
-	background-origin: padding-box;
-	z-index: 1;
-}
-
-@mixin normalBookLeftSide_Laptop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	flex-shrink: 0;
-	width: 42px; /*changed*/
-	height: auto;
-	background-color: var(--roLeftMark_BgColor);
-	background-image: var(--roMark_Image);
-	background-position: 13px center;
-	background-repeat: no-repeat;		
-	background-size: 21px 21px; /*changed*/
-	background-origin: padding-box;
-	z-index: 1;
-}
-
-@mixin normalBookLeftSide_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	flex-shrink: 0;
-	width: 43px; /*changed*/
-	height: auto;
-	background-color: var(--roLeftMark_BgColor);
-	background-image: var(--roMark_Image);
-	background-position: 14.5px center;
-	background-repeat: no-repeat;		
-	background-size: 22.5px 22.5px; /*changed*/
-	background-origin: padding-box;
-	z-index: 1;
-}
-
-
-
-@mixin normalBookLabelSide_MT_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	white-space: normal;
-	word-break: keep-all;
-	flex-shrink: 1;
-	align-self: center;	
-	width: 100%;
-	height: auto;	
-	background-color: var(--roRightMark_BgColor);	
-	color: var(--roMark_FColor);		
-	padding: 5px 5px 5px 15px;
-	z-index: 0;
-}
-
-@mixin normalBookLabelSide_Laptop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	flex-shrink: 1;
-	align-self: center;	
-	width: 100%;
-	height: auto;		
-	background-color: var(--roRightMark_BgColor);	
-	color: var(--roMark_FColor);		
-	padding: 5px 5px 5px 15px;
-	z-index: 0;
-}
-
-@mixin normalBookLabelSide_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	flex-shrink: 1;
-	align-self: center;
-	width: 100%;
-	height: auto;
-	background-color: var(--roRightMark_BgColor);
-	color: var(--roMark_FColor);
-	padding: 5px 5px 5px 15px;
-	z-index: 0;
-}
-/*For Bookmark Rogrid Mixin*/
-/***********************************************************************************************************************************************************************************************************/
-
-
-/***********************************************************************************************************************************************************************************************************/
 
 
 /***********************************************************************************************************************************************************************************************************/
@@ -1438,8 +733,8 @@
 	border-style: solid;		
 	border-width: var(--cusRadioBorderWidth);
 	border-color: var(--cusRadioBorderColor);
-	width: var(--cusRadioWidth); 
-	height: var(--cusRadioHeight);
+	width: var(--cusRadioWidthHeight); 
+	height: var(--cusRadioWidthHeight);
 	padding: 3px;
 	border-radius: 50%;
 	box-shadow: none; /*box-shadow: 0px 0px 15px #00fafa; in JS*/
@@ -1458,8 +753,8 @@
 	border-style: solid;		
 	border-width: var(--cusRadioBorderWidth);
 	border-color: var(--cusRadioBorderColor);
-	width: var(--cusRadioWidth); 
-	height: var(--cusRadioHeight);	
+	width: var(--cusRadioWidthHeight); 
+	height: var(--cusRadioWidthHeight);	
 	background-color: var(--cusRadioBgColor);
 	cursor: pointer;
 }
@@ -1523,8 +818,8 @@
 	overflow: visible;
 	white-space: normal;
 	word-break: keep-all;
-	width: var(--radioIconLabelWidth); 
-	height: var(--radioIconLabelHeight);
+	width: var(--radioIconLabelWidthHeight); 
+	height: var(--radioIconLabelWidthHeight);
 }
 
 
@@ -1570,7 +865,7 @@
 
 
 
-@mixin calendarLiteHeaderItem_MTL_RoStyle{
+@mixin calendarLiteHeaderItem_RoStyle{
 	position: relative;
 	display: flex;
 	box-sizing: border-box;
@@ -1579,84 +874,32 @@
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;	
-	width: 120px; /*To be changed*/
-}
-
-@mixin calendarLiteHeaderItem_Desktop_RoStyle{
-	position: relative;
-	display: flex;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
-	width: 130px; /*changed*/
 }
 
 
 
-@mixin calendarLiteHeaderTxt_MT_RoStyle{
+@mixin calendarLiteHeaderTxt_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	border: 1px solid transparent;
-	white-space: nowrap;		
-	font: normal bold 15px calibri; /*To be changed*/
+	white-space: nowrap;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--calendarHeadTxtFSize);
 	color: #06a685;
 }
 
-@mixin calendarLiteHeaderTxt_Laptop_RoStyle{
+
+
+@mixin calendarLiteHeaderButton_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	border: 1px solid transparent;
-	white-space: nowrap;		
-	font: normal bold 16px calibri; /*changed*/
-	color: #06a685;	
-}
-
-@mixin calendarLiteHeaderTxt_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	white-space: nowrap;		
-	font: normal bold 18px calibri; /*changed*/
-	color: #06a685;	
-}
-
-
-
-@mixin calendarLiteHeaderButton_MT_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	width: 25px; /*To be changed*/
-	height: 25px; /*To be changed*/
-	cursor: pointer;
-	flex-shrink: 0;
-}
-
-@mixin calendarLiteHeaderButton_Laptop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	width: 26px; /*changed*/
-	height: 26px; /*changed*/
-	cursor: pointer;
-	flex-shrink: 0;
-}
-
-@mixin calendarLiteHeaderButton_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	width: 28px; /*changed*/
-	height: 28px; /*changed*/
+	width: var(--calendarHeadBtnWidthHeight);
+	height: var(--calendarHeadBtnWidthHeight);
 	cursor: pointer;
 	flex-shrink: 0;
 }
@@ -1674,34 +917,17 @@
 
 
 
-@mixin calendarLiteDaysText_MT_RoStyle{
+@mixin calendarLiteDaysText_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: visible;
 	width: 70px; /*To be changed*/
 	padding: 4px;
 	text-align: center;
-	font: normal normal 14px calibri; /*To be changed*/
-}
-
-@mixin calendarLiteDaysText_Laptop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	width: 71px; /*changed*/
-	padding: 4px;
-	text-align: center;
-	font: normal normal 15px calibri; /*changed*/
-}
-
-@mixin calendarLiteDaysText_Desktop_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
-	width: 73px; /*changed*/
-	padding: 4px;
-	text-align: center;
-	font: normal normal 17px calibri; /*changed*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--calendarDayTxtFSize);
 }
 
 
@@ -1734,14 +960,17 @@
 
 
 
-@mixin cusDropdownSelected_MT_RoStyle{
+@mixin cusDropdownSelected_RoStyle{
 	position: relative;
 	box-sizing: border-box;
 	overflow: hidden;
 	border: 1px solid transparent;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-	font: normal normal 12px calibri; /*To be changed*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--cusDropFsize);
 	color: var(--cusDropSelFColor);
 	padding: 10px 5px 10px 5px;	
 	border-radius: 7px;
@@ -1750,52 +979,19 @@
 	order: 0;
 }
 
-@mixin cusDropdownSelected_LD_RoStyle{
-	position: relative;
-	box-sizing: border-box;
-	overflow: hidden;
-	border: 1px solid transparent;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	font: normal normal 14px calibri; /*changed*/
-	color: var(--cusDropSelFColor);
-	padding: 10px 5px 10px 5px;	
-	border-radius: 7px; 
-	background-color: transparent;
-	cursor: pointer;
-	order: 0;
-}
 
 
-
-@mixin cusDropdownSelArrow_MT_RoStyle{
+@mixin cusDropdownSelArrow_RoStyle{
 	//content: "";
 	position: absolute;
 	display: block;
 	box-sizing: border-box;
 	overflow: visible;
 	border: 1px solid transparent;
-	height: 22px; /*To be changed*/
-	width: 22px; /*To be changed*/
+	height: var(--cusDropArrowWidthHeight);
+	width: var(--cusDropArrowWidthHeight);
 	right: 10px;				
 	background-image: var(--cusDropSelArrowDownIcon); 
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-	transition: all 0.4s;
-}
-
-@mixin cusDropdownSelArrow_LD_RoStyle{
-	//content: "";
-	position: absolute;
-	display: block;
-	box-sizing: border-box;
-	overflow: visible;
-	border: 1px solid transparent;
-	height: 24px; /*changed*/
-	width: 24px; /*changed*/
-	right: 10px;				
-	background-image: var(--cusDropSelArrowDownIcon);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -1827,25 +1023,14 @@
 
 
 
-@mixin dropdownSearchInput_MT_RoStyle{
+@mixin dropdownSearchInput_RoStyle{
 	display: block;
 	box-sizing: border-box;
 	padding: 5px;
-	font: normal normal 14px calibri; /*To be changed*/
-	border-width: var(--cusDropSearchBorderWidth);
-	border-style: solid;
-	border-color: var(--cusDropSearchBorderColor);
-	background-color: var(--cusDropSearchBgColor);
-	border-radius: 7px 7px 0px 0px;
-	width: 100%;
-	color: var(--cusDropSearchFColor);
-}
-
-@mixin dropdownSearchInput_LD_RoStyle{
-	display: block;
-	box-sizing: border-box;
-	padding: 5px;
-	font: normal normal 16px calibri; /*changed*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--cusDropFsize);
 	border-width: var(--cusDropSearchBorderWidth);
 	border-style: solid;
 	border-color: var(--cusDropSearchBorderColor);
@@ -1925,13 +1110,12 @@
 
 @mixin cusDropdownRealInputRadio_RoStyle{
 	position: absolute;
-	display: block;
-	visibility: hidden;
+	display: none;
 }
 
 
 
-@mixin cusDropdownOptionLabel_MT_RoStyle{
+@mixin cusDropdownOptionLabel_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
@@ -1939,26 +1123,15 @@
 	white-space: nowrap;
 	border: 1px solid transparent;
 	text-overflow: ellipsis;
-	font: normal normal 14px calibri; /* To be changed*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--cusDropFsize);
 	padding: 12px;
 	color: var(--cusDropOptLabColor);
 	cursor: pointer;
 	background-color: transparent;
-}
-
-@mixin cusDropdownOptionLabel_LD_RoStyle{
-	position: relative;
-	display: block;
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: nowrap;
-	border: 1px solid transparent;
-	text-overflow: ellipsis;
-	font: normal normal 16px calibri; /*changed*/
-	padding: 12px;
-	color: var(--cusDropOptLabColor);
-	cursor: pointer;
-	background-color: transparent;
+	width: 100%;
 }
 
 
@@ -2515,19 +1688,11 @@
 
 
 
-@mixin footerTxt_MT_RoStyle{
+@mixin footerTxt_RoStyle{
 	font-style: normal; 
 	font-weight: normal;
 	font-family: calibri;
-	font-size: var(--footerFMTSize);
-	color: var(--footerFColor);
-}
-
-@mixin footerTxt_LD_RoStyle{
-	font-style: normal; 
-	font-weight: normal;
-	font-family: calibri;
-	font-size: var(--footerFLDSize);
+	font-size: var(--footerFSize);
 	color: var(--footerFColor);
 }
 /*Footer Rogrid Mixin*/

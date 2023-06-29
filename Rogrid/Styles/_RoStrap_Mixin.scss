@@ -12,123 +12,33 @@
 /*Body Style RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	body{
-		@include bodyitself_RoStyle;
-	}
+/*General Media*/
 
-	/* width */
-	body::-webkit-scrollbar {
-		@include bodyScrollBar_RoStyle;
-	}
-
-	/* Track */
-	body::-webkit-scrollbar-track {
-		@include bodyTrack_RoStyle;
-	}
-
-	/* Handle */
-	body::-webkit-scrollbar-thumb {
-		@include bodyHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	body::-webkit-scrollbar-thumb:hover {
-		@include bodyHandleHover_RoStyle;
-	}
+body{
+	@include bodyitself_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	body{
-		@include bodyitself_RoStyle;
-	}
-
-	/* width */
-	body::-webkit-scrollbar {
-		@include bodyScrollBar_RoStyle;
-	}
-
-	/* Track */
-	body::-webkit-scrollbar-track {
-		@include bodyTrack_RoStyle;
-	}
-
-	/* Handle */
-	body::-webkit-scrollbar-thumb {
-		@include bodyHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	body::-webkit-scrollbar-thumb:hover {
-		@include bodyHandleHover_RoStyle;
-	}
+/* width */
+body::-webkit-scrollbar {
+	@include bodyScrollBar_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	body{
-		@include bodyitself_RoStyle;
-	}
-
-	/* width */
-	body::-webkit-scrollbar {
-		@include bodyScrollBar_RoStyle;
-	}
-
-	/* Track */
-	body::-webkit-scrollbar-track {
-		@include bodyTrack_RoStyle;
-	}
-
-	/* Handle */
-	body::-webkit-scrollbar-thumb {
-		@include bodyHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	body::-webkit-scrollbar-thumb:hover {
-		@include bodyHandleHover_RoStyle;
-	}
+/* Track */
+body::-webkit-scrollbar-track {
+	@include bodyTrack_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	body{
-		@include bodyitself_RoStyle;
-	}
-
-	/* width */
-	body::-webkit-scrollbar {
-		@include bodyScrollBar_RoStyle;
-	}
-
-	/* Track */
-	body::-webkit-scrollbar-track {
-		@include bodyTrack_RoStyle;
-	}
-
-	/* Handle */
-	body::-webkit-scrollbar-thumb {
-		@include bodyHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	body::-webkit-scrollbar-thumb:hover {
-		@include bodyHandleHover_RoStyle;
-	}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+	@include bodyHandle_RoStyle;
 }
-/*Desktop*/
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+	@include bodyHandleHover_RoStyle;
+}
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Body Style RoStrap Mixin*/
@@ -142,167 +52,44 @@
 /*Custom Inputs RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	div.cusInputs_RoClass{
-		@include customInputsWrap_RoStyle;
-	}
+/*General Media*/
 
-	div.cusInputs_RoClass>input{
-		@include customInputs_MT_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select{
-		@include customInputs_MT_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.placeholdme_RoClass{
-		@include customInputsPlace_Mobile_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.upPlaceholdme_RoClass{
-		@include customInputsPlaceUp_Mobile_RoStyle;
-	}	
-
-	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Mobile_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass{
-		@include customInputsPlaceAnimate_Mobile_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Mobile_RoStyle;
-	}
+div.cusInputs_RoClass{
+	@include customInputsWrap_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	div.cusInputs_RoClass{
-		@include customInputsWrap_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input{
-		@include customInputs_MT_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select{
-		@include customInputs_MT_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.placeholdme_RoClass{
-		@include customInputsPlace_Tablet_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.upPlaceholdme_RoClass{
-		@include customInputsPlaceUp_Tablet_RoStyle;
-	}		
-
-	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Tablet_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass{
-		@include customInputsPlaceAnimate_Tablet_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Tablet_RoStyle;
-	}
+div.cusInputs_RoClass>input{
+	@include customInputs_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	div.cusInputs_RoClass{
-		@include customInputsWrap_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input{
-		@include customInputs_LD_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select{
-		@include customInputs_LD_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.placeholdme_RoClass{
-		@include customInputsPlace_Laptop_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.upPlaceholdme_RoClass{
-		@include customInputsPlaceUp_Laptop_RoStyle;
-	}		
-
-	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Laptop_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass{
-		@include customInputsPlaceAnimate_Laptop_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Laptop_RoStyle;
-	}
+div.cusInputs_RoClass>select{
+	@include customInputs_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	div.cusInputs_RoClass{
-		@include customInputsWrap_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input{
-		@include customInputs_LD_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select{
-		@include customInputs_LD_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.placeholdme_RoClass{
-		@include customInputsPlace_Desktop_RoStyle;
-	}
-
-	div.cusInputs_RoClass>.upPlaceholdme_RoClass{
-		@include customInputsPlaceUp_Desktop_RoStyle;
-	}		
-
-	div.cusInputs_RoClass>input:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Desktop_RoStyle;
-	}
-
-	div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass,
-	div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass{
-		@include customInputsPlaceAnimate_Desktop_RoStyle;
-	}
-
-	div.cusInputs_RoClass>select:focus + .placeholdme_RoClass,
-	div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass{
-		@include customInputsPlaceAnimate_Desktop_RoStyle;
-	}
+div.cusInputs_RoClass>.placeholdme_RoClass{
+	@include customInputsPlace_RoStyle;
 }
-/*Desktop*/
+
+div.cusInputs_RoClass>.upPlaceholdme_RoClass{
+	@include customInputsPlaceUp_RoStyle;
+}	
+
+div.cusInputs_RoClass>input:focus + .placeholdme_RoClass,
+div.cusInputs_RoClass>input:not(:focus):valid + .placeholdme_RoClass{
+	@include customInputsPlaceAnimate_RoStyle;
+}
+
+div.cusInputs_RoClass>input:focus + .upPlaceholdme_RoClass,
+div.cusInputs_RoClass>input:not(:focus):valid + .upPlaceholdme_RoClass{
+	@include customInputsPlaceAnimate_RoStyle;
+}
+
+div.cusInputs_RoClass>select:focus + .placeholdme_RoClass,
+div.cusInputs_RoClass>select:not(:focus):valid + .placeholdme_RoClass{
+	@include customInputsPlaceAnimate_RoStyle;
+}
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Custom Inputs RoStrap Mixin*/
@@ -316,43 +103,13 @@
 /*Current Date RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	.currentDate_RoClass{
-		@include currentDate_MT_RoStyle;
-	} 
-}
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	.currentDate_RoClass{
-		@include currentDate_MT_RoStyle;
-	} 
-}
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
+.currentDate_RoClass{
+	@include currentDate_RoStyle;
+} 
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	.currentDate_RoClass{
-		@include currentDate_LD_RoStyle;
-	}
-}
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){	
-	.currentDate_RoClass{
-		@include currentDate_LD_RoStyle;
-	}
-}
-/*Desktop*/
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Current Date RoStrap Mixin*/
@@ -366,107 +123,27 @@
 /*Custom Checkbox RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	.cusCheckBoxPaper_RoClass{
-		@include customCheckboxWrap_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxLabel_MT_RoStyle;		
-	}
-
-	.cusCheckBoxPaper_RoClass>input{
-		@include origCheckbox_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass{
-		@include cusCheckbox_MT_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass>img{
-		@include checkIcon_RoStyle;
-	}
+/*General Media*/
+.cusCheckBoxPaper_RoClass{
+	@include customCheckboxWrap_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	.cusCheckBoxPaper_RoClass{
-		@include customCheckboxWrap_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxLabel_MT_RoStyle;		
-	}
-
-	.cusCheckBoxPaper_RoClass>input{
-		@include origCheckbox_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass{
-		@include cusCheckbox_MT_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass>img{
-		@include checkIcon_RoStyle;
-	}
+.cusCheckBoxPaper_RoClass>label{
+	@include cusCheckboxLabel_RoStyle;		
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	.cusCheckBoxPaper_RoClass{
-		@include customCheckboxWrap_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxLabel_LD_RoStyle;		
-	}
-
-	.cusCheckBoxPaper_RoClass>input{
-		@include origCheckbox_RoStyle;;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass{
-		@include cusCheckbox_LD_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass>img{
-		@include checkIcon_RoStyle;
-	}
+.cusCheckBoxPaper_RoClass>input{
+	@include origCheckbox_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	.cusCheckBoxPaper_RoClass{
-		@include customCheckboxWrap_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label{
-		@include cusCheckboxLabel_LD_RoStyle;		
-	}
-
-	.cusCheckBoxPaper_RoClass>input{
-		@include origCheckbox_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass{
-		@include cusCheckbox_LD_RoStyle;
-	}
-
-	.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass>img{
-		@include checkIcon_RoStyle;
-	}
+.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass{
+	@include cusCheckbox_RoStyle;
 }
-/*Desktop*/
+
+.cusCheckBoxPaper_RoClass>label>div.boxme_RoClass>img{
+	@include checkIcon_RoStyle;
+}
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Custom Checkbox RoStrap Mixin*/
@@ -480,267 +157,69 @@
 /*Custom Modal RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	/*Blurrer*/
-	.thisIsJapan_RoClass{
-		@include blurrer_RoStyle;
-	}
-	/*Blurrer*/
+/*General media*/
 
-
-	/*Modal Container*/
-	.modalmeCon_RoClass{
-		@include modalmeCon_Style;
-	}
-	/*Modal Container*/
-
-
-	/*Custom Modal itself*/
-	.modalme_RoClass{
-		@include modalItself_Mobile_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass{
-		@include modalHeader_RoStyle;
-	}
-
-	.modalme_RoClass>.modalBody_RoClass{
-		@include modalBody_RoStyle;
-	}
-
-	/* width */
-	.modalBody_RoClass::-webkit-scrollbar {
-		@include modalScrollWidth_RoStyle;
-	}
-
-	/* Track */
-	.modalBody_RoClass::-webkit-scrollbar-track {
-		@include modalScrollTrack_RoStyle;
-	}
-
-	/* Handle */
-	.modalBody_RoClass::-webkit-scrollbar-thumb {
-		@include modalScrollHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
-		@include modalScrollHover_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadTxt_RoClass{
-		@include modalHeaderTxt_MT_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass{
-		@include modalHeaderCloser_Mobile_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
-		@include modalCloseIcon_RoStyle;
-	}
-	/*Custom Modal itself*/
+/*Blurrer*/
+.thisIsJapan_RoClass{
+	@include blurrer_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	/*Blurrer*/
-	.thisIsJapan_RoClass{
-		@include blurrer_RoStyle;
-	}
-	/*Blurrer*/
+/*Blurrer*/
 
 
-	/*Modal Container*/
-	.modalmeCon_RoClass{
-		@include modalmeCon_Style;
-	}
-	/*Modal Container*/
-
-
-	/*Custom Modal*/
-	.modalme_RoClass{
-		@include modalItself_Tablet_RoStyle;
-	}	
-
-	.modalme_RoClass>.modalHeader_RoClass{
-		@include modalHeader_RoStyle;
-	}
-
-	.modalme_RoClass>.modalBody_RoClass{
-		@include modalBody_RoStyle;
-	}
-
-	/* width */
-	.modalBody_RoClass::-webkit-scrollbar {
-		@include modalScrollWidth_RoStyle;
-	}
-
-	/* Track */
-	.modalBody_RoClass::-webkit-scrollbar-track {
-		@include modalScrollTrack_RoStyle;
-	}
-
-	/* Handle */
-	.modalBody_RoClass::-webkit-scrollbar-thumb {
-		@include modalScrollHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
-		@include modalScrollHover_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadTxt_RoClass{
-		@include modalHeaderTxt_MT_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass{
-		@include modalHeaderCloser_Tablet_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
-		@include modalCloseIcon_RoStyle;
-	}
-	/*Custom Modal*/
+/*Modal Container*/
+.modalmeCon_RoClass{
+	@include modalmeCon_Style;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	/*Blurrer*/
-	.thisIsJapan_RoClass{
-		@include blurrer_RoStyle;
-	}
-	/*Blurrer*/
+/*Modal Container*/
 
 
-	/*Modal Container*/
-	.modalmeCon_RoClass{
-		@include modalmeCon_Style;
-	}
-	/*Modal Container*/
-
-
-	/*Custom Modal*/
-	.modalme_RoClass{
-		@include modalItself_Laptop_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass{
-		@include modalHeader_RoStyle;
-	}
-
-	.modalme_RoClass>.modalBody_RoClass{
-		@include modalBody_RoStyle;
-	}
-
-	/* width */
-	.modalBody_RoClass::-webkit-scrollbar {
-		@include modalScrollWidth_RoStyle;
-	}
-
-	/* Track */
-	.modalBody_RoClass::-webkit-scrollbar-track {
-		@include modalScrollTrack_RoStyle;
-	}
-
-	/* Handle */
-	.modalBody_RoClass::-webkit-scrollbar-thumb {
-		@include modalScrollHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
-		@include modalScrollHover_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadTxt_RoClass{
-		@include modalHeaderTxt_LD_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass{
-		@include modalHeaderCloser_Laptop_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
-		@include modalCloseIcon_RoStyle;
-	}
-	/*Custom Modal*/
+/*Custom Modal itself*/
+.modalme_RoClass{
+	@include modalItself_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	/*Blurrer*/
-	.thisIsJapan_RoClass{
-		@include blurrer_RoStyle;
-	}
-	/*Blurrer*/
-
-
-	/*Modal Container*/
-	.modalmeCon_RoClass{
-		@include modalmeCon_Style;
-	}
-	/*Modal Container*/
-
-
-	/*Custom Modal*/
-	.modalme_RoClass{
-		@include modalItself_Desktop_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass{
-		@include modalHeader_RoStyle;
-	}
-
-	.modalme_RoClass>.modalBody_RoClass{
-		@include modalBody_RoStyle;
-	}
-
-	/* width */
-	.modalBody_RoClass::-webkit-scrollbar {
-		@include modalScrollWidth_RoStyle;
-	}
-
-	/* Track */
-	.modalBody_RoClass::-webkit-scrollbar-track {
-		@include modalScrollTrack_RoStyle;
-	}
-
-	/* Handle */
-	.modalBody_RoClass::-webkit-scrollbar-thumb {
-		@include modalScrollHandle_RoStyle;
-	}
-
-	/* Handle on hover */
-	.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
-		@include modalScrollHover_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadTxt_RoClass{
-		@include modalHeaderTxt_LD_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass{
-		@include modalHeaderCloser_Desktop_RoStyle;
-	}
-
-	.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
-		@include modalCloseIcon_RoStyle;
-	}
-	/*Custom Modal*/
+.modalme_RoClass>.modalHeader_RoClass{
+	@include modalHeader_RoStyle;
 }
-/*Desktop*/
+
+.modalme_RoClass>.modalBody_RoClass{
+	@include modalBody_RoStyle;
+}
+
+/* width */
+.modalBody_RoClass::-webkit-scrollbar {
+	@include modalScrollWidth_RoStyle;
+}
+
+/* Track */
+.modalBody_RoClass::-webkit-scrollbar-track {
+	@include modalScrollTrack_RoStyle;
+}
+
+/* Handle */
+.modalBody_RoClass::-webkit-scrollbar-thumb {
+	@include modalScrollHandle_RoStyle;
+}
+
+/* Handle on hover */
+.modalBody_RoClass::-webkit-scrollbar-thumb:hover {
+	@include modalScrollHover_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass>.modalHeadTxt_RoClass{
+	@include modalHeaderTxt_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass{
+	@include modalHeaderCloser_RoStyle;
+}
+
+.modalme_RoClass>.modalHeader_RoClass>.modalHeadClose_RoClass>img{
+	@include modalCloseIcon_RoStyle;
+}
+/*Custom Modal itself*/
+
+/*General media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Custom Modal RoStrap Mixin*/
@@ -754,59 +233,17 @@
 /*Spinner Loading RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	.spinnerLoad_RoClass{
-		@include spinnerLoad_RoStyle;
-	}
+/*General Medial*/
 
-	.spinnerLoad_RoClass>img{
-		@include childImage_RoStyle;
-	}
+.spinnerLoad_RoClass{
+	@include spinnerLoad_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	.spinnerLoad_RoClass{
-		@include spinnerLoad_RoStyle;
-	}
-
-	.spinnerLoad_RoClass>img{
-		@include childImage_RoStyle;
-	}
+.spinnerLoad_RoClass>img{
+	@include childImage_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	.spinnerLoad_RoClass{
-		@include spinnerLoad_RoStyle;
-	}
-
-	.spinnerLoad_RoClass>img{
-		@include childImage_RoStyle;
-	}
-}
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	.spinnerLoad_RoClass{
-		@include spinnerLoad_RoStyle;
-	}
-
-	.spinnerLoad_RoClass>img{
-		@include childImage_RoStyle;
-	}
-}
-/*Desktop*/
+/*General Medial*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Spinner Loading RoStrap Mixin*/
@@ -820,43 +257,13 @@
 /*Search Input with Style RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	input.searchInput_RoClass{
-		@include searchInput_Mobile_Style;
-	}
-}
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	input.searchInput_RoClass{
-		@include searchInput_Tablet_Style;
-	}
+input.searchInput_RoClass{
+	@include searchInput_Style;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	input.searchInput_RoClass{
-		@include searchInput_Laptop_Style;
-	}
-}
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	input.searchInput_RoClass{
-		@include searchInput_Desktop_Style;
-	}
-}
-/*Desktop*/
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Search Input with Style RoStrap Mixin*/
@@ -870,183 +277,50 @@
 /*Notification Box RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	/*_Success Notification Box*/
-	.notifyFlex_Suc_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxSuccessBg_RoStyle;
-	}
+/*General Media*/
 
-	.notifyFlex_Suc_RoClass>.notifyMessItem_Suc_RoClass{
-		@include notiBoxMessItem_Mobile_RoStyle;		
-		@include notiBoxSuccessColor_RoStyle;
-	}
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass{
-		@include notiBoxCloseIconItemWrap_Mobile_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Success Notification Box*/
-
-
-	/*_Failed Notification Box*/
-	.notifyFlex_Failed_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxFailedBg_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyMessItem_Failed_RoClass{
-		@include notiBoxMessItem_Mobile_RoStyle;		
-		@include notiBoxFailedColor_RoStyle;
-	}
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass{
-		@include notiBoxCloseIconItemWrap_Mobile_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Failed Notification Box*/
+/*_Success Notification Box*/
+.notifyFlex_Suc_RoClass{
+	@include notiBoxFlexWrap_RoStyle;
+	@include notiBoxSuccessBg_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	/*_Success Notification Box*/
-	.notifyFlex_Suc_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxSuccessBg_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyMessItem_Suc_RoClass{
-		@include notiBoxMessItem_Tablet_RoStyle;
-		@include notiBoxSuccessColor_RoStyle;
-	}
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass{
-		@include notiBoxCloseIconItemWrap_Tablet_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Success Notification Box*/
-
-
-	/*_Failed Notification Box*/
-	.notifyFlex_Failed_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxFailedBg_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyMessItem_Failed_RoClass{
-		@include notiBoxMessItem_Tablet_RoStyle;		
-		@include notiBoxFailedColor_RoStyle;
-	}
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass{
-		@include notiBoxCloseIconItemWrap_Tablet_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Failed Notification Box*/
+.notifyFlex_Suc_RoClass>.notifyMessItem_Suc_RoClass{
+	@include notiBoxMessItem_RoStyle;		
+	@include notiBoxSuccessColor_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	/*_Success Notification Box*/
-	.notifyFlex_Suc_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxSuccessBg_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyMessItem_Suc_RoClass{
-		@include notiBoxMessItem_Laptop_RoStyle;
-		@include notiBoxSuccessColor_RoStyle;
-	}
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass{
-		@include notiBoxCloseIconItemWrap_Laptop_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Success Notification Box*/
-
-
-	/*_Failed Notification Box*/
-	.notifyFlex_Failed_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxFailedBg_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyMessItem_Failed_RoClass{
-		@include notiBoxMessItem_Laptop_RoStyle;		
-		@include notiBoxFailedColor_RoStyle;
-	}
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass{
-		@include notiBoxCloseIconItemWrap_Laptop_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Failed Notification Box*/
+.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass{
+	@include notiBoxCloseIconItemWrap_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){	
-	/*_Success Notification Box*/
-	.notifyFlex_Suc_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxSuccessBg_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyMessItem_Suc_RoClass{
-		@include notiBoxMessItem_Desktop_RoStyle;
-		@include notiBoxSuccessColor_RoStyle;
-	}
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass{
-		@include notiBoxCloseIconItemWrap_Desktop_RoStyle;
-	}
-
-	.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Success Notification Box*/
-
-
-	/*_Failed Notification Box*/
-	.notifyFlex_Failed_RoClass{
-		@include notiBoxFlexWrap_RoStyle;
-		@include notiBoxFailedBg_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyMessItem_Failed_RoClass{
-		@include notiBoxMessItem_Desktop_RoStyle;		
-		@include notiBoxFailedColor_RoStyle;
-	}
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass{
-		@include notiBoxCloseIconItemWrap_Desktop_RoStyle;
-	}
-
-	.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass>img{
-		@include childImage_RoStyle;
-	}
-	/*_Failed Notification Box*/
+.notifyFlex_Suc_RoClass>.notifyCloseItem_Suc_RoClass>img{
+	@include childImage_RoStyle;
 }
-/*Desktop*/
+/*_Success Notification Box*/
+
+
+/*_Failed Notification Box*/
+.notifyFlex_Failed_RoClass{
+	@include notiBoxFlexWrap_RoStyle;
+	@include notiBoxFailedBg_RoStyle;
+}
+
+.notifyFlex_Failed_RoClass>.notifyMessItem_Failed_RoClass{
+	@include notiBoxMessItem_RoStyle;		
+	@include notiBoxFailedColor_RoStyle;
+}
+
+.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass{
+	@include notiBoxCloseIconItemWrap_RoStyle;
+}
+
+.notifyFlex_Failed_RoClass>.notifyCloseItem_Failed_RoClass>img{
+	@include childImage_RoStyle;
+}
+/*_Failed Notification Box*/
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Notification Box RoStrap Mixin*/
@@ -1060,75 +334,21 @@
 /*Normal Custom Button RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	.normButton_RoClass{
-		@include normalBtn_Mobile_RoStyle;
-	}
+/*General Medial*/
 
-	.normButton_RoClass:hover{
-		@include normalBtn_HovAct_RoStyle;
-	}
-
-	.normButton_RoClass:active{
-		@include normalBtn_HovAct_RoStyle;
-	}	
+.normButton_RoClass{
+	@include normalBtn_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	.normButton_RoClass{
-		@include normalBtn_Tablet_RoStyle;
-	}
-
-	.normButton_RoClass:hover{
-		@include normalBtn_HovAct_RoStyle;
-	}
-
-	.normButton_RoClass:active{
-		@include normalBtn_HovAct_RoStyle;
-	}
+.normButton_RoClass:hover{
+	@include normalBtn_HovAct_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	.normButton_RoClass{
-		@include normalBtn_Laptop_RoStyle;
-	}
+.normButton_RoClass:active{
+	@include normalBtn_HovAct_RoStyle;
+}	
 
-	.normButton_RoClass:hover{
-		@include normalBtn_HovAct_RoStyle;
-	}
-
-	.normButton_RoClass:active{
-		@include normalBtn_HovAct_RoStyle;
-	}
-}
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	.normButton_RoClass{
-		@include normalBtn_Desktop_RoStyle;
-	}
-
-	.normButton_RoClass:hover{
-		@include normalBtn_HovAct_RoStyle;
-	}
-
-	.normButton_RoClass:active{
-		@include normalBtn_HovAct_RoStyle;
-	}
-}
-/*Desktop*/
+/*General Medial*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Normal Custom Button RoStrap Mixin*/
@@ -1142,43 +362,13 @@
 /*Icon Button Only RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	button.iconBtn_RoClass{
-		@include iconBtn_RoStyle;
-	}
-}
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	button.iconBtn_RoClass{
-		@include iconBtn_RoStyle;
-	}
+button.iconBtn_RoClass{
+	@include iconBtn_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	button.iconBtn_RoClass{
-		@include iconBtn_RoStyle;
-	}
-}
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	button.iconBtn_RoClass{
-		@include iconBtn_RoStyle;
-	}
-}
-/*Desktop*/
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Icon Button Only RoStrap Mixin*/
@@ -1189,416 +379,73 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
-/*Bookmark RoStrap Mixin*/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	/*_Button Bookmark itself*/
-	.roMark_RoClass{
-		@include normalBookSelf_MT_RoStyle;		
-	}
-	/*_Button Bookmark itself*/
-
-
-	/*_Pointer*/
-	.roMark_RoClass>.roMarkPointer_RoClass{
-		@include normalBookPoint_MT_RoStyle;
-	}
-	/*_Pointer*/
-
-
-	/*_Bookmark Left Side*/
-	.roMark_RoClass>.roMarkTransBSide_RoClass{
-		@include normalBookLeftSide_MT_RoStyle;
-	}
-	/*_Bookmark Left Side*/
-
-
-	/*_Bookmark Right Side/Label*/
-	.roMark_RoClass>.roMarkLabSide_RoClass{
-		@include normalBookLabelSide_MT_RoStyle;
-	}
-	/*_Bookmark Right Side/Label*/
-}
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	/*_Button Bookmark itself*/
-	.roMark_RoClass{
-		@include normalBookSelf_MT_RoStyle;		
-	}
-	/*_Button Bookmark itself*/
-
-
-	/*_Pointer*/
-	.roMark_RoClass>.roMarkPointer_RoClass{
-		@include normalBookPoint_MT_RoStyle;
-	}
-	/*_Pointer*/
-
-
-	/*_Bookmark Left Side*/
-	.roMark_RoClass>.roMarkTransBSide_RoClass{
-		@include normalBookLeftSide_MT_RoStyle;
-	}
-	/*_Bookmark Left Side*/
-
-
-	/*_Bookmark Right Side/Label*/
-	.roMark_RoClass>.roMarkLabSide_RoClass{
-		@include normalBookLabelSide_MT_RoStyle;
-	}
-	/*_Bookmark Right Side/Label*/
-}
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	/*_Button Bookmark itself*/
-	.roMark_RoClass{
-		@include normalBookSelf_Laptop_RoStyle;		
-	}
-	/*_Button Bookmark itself*/
-
-
-	/*_Pointer*/
-	.roMark_RoClass>.roMarkPointer_RoClass{
-		@include normalBookPoint_Laptop_RoStyle;
-	}
-	/*_Pointer*/
-
-
-	/*_Bookmark Left Side*/
-	.roMark_RoClass>.roMarkTransBSide_RoClass{
-		@include normalBookLeftSide_Laptop_RoStyle;
-	}
-	/*_Bookmark Left Side*/
-
-
-	/*_Bookmark Right Side/Label*/
-	.roMark_RoClass>.roMarkLabSide_RoClass{
-		@include normalBookLabelSide_Laptop_RoStyle;
-	}
-	/*_Bookmark Right Side/Label*/
-}
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	/*_Button Bookmark itself*/
-	.roMark_RoClass{
-		@include normalBookSelf_Desktop_RoStyle;		
-	}
-	/*_Button Bookmark itself*/
-
-
-	/*_Pointer*/
-	.roMark_RoClass>.roMarkPointer_RoClass{
-		@include normalBookPoint_Desktop_RoStyle;
-	}
-	/*_Pointer*/
-
-
-	/*_Bookmark Left Side*/
-	.roMark_RoClass>.roMarkTransBSide_RoClass{
-		@include normalBookLeftSide_Desktop_RoStyle;
-	}
-	/*_Bookmark Left Side*/
-
-
-	/*_Bookmark Right Side/Label*/
-	.roMark_RoClass>.roMarkLabSide_RoClass{
-		@include normalBookLabelSide_Desktop_RoStyle;
-	}
-	/*_Bookmark Right Side/Label*/
-}
-/*Desktop*/
-/***********************************************************************************************************************************************************************************************************/
-
-/*Bookmark RoStrap Mixin*/
-/***********************************************************************************************************************************************************************************************************/
-
-
-/***********************************************************************************************************************************************************************************************************/
-
-
-/***********************************************************************************************************************************************************************************************************/
 /*Custom Radio Button RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	/*_Radio Button Circle Type*/
-	.radioCircleFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
+/*General Media*/
 
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass{
-		@include customRadioCircleSelf_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass>span.innerCircle_RoClass{
-		@include innerCircle_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Circle Type*/
-
-
-	/*_Radio Button Check Type*/
-	.radioCheckFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass{
-		@include customRadioCheckSelf_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass>img{
-		@include innerCheck_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Check Type*/
+/*_Radio Button Circle Type*/
+.radioCircleFlex_RoClass{
+	@include radioFlex_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	/*_Radio Button Circle Type*/
-	.radioCircleFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass{
-		@include customRadioCircleSelf_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass>span.innerCircle_RoClass{
-		@include innerCircle_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Circle Type*/
-
-
-	/*_Radio Button Check Type*/
-	.radioCheckFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass{
-		@include customRadioCheckSelf_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass>img{
-		@include innerCheck_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Check Type*/
+.radioCircleFlex_RoClass>label.customRadioCircle_RoClass{
+	@include customRadioCircleSelf_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	/*_Radio Button Circle Type*/
-	.radioCircleFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass{
-		@include customRadioCircleSelf_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass>span.innerCircle_RoClass{
-		@include innerCircle_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Circle Type*/
-
-
-	/*_Radio Button Check Type*/
-	.radioCheckFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass{
-		@include customRadioCheckSelf_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass>img{
-		@include innerCheck_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Check Type*/
+.radioCircleFlex_RoClass>label.customRadioCircle_RoClass>span.innerCircle_RoClass{
+	@include innerCircle_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	/*_Radio Button Circle Type*/
-	.radioCircleFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass{
-		@include customRadioCircleSelf_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>label.customRadioCircle_RoClass>span.innerCircle_RoClass{
-		@include innerCircle_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Circle Type*/
-
-
-	/*_Radio Button Check Type*/
-	.radioCheckFlex_RoClass{
-		@include radioFlex_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass{
-		@include customRadioCheckSelf_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>label.customRadioCheck_RoClass>img{
-		@include innerCheck_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>input{
-		@include originalRadioBtn_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckTxtLabel_RoClass{
-		@include radioTextLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass{
-		@include radioIconLabel_RoStyle;
-	}
-
-	.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass>img{
-		@include radioIconImage_RoStyle;
-	}
-	/*_Radio Button Check Type*/
+.radioCircleFlex_RoClass>input{
+	@include originalRadioBtn_RoStyle;
 }
-/*Desktop*/
+
+.radioCircleFlex_RoClass>.radioCircleTxtLabel_RoClass{
+	@include radioTextLabel_RoStyle;
+}
+
+.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass{
+	@include radioIconLabel_RoStyle;
+}
+
+.radioCircleFlex_RoClass>.radioCircleIconLabel_RoClass>img{
+	@include radioIconImage_RoStyle;
+}
+/*_Radio Button Circle Type*/
+
+
+/*_Radio Button Check Type*/
+.radioCheckFlex_RoClass{
+	@include radioFlex_RoStyle;
+}
+
+.radioCheckFlex_RoClass>label.customRadioCheck_RoClass{
+	@include customRadioCheckSelf_RoStyle;
+}
+
+.radioCheckFlex_RoClass>label.customRadioCheck_RoClass>img{
+	@include innerCheck_RoStyle;
+}
+
+.radioCheckFlex_RoClass>input{
+	@include originalRadioBtn_RoStyle;
+}
+
+.radioCheckFlex_RoClass>.radioCheckTxtLabel_RoClass{
+	@include radioTextLabel_RoStyle;
+}
+
+.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass{
+	@include radioIconLabel_RoStyle;
+}
+
+.radioCheckFlex_RoClass>.radioCheckIconLabel_RoClass>img{
+	@include radioIconImage_RoStyle;
+}
+/*_Radio Button Check Type*/
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Custom Radio Button RoStrap Mixin*/
@@ -1612,235 +459,61 @@
 /*Calendar Lite RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	.calLite_RoClass{
-		@include calendarLiteItself_RoStyle;
-	}
+/*General Media*/
 
-	.calLite_RoClass>.calLiteHead_RoClass{
-		@include calendarLiteHeader_RoStyle;			
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass{
-		@include calendarLiteHeaderItem_MTL_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass{
-		@include calendarLiteHeaderItem_MTL_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass>.calLiteMonthText_RoClass{
-		@include calendarLiteHeaderTxt_MT_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass>.calLiteYearText_RoClass{
-		@include calendarLiteHeaderTxt_MT_RoStyle;
-	}
-
-	.calLiteButton_RoClass{
-		@include calendarLiteHeaderButton_MT_RoStyle;
-	}
-
-	.calLiteButton_RoClass>img{
-		@include childImage_RoStyle;
-	}	
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass>div{
-		@include calendarLiteDaysText_MT_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div{
-		@include calendarLiteDaysText_MT_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div>div{
-		@include printableDayTextNum_RoStyle;
-	}
+.calLite_RoClass{
+	@include calendarLiteItself_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	.calLite_RoClass{
-		@include calendarLiteItself_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass{
-		@include calendarLiteHeader_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass{
-		@include calendarLiteHeaderItem_MTL_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass{
-		@include calendarLiteHeaderItem_MTL_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass>.calLiteMonthText_RoClass{
-		@include calendarLiteHeaderTxt_MT_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass>.calLiteYearText_RoClass{
-		@include calendarLiteHeaderTxt_MT_RoStyle;
-	}
-
-	.calLiteButton_RoClass{
-		@include calendarLiteHeaderButton_MT_RoStyle;
-	}
-
-	.calLiteButton_RoClass>img{
-		@include childImage_RoStyle;
-	}	
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass>div{
-		@include calendarLiteDaysText_MT_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div{
-		@include calendarLiteDaysText_MT_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div>div{
-		@include printableDayTextNum_RoStyle;
-	}
+.calLite_RoClass>.calLiteHead_RoClass{
+	@include calendarLiteHeader_RoStyle;			
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	.calLite_RoClass{
-		@include calendarLiteItself_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass{
-		@include calendarLiteHeader_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass{
-		@include calendarLiteHeaderItem_MTL_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass{
-		@include calendarLiteHeaderItem_MTL_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass>.calLiteMonthText_RoClass{
-		@include calendarLiteHeaderTxt_Laptop_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass>.calLiteYearText_RoClass{
-		@include calendarLiteHeaderTxt_Laptop_RoStyle;
-	}
-
-	.calLiteButton_RoClass{
-		@include calendarLiteHeaderButton_Laptop_RoStyle;
-	}
-
-	.calLiteButton_RoClass>img{
-		@include childImage_RoStyle;
-	}	
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass>div{
-		@include calendarLiteDaysText_Laptop_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div{
-		@include calendarLiteDaysText_Laptop_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div>div{
-		@include printableDayTextNum_RoStyle;
-	}
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass{
+	@include calendarLiteHeaderItem_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	.calLite_RoClass{
-		@include calendarLiteItself_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass{
-		@include calendarLiteHeader_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass{
-		@include calendarLiteHeaderItem_Desktop_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass{
-		@include calendarLiteHeaderItem_Desktop_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass>.calLiteMonthText_RoClass{
-		@include calendarLiteHeaderTxt_Desktop_RoStyle;		
-	}
-
-	.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass>.calLiteYearText_RoClass{
-		@include calendarLiteHeaderTxt_Desktop_RoStyle;
-	}
-
-	.calLiteButton_RoClass{
-		@include calendarLiteHeaderButton_Desktop_RoStyle;
-	}
-
-	.calLiteButton_RoClass>img{
-		@include childImage_RoStyle;
-	}	
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysTxt_RoClass>div{
-		@include calendarLiteDaysText_Desktop_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass{
-		@include calendarLiteDays_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div{
-		@include calendarLiteDaysText_Desktop_RoStyle;
-	}
-
-	.calLite_RoClass>.calLiteDaysIndex_RoClass>div>div{
-		@include printableDayTextNum_RoStyle;
-	}
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass{
+	@include calendarLiteHeaderItem_RoStyle;
 }
-/*Desktop*/
+
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteMonthHead_RoClass>.calLiteMonthText_RoClass{
+	@include calendarLiteHeaderTxt_RoStyle;		
+}
+
+.calLite_RoClass>.calLiteHead_RoClass>.calLiteYearHead_RoClass>.calLiteYearText_RoClass{
+	@include calendarLiteHeaderTxt_RoStyle;
+}
+
+.calLiteButton_RoClass{
+	@include calendarLiteHeaderButton_RoStyle;
+}
+
+.calLiteButton_RoClass>img{
+	@include childImage_RoStyle;
+}	
+
+.calLite_RoClass>.calLiteDaysTxt_RoClass{
+	@include calendarLiteDays_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysTxt_RoClass>div{
+	@include calendarLiteDaysText_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysIndex_RoClass{
+	@include calendarLiteDays_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysIndex_RoClass>div{
+	@include calendarLiteDaysText_RoStyle;
+}
+
+.calLite_RoClass>.calLiteDaysIndex_RoClass>div>div{
+	@include printableDayTextNum_RoStyle;
+}
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Calendar Lite RoStrap Mixin*/
@@ -1854,417 +527,103 @@
 /*Custom Dropdown Menu With search Version 1 Section RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	/*_Dropdown Visible True*/
-	.scdropdownSelBox_RoClass{
-		@include cusDropdownVisibleWrap_RoStyle;
-	}
-	/*_Dropdown Visible True*/
+/*General Media*/
+
+/*_Dropdown Visible True*/
+.scdropdownSelBox_RoClass{
+	@include cusDropdownVisibleWrap_RoStyle;
+}
+/*_Dropdown Visible True*/
 	
 
-	/*_Dropdown Option Wrapper or Container*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass{
-		@include cusDropdownOptionWrapper_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionConActive_RoClass{
-		@include cusDropdownOptionWrapperActive_RoStyle;
-	}
-
-	/*width*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar{
-		@include optionWrapperScrollBar_Width;		
-	}
-
-	/*Track*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-track{
-		@include optionWrapperScrollBar_Track;
-	}
-
-	/*Handle*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb{
-		@include optionWrapperScrollBar_Thumb;
-	}
-
-	/*Handle on hover*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb:hover{
-		@include optionWrapperScrollBar_ThumbHover; 
-	}
-	/*_Dropdown Option Wrapper or Container*/
-
-
-	/*_Per option*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass{
-		@include cusDropdownPerOption_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>input{
-		@include cusDropdownRealInputRadio_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label{
-		@include cusDropdownOptionLabel_MT_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label:hover{
-		@include cusDropdownOptionLabelHover_RoStyle;		
-	}
-	/*_Per option*/
-
-
-	/*_Dropdown Selected*/
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass{
-		@include cusDropdownSelected_MT_RoStyle;	
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
-		@include cusDropdownSelArrow_MT_RoStyle;
-	}
-
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
-		transform: rotateX(180deg);
-	}
-	/*_Dropdown Selected*/
-
-
-	/*_Dropdown Searchbox*/
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass{
-		@include cusDropdownSearchBoxWrap_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass>input{
-		@include dropdownSearchInput_MT_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrapActive_RoClass{
-		@include cusDropdownSearchBoxWrapActive_RoStyle;
-		
-	} 
-	/*_Dropdown Searchbox*/
-
-
-	/*_Dropdown Hidden input value*/
-	.scdropdownSelBox_RoClass>.scDropdownVal_RoClass{
-		@include cusDropdownHiddenVal_RoStyle;
-	}
-	/*_Dropdown Hidden input value*/
+/*_Dropdown Option Wrapper or Container*/
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass{
+	@include cusDropdownOptionWrapper_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	/*_Dropdown Element itself
-	.scdropdown_RoClass{
-		@include dropdownCusElem_RoStyle;		 
-	}
-	/*_Dropdown Element itself*/
-
-
-	/*_Dropdown Visible True*/
-	.scdropdownSelBox_RoClass{
-		@include cusDropdownVisibleWrap_RoStyle;
-	}
-	/*_Dropdown Visible True*/
-	
-
-	/*_Dropdown Option Wrapper or Container*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass{
-		@include cusDropdownOptionWrapper_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionConActive_RoClass{
-		@include cusDropdownOptionWrapperActive_RoStyle;
-	}
-
-	/*width*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar{
-		@include optionWrapperScrollBar_Width;		
-	}
-
-	/*Track*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-track{
-		@include optionWrapperScrollBar_Track;
-	}
-
-	/*Handle*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb{
-		@include optionWrapperScrollBar_Thumb;
-	}
-
-	/*Handle on hover*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb:hover{
-		@include optionWrapperScrollBar_ThumbHover; 
-	}
-	/*_Dropdown Option Wrapper or Container*/
-
-
-	/*_Per option*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass{
-		@include cusDropdownPerOption_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>input{
-		@include cusDropdownRealInputRadio_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label{
-		@include cusDropdownOptionLabel_MT_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label:hover{
-		@include cusDropdownOptionLabelHover_RoStyle;		
-	}
-	/*_Per option*/
-
-
-	/*_Dropdown Selected*/
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass{
-		@include cusDropdownSelected_MT_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
-		@include cusDropdownSelArrow_MT_RoStyle;
-	}
-
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
-		transform: rotateX(180deg);
-	}
-	/*_Dropdown Selected*/
-
-
-	/*_Dropdown Searchbox*/
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass{
-		@include cusDropdownSearchBoxWrap_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass>input{
-		@include dropdownSearchInput_MT_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrapActive_RoClass{
-		@include cusDropdownSearchBoxWrapActive_RoStyle;
-		
-	} 
-	/*_Dropdown Searchbox*/
-
-
-	/*_Dropdown Hidden input value*/
-	.scdropdownSelBox_RoClass>.scDropdownVal_RoClass{
-		@include cusDropdownHiddenVal_RoStyle;
-	}
-	/*_Dropdown Hidden input value*/
+.scdropdownSelBox_RoClass>.scdropOptionConActive_RoClass{
+	@include cusDropdownOptionWrapperActive_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	/*_Dropdown Element itself
-	.scdropdown_RoClass{
-		@include dropdownCusElem_RoStyle;		 
-	}
-	_/*Dropdown Element itself*/
-
-
-	/*_Dropdown Visible True*/
-	.scdropdownSelBox_RoClass{
-		@include cusDropdownVisibleWrap_RoStyle;
-	}
-	/*_Dropdown Visible True*/
-	
-
-	/*_Dropdown Option Wrapper or Container*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass{
-		@include cusDropdownOptionWrapper_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionConActive_RoClass{
-		@include cusDropdownOptionWrapperActive_RoStyle;
-	}
-
-	/*width*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar{
-		@include optionWrapperScrollBar_Width;		
-	}
-
-	/*Track*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-track{
-		@include optionWrapperScrollBar_Track;
-	}
-
-	/*Handle*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb{
-		@include optionWrapperScrollBar_Thumb;
-	}
-
-	/*Handle on hover*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb:hover{
-		@include optionWrapperScrollBar_ThumbHover; 
-	}
-	/*_Dropdown Option Wrapper or Container*/
-
-
-	/*_Per option*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass{
-		@include cusDropdownPerOption_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>input{
-		@include cusDropdownRealInputRadio_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label{
-		@include cusDropdownOptionLabel_LD_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label:hover{
-		@include cusDropdownOptionLabelHover_RoStyle;		
-	}
-	/*_Per option*/
-
-
-	/*_Dropdown Selected*/
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass{
-		@include cusDropdownSelected_LD_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
-		@include cusDropdownSelArrow_LD_RoStyle;
-	}
-
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
-		transform: rotateX(180deg);
-	}
-	/*_Dropdown Selected*/
-
-
-	/*_Dropdown Searchbox*/
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass{
-		@include cusDropdownSearchBoxWrap_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass>input{
-		@include dropdownSearchInput_LD_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrapActive_RoClass{
-		@include cusDropdownSearchBoxWrapActive_RoStyle;
-		
-	} 
-	/*_Dropdown Searchbox*/
-
-
-	/*_Dropdown Hidden input value*/
-	.scdropdownSelBox_RoClass>.scDropdownVal_RoClass{
-		@include cusDropdownHiddenVal_RoStyle;
-	}
-	/*_Dropdown Hidden input value*/
+/*width*/
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar{
+	@include optionWrapperScrollBar_Width;		
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	/*_Dropdown Element itself
-	.scdropdown_RoClass{
-		@include dropdownCusElem_RoStyle;		 
-	}
-	_/*Dropdown Element itself*/
-
-
-	/*_Dropdown Visible True*/
-	.scdropdownSelBox_RoClass{
-		@include cusDropdownVisibleWrap_RoStyle;
-	}
-	/*_Dropdown Visible True*/
-	
-
-	/*_Dropdown Option Wrapper or Container*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass{
-		@include cusDropdownOptionWrapper_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionConActive_RoClass{
-		@include cusDropdownOptionWrapperActive_RoStyle;
-	}
-
-	/*width*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar{
-		@include optionWrapperScrollBar_Width;		
-	}
-
-	/*Track*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-track{
-		@include optionWrapperScrollBar_Track;
-	}
-
-	/*Handle*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb{
-		@include optionWrapperScrollBar_Thumb;
-	}
-
-	/*Handle on hover*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb:hover{
-		@include optionWrapperScrollBar_ThumbHover; 
-	}
-	/*_Dropdown Option Wrapper or Container*/
-
-
-	/*_Per option*/
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass{
-		@include cusDropdownPerOption_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>input{
-		@include cusDropdownRealInputRadio_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label{
-		@include cusDropdownOptionLabel_LD_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label:hover{
-		@include cusDropdownOptionLabelHover_RoStyle;		
-	}
-	/*_Per option*/
-
-
-	/*_Dropdown Selected*/
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass{
-		@include cusDropdownSelected_LD_RoStyle;		
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
-		@include cusDropdownSelArrow_LD_RoStyle;
-	}
-
-	.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
-		transform: rotateX(180deg);
-	}
-	/*_Dropdown Selected*/
-
-
-	/*_Dropdown Searchbox*/
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass{
-		@include cusDropdownSearchBoxWrap_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass>input{
-		@include dropdownSearchInput_LD_RoStyle;
-	}
-
-	.scdropdownSelBox_RoClass>.scdropSearchboxWrapActive_RoClass{
-		@include cusDropdownSearchBoxWrapActive_RoStyle;
-		
-	} 
-	/*_Dropdown Searchbox*/
+/*Track*/
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-track{
+	@include optionWrapperScrollBar_Track;
 }
-/*Desktop*/
+
+/*Handle*/
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb{
+	@include optionWrapperScrollBar_Thumb;
+}
+
+/*Handle on hover*/
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass::-webkit-scrollbar-thumb:hover{
+	@include optionWrapperScrollBar_ThumbHover; 
+}
+/*_Dropdown Option Wrapper or Container*/
+
+
+/*_Per option*/
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass{
+	@include cusDropdownPerOption_RoStyle;
+}
+
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>input{
+	@include cusDropdownRealInputRadio_RoStyle;
+}
+
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label{
+	@include cusDropdownOptionLabel_RoStyle;		
+}
+
+.scdropdownSelBox_RoClass>.scdropOptionCon_RoClass>.scdropOption_RoClass>label:hover{
+	@include cusDropdownOptionLabelHover_RoStyle;		
+}
+/*_Per option*/
+
+
+/*_Dropdown Selected*/
+.scdropdownSelBox_RoClass>.scdropSelected_RoClass{
+	@include cusDropdownSelected_RoStyle;	
+}
+
+.scdropdownSelBox_RoClass>.scdropSelected_RoClass>span[style]{
+	@include cusDropdownSelArrow_RoStyle;
+}
+
+.scdropOptionConActive_RoClass + .scdropSelected_RoClass>span[style]{
+	transform: rotateX(180deg);
+}
+/*_Dropdown Selected*/
+
+
+/*_Dropdown Searchbox*/
+.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass{
+	@include cusDropdownSearchBoxWrap_RoStyle;
+}
+
+.scdropdownSelBox_RoClass>.scdropSearchboxWrap_RoClass>input{
+	@include dropdownSearchInput_RoStyle;
+}
+
+.scdropdownSelBox_RoClass>.scdropSearchboxWrapActive_RoClass{
+	@include cusDropdownSearchBoxWrapActive_RoStyle;
+		
+} 
+/*_Dropdown Searchbox*/
+
+
+/*_Dropdown Hidden input value*/
+.scdropdownSelBox_RoClass>.scDropdownVal_RoClass{
+	@include cusDropdownHiddenVal_RoStyle;
+}
+/*_Dropdown Hidden input value*/
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Custom Dropdown Menu With search Version 1 Section RoStrap Mixin*/
@@ -2278,161 +637,43 @@
 /*Custom Dropdown Button List*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	.cusDroplistBtn_RoClass{
-		@include cusDroplistBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass{
-		@include masterBtnWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>button{
-		@include masterBtn_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div{
-		@include masterBtnIcon_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div>img{
-		@include childImage_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass{
-		@include droplistWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass{
-		@include listBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass:hover{
-		@include listBtnHover_RoStyle;
-	}
+/*General Media*/
+.cusDroplistBtn_RoClass{
+	@include cusDroplistBtn_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	.cusDroplistBtn_RoClass{
-		@include cusDroplistBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass{
-		@include masterBtnWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>button{
-		@include masterBtn_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div{
-		@include masterBtnIcon_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div>img{
-		@include childImage_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass{
-		@include droplistWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass{
-		@include listBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass:hover{
-		@include listBtnHover_RoStyle;
-	}
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass{
+	@include masterBtnWrap_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	.cusDroplistBtn_RoClass{
-		@include cusDroplistBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass{
-		@include masterBtnWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>button{
-		@include masterBtn_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div{
-		@include masterBtnIcon_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div>img{
-		@include childImage_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass{
-		@include droplistWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass{
-		@include listBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass:hover{
-		@include listBtnHover_RoStyle;
-	}
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>button{
+	@include masterBtn_RoStyle;	
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	.cusDroplistBtn_RoClass{
-		@include cusDroplistBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass{
-		@include masterBtnWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>button{
-		@include masterBtn_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div{
-		@include masterBtnIcon_RoStyle;	
-	}
-
-	.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div>img{
-		@include childImage_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass{
-		@include droplistWrap_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass{
-		@include listBtn_RoStyle;
-	}
-
-	.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass:hover{
-		@include listBtnHover_RoStyle;
-	}
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div{
+	@include masterBtnIcon_RoStyle;	
 }
-/*Desktop*/
+
+.cusDroplistBtn_RoClass>.masterBtnWrap_RoClass>div>img{
+	@include childImage_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.droplistWrap_RoClass{
+	@include droplistWrap_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass{
+	@include listBtn_RoStyle;
+}
+
+.cusDroplistBtn_RoClass>.droplistWrap_RoClass>.listBtn_RoClass:hover{
+	@include listBtnHover_RoStyle;
+}
+
+/*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Custom Dropdown Button List*/
-/***********************************************************************************************************************************************************************************************************/
-
-
 /***********************************************************************************************************************************************************************************************************/
 
 
@@ -3068,75 +1309,21 @@
 /*Footer RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width:641px){
-	hr.linethis_RoClass{
-		@include liner_RoStyle;
-	}
+/*General Medial*/
 
-	div.footerWrap_RoClass{
-		@include footerWrap_RoStyle;
-	}
-
-	div.footerWrap_RoClass>span.footerTxt_RoClass{
-		@include footerTxt_MT_RoStyle;
-	}
+hr.linethis_RoClass{
+	@include liner_RoStyle;
 }
-/*Mobile*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-	hr.linethis_RoClass{
-		@include liner_RoStyle;
-	}
-
-	div.footerWrap_RoClass{
-		@include footerWrap_RoStyle;
-	}
-
-	div.footerWrap_RoClass>span.footerTxt_RoClass{
-		@include footerTxt_MT_RoStyle;
-	}
+div.footerWrap_RoClass{
+	@include footerWrap_RoStyle;
 }
-/*Tablet*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Laptop*/
-@media all and (min-width:1081px) and (max-width:1600px){
-	hr.linethis_RoClass{
-		@include liner_RoStyle;
-	}
-
-	div.footerWrap_RoClass{
-		@include footerWrap_RoStyle;
-	}
-
-	div.footerWrap_RoClass>span.footerTxt_RoClass{
-		@include footerTxt_LD_RoStyle;
-	}
+div.footerWrap_RoClass>span.footerTxt_RoClass{
+	@include footerTxt_RoStyle;
 }
-/*Laptop*/
-/***********************************************************************************************************************************************************************************************************/
 
-/***********************************************************************************************************************************************************************************************************/
-/*Desktop*/
-@media all and (min-width:1601px){
-	hr.linethis_RoClass{
-		@include liner_RoStyle;
-	}
-	
-	div.footerWrap_RoClass{
-		@include footerWrap_RoStyle;
-	}
-
-	div.footerWrap_RoClass>span.footerTxt_RoClass{
-		@include footerTxt_LD_RoStyle;
-	}
-}
-/*Desktop*/
+/*General Medial*/
 /***********************************************************************************************************************************************************************************************************/
 
 /*Footer RoStrap Mixin*/

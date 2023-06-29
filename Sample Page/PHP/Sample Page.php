@@ -148,15 +148,15 @@
 				<div class="scdropdownSelBox_RoClass" id="scdropdownSelBox-Id">
 					<div class="scdropOptionCon_RoClass">
 						<div class="scdropOption_RoClass">
-							<input type="radio" name="namebg" value="test1" id="bgHere1">
+							<input type="radio"class="scdropOptionRadio_RoClass" name="namebg" value="test1" id="bgHere1">
 							<label for="bgHere1">Option one</label>
 						</div>
 						<div class="scdropOption_RoClass">
-							<input type="radio" name="namebg" value="test2" id="bgHere2">
+							<input type="radio" class="scdropOptionRadio_RoClass" name="namebg" value="test2" id="bgHere2">
 							<label for="bgHere2">Option two</label>
 						</div>
 						<div class="scdropOption_RoClass">
-							<input type="radio" name="namebg" value="test3" id="bgHere3">
+							<input type="radio" class="scdropOptionRadio_RoClass" name="namebg" value="test3" id="bgHere3">
 							<label for="bgHere3">Option three</label>
 						</div>
 					</div>

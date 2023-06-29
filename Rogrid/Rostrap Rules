@@ -120,7 +120,9 @@
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
 	• Codes needed 
-		• " --customInputColor:fontColorValue " (Provide the color of input element) (For cusInputs_RoClass and its children)
+		• " --customInputColor: value " (Provide the color of input element) (For cusInputs_RoClass and its children)
+		• " --customInputFSize: value " (Provide font size) (For input)
+		• " --customInputAnimFSize: value " (Provide font size for animation) (For placeholdme_RoClass or upPlaceholdme_RoClass)
 	• Structure
 		<div class="cusInputs_RoClass">					
 			<input type="text" onfocusout="lowlightInWrap(this, fontColorValue)" onfocus="highlightInWrap(this, fontColorValue)" required>
@@ -132,9 +134,8 @@
 	• Codes needed 
 		• " --currDateFStyle: value " (Provide the font style) (For currentDate_RoClass)
 		• " --currDateFWeight: value " (Provide the font weight) (For currentDate_RoClass)
-		• " --currDateFMTsize: value " (Provide the font size for mobile and table) (For currentDate_RoClass)
-		• " --currDateFLDsize: value " (Provide the font size for laptop and desktop) (For currentDate_RoClass)
-		•" --currDateFColor: value " (Provide font color) (For currentDate_RoClass)
+		• " --currDateFsize: value " (Provide the font size) (For currentDate_RoClass)
+		• " --currDateFColor: value " (Provide font color) (For currentDate_RoClass)
 	• Structure
 		<div class="mainmechaCon_RoClass"> <--Main Side Per Item
 			<div class="currentDate_RoClass"></div>
@@ -144,8 +145,7 @@
 	• Import "RoStrap_Mixin" to your scss file
 	• Codes needed 
 		• " --footerBgColor: value " (Provide background color) (For footerTxt_RoClass)
-		• " --footerFMTSize: value " (Provide font size for mobile and tablet) (For footerTxt_RoClass)
-		• " --footerFLDSize: value " (Provide font size for laptop and desktop) (For footerTxt_RoClass)
+		• " --footerFSize: value " (Provide font size) (For footerTxt_RoClass)
 		• " --footerFColor: value " (Provide font color) (For footerTxt_RoClass)
 	• Structure
 		<hr class="linethis_RoClass">
@@ -159,13 +159,9 @@
 	• Codes needed 
 		• " --cusCheckboxFStyle: value " (Provide the font style) (For label element)
 		• " --cusCheckboxFWeight: value " (Provide the font weigth) (For label element)
-		• " --custCheckboxFMTSize: value " (Provide the font size for mobile and tablet) (For label element)
-		• " --custCheckboxFLDSize: value " (Provide the font size for laptop and desktop) (For label element)
+		• " --custCheckboxFSize: value " (Provide the font size) (For label element)
 		• " --cusCheckboxColor: value " (Provide the font color) (For label element)
-		• " --cusCheckboxMTWidth: value " (Provide the width of check for mobile and tablet) (For boxme_RoClass)
-		• " --cusCheckboxLDWidth: value " (Provide the width of check for laptop and desktop) (For boxme_RoClass)
-		• " --cusCheckboxMTHeight: value " (Provide the height of check for mobile and tablet) (For boxme_RoClass)
-		• " --cusCheckboxLDHeight: value " (Provide the height of check for laptop and desktop) (For boxme_RoClass)
+		• " --cusCheckboxWidthHeight: value " (Provide the width and height of check) (For boxme_RoClass)
 		• " --cusCheckboxBorderWidth: value " (Provide the border thick) (For boxme_RoClass)
 		• " --cusCheckboxBorderColor: value " (Provide the border color) (For boxme_RoClass)
 	• Structure
@@ -186,20 +182,14 @@ Modal Note: Invoke "showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)" 
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
 	• Codes needed 
-		• " --modalMobileWidth: value " (Provide the width of the modal for mobile) (For modalme_RoClass) 
-		• " --modalMobileHeight: value " (Provide the height of the modal for mobile) (For modalme_RoClass)
-		• " --modalTabletWidth: value " (Provide the width of the modal for tablet) (For modalme_RoClass) 
-		• " --modalTabletHeight: value " (Provide the height of the modal for tablet) (For modalme_RoClass)
-		• " --modalLaptopWidth: value " (Provide the width of the modal for laptop) (For modalme_RoClass) 
-		• " --modalLaptopHeight: value " (Provide the height of the modal for laptop) (For modalme_RoClass)
-		• " --modalDesktopWidth: value " (Provide the width of the modal for desktop) (For modalme_RoClass) 
-		• " --modalDesktopHeight: value " (Provide the height of the modal for desktop) (For modalme_RoClass)
+		• " --modalWidth: value " (Provide the width of the modal) (For modalme_RoClass) 
+		• " --modalHeight: value " (Provide the height of the modal) (For modalme_RoClass)		
 		• " --modalBorderColor: value " (Provide the border color of the modal) (For modalme_RoClass)
 		• " --modalBodyBgColor: value " (Provide the background color of the modal body) (For modalme_RoClass)
 		• " --modalHeaderBgColor: value " (Provide the background color of the modal header) (For modalme_RoClass)
-		• " --modalHeaderFMTSize: value " (Provide the modal header font size for mobile and tablet) (For modalHeadTxt_RoClass)
-		• " --modalHeaderFLDSize: value " (Provide the modal header font size for laptop and desktop) (For modalHeadTxt_RoClass)
+		• " --modalHeaderFSize: value " (Provide the modal header font size) (For modalHeadTxt_RoClass)
 		• " --modalHeaderFColor: value " (Provide the modal header font color) (For modalHeadTxt_RoClass)
+		• " --modalCloseIconSize: value " (Provide the close icon size) (For modalHeadClose_RoClass)
 	• Structure
 		<div class="modalmeCon_RoClass" style=" --topOnBlurrer: integer; ">
 			<div class="modalme_RoClass">
@@ -218,8 +208,7 @@ Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner a
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
 	• Codes needed 
-		• " --spinnerWidth: value " (Provide the loading icon width) (For spinnerLoad_RoClass) 
-		• " --spinnerHeight: value " (Provide the loading icon height) (For spinnerLoad_RoClass) 
+		• " --spinnerWidthHeight: value " (Provide the loading icon width and height) (For spinnerLoad_RoClass) 
 	• Structure
 	<div class="spinnerLoad_RoClass" style=" --topSpinBlurrer: integer; ">
 		<img src="../../src/loading.gif">
@@ -228,10 +217,7 @@ Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner a
 * How to use input search RoStrap
 	• Import "RoStrap_Mixin" to your scss file.
 	• Codes needed 
-		• " --inputSearchMobileWidth: value " (Provide width for mobile) (For searchInput_RoClass)
-		• " --inputSearchTabletWidth: value " (Provide width for tablet) (For searchInput_RoClass)
-		• " --inputSearchLaptopWidth: value " (Provide width for laptop) (For searchInput_RoClass)
-		• " --inputSearchDesktopWidth: value " (Provide width for desktop) (For searchInput_RoClass)
+		• " --inputSearchWidth: value " (Provide width for mobile) (For searchInput_RoClass)
 		• " --inputSearchTopPadding: value " (Provide top padding) (For searchInput_RoClass)
 		• " --inputSearchRightPadding: value " (Provide right padding) (For searchInput_RoClass)
 		• " --inputSearchBottomPadding: value " (Provide bottom padding) (For searchInput_RoClass)
@@ -249,6 +235,9 @@ Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner a
 Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " function to create and show notification box with auto close and " notifyNodeBoxStay(boolean, message, wrapperID) " for stay.
 * How to use Notification Box RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed 
+		• " --notiFSize: value " (Provide font size) (For notifyMessItem_Suc_RoClass or notifyMessItem_Failed_RoClass)
+		• " --notiCloseIconWidthHeight: value " (Provide close icon width and height) (For notifyCloseItem_Suc_RoClass or notifyCloseItem_Failed_RoClass)
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
 	• Different types of Notification Boxes
 		• For Success Style
@@ -273,17 +262,13 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 * How to use customized normal button RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file.
 	• Codes needed
-		• " --normBtnMWidth: value " (Provide the button width for mobile) (For normButton_RoClass)
-		• " --normBtnTWidth: value " (Provide the button width for tablet) (For normButton_RoClass)
-		• " --normBtnLWidth: value " (Provide the button width for laptop) (For normButton_RoClass)
-		• " --normBtnDWidth: value " (Provide the button width for desktop) (For normButton_RoClass)
+		• " --normBtnWidth: value " (Provide the button width)
 		• " --normBtnPadding: value " (Provide the button padding) (For normButton_RoClass)
 		• " --normBtnBorderWidth: value " (Provide the button border thickness) (For normButton_RoClass)
 		• " --normBtnBorderColor: value " (Provide the button border color) (For normButton_RoClass)
 		• " --normBtnRadius: value " (Provide the button border radius) (For normButton_RoClass)
 		• " --normBtnFWeight: value " (Provide the button font weight) (For normButton_RoClass)
-		• " --normBtnFMTSize: value " (Provide the button font size for mobile and tablet) (For normButton_RoClass)
-		• " --normBtnFLDSize: value " (Provide the button font size for laptop and desktop) (For normButton_RoClass)
+		• " --normBtnFSize: value " (Provide the button font size) (For normButton_RoClass)
 		• " --normBtnBgColor: value " (Provide the button background color) (For normButton_RoClass)
 		• " --normBtnFcolor: value " (Provide the button font color) (For normButton_RoClass)
 		• " --normBtnHovActFColor: value " (Provide the button font color) (For normButton_RoClass)
@@ -306,52 +291,20 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 	• Structure
 		<button class="iconBtn_RoClass"></button>
 
-16. How to use flexbox grid
-	• Import "RoStrap_Mixin" to your scss file.	
-	• Classes style
-		• "gridBoxBetWrapping_RoClass" (For flexbox wrap item with space between and center with hori column for mobile/tablet)
-		• "gridBoxStartWrapping_RoClass" (For flexbox with hori flex start and center for mobile/tablet)
-		• "gridBoxCenterWrapping_RoClass" (For flexbox with hori center and center for mobile/tablet)
-		• "gridBoxStartAllWrapping_RoClass" (For flexbox with hori flex start for mobile to desktop and flow column when mobile and tablet)
-	• Structure.	
-		<div class="gridBoxBetWrapping_RoClass"> 
-			Item Here
-		</div>
-
-
-Normal Bookmark Note: This is better with gridBoxStartWrapping_RoClass. Bookmark label character should not be that long or else it will not be visible.
-Warning: Subject for revision.
-17. How to use Bookmark RoStyle 
-	17.1 Import "RoStrap_Mixin" to your scss file.
-	17.2 Codes for providing styles
-		17.2.1 " --roMarkPoint_Color:value " (For pointer color)
-		17.2.2 " --roLeftMark_BgColor:value " (For left side bg color)
-		17.2.3 " --roMark_Image:url('filename') " (for bookmark icon)
-		17.2.4 " --roRightMark_BgColor:value " (For right side/label bg color)
-		17.2.5 " --roMark_FColor:value " (For label font color)
-	17.3 Structure 
-		<div href="id" class="roMark_RoClass" style="--roMarkSelf_BgColor: value;">						
-			<div class="roMarkPointer_RoClass" style="--roMarkPoint_Color:value;"></div>						
-			<div class="roMarkTransBSide_RoClass" style="--roLeftMark_BgColor:value; --roMark_Image:url('filename');"></div>				
-			<div class="roMarkLabSide_RoClass" style="--roRightMark_BgColor:value; --roMark_FColor:value;">InnerText Here</div>					
-		</div>
-
 * How to use custom radio button with Circle type & Check type RoStyle
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
 	• Codes needed
 		• " --cusRadioBorderWidth: value " (Provide custom radio circle border thickness) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
 		• " --cusRadioBorderColor: value " (Provide custom radio circle border color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
-		• " --cusRadioWidth: value " (Provide custom radio circle width) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
-		• " --cusRadioHeight: value " (Provide custom radio circle height) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
+		• " --cusRadioWidthHeight: value " (Provide custom radio circle width and height) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
 		• " --cusRadioBgColor: value " (Provide custom radio background color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
 		
 		• " --cusRadioFWeight: value " (Provide font weight) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
 		• " --cusRadioFsize: value " (Provide font size) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
 		• " --cusRadioFColor: value " (Provide font color) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
 
-		• " --radioIconLabelWidth: value " (Provide font size) (For radioCircleIconLabel_RoClass or radioCheckIconLabel_RoClass)
-		• " --radioIconLabelHeight: value " (Provide font color) (For radioCircleIconLabel_RoClass or radioCheckIconLabel_RoClass)
+		• " --radioIconLabelWidthHeight: value " (Provide label icon size) (For radioCircleIconLabel_RoClass or radioCheckIconLabel_RoClass)
 	• Structure
 		<div class="radioCircleFlex_RoClass"> <--Circle Type							
 			<label for="idHere" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
@@ -371,6 +324,10 @@ Warning: Subject for revision.
 Calendar Lite Note: Calendar Lite can only be used one per page only.
 * How to use Calendar Lite RoStyle
 	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed 
+		• " --calendarHeadTxtFSize: value " (Provide header font size) (For calLiteMonthText_RoClass and calLiteYearText_RoClass)
+		• " --calendarHeadBtnWidthHeight: value " (Provide header button width and height) (For calLiteButton_RoClass)
+		• " --calendarDayTxtFSize: value " (Provide day font size) (For calLiteDaysTxt_RoClass)
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" else if you don't want to use the global version create a copy of CalendarLite.js file and insert to your desired page folder and import it. 
 	• Invoke this function if wanted to render calendar on your code manually. 
 		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid)" 
@@ -446,8 +403,9 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 		• " --cusDropOptWrapScrollHovColor: value " (Provide options wrapper hovered scroll color) (For scdropOptionCon_RoClass)
 		• " --cusDropOptLabColor: value " (Provide options label font color) (For scdropOption_RoClass>label)
 		• " --cusDropOptHovLabBgColor: value " (Provide option hovered background color) (For scdropOption_RoClass>label)
-		• " --cusDropSelArrowDownIcon: value " (Provide down arrow icon) (For scdropSelected_RoClass)
-		• " --cusDropZIndex: value " (Provide z-index for per custom dropdown element. NOTE: Use this property with cusDropdownVisibleWrap_RoStyle I.D) (For cusDropdownVisibleWrap_RoStyle, cusDropdownSearchBoxWrap_RoStyle, cusDropdownOptionWrapper_RoStyle)
+		• " --cusDropArrowWidthHeight: value " (Provide down arrow icon width and height) (For scdropSelected_RoClass>span)
+		• " --cusDropFsize: value " (Provide font size) (For scdropSelectedVal_RoClass, scdropSearchboxWrap_RoClass>input, scdropOption_RoClass>label)
+		• " --cusDropZIndex: value " (Provide z-index for per custom dropdown element) (For scdropdownSelBox_RoClass, scdropSearchboxWrap_RoClass, scdropOptionCon_RoClass)
 	• Structure						
 		<div class="scdropdownSelBox_RoClass"> <--Customized Dropdown Element itself
 			<div class="scdropOptionCon_RoClass"> <--Options Container
@@ -456,7 +414,7 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 					<label for="bgHere1">Bahay toro</label>
 				</div>
 			</div>
-			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span><span class="scdropSelectedVal_RoClass">Selected Value</span>Baranggay</div> <--Selected Area
+			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span><span class="scdropSelectedVal_RoClass">Selected Value</span></div> <--Selected Area
 			<div class="scdropSearchboxWrap_RoClass"> <--Search Area Wrapper
 				<input type="text" placeholder="Start Typing..."> <--Search Input Section
 			</div>

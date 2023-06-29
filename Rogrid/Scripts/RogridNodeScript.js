@@ -438,7 +438,6 @@ const radioCheckSelected = (origRadioBtn_Elem) =>{
 /****************************************************************************************************************************************************************************/ 
 /*Adding function to customized dropdown menu (Back-End list)*/
 
-
 /*_Function for clearing the event of scdropSelected_Rogrid*/
 const showOptionsWithClass = (dropdownSearchInput, scdropOptionCon, scdropSearchboxWrap) => {
 	dropdownSearchInput.value = "";			
@@ -463,35 +462,38 @@ function createCusDropOptWoRogrid(scdropdownSelBox_Param){
 	const dropdownSearchInput_Rogrid = scdropSearchboxWrap_Rogrid.children[0];
 	const scdropOptionCon_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropOptionCon_RoClass");
 	const scdropOption_Rogrid = scdropOptionCon_Rogrid.querySelectorAll(".scdropOption_RoClass");
+	const scdropOptionRadio_Rogrid = scdropOptionCon_Rogrid.querySelectorAll("input");
 	const scDropdownVal_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scDropdownVal_RoClass");
-	
 
 
 	/*_Show and hide options*/
 	scdropSelected_Rogrid.removeEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});		
 
-	scdropSelected_Rogrid.addEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});		
+	scdropSelected_Rogrid.addEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});
 	/*_Show and hide options*/
 
 
-
 	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
-	scdropOption_Rogrid.forEach(perOptionForSel => {		
-		perOptionForSel.addEventListener("click", () => {
-			scdropSelected_Rogrid.setAttribute("title", perOptionForSel.querySelector("label").innerText);
+	scdropOptionRadio_Rogrid.forEach(perOptionForSel => {	
+		perOptionForSel.addEventListener("change", async function(){
+			const customDropdownPromise = new Promise(function(resolve){
+				scdropSelected_Rogrid.setAttribute("title", perOptionForSel.nextElementSibling.innerText);
 
-			scdropSelectedVal_Rogrid.innerText = perOptionForSel.querySelector("label").innerText;
+				scdropSelectedVal_Rogrid.innerText = perOptionForSel.nextElementSibling.innerText;
+
+				scDropdownVal_Rogrid.value = perOptionForSel.value;
+
+				resolve(true);
+			});
+
+			await customDropdownPromise;
 
 			scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
 
-			scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
-
-			scDropdownVal_Rogrid.value = perOptionForSel.querySelector("input").value;				
-		})
+			scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");		
+		});
 	});
-	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
-	
-
+	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/	
 
 
 	/*_Hide Search and Option list when focus out*/
@@ -502,7 +504,6 @@ function createCusDropOptWoRogrid(scdropdownSelBox_Param){
 	});
 	/*_Hide Search and Option list when focus out*/
 }
-
 
 /*Adding function to customized dropdown menu (Back-End list)*/
 /****************************************************************************************************************************************************************************/ 
