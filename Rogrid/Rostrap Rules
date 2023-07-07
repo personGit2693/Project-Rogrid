@@ -409,10 +409,10 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 	• Structure						
 		<div class="scdropdownSelBox_RoClass"> <--Customized Dropdown Element itself
 			<div class="scdropOptionCon_RoClass"> <--Options Container
-				<div class="scdropOption_RoClass">
+				<label class="scdropOption_RoClass" for="bgHere1">
 					<input type="radio" name="namebg" value="test" id="bgHere1">
 					<label for="bgHere1">Bahay toro</label>
-				</div>
+				</label>
 			</div>
 			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span><span class="scdropSelectedVal_RoClass">Selected Value</span></div> <--Selected Area
 			<div class="scdropSearchboxWrap_RoClass"> <--Search Area Wrapper
