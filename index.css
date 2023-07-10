@@ -1102,7 +1102,7 @@ button.iconBtn_RoClass {
   display: block;
   box-sizing: border-box;
   overflow: visible;
-  border: 1px solid red;
+  border: 1px solid transparent;
   white-space: nowrap; }
 
 .scdropdownSelBox_RoClass > .scdropOptionCon_RoClass > .scdropOption_RoClass > input {
