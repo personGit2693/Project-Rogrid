@@ -1100,9 +1100,10 @@
 
 @mixin cusDropdownPerOption_RoStyle{
 	position: relative;
+	display: block;
 	box-sizing: border-box;
 	overflow: visible;
-	border: 1px solid transparent;
+	border: 1px solid red;
 	white-space: nowrap;	
 }
 
