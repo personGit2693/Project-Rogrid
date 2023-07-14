@@ -11,55 +11,58 @@
 	<div class="rolayout_RoClass">
 		<div class="sidemecha_RoClass" style="--naviBgColor:#161B22;">
 			<div class="sidemechaCon_RoClass">
-				<a href="" class="navMenu_RoClass" style="--navicon: url('./src/abouticonwhite.png'); --naviconha: url('./src/abouticongreen.png');">					
-					navigation 1
+				<a href="" class="mainNavMenu_RoClass" style="" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)">					
+					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 1</span>
 				</a>
 
-				<a href="" class="navMenu_RoClass navMenuActive_RoClass" style="--naviconha: url('./src/abouticongreen.png');">
-					navigation 2
+
+				<a href="" class="activeMainNavMenu_RoClass">					
+					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticongreen.png" /></div><span class="mainNavMenuText_RoClass">navigation 2</span>
 				</a>
 
-				<div class="navMenuCollRight_RoClass" style="--navicon: url('./src/abouticonwhite.png'); --naviconha: url('./src/abouticongreen.png'); --navArrowRight: url('./src/Chevron Right.png'); --navArrowDown:url('./src/Chevron Down.png');" onmouseover="hoverCollapsableMenu(this)" onmouseout="hoverOutCollapsableMenu(this)" onclick="collapseMenu(this)">
-					navigation 3
-				</div>
-				<div style="display:none">
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a>
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-				</div>
 
-				<div class="navMenuCollDownActive_RoClass" onclick="collapseMenu(this)" style="--naviconha: url('./src/abouticongreen.png'); --navArrowRight: url('./src/Chevron Right.png'); --navArrowDown:url('./src/Chevron Down.png');">
-					Navigation 4
+				<div class="mainNavMenu_RoClass" style="" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)" onclick="collapseMenu(this)">					
+					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 3</span><div class="chevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
 				</div>
-				<div style="display:block">					
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a>
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a>
+				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
 
-					<div class="navMenuCollRight_RoClass" style="--navicon: url('./src/abouticonwhite.png'); --naviconha: url('./src/abouticongreen.png'); --navArrowRight: url('./src/Chevron Right.png'); --navArrowDown:url('./src/Chevron Down.png');" onmouseover="hoverCollapsableMenu(this)" onmouseout="hoverOutCollapsableMenu(this)" onclick="collapseMenu(this)">
-					navigation 5
+					<div class="mainNavMenu_RoClass" style="padding-left: 14px;" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)" onclick="collapseMenu(this)">					
+						<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 3.1</span><div class="chevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
 					</div>
-					<div style="display:none; padding-left: 7px;">
-						<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a>
-						<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a>
-
-						<div class="navMenuCollRight_RoClass" style="--navicon: url('./src/abouticonwhite.png'); --naviconha: url('./src/abouticongreen.png'); --navArrowRight: url('./src/Chevron Right.png'); --navArrowDown:url('./src/Chevron Down.png');" onmouseover="hoverCollapsableMenu(this)" onmouseout="hoverOutCollapsableMenu(this)" onclick="collapseMenu(this)">
-						navigation 6
-						</div>
-						<div style="display:none; padding-left: 14px;">
-							<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a>
-							<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-							<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-							<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-						</div>
-
-						<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-						<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
+					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a>
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
 					</div>
 
-					<a href="path" class="collapseMenus_RoClass collapseMenusActive_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
 				</div>
+
+
+				<div class="activeMainNavMenu_RoClass" style="" onclick="collapseMenu(this)">					
+					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticongreen.png" /></div><span class="mainNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
+				</div>
+				<div style="max-height: 500px;" class="subNavMenuWrap_RoClass">
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
+
+					<div class="activeMainNavMenu_RoClass" style="padding-left: 14px;" onclick="collapseMenu(this)">					
+						<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 4.1</span><div class="activeChevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
+					</div>
+					<div style="max-height: 500px;" class="subNavMenuWrap_RoClass">
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a>
+						<a href="path" class="activeSubNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
+						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
+					</div>
+
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
+					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
+				</div>				
 			</div>
 		</div>
 		<div class="mainmecha_RoClass" style="--mainBodyBgColor:#0D1117;"> 

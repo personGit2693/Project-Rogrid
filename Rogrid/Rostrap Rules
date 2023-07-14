@@ -23,98 +23,45 @@
 		</div>
 
 * How to use navigation link with collapse and navigation link
-	•Global Codes needed
-		• " --navpaddtop: value " (Provide padding top) (For Navigation menu and menus)
-		• " --navpaddright: value "  (Provide padding right) (For Navigation menu and menus)
-		• " --navpaddbottom: value " (Provide padding bottom) (For Navigation menu and menus)
-		• " --navpaddleft: value "  (Provide padding left) (For Navigation menu and menus)
-		• " --navicon: value "  (Provide navigation icon) (For Navigation menu)
-		• " --naviconSize: value "  (Provide navigation icon size) (For Navigation menu)
-		• " --navFSize: value "  (Provide navigation font size) (For Navigation menu and menus)
-		• " --navFcolor: value "  (Provide navigation font size) (For Navigation menu and menus)
-		• " --navBgColorha: value " (Provide navigation background color when hovered) (For Navigation menu and menus) (Hover or Hover)
-		• " --naviconha: value " (Provide navigation icon when hovered) (For Navigation menu) (Hover or Active)
-		• " --navFcolorha: value " (Provide navigation font color when hovered) (For Navigation menu and menus) (Hover or Active)
+	• Import "RoStrap_Mixin" to your scss file
+	• Codes needed 
+		• --generalNavMenuPadding: value; (To provide padding per nav menu) (mainNavMenu_RoClass, subNavMenu_RoClass)
 
-	• For Non-Active Collapsable
-		• Codes needed						
-			• " --navArrowRight: value " (Provide navigation right arrow icon) (For Navigation menu)
-			• " --navArrowDown: value " (Provide navigation down arrow icon) (For Navigation menu)
-			• " --navArrowSize: value " (Provide navigation arrow icon size) (For Navigation menu)
-			• " onmouseover='hoverCollapsableMenu(this)' " (event listener) (To make menu hoverable) (For Navigation menu)
-			• " onmouseout='hoverOutCollapsableMenu(this)' " (event listener) (To make menu hoverable) (For Navigation menu)
-			• " onclick='collapseMenu(this)' " (event listener) (For Collapsing the menu) (For Navigation menu)
-		• Structure
+		• --mainNavMenuIconSize: value; (To provide main nav icon size) (mainNavMenuIconWrap_RoClass)
+		• --mainNavMenuFSize: value; (To provide main nav font size) (mainNavMenu_RoClass)
+		• --mainNavMenuBgColor: value; (To provide main nav font size) (mainNavMenu_RoClass)
+		• --mainNavMenuFColor: value; (To provide main nav font color) (mainNavMenu_RoClass)
+		• --hoverMainNavMenuBgColor: value; (To provide main nav background color when hover and active) (mainNavMenu_RoClass)
+		• --hoverMainNavMenuFColor: value; (To provide main nav font color when hover and active) (mainNavMenu_RoClass)
+		• --chevronIconSize: value; (To provide chevron size) (chevronIconWrap_RoClass)
+
+		• --subNavMenuWrapBgColor: value; (To provide sub menus wrapper background color) (subNavMenuWrap_RoClass)
+		• --subNavMenuBgColor: value; (To provide sub menus background color) (subNavMenu_RoClass)
+		• --subNavMenuFSize: value; (To provide sub menus font size) (subNavMenu_RoClass)
+		• --subNavMenuFColor: value; (To provide sub menus font color) (subNavMenu_RoClass)
+		• --hoverSubNavMenuBgColor: value; (To provide sub menus background color when hover and active) (subNavMenu_RoClass)
+		• --hoverSubNavMenuFColor: value; (To provide sub menus font color when hover and active) (subNavMenu_RoClass)
+
+	• Structure
+		//Without Sub Menus
+		<div class="sidemecha_RoClass" style=" --naviBgColor:value; "> <--Left Side
 			<div class="sidemechaCon_RoClass"> <--Left Side Per Item
-				<div class="navMenuCollRight_RoClass"> <--Navigation menu						
-					innerText
-				</div>
-				<div style="display:none"> <--div menus
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> <--menus
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-				</div>
-			</div>
-
-
-
-	• For Active Collapsable
-		• Codes needed
-			• " onclick='collapseMenu(this)' " (event listener) (For Collapsing the menu) (For Navigation menu)
-			• "collapseMenusActive_RoClass" (Add this class to menus for active) (For menus)
-		• Structure
-			<div class="sidemechaCon_RoClass"> <--Left Side Per Item
-				<div class="navMenuCollDownActive_RoClass" onclick="collapseMenu(this)"> <--Navigation menu						
-					innerText
-				</div>
-				<div style="display:block"> <--div menus
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> <--menus
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-					<a href="path" class="collapseMenus_RoClass">Nav Menu Selection</a> 
-				</div>
-			</div>
-
-
-	• For Non-Active
-		• Codes needed			
-			• " --navpaddtop: value " (Provide padding top) (For navMenu_RoClass)
-			• " --navpaddright: value "  (Provide padding right) (For navMenu_RoClass)
-			• " --navpaddbottom: value " (Provide padding bottom) (For navMenu_RoClass)
-			• " --navpaddleft: value "  (Provide padding left) (For navMenu_RoClass)
-			• " --navicon: value "  (Provide navigation icon) (For navMenu_RoClass)
-			• " --naviconSize: value "  (Provide navigation icon size) (For navMenu_RoClass)
-			• " --navFSize: value "  (Provide navigation font size) (For navMenu_RoClass)
-			• " --navFcolor: value "  (Provide navigation font size) (For navMenu_RoClass)
-			• " --navBgColorha: value " (Provide navigation background color when hovered) (For navMenu_RoClass)
-			• " --naviconha: value " (Provide navigation icon when hovered) (For navMenu_RoClass)
-			• " --navFcolorha: value " (Provide navigation font color when hovered) (For navMenu_RoClass)
-		• Structure
-			<div class="sidemechaCon_RoClass"> <--Left Side Per Item
-				<a href="" class="navMenu_RoClass">	 <--Navigation Menu				
-					navigation 1
+				<a href="" class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass" style="" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)">					
+					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="generalNavMenuText_RoClass">navigation 1</span>
 				</a>
 			</div>
+		</div>
 
-
-	• For Active
-		• Codes needed
-			• " --navpaddtop: value " (Provide padding top) (For navMenuActive_RoClass)
-			• " --navpaddright: value "  (Provide padding right) (For navMenuActive_RoClass)
-			• " --navpaddbottom: value " (Provide padding bottom) (For navMenuActive_RoClass)
-			• " --navpaddleft: value "  (Provide padding left) (For navMenuActive_RoClass)
-			• " --naviconSize: value "  (Provide navigation icon size) (For navMenuActive_RoClass)
-			• " --navFSize: value "  (Provide navigation font size) (For navMenuActive_RoClass)
-			• " --navBgColorha: value " (Provide navigation background color when hovered) (For navMenuActive_RoClass)
-			• " --naviconha: value " (Provide navigation icon when hovered) (For navMenuActive_RoClass)
-			• " --navFcolorha: value " (Provide navigation font color when hovered) (For navMenuActive_RoClass)
-		• Structure
-			<div class="sidemechaCon_RoClass"> <--Left Side Per Item
-				<a href="path" class="navMenu_RoClass navMenuActive_RoClass"> <--Navigation menu						
-					innerText
-				</a>
-			</div>
+		//With sub menus
+		<div class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)" onclick="collapseMenu(this)">					
+			<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 2</span><div class="chevronIconWrap_RoClass OR activeChevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
+		</div>
+		<div style="max-height: 0px;" class="subNavMenuWrap_RoClass"> <--Editable max-height align with js.
+			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a>
+			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a>
+			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a> 
+			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a> 
+		</div>
 
 * How to use input RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file

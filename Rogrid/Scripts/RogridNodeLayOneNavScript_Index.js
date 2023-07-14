@@ -131,66 +131,44 @@ burger_RoClass_Rogrid.addEventListener("click", function(){
 /*Collapse Navigation Menu*/
 
 
-/*_Function for changing background color non active only nav menu collapsable Secton*/
-const hoverCollapsableMenu = (menuCollClass_Param) => {
-	if(menuCollClass_Param.className == "navMenuCollRight_RoClass"){
-		menuCollClass_Param.className = "navMenuCollHoverRight_RoClass";
-	}else if(menuCollClass_Param.className == "navMenuCollDown_RoClass"){
-		menuCollClass_Param.className = "navMenuCollHoverDown_RoClass";		
-	}
-}
+/*_Change main nav menu icon*/
+const hoverMainNavMenu = (mainNavMenu) => {
+	const mainNavMenu_Img_Elem = mainNavMenu.querySelector("img");
 
-const hoverOutCollapsableMenu = (menuCollClass_Param) => {
-	if(menuCollClass_Param.className == "navMenuCollHoverRight_RoClass"){
-		menuCollClass_Param.className = "navMenuCollRight_RoClass";
-	}else if(menuCollClass_Param.className == "navMenuCollHoverDown_RoClass"){
-		menuCollClass_Param.className = "navMenuCollDown_RoClass";
+	/*Editable*/
+	let defaultMainNavMenu_Icon = "abouticonwhite.png"; 
+	let hoverMainNavMenu_Icon = "abouticongreen.png";
+	/*Editable*/
+	
+	let currentMainNavMenu_Icon = mainNavMenu_Img_Elem.src.substring(mainNavMenu_Img_Elem.src.lastIndexOf('/')+1);
+
+	/*Editable*/
+	if(currentMainNavMenu_Icon == defaultMainNavMenu_Icon){
+		mainNavMenu_Img_Elem.src = "./src/"+hoverMainNavMenu_Icon;
+		currentMainNavMenu_Icon = hoverMainNavMenu_Icon
+	}else if(currentMainNavMenu_Icon == hoverMainNavMenu_Icon){
+		mainNavMenu_Img_Elem.src = "./src/"+defaultMainNavMenu_Icon;
+		currentMainNavMenu_Icon = defaultMainNavMenu_Icon;
 	}
+	/*Editable*/
 }
-/*_Function for changing background color non active only nav menu collapsable Secton*/
+/*_Change main nav menu icon*/
 
 
 
 
 /*_Function for collapsing the collapsable Nav Menu*/
-const collapseMenu = (thisCollapsableMenu) => {
-	if(thisCollapsableMenu.className == "navMenuCollHoverRight_RoClass" || thisCollapsableMenu.className == "navMenuCollRightActive_RoClass"){
-		if(thisCollapsableMenu.className == "navMenuCollHoverRight_RoClass"){
-			thisCollapsableMenu.className = "navMenuCollHoverDown_RoClass"
+const collapseMenu = (mainNavMenu) => {
+	const chevronIconWrap = (mainNavMenu.querySelector(".chevronIconWrap_RoClass") != null) ? mainNavMenu.querySelector(".chevronIconWrap_RoClass") : mainNavMenu.querySelector(".activeChevronIconWrap_RoClass");
 
-			if(thisCollapsableMenu.nextElementSibling.style.display == "none"){
-				thisCollapsableMenu.nextElementSibling.style.display = "block";
-			}else if(thisCollapsableMenu.nextElementSibling.style.display == "block"){
-				thisCollapsableMenu.nextElementSibling.style.display = "none";
-			}			
-		}else if(thisCollapsableMenu.className == "navMenuCollRightActive_RoClass"){
-			thisCollapsableMenu.className = "navMenuCollDownActive_RoClass";
-
-			if(thisCollapsableMenu.nextElementSibling.style.display == "none"){
-				thisCollapsableMenu.nextElementSibling.style.display = "block";
-			}else if(thisCollapsableMenu.nextElementSibling.style.display == "block"){
-				thisCollapsableMenu.nextElementSibling.style.display = "none";
-			}	
-		}
-	}else if(thisCollapsableMenu.className == "navMenuCollHoverDown_RoClass" || thisCollapsableMenu.className == "navMenuCollDownActive_RoClass"){
-		if(thisCollapsableMenu.className == "navMenuCollHoverDown_RoClass"){
-			thisCollapsableMenu.className = "navMenuCollHoverRight_RoClass"
-
-			if(thisCollapsableMenu.nextElementSibling.style.display == "none"){
-				thisCollapsableMenu.nextElementSibling.style.display = "block";
-			}else if(thisCollapsableMenu.nextElementSibling.style.display == "block"){
-				thisCollapsableMenu.nextElementSibling.style.display = "none";
-			}	
-		}else if(thisCollapsableMenu.className == "navMenuCollDownActive_RoClass"){
-			thisCollapsableMenu.className = "navMenuCollRightActive_RoClass"
-
-			if(thisCollapsableMenu.nextElementSibling.style.display == "none"){
-				thisCollapsableMenu.nextElementSibling.style.display = "block";
-			}else if(thisCollapsableMenu.nextElementSibling.style.display == "block"){
-				thisCollapsableMenu.nextElementSibling.style.display = "none";
-			}	
-		}
-	}
+	if(mainNavMenu.nextElementSibling.style.maxHeight == "0px"){
+		mainNavMenu.nextElementSibling.style.maxHeight = "500px"; /*Editable*/
+		chevronIconWrap.style.transform = "rotate(90deg)";
+	}else if(mainNavMenu.nextElementSibling.style.maxHeight != "0px"){
+		mainNavMenu.nextElementSibling.style.maxHeight = "0px";
+		chevronIconWrap.style.transform = "rotate(0deg)";
+	}			
+		
 }
 /*_Function for collapsing the collapsable Nav Menu*/
 

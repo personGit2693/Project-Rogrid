@@ -1352,30 +1352,23 @@
 
 
 /*_Navigation Menu*/
-@mixin navMenu_RoStyle{
+/*_ _Normal Nav Menu Without Collapse*/
+@mixin normalNavMenu_RoStyle{
 	position: relative;
-	display: block;
+	display: flex;
 	box-sizing: border-box;
 	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
 	width: auto;
-	margin-bottom: 3px;	
-	padding-top: var(--navpaddtop);
-	padding-right: var(--navpaddright);
-	padding-bottom: var(--navpaddbottom);
-	padding-left: var(--navpaddleft);
-	background: transparent var(--navicon) no-repeat 5px center;
-	background-origin: padding-box;
-	background-size: var(--naviconSize);
-	text-decoration: none;
-	font-style: normal;
-	font-weight: bold;
-	font-family: calibri;
-	font-size: var(--navFSize);	
-	color: var(--navFcolor);
 	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--navMenuBgColor);
+	border-radius: 3px;
+
+	border: 1px solid yellow;
 }
+/*_ _Normal Nav Menu Without Collapse*/
 /*_Navigation Menu*/
 
 
@@ -1510,7 +1503,7 @@
 /*_Navigation Menus*/
 @mixin navMenus_RoStyle{
 	position: relative;
-	display: block;
+	display: inline-block;
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
@@ -1526,7 +1519,7 @@
 	font-weight: bold;
 	font-family: calibri;
 	font-size: var(--navFSize);
-	color: var(--navFcolor);
+	color: var(--navMenuFcolor);
 	cursor: pointer;
 }
 /*_Navigation Menus*/

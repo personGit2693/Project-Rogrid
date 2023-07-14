@@ -723,59 +723,177 @@ button.iconBtn_RoClass{
 		@include naviWrapper_RoStyle;
 	}
 
-	/*_Navigation Menu*/	
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass{ /*Normal Nav Menu Without Collapse*/
-		@include navMenu_RoStyle;
+	/*_Navigation Menu*/
+	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .mainNavMenu_RoClass{ 
+		position: relative;
+		display: flex;
+		box-sizing: border-box;
+		overflow: visible;
+		width: auto;
+		cursor: pointer;
+		flex-flow: row nowrap;
+		align-items: center;
+		text-decoration: none;
+		background-color: var(--mainNavMenuBgColor);
+		border-radius: 3px;
+		font-size: var(--mainNavMenuFSize);
+		font-style: normal;
+		font-weight: normal;
+		color: var(--mainNavMenuFColor);
+		padding: var(--generalNavMenuPadding);
+		transition: background-color 0.5s;
+		-webkit-transition: background-color 0.5s;
+	}
+	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .mainNavMenu_RoClass:hover{
+		background-color: var(--hoverMainNavMenuBgColor);
+		color: var(--hoverMainNavMenuFColor);
 	}
 
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRight_RoClass{ /*Normal Nav Menu With Collapse Right*/
-		@include navMenuWithCollRight_RoStyle;
+	.activeMainNavMenu_RoClass{
+		position: relative;
+		display: flex;
+		box-sizing: border-box;
+		overflow: visible;
+		width: auto;
+		cursor: pointer;
+		flex-flow: row nowrap;
+		align-items: center;
+		text-decoration: none;
+		background-color: var(--hoverMainNavMenuBgColor);
+		border-radius: 3px;
+		font-size: var(--mainNavMenuFSize);
+		font-style: normal;
+		font-weight: normal;
+		color: var(--hoverMainNavMenuFColor);
+		padding: var(--generalNavMenuPadding);
+		transition: background-color 0.5s;
+		-webkit-transition: background-color 0.5s;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		position: relative;
+		box-sizing: border-box;
+		overflow: visible;
+		width: var(--mainNavMenuIconSize);
+		height: var(--mainNavMenuIconSize);
+		flex-shrink: 0;
 	}
 
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDown_RoClass{ /*Normal Nav Menu With Collapse Down*/
-		@include navMenuWithCollDown_RoStyle;
+	.mainNavMenuIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}	
+
+	.mainNavMenuText_RoClass{
+		position: relative;
+		display: block;
+		overflow: visible;
+		box-sizing: border-box;
+		white-space: normal;
+		font-family: calibri;		
+		width: 100%;
+		margin-left: 7px;		
 	}
 
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuActive_RoClass{ /*Active Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
+	.chevronIconWrap_RoClass{
+		position: relative;
+		box-sizing: border-box;
+		overflow: visible;
+		width: var(--chevronIconSize);
+		height: var(--chevronIconSize);
+		flex-shrink: 0;
+		transform: rotate(0deg);
+		transition: transform 0.1s;
+		-webkit-transition: transform 0.1s;
 	}
 
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass:hover{ /*Hovered Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass{ /*Active Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass{ /*Active Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass{ /*Hovered Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass{ /*Hovered Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
 	}
 	/*_Navigation Menu*/
 
 
-	/*_ _Navigation Menus From Collapse*/
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass{
-		@include navMenus_RoStyle;
+	/*_Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		position: relative;
+		display: block;
+		box-sizing: border-box;
+		overflow: hidden;
+		background-color: var(--subNavMenuWrapBgColor);
+		transition: max-height 0.5s;		
+		-webkit-transition: max-height 0.5s;
 	}
 
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenusActive_RoClass{
-		@include navMenusHoverActive_RoStyle;
+	.subNavMenu_RoClass{
+		position: relative;
+		display: flex;
+		box-sizing: border-box;
+		overflow: visible;
+		width: auto;
+		cursor: pointer;
+		flex-flow: row nowrap;
+		align-items: center;
+		text-decoration: none;
+		background-color: var(--subNavMenuBgColor);
+		border-radius: 3px;
+		font-size: var(--subNavMenuFSize);
+		font-style: normal;
+		font-weight: normal;
+		color: var(--subNavMenuFColor);
+		padding: var(--generalNavMenuPadding);
+		transition: background-color 0.5s;
+		-webkit-transition: background-color 0.5s;
 	}
 
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass:hover{
-		@include navMenusHoverActive_RoStyle;
+	.subNavMenu_RoClass:hover{
+		background-color: var(--hoverSubNavMenuBgColor);
+		color: var(--hoverSubNavMenuFColor);
 	}
-	/*_ _/*Navigation Menus From Collapse*/
 
+	.activeSubNavMenu_RoClass{
+		position: relative;
+		display: flex;
+		box-sizing: border-box;
+		overflow: visible;
+		width: auto;
+		cursor: pointer;
+		flex-flow: row nowrap;
+		align-items: center;
+		text-decoration: none;
+		background-color: var(--hoverSubNavMenuBgColor);
+		border-radius: 3px;
+		font-size: var(--subNavMenuFSize);
+		font-style: normal;
+		font-weight: normal;
+		color: var(--hoverSubNavMenuFColor);
+		padding: var(--generalNavMenuPadding);
+		transition: background-color 0.5s;
+		-webkit-transition: background-color 0.5s;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		position: relative;
+		box-sizing: border-box;
+		overflow: visible;
+		width: var(--subNavMenuIconSize);
+		height: var(--subNavMenuIconSize);
+		flex-shrink: 0;
+	}
+
+	.subNavMenuIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.subNavMenuText_RoClass{
+		position: relative;
+		display: block;
+		overflow: visible;
+		box-sizing: border-box;
+		white-space: normal;
+		font-family: calibri;		
+		width: 100%;
+		margin-left: 7px;		
+	}
+	/*_Navigation Menus From Collapse Or Sub Menu*/
 	/*Left Side Item*/
 
 
@@ -879,56 +997,12 @@ button.iconBtn_RoClass{
 	}
 
 	/*_Navigation Menu*/	
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass{ /*Normal Nav Menu Without Collapse*/
-		@include navMenu_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRight_RoClass{ /*Normal Nav Menu With Collapse Right*/
-		@include navMenuWithCollRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDown_RoClass{ /*Normal Nav Menu With Collapse Down*/
-		@include navMenuWithCollDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuActive_RoClass{ /*Active Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass:hover{ /*Hovered Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass{ /*Active Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass{ /*Active Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass{ /*Hovered Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass{ /*Hovered Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
+	
 	/*_Navigation Menu*/
 
 
 	/*_Navigation Menus Collapse*/
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass{
-		@include navMenus_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenusActive_RoClass{
-		@include navMenusHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass:hover{
-		@include navMenusHoverActive_RoStyle;
-	}
+	
 	/*_Navigation Menus Collapse*/	
 	/*Left Side Item*/
 
@@ -1033,56 +1107,12 @@ button.iconBtn_RoClass{
 	}
 
 	/*_Navigation Menu*/	
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass{ /*Normal Nav Menu Without Collapse*/
-		@include navMenu_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRight_RoClass{ /*Normal Nav Menu With Collapse Right*/
-		@include navMenuWithCollRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDown_RoClass{ /*Normal Nav Menu With Collapse Down*/
-		@include navMenuWithCollDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuActive_RoClass{ /*Active Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass:hover{ /*Hovered Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass{ /*Active Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass{ /*Active Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass{ /*Hovered Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass{ /*Hovered Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
+	
 	/*_Navigation Menu*/
 
 
 	/*_Navigation Menus Collapse*/
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass{
-		@include navMenus_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenusActive_RoClass{
-		@include navMenusHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass:hover{
-		@include navMenusHoverActive_RoStyle;
-	}
+	
 	/*_Navigation Menus Collapse*/	
 	/*Left Side Item*/
 
@@ -1187,56 +1217,12 @@ button.iconBtn_RoClass{
 	}
 
 	/*_Navigation Menu*/	
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass{ /*Normal Nav Menu Without Collapse*/
-		@include navMenu_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRight_RoClass{ /*Normal Nav Menu With Collapse Right*/
-		@include navMenuWithCollRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDown_RoClass{ /*Normal Nav Menu With Collapse Down*/
-		@include navMenuWithCollDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuActive_RoClass{ /*Active Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenu_RoClass:hover{ /*Hovered Nav Menu Without Collapse*/
-		@include navMenuHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollRightActive_RoClass{ /*Active Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollDownActive_RoClass{ /*Active Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverRight_RoClass{ /*Hovered Nav Menu With Collapse Right*/
-		@include navMenuWithCollHoverActiveRight_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .navMenuCollHoverDown_RoClass{ /*Hovered Nav Menu With Collapse Down*/
-		@include navMenuWithCollHoverActiveDown_RoStyle;
-	}
+	
 	/*_Navigation Menu*/
 
 
 	/*_Navigation Menus Collapse*/
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass{
-		@include navMenus_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenusActive_RoClass{
-		@include navMenusHoverActive_RoStyle;
-	}
-
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .collapseMenus_RoClass:hover{
-		@include navMenusHoverActive_RoStyle;
-	}
+	
 	/*_Navigation Menus Collapse*/	
 	/*Left Side Item*/
 

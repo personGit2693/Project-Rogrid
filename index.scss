@@ -13,16 +13,22 @@
 /*Root*/
 :root{
 	/*Navigation*/
-	--navpaddtop: 12px;	
-	--navpaddright: 12px;
-	--navpaddbottom: 12px;
-	--navpaddleft: 30px;
-	--naviconSize: 20px;
-	--navFSize: 12px;
-	--navFcolor: #ffffff;
-	--navBgColorha: blue;
-	--navFcolorha: yellow;
-	--navArrowSize: 12px;
+	--generalNavMenuPadding: 12px;
+
+	--mainNavMenuIconSize: 20px;
+	--mainNavMenuFSize: 16px;
+	--mainNavMenuBgColor: transparent;
+	--mainNavMenuFColor: #ffffff;
+	--hoverMainNavMenuBgColor: red;
+	--hoverMainNavMenuFColor: yellow;
+	--chevronIconSize: 14px;
+
+	--subNavMenuWrapBgColor: #C5C7C6;
+	--subNavMenuBgColor: transparent;
+	--subNavMenuFSize: 16px;
+	--subNavMenuFColor: #E9E9E9;
+	--hoverSubNavMenuBgColor: blue;
+	--hoverSubNavMenuFColor: #247F4F;
 	/*Navigation*/
 
 	/*Custom input element*/
