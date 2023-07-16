@@ -1283,7 +1283,6 @@
 	flex-shrink: 0;
 	background: var(--naviBgColor);
 }
-
 @mixin leftsideItem_Tablet_RoStyle{
 	position: relative;
 	box-sizing: border-box;
@@ -1295,7 +1294,6 @@
 	flex-shrink: 0;
 	background: var(--naviBgColor);
 }
-
 @mixin leftsideItem_Laptop_RoStyle{
 	position: relative;
 	box-sizing: border-box;
@@ -1307,7 +1305,6 @@
 	flex-shrink: 0;
 	background: var(--naviBgColor);
 }
-
 @mixin leftsideItem_Desktop_RoStyle{
 	position: relative;
 	box-sizing: border-box;
@@ -1352,8 +1349,7 @@
 
 
 /*_Navigation Menu*/
-/*_ _Normal Nav Menu Without Collapse*/
-@mixin normalNavMenu_RoStyle{
+@mixin mainNavMenu_RoStyle{
 	position: relative;
 	display: flex;
 	box-sizing: border-box;
@@ -1363,179 +1359,221 @@
 	flex-flow: row nowrap;
 	align-items: center;
 	text-decoration: none;
-	background-color: var(--navMenuBgColor);
+	background-color: var(--mainNavMenuBgColor);
 	border-radius: 3px;
-
-	border: 1px solid yellow;
+	font-size: var(--mainNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--mainNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
 }
-/*_ _Normal Nav Menu Without Collapse*/
+
+
+@mixin activeMainNavMenu_RoStyle{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--hoverMainNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--mainNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--hoverMainNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+}
+
+
+@mixin mainNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--mainNavMenuIconSize);
+	height: var(--mainNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--mainNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+@mixin activeMainNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--mainNavMenuIconSize);
+	height: var(--mainNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--activeMainNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+@mixin mainNavMenu_Hover_RoStyle{
+	background-color: var(--hoverMainNavMenuBgColor);
+	color: var(--hoverMainNavMenuFColor);
+}
+
+
+@mixin mainNavMenuIconWrap_Hover_RoStyle{
+	background-image: var(--activeMainNavMenuIcon);
+}
+
+
+@mixin generalNavMenuText_RoStyle{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;
+	font-family: calibri;		
+	width: 100%;
+	margin-left: 7px;
+}
+
+
+@mixin chevronIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--chevronIconSize);
+	height: var(--chevronIconSize);
+	flex-shrink: 0;
+	transform: rotate(0deg);
+	transition: transform 0.1s;
+	-webkit-transition: transform 0.1s;
+}
+
+
+@mixin activeChevronIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--chevronIconSize);
+	height: var(--chevronIconSize);
+	flex-shrink: 0;
+	transform: rotate(90deg);
+	transition: transform 0.1s;
+	-webkit-transition: transform 0.1s;
+}
 /*_Navigation Menu*/
 
 
 
-/*_Navigation Menu with Collapse (Right Chevron)*/
-@mixin navMenuWithCollRight_RoStyle{
+/*_Navigation Menus From Collapse or Sub Menu*/
+@mixin subNavMenuWrap_RoStyle{
 	position: relative;
 	display: block;
 	box-sizing: border-box;
-	overflow: visible;
-	white-space: nowrap;
-	width: auto;
-	margin-bottom: 3px;	
-	padding-top: var(--navpaddtop);
-	padding-right: var(--navpaddright);
-	padding-bottom: var(--navpaddbottom);
-	padding-left: var(--navpaddleft);	
-	background: var(--navicon) no-repeat 5px center, var(--navArrowRight) no-repeat right center; 
-	background-origin: padding-box, padding-box;
-	background-size: var(--naviconSize), var(--navArrowSize);
-	background-color: transparent; 
-	text-decoration: none;
-	font-style: normal;
-	font-weight: bold;
-	font-family: calibri;
-	font-size: var(--navFSize);
-	color: var(--navFcolor);
-	cursor: pointer;
+	overflow: hidden;
+	background-color: var(--subNavMenuWrapBgColor);
+	transition: max-height 0.5s;		
+	-webkit-transition: max-height 0.5s;
 }
-/*_Navigation Menu with Collapse (Right Chevron)*/
 
 
-
-/*_Navigation Menu with Collapse (Down Chevron)*/
-@mixin navMenuWithCollDown_RoStyle{
+@mixin subNavMenu_RoStyle{
 	position: relative;
-	display: block;
+	display: flex;
 	box-sizing: border-box;
 	overflow: visible;
-	white-space: nowrap;
 	width: auto;
-	margin-bottom: 3px;	
-	padding-top: var(--navpaddtop);
-	padding-right: var(--navpaddright);
-	padding-bottom: var(--navpaddbottom);
-	padding-left: var(--navpaddleft);	
-	background: var(--navicon) no-repeat 5px center, var(--navArrowDown) no-repeat right center; 
-	background-origin: padding-box, padding-box;
-	background-size: var(--naviconSize), var(--navArrowSize);
-	background-color: transparent; 
-	text-decoration: none;
-	font-style: normal;
-	font-weight: bold;
-	font-family: calibri;
-	font-size: var(--navFSize);
-	color: var(--navFcolor);
 	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--subNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--subNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--subNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
 }
-/*_Navigation Menu with Collapse (Down Chevron)*/
 
 
-
-/*_Navigation Menu Hover and Active*/
-@mixin navMenuHoverActive_RoStyle{
-	background: var(--navBgColorha) var(--naviconha) no-repeat 5px center;
-	color: var(--navFcolorha);
-	background-origin: padding-box;
-	background-size: var(--naviconSize);
-}
-/*_Navigation Menu Hover and Active*/
-
-
-
-/*_Navigation Menu with Collapse(Right Chevron) Hover & Active*/
-@mixin navMenuWithCollHoverActiveRight_RoStyle{
+@mixin activeSubNavMenu_RoStyle{
 	position: relative;
-	display: block;
+	display: flex;
 	box-sizing: border-box;
 	overflow: visible;
-	white-space: nowrap;
 	width: auto;
-	margin-bottom: 3px;	
-	padding-top: var(--navpaddtop);
-	padding-right: var(--navpaddright);
-	padding-bottom: var(--navpaddbottom);
-	padding-left: var(--navpaddleft);	
-	background: var(--naviconha) no-repeat 5px center, var(--navArrowRight) no-repeat right center; 
-	background-origin: padding-box, padding-box;
-	background-size: var(--naviconSize), var(--navArrowSize);
-	background-color: var(--navBgColorha); 
-	text-decoration: none;
-	font-style: normal;
-	font-weight: bold;
-	font-family: calibri;
-	font-size: var(--navFSize);
-	color: var(--navFcolorha);
 	cursor: pointer;
+	flex-flow: row nowrap;
+	align-items: center;
+	text-decoration: none;
+	background-color: var(--hoverSubNavMenuBgColor);
+	border-radius: 3px;
+	font-size: var(--subNavMenuFSize);
+	font-style: normal;
+	font-weight: normal;
+	color: var(--hoverSubNavMenuFColor);
+	padding: var(--generalNavMenuPadding);
+	transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
 }
-/*_Navigation Menu with Collapse(Right Chevron) Hover & Active*/
 
 
-
-/*_Navigation Menu with Collapse(Down Chevron) Hover & Active*/
-@mixin navMenuWithCollHoverActiveDown_RoStyle{
+@mixin subNavMenuIconWrap_RoStyle{
 	position: relative;
-	display: block;
 	box-sizing: border-box;
 	overflow: visible;
-	white-space: nowrap;
-	width: auto;
-	margin-bottom: 3px;	
-	padding-top: var(--navpaddtop);
-	padding-right: var(--navpaddright);
-	padding-bottom: var(--navpaddbottom);
-	padding-left: var(--navpaddleft);	
-	background: var(--naviconha) no-repeat 5px center, var(--navArrowDown) no-repeat right center; 
-	background-origin: padding-box, padding-box;
-	background-size: var(--naviconSize), var(--navArrowSize);
-	background-color: var(--navBgColorha); 
-	text-decoration: none;
-	font-style: normal;
-	font-weight: bold;
-	font-family: calibri;
-	font-size: var(--navFSize);
-	color: var(--navFcolorha);
-	cursor: pointer;
-}
-/*_Navigation Menu with Collapse(Down Chevron) Hover & Active*/
-
-
-
-/*_Navigation Menus*/
-@mixin navMenus_RoStyle{
-	position: relative;
-	display: inline-block;
-	box-sizing: border-box;
-	overflow: visible;
-	white-space: normal;
-	word-break: keep-all;
-	width: auto;
-	padding-top: var(--navpaddtop);
-	padding-right: var(--navpaddright);
-	padding-bottom: var(--navpaddbottom);
-	padding-left: var(--navpaddleft);
+	width: var(--subNavMenuIconSize);
+	height: var(--subNavMenuIconSize);
+	flex-shrink: 0;
 	background-color: transparent;
-	text-decoration: none;
-	font-style: normal;
-	font-weight: bold;
-	font-family: calibri;
-	font-size: var(--navFSize);
-	color: var(--navMenuFcolor);
-	cursor: pointer;
+	background-image: var(--subNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
-/*_Navigation Menus*/
 
 
-
-/*_Navigation Menus Hover & Active*/
-@mixin navMenusHoverActive_RoStyle{
-	background-color: var(--navBgColorha);
-	color: var(--navFcolorha);
+@mixin activeSubNavMenuIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--subNavMenuIconSize);
+	height: var(--subNavMenuIconSize);
+	flex-shrink: 0;
+	background-color: transparent;
+	background-image: var(--activeSubNavMenuIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
-/*_Navigation Menus Hover & Active*/
+
+
+@mixin subNavMenu_Hover_RoStyle{
+	background-color: var(--hoverSubNavMenuBgColor);
+	color: var(--hoverSubNavMenuFColor);
+}
+
+
+@mixin subNavMenuIconWrap_Hover_RoStyle{
+	background-image: var(--activeSubNavMenuIcon);
+}
+/*_Navigation Menus From Collapse or Sub Menu*/
 
 
 
-/*_Navigation Menu Icon Wrapper*/
+/*_Burger*/
 @mixin burgerIconWrap_Mobile_RoStyle{
 	position: relative;
 	display: inline-block; /*To be changed*/
@@ -1545,7 +1583,6 @@
 	height: 25px; /*To be changed*/
 	cursor: pointer;
 }
-
 @mixin burgerIconWrap_Tablet_RoStyle{
 	position: relative;
 	display: inline-block; /*To be changed*/
@@ -1555,7 +1592,6 @@
 	height: 25px; /*To be changed*/
 	cursor: pointer;
 }
-
 @mixin burgerIconWrap_Laptop_RoStyle{
 	position: relative;
 	display: none; /*changed*/
@@ -1565,7 +1601,6 @@
 	height: 28px; /*changed*/
 	cursor: pointer;	
 }
-
 @mixin burgerIconWrap_Desktop_RoStyle{
 	position: relative;
 	display: none; /*changed*/
@@ -1575,7 +1610,7 @@
 	height: 32px; /*changed*/
 	cursor: pointer;
 }
-/*_Navigation Menu Icon Wrapper*/
+/*_Burger*/
 
 
 

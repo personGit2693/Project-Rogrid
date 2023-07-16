@@ -130,39 +130,12 @@ burger_RoClass_Rogrid.addEventListener("click", function(){
 /****************************************************************************************************************************************************************************/
 /*Collapse Navigation Menu*/
 
-
-/*_Change main nav menu icon*/
-const hoverMainNavMenu = (mainNavMenu) => {
-	const mainNavMenu_Img_Elem = mainNavMenu.querySelector("img");
-
-	/*Editable*/
-	let defaultMainNavMenu_Icon = "abouticonwhite.png"; 
-	let hoverMainNavMenu_Icon = "abouticongreen.png";
-	/*Editable*/
-	
-	let currentMainNavMenu_Icon = mainNavMenu_Img_Elem.src.substring(mainNavMenu_Img_Elem.src.lastIndexOf('/')+1);
-
-	/*Editable*/
-	if(currentMainNavMenu_Icon == defaultMainNavMenu_Icon){
-		mainNavMenu_Img_Elem.src = "./src/"+hoverMainNavMenu_Icon;
-		currentMainNavMenu_Icon = hoverMainNavMenu_Icon
-	}else if(currentMainNavMenu_Icon == hoverMainNavMenu_Icon){
-		mainNavMenu_Img_Elem.src = "./src/"+defaultMainNavMenu_Icon;
-		currentMainNavMenu_Icon = defaultMainNavMenu_Icon;
-	}
-	/*Editable*/
-}
-/*_Change main nav menu icon*/
-
-
-
-
 /*_Function for collapsing the collapsable Nav Menu*/
 const collapseMenu = (mainNavMenu) => {
 	const chevronIconWrap = (mainNavMenu.querySelector(".chevronIconWrap_RoClass") != null) ? mainNavMenu.querySelector(".chevronIconWrap_RoClass") : mainNavMenu.querySelector(".activeChevronIconWrap_RoClass");
 
 	if(mainNavMenu.nextElementSibling.style.maxHeight == "0px"){
-		mainNavMenu.nextElementSibling.style.maxHeight = "500px"; /*Editable*/
+		mainNavMenu.nextElementSibling.style.maxHeight = "1000px"; /*Editable*/
 		chevronIconWrap.style.transform = "rotate(90deg)";
 	}else if(mainNavMenu.nextElementSibling.style.maxHeight != "0px"){
 		mainNavMenu.nextElementSibling.style.maxHeight = "0px";
@@ -171,7 +144,6 @@ const collapseMenu = (mainNavMenu) => {
 		
 }
 /*_Function for collapsing the collapsable Nav Menu*/
-
 
 /*Collapse Navigation Menu*/
 /****************************************************************************************************************************************************************************/

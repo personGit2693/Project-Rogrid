@@ -11,57 +11,21 @@
 	<div class="rolayout_RoClass">
 		<div class="sidemecha_RoClass" style="--naviBgColor:#161B22;">
 			<div class="sidemechaCon_RoClass">
-				<a href="" class="mainNavMenu_RoClass" style="" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)">					
-					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 1</span>
-				</a>
-
-
 				<a href="" class="activeMainNavMenu_RoClass">					
-					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticongreen.png" /></div><span class="mainNavMenuText_RoClass">navigation 2</span>
+					<div class="activeMainNavMenuIconWrap_RoClass" style="--activeMainNavMenuIcon:url('./src/abouticongreen.png')"></div>
+					<span class="generalNavMenuText_RoClass">navigation 1</span>
 				</a>
 
 
-				<div class="mainNavMenu_RoClass" style="" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)" onclick="collapseMenu(this)">					
-					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 3</span><div class="chevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
+				<div class="mainNavMenu_RoClass" onclick="collapseMenu(this)">					
+					<div class="mainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url('./src/bookcontacticonwhite.png'); --activeMainNavMenuIcon:url('./src/bookcontacticongreen.png')"></div>
+					<span class="generalNavMenuText_RoClass">navigation 2</span><div class="chevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
 				</div>
 				<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
-
-					<div class="mainNavMenu_RoClass" style="padding-left: 14px;" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)" onclick="collapseMenu(this)">					
-						<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 3.1</span><div class="chevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
-					</div>
-					<div style="max-height: 0px;" class="subNavMenuWrap_RoClass">
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a>
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
-					</div>
-
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
-				</div>
-
-
-				<div class="activeMainNavMenu_RoClass" style="" onclick="collapseMenu(this)">					
-					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticongreen.png" /></div><span class="mainNavMenuText_RoClass">navigation 4</span><div class="activeChevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
-				</div>
-				<div style="max-height: 500px;" class="subNavMenuWrap_RoClass">
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a>
-
-					<div class="activeMainNavMenu_RoClass" style="padding-left: 14px;" onclick="collapseMenu(this)">					
-						<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 4.1</span><div class="activeChevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
-					</div>
-					<div style="max-height: 500px;" class="subNavMenuWrap_RoClass">
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a>
-						<a href="path" class="activeSubNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
-						<a href="path" class="subNavMenu_RoClass" style="padding-left: 28px;">Sub Menu Selection</a> 
-					</div>
-
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
-					<a href="path" class="subNavMenu_RoClass" style="padding-left: 14px;">Sub Menu Selection</a> 
+					<a href="" class="subNavMenu_RoClass">					
+						<div class="subNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url('./src/abouticonwhite.png'); --activeSubNavMenuIcon:url('./src/abouticongreen.png')"></div>
+						<span class="generalNavMenuText_RoClass">navigation 2.1</span>
+					</a>
 				</div>				
 			</div>
 		</div>

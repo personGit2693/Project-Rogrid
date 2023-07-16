@@ -24,43 +24,43 @@
 
 * How to use navigation link with collapse and navigation link
 	• Import "RoStrap_Mixin" to your scss file
-	• Codes needed 
+	• Codes needed
 		• --generalNavMenuPadding: value; (To provide padding per nav menu) (mainNavMenu_RoClass, subNavMenu_RoClass)
 
 		• --mainNavMenuIconSize: value; (To provide main nav icon size) (mainNavMenuIconWrap_RoClass)
 		• --mainNavMenuFSize: value; (To provide main nav font size) (mainNavMenu_RoClass)
-		• --mainNavMenuBgColor: value; (To provide main nav font size) (mainNavMenu_RoClass)
+		• --mainNavMenuBgColor: value; (To provide main nav background color) (mainNavMenu_RoClass) 
 		• --mainNavMenuFColor: value; (To provide main nav font color) (mainNavMenu_RoClass)
-		• --hoverMainNavMenuBgColor: value; (To provide main nav background color when hover and active) (mainNavMenu_RoClass)
-		• --hoverMainNavMenuFColor: value; (To provide main nav font color when hover and active) (mainNavMenu_RoClass)
-		• --chevronIconSize: value; (To provide chevron size) (chevronIconWrap_RoClass)
+		• --hoverMainNavMenuBgColor: value; (To provide main nav background color when hovered and active) (mainNavMenu_RoClass)
+		• --hoverMainNavMenuFColor: yellow;	(To provide main nav font color when hovered and active) (mainNavMenu_RoClass)
 
-		• --subNavMenuWrapBgColor: value; (To provide sub menus wrapper background color) (subNavMenuWrap_RoClass)
-		• --subNavMenuBgColor: value; (To provide sub menus background color) (subNavMenu_RoClass)
-		• --subNavMenuFSize: value; (To provide sub menus font size) (subNavMenu_RoClass)
-		• --subNavMenuFColor: value; (To provide sub menus font color) (subNavMenu_RoClass)
-		• --hoverSubNavMenuBgColor: value; (To provide sub menus background color when hover and active) (subNavMenu_RoClass)
-		• --hoverSubNavMenuFColor: value; (To provide sub menus font color when hover and active) (subNavMenu_RoClass)
+		• --subNavMenuIconSize: value; (To provide sub nav icon size) (subNavMenuIconWrap_RoClass)
+		• --subNavMenuWrapBgColor: value; (To provide sub nav wrapper background color) (subNavMenuWrap_RoClass)
+		• --subNavMenuBgColor: value; (To provide sub nav background color) (subNavMenu_RoClass) 
+		• --subNavMenuFSize: value; (To provide sub nav font size) (subNavMenu_RoClass)
+		• --subNavMenuFColor: value; (To provide sub nav font color) (subNavMenu_RoClass)
+		• --hoverSubNavMenuBgColor: value; (To provide sub nav background color when hovered and active) (subNavMenu_RoClass)
+		• --hoverSubNavMenuFColor: value; (To provide sub nav font color when hovered and active) (subNavMenu_RoClass)
+
+		• --chevronIconSize: value; (To provide chevron size) (chevronIconWrap_RoClass)
 
 	• Structure
 		//Without Sub Menus
-		<div class="sidemecha_RoClass" style=" --naviBgColor:value; "> <--Left Side
-			<div class="sidemechaCon_RoClass"> <--Left Side Per Item
-				<a href="" class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass" style="" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)">					
-					<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="generalNavMenuText_RoClass">navigation 1</span>
-				</a>
-			</div>
-		</div>
+		<a href="" class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass">					
+			<div class="mainNavMenuIconWrap_RoClass OR activeMainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url(' value '); --activeMainNavMenuIcon:url(' value ')"></div> <--Use only "--activeMainNavMenuIcon" for active
+			<span class="generalNavMenuText_RoClass">navigation 1</span>
+		</a>
 
 		//With sub menus
-		<div class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass" onmouseover="hoverMainNavMenu(this)" onmouseout="hoverMainNavMenu(this)" onclick="collapseMenu(this)">					
-			<div class="mainNavMenuIconWrap_RoClass"><img src="./src/abouticonwhite.png" /></div><span class="mainNavMenuText_RoClass">navigation 2</span><div class="chevronIconWrap_RoClass OR activeChevronIconWrap_RoClass"><img src="./src/Chevron Right.png" /></div>
+		<div class="mainNavMenu_RoClass OR activeMainNavMenu_RoClass" onclick="collapseMenu(this)">					
+			<div class="mainNavMenuIconWrap_RoClass OR activeMainNavMenuIconWrap_RoClass" style="--mainNavMenuIcon:url(' value '); --activeMainNavMenuIcon:url(' value ')"></div> <--Use only "--activeMainNavMenuIcon" for active
+			<span class="generalNavMenuText_RoClass">navigation 2</span><div class="chevronIconWrap_RoClass"><img src=" value " /></div>
 		</div>
-		<div style="max-height: 0px;" class="subNavMenuWrap_RoClass"> <--Editable max-height align with js.
-			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a>
-			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a>
-			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a> 
-			<a href="path" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">Sub Menu Selection</a> 
+		<div style="max-height: 0px;" class="subNavMenuWrap_RoClass"> <--Set "max-height" to at least 1000px for active
+			<a href="" class="subNavMenu_RoClass OR activeSubNavMenu_RoClass">					
+				<div class="subNavMenuIconWrap_RoClass OR activeSubNavMenuIconWrap_RoClass" style="--subNavMenuIcon:url(' value '); --activeSubNavMenuIcon:url(' value ')"></div> <--Use only "--activeSubNavMenuIcon" for active
+				<span class="generalNavMenuText_RoClass">navigation 2.1</span>
+			</a>
 		</div>
 
 * How to use input RoStrap Style

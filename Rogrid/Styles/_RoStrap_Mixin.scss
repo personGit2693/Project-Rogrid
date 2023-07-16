@@ -722,179 +722,85 @@ button.iconBtn_RoClass{
 	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
 		@include naviWrapper_RoStyle;
 	}
+	/*Left Side Item*/
 
-	/*_Navigation Menu*/
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .mainNavMenu_RoClass{ 
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		overflow: visible;
-		width: auto;
-		cursor: pointer;
-		flex-flow: row nowrap;
-		align-items: center;
-		text-decoration: none;
-		background-color: var(--mainNavMenuBgColor);
-		border-radius: 3px;
-		font-size: var(--mainNavMenuFSize);
-		font-style: normal;
-		font-weight: normal;
-		color: var(--mainNavMenuFColor);
-		padding: var(--generalNavMenuPadding);
-		transition: background-color 0.5s;
-		-webkit-transition: background-color 0.5s;
-	}
-	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass .mainNavMenu_RoClass:hover{
-		background-color: var(--hoverMainNavMenuBgColor);
-		color: var(--hoverMainNavMenuFColor);
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
 	}
 
 	.activeMainNavMenu_RoClass{
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		overflow: visible;
-		width: auto;
-		cursor: pointer;
-		flex-flow: row nowrap;
-		align-items: center;
-		text-decoration: none;
-		background-color: var(--hoverMainNavMenuBgColor);
-		border-radius: 3px;
-		font-size: var(--mainNavMenuFSize);
-		font-style: normal;
-		font-weight: normal;
-		color: var(--hoverMainNavMenuFColor);
-		padding: var(--generalNavMenuPadding);
-		transition: background-color 0.5s;
-		-webkit-transition: background-color 0.5s;
+		@include activeMainNavMenu_RoStyle;
 	}	
 
 	.mainNavMenuIconWrap_RoClass{
-		position: relative;
-		box-sizing: border-box;
-		overflow: visible;
-		width: var(--mainNavMenuIconSize);
-		height: var(--mainNavMenuIconSize);
-		flex-shrink: 0;
+		@include mainNavMenuIconWrap_RoStyle;
 	}
 
-	.mainNavMenuIconWrap_RoClass>img{
-		@include childImage_RoStyle;
-	}	
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
 
-	.mainNavMenuText_RoClass{
-		position: relative;
-		display: block;
-		overflow: visible;
-		box-sizing: border-box;
-		white-space: normal;
-		font-family: calibri;		
-		width: 100%;
-		margin-left: 7px;		
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
+	
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
 	}
 
 	.chevronIconWrap_RoClass{
-		position: relative;
-		box-sizing: border-box;
-		overflow: visible;
-		width: var(--chevronIconSize);
-		height: var(--chevronIconSize);
-		flex-shrink: 0;
-		transform: rotate(0deg);
-		transition: transform 0.1s;
-		-webkit-transition: transform 0.1s;
+		@include chevronIconWrap_RoStyle;
 	}
 
 	.chevronIconWrap_RoClass>img{
 		@include childImage_RoStyle;
 	}
-	/*_Navigation Menu*/
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
 
 
-	/*_Navigation Menus From Collapse or Sub Menu*/
+	/*Navigation Menus From Collapse or Sub Menu*/
 	.subNavMenuWrap_RoClass{
-		position: relative;
-		display: block;
-		box-sizing: border-box;
-		overflow: hidden;
-		background-color: var(--subNavMenuWrapBgColor);
-		transition: max-height 0.5s;		
-		-webkit-transition: max-height 0.5s;
+		@include subNavMenuWrap_RoStyle;
 	}
 
 	.subNavMenu_RoClass{
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		overflow: visible;
-		width: auto;
-		cursor: pointer;
-		flex-flow: row nowrap;
-		align-items: center;
-		text-decoration: none;
-		background-color: var(--subNavMenuBgColor);
-		border-radius: 3px;
-		font-size: var(--subNavMenuFSize);
-		font-style: normal;
-		font-weight: normal;
-		color: var(--subNavMenuFColor);
-		padding: var(--generalNavMenuPadding);
-		transition: background-color 0.5s;
-		-webkit-transition: background-color 0.5s;
-	}
-
-	.subNavMenu_RoClass:hover{
-		background-color: var(--hoverSubNavMenuBgColor);
-		color: var(--hoverSubNavMenuFColor);
+		@include subNavMenu_RoStyle;
 	}
 
 	.activeSubNavMenu_RoClass{
-		position: relative;
-		display: flex;
-		box-sizing: border-box;
-		overflow: visible;
-		width: auto;
-		cursor: pointer;
-		flex-flow: row nowrap;
-		align-items: center;
-		text-decoration: none;
-		background-color: var(--hoverSubNavMenuBgColor);
-		border-radius: 3px;
-		font-size: var(--subNavMenuFSize);
-		font-style: normal;
-		font-weight: normal;
-		color: var(--hoverSubNavMenuFColor);
-		padding: var(--generalNavMenuPadding);
-		transition: background-color 0.5s;
-		-webkit-transition: background-color 0.5s;
+		@include activeSubNavMenu_RoStyle;
 	}
 
 	.subNavMenuIconWrap_RoClass{
-		position: relative;
-		box-sizing: border-box;
-		overflow: visible;
-		width: var(--subNavMenuIconSize);
-		height: var(--subNavMenuIconSize);
-		flex-shrink: 0;
+		@include subNavMenuIconWrap_RoStyle;
 	}
 
-	.subNavMenuIconWrap_RoClass>img{
-		@include childImage_RoStyle;
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
 	}
 
-	.subNavMenuText_RoClass{
-		position: relative;
-		display: block;
-		overflow: visible;
-		box-sizing: border-box;
-		white-space: normal;
-		font-family: calibri;		
-		width: 100%;
-		margin-left: 7px;		
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
 	}
-	/*_Navigation Menus From Collapse Or Sub Menu*/
-	/*Left Side Item*/
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
 
 
 	/*Main Side*/
@@ -994,17 +900,86 @@ button.iconBtn_RoClass{
 
 	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
 		@include naviWrapper_RoStyle;
+	}	
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
 	}
 
-	/*_Navigation Menu*/	
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
 	
-	/*_Navigation Menu*/
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
 
 
-	/*_Navigation Menus Collapse*/
-	
-	/*_Navigation Menus Collapse*/	
-	/*Left Side Item*/
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
 
 
 	/*Main Side*/
@@ -1104,17 +1079,86 @@ button.iconBtn_RoClass{
 
 	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
 		@include naviWrapper_RoStyle;
+	}	
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
 	}
 
-	/*_Navigation Menu*/	
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
 	
-	/*_Navigation Menu*/
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
 
 
-	/*_Navigation Menus Collapse*/
-	
-	/*_Navigation Menus Collapse*/	
-	/*Left Side Item*/
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
 
 
 	/*Main Side*/
@@ -1214,17 +1258,86 @@ button.iconBtn_RoClass{
 
 	div.rolayout_RoClass>div.sidemecha_RoClass>div.sidemechaCon_RoClass{
 		@include naviWrapper_RoStyle;
+	}	
+	/*Left Side Item*/
+
+
+	/*Navigation Menu*/
+	.mainNavMenu_RoClass{ 
+		@include mainNavMenu_RoStyle;
 	}
 
-	/*_Navigation Menu*/	
+	.activeMainNavMenu_RoClass{
+		@include activeMainNavMenu_RoStyle;
+	}	
+
+	.mainNavMenuIconWrap_RoClass{
+		@include mainNavMenuIconWrap_RoStyle;
+	}
+
+	.activeMainNavMenuIconWrap_RoClass{
+		@include activeMainNavMenuIconWrap_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover{
+		@include mainNavMenu_Hover_RoStyle;
+	}
+
+	.mainNavMenu_RoClass:hover .mainNavMenuIconWrap_RoClass{	
+		@include mainNavMenuIconWrap_Hover_RoStyle;
+	}
 	
-	/*_Navigation Menu*/
+	.generalNavMenuText_RoClass{
+		@include generalNavMenuText_RoStyle;	
+	}
+
+	.chevronIconWrap_RoClass{
+		@include chevronIconWrap_RoStyle;
+	}
+
+	.chevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass{
+		@include activeChevronIconWrap_RoStyle;
+	}
+
+	.activeChevronIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+	/*Navigation Menu*/
 
 
-	/*_Navigation Menus Collapse*/
-	
-	/*_Navigation Menus Collapse*/	
-	/*Left Side Item*/
+	/*Navigation Menus From Collapse or Sub Menu*/
+	.subNavMenuWrap_RoClass{
+		@include subNavMenuWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass{
+		@include subNavMenu_RoStyle;
+	}
+
+	.activeSubNavMenu_RoClass{
+		@include activeSubNavMenu_RoStyle;
+	}
+
+	.subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_RoStyle;
+	}
+
+	.activeSubNavMenuIconWrap_RoClass{
+		@include activeSubNavMenuIconWrap_RoStyle;
+	}
+
+	.subNavMenu_RoClass:hover{
+		@include subNavMenu_Hover_RoStyle
+	}
+
+	.subNavMenu_RoClass:hover .subNavMenuIconWrap_RoClass{
+		@include subNavMenuIconWrap_Hover_RoStyle;
+	}
+	/*Navigation Menus From Collapse Or Sub Menu*/
 
 
 	/*Main Side*/
