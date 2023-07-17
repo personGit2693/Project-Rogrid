@@ -4,6 +4,8 @@
 * How to use Layout one Design
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeLayOneNavScript.js" or "RogridNodeLayOneNavScript_Index.js"
+	• Codes needed
+		• --projectTitleTextFColor: value; (To provide font color) (projectTitle_RoClass)
 	• Structure
 		<div class="rolayout_RoClass"> <--The body 
 			<div class="sidemecha_RoClass" style=" --naviBgColor:value; "> <--Left Side
@@ -24,6 +26,7 @@
 
 * How to use navigation link with collapse and navigation link
 	• Import "RoStrap_Mixin" to your scss file
+	• Add Script "RogridNodeLayOneNavScript.js" or "RogridNodeLayOneNavScript_Index.js"
 	• Codes needed
 		• --generalNavMenuPadding: value; (To provide padding per nav menu) (mainNavMenu_RoClass, subNavMenu_RoClass)
 

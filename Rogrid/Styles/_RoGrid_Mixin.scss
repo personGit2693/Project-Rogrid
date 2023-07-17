@@ -1656,7 +1656,7 @@
 	word-break: keep-all;				
 	padding-right: 5px;
 	font: normal bold 18px calibri; /*To be changed*/
-	color: #ffffff;
+	color: var(--projectTitleTextFColor);
 	vertical-align: top;
 }
 
@@ -1669,7 +1669,7 @@
 	word-break: keep-all;				
 	padding-right: 5px;
 	font: normal bold 18px calibri; /*To be changed*/
-	color: #ffffff;
+	color: var(--projectTitleTextFColor);
 	vertical-align: top;
 }
 
@@ -1682,7 +1682,7 @@
 	word-break: keep-all;				
 	padding-right: 5px;
 	font: normal bold 20px calibri; /*changed*/
-	color: #ffffff;
+	color: var(--projectTitleTextFColor);
 	vertical-align: top;
 }
 /*_Main side project title*/

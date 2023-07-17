@@ -1630,7 +1630,7 @@ button.iconBtn_RoClass {
     padding-right: 5px;
     font: normal bold 18px calibri;
     /*To be changed*/
-    color: #ffffff;
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
@@ -1972,7 +1972,7 @@ button.iconBtn_RoClass {
     padding-right: 5px;
     font: normal bold 18px calibri;
     /*To be changed*/
-    color: #ffffff;
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
@@ -2314,7 +2314,7 @@ button.iconBtn_RoClass {
     padding-right: 5px;
     font: normal bold 20px calibri;
     /*changed*/
-    color: #ffffff;
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
@@ -2656,7 +2656,7 @@ button.iconBtn_RoClass {
     padding-right: 5px;
     font: normal bold 20px calibri;
     /*changed*/
-    color: #ffffff;
+    color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
@@ -2719,6 +2719,9 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --hoverSubNavMenuFColor: #247F4F;
   --chevronIconSize: 14px;
   /*Navigation*/
+  /*Page title*/
+  --projectTitleTextFColor: #ffffff;
+  /*Page title*/
   /*Custom input element*/
   --customInputFSize: 12px;
   --customInputAnimFSize: 9px;
