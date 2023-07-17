@@ -32,7 +32,13 @@
 		<div class="mainmecha_RoClass" style="--mainBodyBgColor:#0D1117;"> 
 			<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style="--projectTitle_BgColor:#161B22;">
 				<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div>
-				<div class="projectTitle_RoClass">My Project Title</div>
+				<div class="projTitleAndUserLogin_RoClass">
+					<div class="projTitleTxt_RoClass">My Page</div>
+					<div class="userLogin_RoClass">
+						<div class="userLoginIconWrap_RoClass"><img src="./src/actionofficericon.png"></div>
+						<div class="userLoginDetails_RoClass">Account Details</div>
+					</div>
+				</div>
 			</div> 
 			
 			<div style="position: relative;">

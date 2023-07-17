@@ -136,6 +136,8 @@
 /*_Main side content*/
 /*_Main side project title*/
 /*_Main side project title*/
+/*_Project Title and Login User Details*/
+/*_Project Title and Login User Details*/
 /*Layout one Rogrid Mixin*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -1628,12 +1630,83 @@ button.iconBtn_RoClass {
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 18px calibri;
-    /*To be changed*/
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
     color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: column wrap;
+    /*To be changed*/
+    justify-content: flex-start;
+    /*To be changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1970,12 +2043,83 @@ button.iconBtn_RoClass {
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 18px calibri;
-    /*To be changed*/
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
     color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -2305,19 +2449,90 @@ button.iconBtn_RoClass {
 
   div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
     position: relative;
-    display: block;
-    /*return to mobile value*/
+    display: inline-block;
+    /*changed*/
     box-sizing: border-box;
     overflow: hidden;
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 20px calibri;
-    /*changed*/
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
     color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Laptop*/
 /***********************************************************************************************************************************************************************************************************/
@@ -2647,19 +2862,90 @@ button.iconBtn_RoClass {
 
   div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projectTitle_RoClass {
     position: relative;
-    display: block;
-    /*return to mobile value*/
+    display: inline-block;
+    /*changed*/
     box-sizing: border-box;
     overflow: hidden;
     white-space: normal;
     word-break: keep-all;
     padding-right: 5px;
-    font: normal bold 20px calibri;
-    /*changed*/
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
     color: var(--projectTitleTextFColor);
     vertical-align: top; }
 
   /*_Project Title*/
+  /*_Project Title and Login User Details*/
+  div.rolayout_RoClass > div.mainmecha_RoClass > .mainmechaCon_RoClass > .projTitleAndUserLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row wrap;
+    /*changed*/
+    justify-content: space-between;
+    /*changed*/
+    width: 100%; }
+
+  .projTitleTxt_RoClass {
+    position: relative;
+    display: block;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    padding: 5px; }
+
+  .userLogin_RoClass {
+    position: relative;
+    display: flex;
+    overflow: visible;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    flex-flow: row nowrap;
+    width: auto; }
+
+  .userLoginIconWrap_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    width: var(--projectTitleUserIconSize);
+    height: var(--projectTitleUserIconSize);
+    flex-shrink: 0;
+    margin-right: 3px; }
+
+  .userLoginIconWrap_RoClass > img {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%; }
+
+  .userLoginDetails_RoClass {
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    border: 1px solid transparent;
+    white-space: normal;
+    width: auto;
+    font-family: calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--projectTitleTextFSize);
+    color: var(--projectTitleTextFColor);
+    align-self: center; }
+
+  /*_Project Title and Login User Details*/
   /*Main Side*/ }
 /*Dekstop*/
 /***********************************************************************************************************************************************************************************************************/

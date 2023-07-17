@@ -1646,7 +1646,6 @@
 }
 
 
-
 @mixin projectTitleText_Mobile_RoStyle{
 	position: relative;
 	display: block; /*To be changed*/
@@ -1655,12 +1654,14 @@
 	white-space: normal;
 	word-break: keep-all;				
 	padding-right: 5px;
-	font: normal bold 18px calibri; /*To be changed*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
 	color: var(--projectTitleTextFColor);
 	vertical-align: top;
 }
-
-@mixin projectTitleText_Tablet_RoStyle{
+@mixin projectTitleText_TLD_RoStyle{
 	position: relative;
 	display: inline-block; /*changed*/
 	box-sizing: border-box;
@@ -1668,24 +1669,95 @@
 	white-space: normal;
 	word-break: keep-all;				
 	padding-right: 5px;
-	font: normal bold 18px calibri; /*To be changed*/
-	color: var(--projectTitleTextFColor);
-	vertical-align: top;
-}
-
-@mixin projectTitleText_LD_RoStyle{
-	position: relative;
-	display: block; /*return to mobile value*/
-	box-sizing: border-box;
-	overflow: hidden;
-	white-space: normal;
-	word-break: keep-all;				
-	padding-right: 5px;
-	font: normal bold 20px calibri; /*changed*/
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
 	color: var(--projectTitleTextFColor);
 	vertical-align: top;
 }
 /*_Main side project title*/
+
+
+/*_Project Title and Login User Details*/
+@mixin projTitleAndUserLogin_Mobile_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: column wrap; /*To be changed*/
+	justify-content: flex-start; /*To be changed*/
+	width: 100%;
+}
+@mixin projTitleAndUserLogin_TLD_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row wrap; /*changed*/
+	justify-content: space-between; /*changed*/
+	width: 100%;
+}
+
+
+@mixin projTitleTxt_RoStyle{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	white-space: normal;
+	width: auto;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
+	color: var(--projectTitleTextFColor);
+	padding: 5px;
+}
+
+
+
+@mixin userLogin_RoStyle{
+	position: relative;
+	display: flex;
+	overflow: visible;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	flex-flow: row nowrap;
+	width: auto;
+}
+
+
+@mixin userLoginIconWrap_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	width: var(--projectTitleUserIconSize);
+	height: var(--projectTitleUserIconSize);
+	flex-shrink: 0;
+	margin-right: 3px;
+}
+
+
+@mixin userLoginDetails_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	border: 1px solid transparent;
+	white-space: normal;
+	width: auto;
+	font-family: calibri;
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--projectTitleTextFSize);
+	color: var(--projectTitleTextFColor);
+	align-self: center;
+}
+/*_Project Title and Login User Details*/
 
 /*Layout one Rogrid Mixin*/
 /***********************************************************************************************************************************************************************************************************/

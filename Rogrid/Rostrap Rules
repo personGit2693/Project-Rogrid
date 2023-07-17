@@ -5,7 +5,9 @@
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeLayOneNavScript.js" or "RogridNodeLayOneNavScript_Index.js"
 	• Codes needed
-		• --projectTitleTextFColor: value; (To provide font color) (projectTitle_RoClass)
+		• --projectTitleTextFColor: value; (To provide font color) (projectTitle_RoClass, projTitleTxt_RoClass, userLoginDetails_RoClass)
+		• --projectTitleTextFSize: value; (To provide font size) (projectTitle_RoClass, projTitleTxt_RoClass, userLoginDetails_RoClass)
+		• --projectTitleUserIconSize: value; (To provide icon size) (userLoginIconWrap_RoClass)
 	• Structure
 		<div class="rolayout_RoClass"> <--The body 
 			<div class="sidemecha_RoClass" style=" --naviBgColor:value; "> <--Left Side
@@ -16,7 +18,20 @@
 			<div class="mainmecha_RoClass" style=" --mainBodyBgColor:value; "> <--Right Side or Main Side
 				<div class="mainmechaCon_RoClass layoutOneHead_RoClass" style=" --projectTitle_BgColor:value; "> <--Header
 					<div class="burger_RoClass"><img class="burgerIcon_RoClass"></div> <--Burger
-					<div class="projectTitle_RoClass">My Project Title</div> <--Header Text
+
+					<!--Choose header style-->
+					//Without user login details
+					<div class="projectTitle_RoClass">My Project Title</div>
+
+					//With user login details
+					<div class="projTitleAndUserLogin_RoClass">
+						<div class="projTitleTxt_RoClass">My Page</div>
+						<div class="userLogin_RoClass">
+							<div class="userLoginIconWrap_RoClass"><img src="filename"></div>
+							<div class="userLoginDetails_RoClass">Account Details</div>
+						</div>
+					</div>
+					<!--Choose header style-->
 				</div> 
 				<div class="mainmechaCon_RoClass"> <--Right Side or Main Side Per Item
 					My Content

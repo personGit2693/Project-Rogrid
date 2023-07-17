@@ -855,6 +855,33 @@ button.iconBtn_RoClass{
 		@include projectTitleText_Mobile_RoStyle;
 	}
 	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_Mobile_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
 	/*Main Side*/
 }
 /*Mobile*/
@@ -1031,9 +1058,36 @@ button.iconBtn_RoClass{
 	}
 
 	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
-		@include projectTitleText_Tablet_RoStyle;
+		@include projectTitleText_TLD_RoStyle;
 	}
 	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_TLD_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
 	/*Main Side*/	
 }
 /*Tablet*/
@@ -1210,9 +1264,36 @@ button.iconBtn_RoClass{
 	}
 
 	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
-		@include projectTitleText_LD_RoStyle;
+		@include projectTitleText_TLD_RoStyle;
 	}
 	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_TLD_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
 	/*Main Side*/
 }
 /*Laptop*/
@@ -1389,9 +1470,36 @@ button.iconBtn_RoClass{
 	}
 
 	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projectTitle_RoClass{
-		@include projectTitleText_LD_RoStyle;
+		@include projectTitleText_TLD_RoStyle;
 	}
 	/*_Project Title*/
+
+
+	/*_Project Title and Login User Details*/
+	div.rolayout_RoClass>div.mainmecha_RoClass>.mainmechaCon_RoClass>.projTitleAndUserLogin_RoClass{
+		@include projTitleAndUserLogin_TLD_RoStyle;
+	}
+
+	.projTitleTxt_RoClass{
+		@include projTitleTxt_RoStyle;
+	}
+
+	.userLogin_RoClass{
+		@include userLogin_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass{
+		@include userLoginIconWrap_RoStyle;
+	}
+
+	.userLoginIconWrap_RoClass>img{
+		@include childImage_RoStyle;
+	}
+
+	.userLoginDetails_RoClass{
+		@include userLoginDetails_RoStyle;
+	}
+	/*_Project Title and Login User Details*/
 	/*Main Side*/	
 }
 /*Dekstop*/
