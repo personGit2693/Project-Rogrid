@@ -92,18 +92,18 @@
 				<div class="chartWrap_RoClass" id="barChartWrap"></div>
 
 
-				<div class="calLite_RoClass">
-					<input type="hidden" name="calLite_Name" id="calLite_ID">
+				<div class="calLite_RoClass" id="myCalendarLite">
+					<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 					<div class="calLiteHead_RoClass">
 						<div class="calLiteMonthHead_RoClass">
-							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus')"><img src="./src/callite left.png"></div>
+							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'myCalendarLite')"><img src="./src/callite left.png"></div>
 							<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
-							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add')"><img src="./src/callite right.png"></div>
+							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'myCalendarLite')"><img src="./src/callite right.png"></div>
 						</div>
 						<div class="calLiteYearHead_RoClass">
-							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus')"><img src="./src/callite left.png"></div>
+							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'myCalendarLite')"><img src="./src/callite left.png"></div>
 							<div class="calLiteYearText_RoClass"><!--Print Here--></div>
-							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add')"><img src="./src/callite right.png"></div>
+							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'myCalendarLite')"><img src="./src/callite right.png"></div>
 						</div>									
 					</div>
 					<div class="calLiteDaysTxt_RoClass">
@@ -302,7 +302,7 @@
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeLayOneNavScript_Index.js"></script>	
 	<script type="text/javascript" src="./Rogrid/Scripts/RogridNodeScript_Index.js"></script>Plugin_GstaticChart
 	<script type="text/javascript" src="./Rogrid/Scripts/Plugin_GstaticChart.js"></script>Plugin_GstaticChart
-	<script type="text/javascript" src="./CalendarLite.js"></script>	
+	<script type="text/javascript" src="./Rogrid/Scripts/CalendarLite.js"></script>	
 	<script type="text/javascript" src="./index.js"></script>	
 </body>
 </html>

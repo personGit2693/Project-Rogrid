@@ -293,23 +293,23 @@ Calendar Lite Note: Calendar Lite can only be used one per page only.
 		• " --calendarHeadTxtFSize: value " (Provide header font size) (For calLiteMonthText_RoClass and calLiteYearText_RoClass)
 		• " --calendarHeadBtnWidthHeight: value " (Provide header button width and height) (For calLiteButton_RoClass)
 		• " --calendarDayTxtFSize: value " (Provide day font size) (For calLiteDaysTxt_RoClass)
-	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" else if you don't want to use the global version create a copy of CalendarLite.js file and insert to your desired page folder and import it. 
+	• Add Script "CalendarLite.js". 
 	• Invoke this function if wanted to render calendar on your code manually. 
-		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid)" 
+		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myCalendarLite')" 
 	• Customize Editable Section
 	• Structure
-		<div class="calLite_RoClass">
-			<input type="hidden" name="calLite_Name" id="calLite_ID">
+		<div class="calLite_RoClass" id="myCalendarLite">
+			<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 			<div class="calLiteHead_RoClass">
 				<div class="calLiteMonthHead_RoClass">
-					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus')"><img src="../../src/callite left.png"></div>
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
 					<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
-					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add')"><img src="../../src/callite right.png"></div>
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
 				</div>
 				<div class="calLiteYearHead_RoClass">
-					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus')"><img src="../../src/callite left.png"></div>
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
 					<div class="calLiteYearText_RoClass"><!--Print Here--></div>
-					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add')"><img src="../../src/callite right.png"></div>
+					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
 				</div>									
 			</div>
 			<div class="calLiteDaysTxt_RoClass">

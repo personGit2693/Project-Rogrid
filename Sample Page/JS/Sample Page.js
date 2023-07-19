@@ -2,6 +2,9 @@ const scdropdownSelBox = document.getElementById("scdropdownSelBox-Id");
 
 createCusDropOptWoRogrid(scdropdownSelBox);
 
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myCalendarLite");
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myCalendarLiteTwo");
+
 /*Pie Chart*/
 /*Copy the format below for data and options for the reference of Javascript*/
 let pieChartData_Array = [['Task','Hours per Day'], 

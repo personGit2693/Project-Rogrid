@@ -2,6 +2,8 @@ const scdropdownSelBox = document.getElementById("scdropdownSelBox-Id");
 
 createCusDropOptWoRogrid(scdropdownSelBox);
 
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myCalendarLite");
+
 //showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0);
 
 /*Pie Chart*/
