@@ -103,6 +103,10 @@
 					<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/vmclogo.png"></div>
 				</div>
 
+				<div class="chartWrap_RoClass" id="pieChartWrap"></div>
+				<div class="chartWrap_RoClass" id="lineChartWrap"></div>
+				<div class="chartWrap_RoClass" id="barChartWrap"></div>
+
 				<div class="calLite_RoClass">
 					<input type="hidden" name="calLite_Name" id="calLite_ID">
 					<div class="calLiteHead_RoClass">
@@ -292,6 +296,7 @@
 
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeLayOneNavScript.js"></script>	
 	<script type="text/javascript" src="../../Rogrid/Scripts/RogridNodeScript.js"></script>
+	<script type="text/javascript" src="../../Rogrid/Scripts/Plugin_GstaticChart.js"></script>Plugin_GstaticChart
 	<script type="text/javascript" src="../JS/CalendarLite.js"></script>	
 	<script type="text/javascript" src="../JS/Sample Page.js"></script>	
 </body>

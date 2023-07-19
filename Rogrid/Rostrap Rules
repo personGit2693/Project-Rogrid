@@ -424,3 +424,18 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 				<button class="listBtn_RoClass">Button List 3</button>
 			</div>
 		</div>
+
+
+Note: For more reference go to "index.js" or "Sample_Page.js" or read the documentation "https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery"
+* How to use Chart.
+	• Import "RoStrap_Mixin" to your scss file. 
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Codes needed for providing styles 
+		• " --chartWrapWidth: value; " (Provide chart wrapper width) (chartWrap_RoClass) 
+		• " --chartWrapHeight: value; " (Provide chart wrapper height) (chartWrap_RoClass)
+		• " --chartWrapBorderWidth: value; " (Provide chart wrapper border width) (chartWrap_RoClass) 
+		• " --chartWrapBorderStyle: value; " (Provide chart wrapper border style) (chartWrap_RoClass) 
+		• " --chartWrapBorderColor: value; " (Provide chart wrapper border color) (chartWrap_RoClass) 
+		• " --chartWrapBorderRadius: value; " (Provide chart wrapper border radius) (chartWrap_RoClass) 		
+	•Structure
+		<div class="chartWrap_RoClass" id=" elementId "></div> 

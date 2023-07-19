@@ -548,3 +548,51 @@ const showActionButtons = (masterBtnWrap) =>{
 }
 /*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
 /****************************************************************************************************************************************************************************/ 
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Draw Pie Chart*/
+function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
+	const data = google.visualization.arrayToDataTable(chartData_Array);
+	const options = chartOption_Obj;
+
+	const chart = new google.visualization.PieChart(document.getElementById(chartWrapperId));
+
+	chart.draw(data, options);
+}
+/*Draw Pie Chart*/
+/****************************************************************************************************************************************************************************/ 
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Draw Line Chart*/
+function drawLineChart(chartData_Array, chartOption_Obj, chartWrapperId){
+	const data = google.visualization.arrayToDataTable(chartData_Array);
+	const options = chartOption_Obj;
+
+	const chart = new google.visualization.LineChart(document.getElementById(chartWrapperId));
+
+	chart.draw(data, options);
+}
+/*Draw Line Chart*/
+/****************************************************************************************************************************************************************************/ 
+
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Draw Bar Chart*/
+function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
+	const data = google.visualization.arrayToDataTable(chartData_Array);
+	const options = chartOption_Obj;
+
+	const chart = new google.visualization.BarChart(document.getElementById(chartWrapperId));
+
+	chart.draw(data, options);
+}
+/*Draw Bar Chart*/
+/****************************************************************************************************************************************************************************/ 

@@ -1255,6 +1255,24 @@
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Chart Wrapper*/
+@mixin chartWrap_RoStyle{
+	position: relative;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-width: var(--chartWrapBorderWidth);	
+	border-style: var(--chartWrapBorderStyle);
+	border-color: var(--chartWrapBorderColor);
+	border-radius: var(--chartWrapBorderRadius);
+	width: var(--chartWrapWidth);
+	height: var(--chartWrapHeight);
+}
+/*Chart Wrapper*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Layout one made Rogrid Mixin*/
 
 /*_Flex Items wrapper*/
