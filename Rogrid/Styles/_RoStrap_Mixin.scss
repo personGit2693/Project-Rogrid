@@ -701,6 +701,74 @@ button.iconBtn_RoClass{
 
 
 /***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+.dateRange_RoClass{
+	@include dateRange_RoStyle;	
+}
+
+.dateRangeDatails_RoClass{
+	@include dateRangeDatails_RoStyle;
+}
+
+.dateRangeIcon_RoClass{
+	@include dateRangeIcon_RoStyle;
+}
+
+.dateRangeText_RoClass{
+	@include dateRangeText_RoStyle;
+}
+
+.dateRangeTooltipArrow_RoClass{
+	@include dateRangeTooltipArrow_RoStyle;
+}
+
+.dateRangeCalLite_RoClass{
+	@include dateRangeCalLite_RoStyle;
+}
+/*General Media*/
+
+
+/*Mobile*/
+@media all and (max-width:641px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_Mobile_RoStyle;
+	}
+}
+
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_TLD_RoStyle;
+	}
+}
+
+/*Laptop*/
+@media all and (min-width:1081px) and (max-width:1600px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_TLD_RoStyle;
+	}
+}
+
+/*Desktop*/
+@media all and (min-width:1601px){
+	.dateRangeCalLiteWrap_RoClass{
+		@include dateRangeCalLiteWrap_TLD_RoStyle;
+	}
+}
+/***********************************************************************************************************************************************************************************************************/
+
+/*Date Range*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Layout one design RoStrap Mixin*/
 
 /***********************************************************************************************************************************************************************************************************/

@@ -64,6 +64,14 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 	const calLiteYearText = calLite.querySelector(".calLiteYearText_RoClass");
 	const calLiteDaysIndex = calLite.querySelector(".calLiteDaysIndex_RoClass");
 	const calLiteValue = calLite.querySelector(".calLiteValue_RoClass");
+	const calLiteMonthBtnValue = calLite.querySelector(".calLiteMonthBtnValue_RoClass");
+	const calLiteYearBtnValue = calLite.querySelector(".calLiteYearBtnValue_RoClass");
+	
+
+	/*_Assign inital value for month button*/
+	calLiteMonthBtnValue.value = month_Param;
+	calLiteYearBtnValue.value = year_Param;
+	/*_Assign inital value for month button*/
 
 
 	/*_Print Month and Year Inner Text*/
@@ -111,12 +119,25 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 		dayTxtDiv_Rogrid.addEventListener("click", function(){
 			/*Editable, you can add more event when date was selected*/
 			getCalendarLiteValue(year_Param, month_Param+1, this, calLite, calLiteValue);
+			/*Editable, you can add more event when date was selected*/
+
+			/*For Date Range only*/
+			/*Editable*/
+			if(calLite.classList.contains("dateRangeCalLite_RoClass") === true){
+				if(calLite.classList.contains("dateRangeCalLiteFrom_RoClass") === true){
+					setDateRangeFromText(calLite.parentElement.previousElementSibling, calLiteValue);
+				}else if(calLite.classList.contains("dateRangeCalLiteTo_RoClass") === true){
+					setDateRangeToText(calLite.parentElement.previousElementSibling, calLiteValue);
+				}				
+			}			
+			/*Editable*/
+			/*For Date Range only*/
 		});
 
 
 
 		/*_ _Setting Attribute per day number div*/
-		var attriMonth_Rogrid = month_Param+1;
+		let attriMonth_Rogrid = month_Param+1;
 		if(attriMonth_Rogrid < 10){
 			attriMonth_Rogrid = "0"+attriMonth_Rogrid;
 		}
@@ -158,23 +179,30 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 
 /*Function to Change calendar lite month*/
 const changeCalLiteMonth = (addMinusMonth_Param, calLite_Param) => {
+	const calLite = document.getElementById(calLite_Param);
+	const calLiteMonthBtnValue = calLite.querySelector(".calLiteMonthBtnValue_RoClass");
+	const calLiteYearBtnValue = calLite.querySelector(".calLiteYearBtnValue_RoClass");
+
+	let calLiteMonthBtnValue_Int = parseInt(calLiteMonthBtnValue.value);
+	let calLiteYearBtnValue_Int = parseInt(calLiteYearBtnValue.value);
+
 	if(addMinusMonth_Param === "minus"){
-		if(month_Rogrid !== 0){
-			month_Rogrid -= 1;
-			renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, calLite_Param);
-		}else if(month_Rogrid === 0){
-			month_Rogrid = 11;
-			year_Rogrid -= 1;
-			renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, calLite_Param);
+		if(calLiteMonthBtnValue_Int !== 0){
+			calLiteMonthBtnValue_Int -= 1;
+			renderCalLite(getNumberOfDays(calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int), calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int, calLite_Param);
+		}else if(calLiteMonthBtnValue_Int === 0){
+			calLiteMonthBtnValue_Int = 11;
+			calLiteYearBtnValue_Int -= 1;
+			renderCalLite(getNumberOfDays(calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int), calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int, calLite_Param);
 		}
 	}else if(addMinusMonth_Param === "add"){
-		if(month_Rogrid !== 11){
-			month_Rogrid += 1;
-			renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, calLite_Param);
-		}else if(month_Rogrid === 11){
-			month_Rogrid = 0;
-			year_Rogrid += 1;
-			renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, calLite_Param);
+		if(calLiteMonthBtnValue_Int !== 11){
+			calLiteMonthBtnValue_Int += 1;
+			renderCalLite(getNumberOfDays(calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int), calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int, calLite_Param);
+		}else if(calLiteMonthBtnValue_Int === 11){
+			calLiteMonthBtnValue_Int = 0;
+			calLiteYearBtnValue_Int += 1;
+			renderCalLite(getNumberOfDays(calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int), calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int, calLite_Param);
 		}
 	}
 }
@@ -185,12 +213,19 @@ const changeCalLiteMonth = (addMinusMonth_Param, calLite_Param) => {
 
 /*Function to Change calendar lite year*/
 const changeCalLiteYear = (addMinusYear_Param, calLite_Param) => {
+	const calLite = document.getElementById(calLite_Param);
+	const calLiteMonthBtnValue = calLite.querySelector(".calLiteMonthBtnValue_RoClass");
+	const calLiteYearBtnValue = calLite.querySelector(".calLiteYearBtnValue_RoClass");
+
+	let calLiteMonthBtnValue_Int = parseInt(calLiteMonthBtnValue.value);
+	let calLiteYearBtnValue_Int = parseInt(calLiteYearBtnValue.value);
+
 	if(addMinusYear_Param === "minus"){
-		year_Rogrid -= 1;
-		renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, calLite_Param);		
+		calLiteYearBtnValue_Int -= 1;
+		renderCalLite(getNumberOfDays(calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int), calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int, calLite_Param);		
 	}else if(addMinusYear_Param === "add"){
-		year_Rogrid += 1;
-		renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, calLite_Param);		
+		calLiteYearBtnValue_Int += 1;
+		renderCalLite(getNumberOfDays(calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int), calLiteMonthBtnValue_Int, calLiteYearBtnValue_Int, calLite_Param);		
 	}
 }
 /*Function to Change calendar lite year*/

@@ -111,11 +111,13 @@
 					<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 					<div class="calLiteHead_RoClass">
 						<div class="calLiteMonthHead_RoClass">
+							<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
 							<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
 						</div>
 						<div class="calLiteYearHead_RoClass">
+							<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
 							<div class="calLiteYearText_RoClass"><!--Print Here--></div>
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
@@ -159,11 +161,13 @@
 					<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 					<div class="calLiteHead_RoClass">
 						<div class="calLiteMonthHead_RoClass">
+							<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'myCalendarLiteTwo')"><img src="../../src/callite left.png"></div>
 							<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'myCalendarLiteTwo')"><img src="../../src/callite right.png"></div>
 						</div>
 						<div class="calLiteYearHead_RoClass">
+							<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'myCalendarLiteTwo')"><img src="../../src/callite left.png"></div>
 							<div class="calLiteYearText_RoClass"><!--Print Here--></div>
 							<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'myCalendarLiteTwo')"><img src="../../src/callite right.png"></div>

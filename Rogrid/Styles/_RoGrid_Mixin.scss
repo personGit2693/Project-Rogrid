@@ -858,7 +858,7 @@
 	overflow: visible;
 	border: 1px solid transparent;
 	flex-flow: row nowrap;
-	justify-content: space-around;	
+	justify-content: space-around;
 	margin-bottom: 10px;
 	box-shadow: 0px 0px 10px #5DA9DD;
 }
@@ -873,7 +873,7 @@
 	border: 1px solid transparent;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-items: center;	
+	align-items: center;
 }
 
 
@@ -1248,6 +1248,115 @@
 	color: var(--listBtnFColorha);
 }
 /*For Custom Dropdown Button List Rogrid Mixin*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Date Range*/
+@mixin dateRange_RoStyle{
+	position: relative;
+	display: inline-block;
+	overflow: visible;
+	box-sizing: border-box;
+	background-color: transparent;
+	border-radius: var(--dateRangeBorderRadius);	
+	border-width: var(--dateRangeBorderWidth);
+	border-style: solid;
+	border-color: var(--dateRangeBorderColor);
+	width: auto;
+	cursor: pointer;
+}
+
+
+@mixin dateRangeDatails_RoStyle{
+	position: relative;
+	overflow: visible;
+	display: flex;
+	box-sizing: border-box;	
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: var(--dateRangePadding);
+}
+
+
+@mixin dateRangeIcon_RoStyle{
+	position: relative;
+	overflow: visible;	
+	box-sizing: border-box;
+	width: var(--dateRangeIconSize);
+	height: var(--dateRangeIconSize);	
+	background-color: transparent;
+	background-image: var(--dateRangeIcon);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+}
+
+
+@mixin dateRangeText_RoStyle{
+	position: relative;
+	overflow: visible;
+	box-sizing: border-box;	
+	white-space: nowrap;
+	font-family: calibri;
+	font-size: var(--dateRangeFSize);
+	font-weight: normal;
+	font-style: normal;
+	color: var(--dateRangeFColor);
+}
+
+
+@mixin dateRangeTooltipArrow_RoStyle{
+	position: relative;
+	box-sizing: border-box;
+	display: none;
+	border-width: 7px;
+	border-style: solid;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: var(--dateRangeTooltipColor);
+	border-left-color: transparent;
+	width: 10px;		
+}
+
+
+@mixin dateRangeCalLiteWrap_Mobile_RoStyle{
+	position: absolute;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid yellow;
+	box-sizing: border-box;	
+	flex-flow: column nowrap; /*To be changed*/
+	width: 100%; /*To be changed*/
+	max-height: 0px;
+	transition: max-height 0.5s;
+	-webkit-transition: max-height 0.5s;	
+}
+@mixin dateRangeCalLiteWrap_TLD_RoStyle{
+	position: absolute;
+	display: flex;
+	overflow: hidden;
+	border: 1px solid yellow;
+	box-sizing: border-box;	
+	flex-flow: row nowrap; /*changed*/
+	width: var(--dateRangeCalLiteWrapWidth);
+	max-height: 0px;
+	transition: max-height 0.5s;
+	-webkit-transition: max-height 0.5s;		
+}
+
+
+@mixin dateRangeCalLite_RoStyle{
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--dateRangeCalLiteBorderColor);
+}
+/*Date Range*/
 /***********************************************************************************************************************************************************************************************************/
 
 

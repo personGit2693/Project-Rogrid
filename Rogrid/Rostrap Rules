@@ -302,11 +302,13 @@ Calendar Lite Note: Calendar Lite can only be used one per page only.
 			<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
 			<div class="calLiteHead_RoClass">
 				<div class="calLiteMonthHead_RoClass">
+					<input type="hidden" name="calLiteMonthBtnValue_Name" class="calLiteMonthBtnValue_RoClass">
 					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
 					<div class="calLiteMonthText_RoClass"><!--Print Here--></div>
 					<div class="calLiteButton_RoClass" onclick="changeCalLiteMonth('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
 				</div>
 				<div class="calLiteYearHead_RoClass">
+					<input type="hidden" name="calLiteYearBtnValue_Name" class="calLiteYearBtnValue_RoClass">
 					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('minus', 'myCalendarLite')"><img src="../../src/callite left.png"></div>
 					<div class="calLiteYearText_RoClass"><!--Print Here--></div>
 					<div class="calLiteButton_RoClass" onclick="changeCalLiteYear('add', 'myCalendarLite')"><img src="../../src/callite right.png"></div>
@@ -438,4 +440,39 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 		• " --chartWrapBorderColor: value; " (Provide chart wrapper border color) (chartWrap_RoClass) 
 		• " --chartWrapBorderRadius: value; " (Provide chart wrapper border radius) (chartWrap_RoClass) 		
 	•Structure
-		<div class="chartWrap_RoClass" id=" elementId "></div> 
+		<div class="chartWrap_RoClass" id=" elementId "></div>
+
+
+* How to use Date Range.
+	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed for providing styles 
+		• " --dateRangeBorderRadius: value; " (Provide Date Range border radius) (dateRange_RoClass) 
+		• " --dateRangeBorderWidth: value; " (Provide Date Range border width) (dateRange_RoClass)
+		• " --dateRangeBorderColor: value; " (Provide Date Range border color) (dateRange_RoClass)
+		• " --dateRangePadding: value; " (Provide Date Range Details Wrapper padding) (dateRangeDatails_RoClass)
+		• " --dateRangeIconSize: value; " (Provide Date Range Calendar Icon Size) (dateRangeIcon_RoClass)
+		• " --dateRangeIcon: value; " (Provide Date Range Calendar Icon) (dateRangeIcon_RoClass)
+		• " --dateRangeFSize: value; " (Provide Date Range Font Size) (dateRangeText_RoClass)
+		• " --dateRangeFColor: value; " (Provide Date Range Font Color) (dateRangeText_RoClass)
+		• " --dateRangeTooltipColor " (Provide color for the Date Range tooltip arrow) (dateRangeTooltipArrow_RoClass)
+		• " --dateRangeCalLiteWrapWidth " (Provide  Date Range Calendar Lite wrapper width) (dateRangeTooltipArrow_RoClass)
+		• " --dateRangeCalLiteBorderColor " (Provide Date Range Calendar lite border color) (dateRangeCalLite_RoClass)
+	•Structure
+		<div class="dateRange_RoClass" id="myDateRange" onclick="displayDateRangeCalLite(this)">
+			<div class="dateRangeDatails_RoClass">
+				<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('./src/calendaricon white.png');"></div>
+				<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
+			</div>
+			<div class="dateRangeTooltipArrow_RoClass"></div>					
+		</div>				
+		<div class="dateRangeCalLiteWrap_RoClass">
+			//Date Range Calendar Lite From
+			<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteFrom_RoClass" id="myDateRangeFrom">
+				Content
+			</div>
+
+			//Date Range Calendar Lite To
+			<div class="calLite_RoClass dateRangeCalLite_RoClass dateRangeCalLiteTo_RoClass" id="myDateRangeTo">
+				Content
+			</div>
+		</div>

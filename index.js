@@ -200,3 +200,9 @@ myBarChart.setOnLoadCallback(function(){
 	drawBarChart(barChartData_Array, barChartOption_Obj, "barChartWrap");
 });
 /*Bar Chart*/
+
+
+/*Date Range*/
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myDateRangeFrom");
+renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myDateRangeTo");
+/*Date Range*/
