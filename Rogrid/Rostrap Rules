@@ -454,11 +454,11 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 		• " --dateRangeIcon: value; " (Provide Date Range Calendar Icon) (dateRangeIcon_RoClass)
 		• " --dateRangeFSize: value; " (Provide Date Range Font Size) (dateRangeText_RoClass)
 		• " --dateRangeFColor: value; " (Provide Date Range Font Color) (dateRangeText_RoClass)
-		• " --dateRangeTooltipColor " (Provide color for the Date Range tooltip arrow) (dateRangeTooltipArrow_RoClass)
-		• " --dateRangeCalLiteWrapWidth " (Provide  Date Range Calendar Lite wrapper width) (dateRangeTooltipArrow_RoClass)
-		• " --dateRangeCalLiteBorderColor " (Provide Date Range Calendar lite border color) (dateRangeCalLite_RoClass)
+		• " --dateRangeTooltipColor: value; " (Provide color for the Date Range tooltip arrow) (dateRangeTooltipArrow_RoClass)
+		• " --dateRangeCalLiteWrapWidth: value; " (Provide  Date Range Calendar Lite wrapper width) (dateRangeTooltipArrow_RoClass)
+		• " --dateRangeCalLiteBorderColor: value; " (Provide Date Range Calendar lite border color) (dateRangeCalLite_RoClass)
 	•Structure
-		<div class="dateRange_RoClass" id="myDateRange" onclick="displayDateRangeCalLite(this)">
+		<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
 			<div class="dateRangeDatails_RoClass">
 				<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('./src/calendaricon white.png');"></div>
 				<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>

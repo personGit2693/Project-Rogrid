@@ -33,7 +33,7 @@ let pieChartOption_Obj = {
 	chartArea:{
 		top: 20,		
 		height: 145,
-		width: 350
+		width: 'auto'
 	},
 	height: 200,
 	width: 'auto',				
