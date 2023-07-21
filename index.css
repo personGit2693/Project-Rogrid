@@ -1330,6 +1330,13 @@ button.iconBtn_RoClass {
 /*Date Range*/
 /***********************************************************************************************************************************************************************************************************/
 /*General Media*/
+.dateRangeWrap_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  border: 0px solid transparent;
+  width: var(--dateRangeWidth); }
+
 .dateRange_RoClass {
   position: relative;
   display: inline-block;
@@ -1401,12 +1408,11 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: column nowrap;
     /*To be changed*/
     width: 100%;
-    /*To be changed*/
     max-height: 0px;
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
@@ -1416,11 +1422,11 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
-    width: var(--dateRangeCalLiteWrapWidth);
+    width: 100%;
     max-height: 0px;
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
@@ -1430,11 +1436,11 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
-    width: var(--dateRangeCalLiteWrapWidth);
+    width: 100%;
     max-height: 0px;
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
@@ -1444,11 +1450,11 @@ button.iconBtn_RoClass {
     position: absolute;
     display: flex;
     overflow: hidden;
-    border: 1px solid yellow;
+    border: 1px solid transparent;
     box-sizing: border-box;
     flex-flow: row nowrap;
     /*changed*/
-    width: var(--dateRangeCalLiteWrapWidth);
+    width: 100%;
     max-height: 0px;
     transition: max-height 0.5s;
     -webkit-transition: max-height 0.5s; } }
@@ -3303,6 +3309,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --chartWrapBorderRadius: 7px;
   /*Chart Wrapper*/
   /*Date Range*/
+  --dateRangeWidth: 100%;
   --dateRangeBorderRadius: 5px;
   --dateRangeBorderWidth: 1px;
   --dateRangeBorderColor: #ffffff;
@@ -3311,7 +3318,6 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --dateRangeFSize: 14px;
   --dateRangeFColor: #ffffff;
   --dateRangeTooltipColor: #ffffff;
-  --dateRangeCalLiteWrapWidth: 550px;
   --dateRangeCalLiteBorderColor: #8394B7;
   /*Date Range*/ }
 

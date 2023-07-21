@@ -705,6 +705,9 @@ button.iconBtn_RoClass{
 
 /***********************************************************************************************************************************************************************************************************/
 /*General Media*/
+.dateRangeWrap_RoClass{
+	@include dateRangeWrap_RoStyle;
+}
 
 .dateRange_RoClass{
 	@include dateRange_RoStyle;	
