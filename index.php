@@ -197,7 +197,7 @@
 
 				<div class="dateRangeWrap_RoClass">
 					<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
-						<div class="dateRangeDatails_RoClass">
+						<div class="dateRangeDetails_RoClass">
 							<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('./src/calendaricon white.png');"></div>
 							<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
 						</div>

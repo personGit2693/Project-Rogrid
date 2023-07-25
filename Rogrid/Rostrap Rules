@@ -445,8 +445,7 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 
 * How to use Date Range.
 	• Import "RoStrap_Mixin" to your scss file.
-	• Codes needed for providing styles 
-		• " --dateRangeWidth: value; " (Provide Date Range Wrapper width) (dateRangeWrap_RoClass) 
+	• Codes needed for providing styles 		
 		• " --dateRangeBorderRadius: value; " (Provide Date Range border radius) (dateRange_RoClass) 
 		• " --dateRangeBorderWidth: value; " (Provide Date Range border width) (dateRange_RoClass)
 		• " --dateRangeBorderColor: value; " (Provide Date Range border color) (dateRange_RoClass)
@@ -456,8 +455,9 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 		• " --dateRangeFSize: value; " (Provide Date Range Font Size) (dateRangeText_RoClass)
 		• " --dateRangeFColor: value; " (Provide Date Range Font Color) (dateRangeText_RoClass)
 		• " --dateRangeTooltipColor: value; " (Provide color for the Date Range tooltip arrow) (dateRangeTooltipArrow_RoClass)
-		• " --dateRangeCalLiteWrapWidth: value; " (Provide  Date Range Calendar Lite wrapper width) (dateRangeTooltipArrow_RoClass)
-		• " --dateRangeCalLiteBorderColor: value; " (Provide Date Range Calendar lite border color) (dateRangeCalLite_RoClass)
+		• " --dateRangeCalLiteWrapWidth: value; " (Provide  Date Range Calendar Lite wrapper width) (dateRangeCalLiteWrap_RoClass)
+		• " --dateRangeCalLiteWrapTop: value; " (Provide Date Range Calendar lite Wrapper Top) (dateRangeCalLiteWrap_RoClass)
+		• " --dateRangeCalLiteBorderColor: value; " (Provide Date Range Calendar lite border color) (dateRangeCalLite_RoClass)		
 	•Structure
 		<div class="dateRangeWrap_RoClass">
 			<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">

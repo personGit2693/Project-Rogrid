@@ -1258,10 +1258,11 @@
 /*Date Range*/
 @mixin dateRangeWrap_RoStyle{
 	position: relative;
+	display: inline-block;
 	box-sizing: border-box;
 	overflow: visible;
 	border: 0px solid transparent;
-	width: var(--dateRangeWidth);
+	width: auto;
 }
 
 
@@ -1280,7 +1281,7 @@
 }
 
 
-@mixin dateRangeDatails_RoStyle{
+@mixin dateRangeDetails_RoStyle{
 	position: relative;
 	overflow: visible;
 	display: flex;
@@ -1321,7 +1322,7 @@
 
 
 @mixin dateRangeTooltipArrow_RoStyle{
-	position: relative;
+	position: absolute;
 	box-sizing: border-box;
 	display: none;
 	border-width: 7px;
@@ -1341,10 +1342,11 @@
 	border: 1px solid transparent;
 	box-sizing: border-box;	
 	flex-flow: column nowrap; /*To be changed*/
-	width: 100%;
+	width: var(--dateRangeCalLiteWrapWidth);
 	max-height: 0px;
+	top: var(--dateRangeCalLiteWrapTop);	
 	transition: max-height 0.5s;
-	-webkit-transition: max-height 0.5s;	
+	-webkit-transition: max-height 0.5s;
 }
 @mixin dateRangeCalLiteWrap_TLD_RoStyle{
 	position: absolute;
@@ -1353,10 +1355,11 @@
 	border: 1px solid transparent;
 	box-sizing: border-box;	
 	flex-flow: row nowrap; /*changed*/
-	width: 100%;
+	width: var(--dateRangeCalLiteWrapWidth);
 	max-height: 0px;
+	top: var(--dateRangeCalLiteWrapTop);	
 	transition: max-height 0.5s;
-	-webkit-transition: max-height 0.5s;		
+	-webkit-transition: max-height 0.5s;
 }
 
 

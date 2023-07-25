@@ -188,8 +188,7 @@
 	--chartWrapBorderRadius: 7px;
 	/*Chart Wrapper*/
 
-	/*Date Range*/
-	--dateRangeWidth: 100%;
+	/*Date Range*/	
 	--dateRangeBorderRadius: 5px;
 	--dateRangeBorderWidth: 1px;
 	--dateRangeBorderColor: #ffffff;
@@ -197,7 +196,9 @@
 	--dateRangeIconSize: 25px;
 	--dateRangeFSize: 14px;
 	--dateRangeFColor: #ffffff;
-	--dateRangeTooltipColor: #ffffff;	
+	--dateRangeTooltipColor: #ffffff;
+	--dateRangeCalLiteWrapWidth: auto;
+	--dateRangeCalLiteWrapTop: 45px;	
 	--dateRangeCalLiteBorderColor: #8394B7;	
 	/*Date Range*/
 }
