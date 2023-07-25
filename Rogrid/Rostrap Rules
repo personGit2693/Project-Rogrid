@@ -294,7 +294,7 @@ Calendar Lite Note: Calendar Lite can only be used one per page only.
 		• " --calendarHeadBtnWidthHeight: value " (Provide header button width and height) (For calLiteButton_RoClass)
 		• " --calendarDayTxtFSize: value " (Provide day font size) (For calLiteDaysTxt_RoClass)
 	• Add Script "CalendarLite.js". 
-	• Invoke this function if wanted to render calendar on your code manually. 
+	• Invoke this function. 
 		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myCalendarLite')" 
 	• Customize Editable Section
 	• Structure
@@ -445,6 +445,10 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 
 * How to use Date Range.
 	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Add Script "CalendarLite.js"
+	• Invoke this function.
+		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myDateRangeFrom')" 
 	• Codes needed for providing styles 		
 		• " --dateRangeBorderRadius: value; " (Provide Date Range border radius) (dateRange_RoClass) 
 		• " --dateRangeBorderWidth: value; " (Provide Date Range border width) (dateRange_RoClass)
