@@ -73,17 +73,17 @@
 					<div class="radioCircleIconLabel_RoClass"><img src="./src/vmclogo.png"></div>
 				</div>
 
-				<div class="radioCheckFlex_RoClass">							
+				<div class="radioCheckFlex_RoClass">
+					<div class="radioCheckIconLabel_RoClass" style=""><img src="./src/paypal icon.png"></div>							
 					<label for="sampleRadioThreeId" class="customRadioCheck_RoClass"><img src="./src/checkIcon.png"></label>
 					<input type="radio" id="sampleRadioThreeId" name="sampleCheckRadioName" onchange="radioCheckSelected(this)" autocomplete="off">					
-					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->
-					<div class="radioCheckIconLabel_RoClass" style=""><img src="./src/paypal icon.png"></div>
+					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->					
 				</div>
-				<div class="radioCheckFlex_RoClass">							
+				<div class="radioCheckFlex_RoClass">
+					<div class="radioCheckIconLabel_RoClass" style=""><img src="./src/vmclogo.png"></div>							
 					<label for="sampleRadioFourId" class="customRadioCheck_RoClass"><img src="./src/checkIcon.png"></label>
 					<input type="radio" id="sampleRadioFourId" name="sampleCheckRadioName" onchange="radioCheckSelected(this)" autocomplete="off">					
-					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->
-					<div class="radioCheckIconLabel_RoClass" style=""><img src="./src/vmclogo.png"></div>
+					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->					
 				</div>
 
 				<div class="calLite_RoClass" id="myCalendarLite">
@@ -195,7 +195,7 @@
 					</div>
 				</div>
 
-				<div class="dateRangeWrap_RoClass">
+				<div class="dateRangeWrap_RoClass" style="z-index: 1;">
 					<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
 						<div class="dateRangeDetails_RoClass">
 							<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('./src/calendaricon white.png');"></div>
@@ -310,7 +310,16 @@
 						</div>
 						<!--Date Range Calendar Lite To-->
 					</div>
-				</div>								
+				</div>
+
+				<div class="selectDropdownWrap_RoClass">
+					<input type="hidden" id="mySelectDropdownValue">
+					<div class="displayedSelectedFlex_RoClass" title="Selected Text">
+						<div class="displayedSelectedIcon_RoClass" style="--displayedSelectedIcon: url('./src/ph flag.png');"></div>
+						<div class="displayedSelectedText_RoClass">Selected Text</div>
+						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('./src/Chevron Up.png');"></div>						
+					</div>
+				</div>							
 
 				<hr class="linethis_RoClass">
 				<div class=footerWrap_RoClass>

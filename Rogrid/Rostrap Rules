@@ -292,7 +292,7 @@ Calendar Lite Note: Calendar Lite can only be used one per page only.
 	• Codes needed 
 		• " --calendarHeadTxtFSize: value " (Provide header font size) (For calLiteMonthText_RoClass and calLiteYearText_RoClass)
 		• " --calendarHeadBtnWidthHeight: value " (Provide header button width and height) (For calLiteButton_RoClass)
-		• " --calendarDayTxtFSize: value " (Provide day font size) (For calLiteDaysTxt_RoClass)
+		• " --calendarDayTxtFSize: value " (Provide day font size) (For calLiteDaysTxt_RoClass, calLiteDaysIndex_RoClass)
 	• Add Script "CalendarLite.js". 
 	• Invoke this function. 
 		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myCalendarLite')" 
@@ -483,3 +483,18 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 				</div>
 			</div>
 		</div>
+
+* How to use Select Dropdown.
+	• Import "RoStrap_Mixin" to your scss file.
+	• Codes needed for providing styles
+		• " --selectDropdownWidth: value; " (Provide Select Dropdown width) (selectDropdownWrap_RoClass) 		
+		• " --selectDropdownBorderWidth: value; " (Provide Select Dropdown border width) (selectDropdownWrap_RoClass)
+		• " --selectDropdownBorderColor: value; " (Provide Select Dropdown border color) (selectDropdownWrap_RoClass)
+		• " --selectDropdownBorderRadius: value; " (Provide Select Dropdown border radius) (selectDropdownWrap_RoClass)
+		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass)		
+		• " --displayedSelectedIcon: value; " (Provide Selected Option icon) (displayedSelectedIcon_RoClass)
+		• " --displayedSelectedIconSize: value; " (Provide Selected Option icon size) (displayedSelectedIcon_RoClass)
+		• " --displayedSelectedFSize: value; " (Provide Selected Option font size) (displayedSelectedText_RoClass)
+		• " --displayedSelectedFColor: value; " (Provide Selected Option font color) (displayedSelectedText_RoClass)
+		• " --selectDropdownChevron: value; " (Provide Chevron icon) (displayedSelectedChevron_RoClass)
+		• " --selectDropdownChevronSize: value; " (Provide Chevron size) (displayedSelectedChevron_RoClass)
