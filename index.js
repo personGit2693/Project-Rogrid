@@ -132,12 +132,12 @@ myLineChart.setOnLoadCallback(function(){
 
 /*Bar Chart*/
 let barChartData_Array = [
-	['City', '2010 Population'],
-	['New York City, NY', 8175000],
-	['LA, CA', 3792000],
-	['Chicago, IL', 2695000],
-	['Houston, TX', 2099000],
-	['Philadelphia, PA', 1526000]
+	['City', '2010 Population', '2011 Population'],
+	['New York City, NY', 8175000, 1005000],
+	['LA, CA', 3792000, 1005000],
+	['Chicago, IL', 2695000, 1005000],
+	['Houston, TX', 2099000, 1005000],
+	['Philadelphia, PA', 1526000, 1005000]
 ];
 
 
