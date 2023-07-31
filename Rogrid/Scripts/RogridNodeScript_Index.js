@@ -639,15 +639,38 @@ function showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap
 	const selectDropdownOptionsWrap = displayedSelectedFlex.parentNode.querySelector(".selectDropdownOptionsWrap_RoClass");
 	const displayedSelectedChevron = displayedSelectedFlex.querySelector(".displayedSelectedChevron_RoClass");
 
-	if(selectDropdownOptionsWrap.style.display != "block"){
-		selectDropdownOptionsWrap.style.maxHeight = selectDropdownOptionsWrap_Height;
+	if(selectDropdownOptionsWrap.style.display != "block"){		
 		selectDropdownOptionsWrap.style.display = "block";
 		displayedSelectedChevron.style.transform = "rotateX(180deg)";
+		selectDropdownOptionsWrap.style.maxHeight = selectDropdownOptionsWrap_Height;
 	}else if(selectDropdownOptionsWrap.style.display == "block"){
 		selectDropdownOptionsWrap.style.maxHeight = "0";
 		selectDropdownOptionsWrap.style.display = "none";
 		displayedSelectedChevron.style.transform = "rotateX(0deg)";
 	}
+}
+
+
+function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height){
+	const selectedOptValue = selectDropdownOpt.parentNode.parentNode.querySelector(".selectedOptValue_RoClass");
+	const displayedSelectedFlex = selectDropdownOpt.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
+	const displayedSelectedIcon = selectDropdownOpt.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
+	const displayedSelectedText = selectDropdownOpt.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
+
+	const optValue = selectDropdownOpt.querySelector(".optValue_RoClass");
+	const optIcon = selectDropdownOpt.querySelector(".optIcon_RoClass");
+	const optText = selectDropdownOpt.querySelector(".optText_RoClass");
+
+	/*Assign selectedOptValue value*/
+	selectedOptValue.value = optValue.value;
+	displayedSelectedFlex.title = optText.innerText;
+	displayedSelectedIcon.style.setProperty("--optIcon", getComputedStyle(optIcon).getPropertyValue('--optIcon'));
+	displayedSelectedText.innerText = optText.innerText;
+	/*Assign selectedOptValue value*/
+
+	/*To Hide options*/
+	showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap_Height);
+	/*To Hide options*/
 }
 /*Display Select Dropdown Options*/
 /****************************************************************************************************************************************************************************/ 

@@ -1459,28 +1459,30 @@
 	max-height: 0;
 	width: 100%;
 	background-color: var(--selectDropdownBgColor);
-	-webkit-transition: max-height 0.5s;
-	transition: max-height 0.5s;
+	-webkit-transition: max-height 1s;
+	transition: max-height 1s;
 
 	border: 1px solid red;
 }
 
 
 @mixin searchOpts_RoStyle{
-	position: relative;
+	position: sticky;
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
-	background-color: var(--selectDropdownBgColor);
+	background-color: var(--searchOptsBgColor);
 	border-style: solid;
 	border-width: 1px;
 	border-color: var(--selectDropdownBorderColor);
+	top: 0;
+	z-index: 1;
 	font-family: calibri;
 	font-style: normal;
 	font-weight: normal;
 	font-size: var(--selectDropdownFSize);
-	color: var(--selectDropdownFColor);
-	padding: 5px;
+	color: var(--searchOptsFColor);
+	padding: 7px;
 }
 
 

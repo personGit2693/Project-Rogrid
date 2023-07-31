@@ -135,29 +135,7 @@
 							<!--Print Here-->										
 						</div>
 					</div>
-				</div>
-
-				<div class="selectDropdownWrap_RoClass" style="z-index: 1;">
-					<input type="hidden" id="mySelectDropdownValue">
-					<div class="displayedSelectedFlex_RoClass" title="Selected Text" onclick="showSelectDropdownOpts(this, '70px')">
-						<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
-						<div class="displayedSelectedText_RoClass">Selected Text</div>
-						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('./src/Chevron Up.png');"></div>						
-					</div>
-					<div class="selectDropdownOptionsWrap_RoClass">
-						<input type="text" placeholder="Search Here" class="searchOpts_RoClass"/>
-						<div class="selectDropdownOpt_RoClass">
-							<input type="hidden" id="optValue_RoClass" value="Opt1">
-							<div class="optIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
-							<div class="optText_RoClass">Option 1</div>
-						</div>
-						<div class="selectDropdownOpt_RoClass">
-							<input type="hidden" id="optValue_RoClass" value="Opt2">
-							<div class="optIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
-							<div class="optText_RoClass">Option 2</div>
-						</div>
-					</div>
-				</div>
+				</div>				
 
 				<div class="chartWrap_RoClass" id="pieChartWrap"></div>
 				<div class="chartWrap_RoClass" id="lineChartWrap"></div>
@@ -331,6 +309,28 @@
 							</div>
 						</div>
 						<!--Date Range Calendar Lite To-->
+					</div>
+				</div>
+
+				<div class="selectDropdownWrap_RoClass">
+					<input type="hidden" class="selectedOptValue_RoClass">
+					<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '70px')">
+						<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
+						<div class="displayedSelectedText_RoClass">Selected Text</div>
+						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('./src/Chevron Down.png');"></div>						
+					</div>
+					<div class="selectDropdownOptionsWrap_RoClass">
+						<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
+						<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+							<input type="hidden" class="optValue_RoClass" value="Opt1">
+							<div class="optIcon_RoClass" style="--optIcon: url('./src/china flag.png');"></div>
+							<div class="optText_RoClass">Option 1</div>
+						</div>
+						<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+							<input type="hidden" class="optValue_RoClass" value="Opt2">
+							<div class="optIcon_RoClass" style="--optIcon: url('./src/usa flag.png');"></div>
+							<div class="optText_RoClass">Option 2</div>
+						</div>
 					</div>
 				</div>							
 

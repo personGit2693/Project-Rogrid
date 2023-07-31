@@ -1548,25 +1548,27 @@ button.iconBtn_RoClass {
   max-height: 0;
   width: 100%;
   background-color: var(--selectDropdownBgColor);
-  -webkit-transition: max-height 0.5s;
-  transition: max-height 0.5s;
+  -webkit-transition: max-height 1s;
+  transition: max-height 1s;
   border: 1px solid red; }
 
 .selectDropdownWrap_RoClass .searchOpts_RoClass {
-  position: relative;
+  position: sticky;
   display: block;
   box-sizing: border-box;
   width: 100%;
-  background-color: var(--selectDropdownBgColor);
+  background-color: var(--searchOptsBgColor);
   border-style: solid;
   border-width: 1px;
   border-color: var(--selectDropdownBorderColor);
+  top: 0;
+  z-index: 1;
   font-family: calibri;
   font-style: normal;
   font-weight: normal;
   font-size: var(--selectDropdownFSize);
-  color: var(--selectDropdownFColor);
-  padding: 5px; }
+  color: var(--searchOptsFColor);
+  padding: 7px; }
 
 .selectDropdownWrap_RoClass .selectDropdownOpt_RoClass {
   position: relative;
@@ -3484,7 +3486,23 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   --dateRangeTooltipColor: #ffffff;
   --dateRangeCalLiteWrapWidth: 550px;
   --dateRangeCalLiteBorderColor: #8394B7;
-  /*Date Range*/ }
+  /*Date Range*/
+  /*Select Dropdown*/
+  --selectDropdownWidth: auto;
+  --selectDropdownBorderWidth: 1px;
+  --selectDropdownBorderColor: #ffffff;
+  --selectDropdownBorderRadius: 8px;
+  --selectDropdownBgColor: transparent;
+  --selectDropdownIconSize: 30px;
+  --selectDropdownFSize: 14px;
+  --selectDropdownFColor: #ffffff;
+  --selectDropdownChevronSize: 14px;
+  --searchOptsBgColor: #ffffff;
+  --searchOptsFColor: black;
+  --hoverOptBgColor: blue;
+  --hoverOptFColor: red;
+  --optWrapThumbBgColor: green;
+  /*Select Dropdown*/ }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
