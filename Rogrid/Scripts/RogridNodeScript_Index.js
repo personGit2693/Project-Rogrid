@@ -631,3 +631,23 @@ function setDateRangeToText(dateRange, calLiteValue){
 }
 /*Display Date Range Calendar Lite*/
 /****************************************************************************************************************************************************************************/ 
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Display Select Dropdown Options*/
+function showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap_Height){
+	const selectDropdownOptionsWrap = displayedSelectedFlex.parentNode.querySelector(".selectDropdownOptionsWrap_RoClass");
+	const displayedSelectedChevron = displayedSelectedFlex.querySelector(".displayedSelectedChevron_RoClass");
+
+	if(selectDropdownOptionsWrap.style.display != "block"){
+		selectDropdownOptionsWrap.style.maxHeight = selectDropdownOptionsWrap_Height;
+		selectDropdownOptionsWrap.style.display = "block";
+		displayedSelectedChevron.style.transform = "rotateX(180deg)";
+	}else if(selectDropdownOptionsWrap.style.display == "block"){
+		selectDropdownOptionsWrap.style.maxHeight = "0";
+		selectDropdownOptionsWrap.style.display = "none";
+		displayedSelectedChevron.style.transform = "rotateX(0deg)";
+	}
+}
+/*Display Select Dropdown Options*/
+/****************************************************************************************************************************************************************************/ 

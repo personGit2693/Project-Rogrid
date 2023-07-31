@@ -781,19 +781,55 @@ button.iconBtn_RoClass{
 }
 
 .selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass{
-	@include displayedSelectedFlex_RoStyle;
+	@include selectDropdownFlex_RoStyle;
 }
 
-.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass .displayedSelectedIcon_RoClass{
-	@include displayedSelectedIcon_RoStyle;
+.selectDropdownWrap_RoClass .displayedSelectedIcon_RoClass{
+	@include selectDropdownIcon_RoStyle;
 }
 
-.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass .displayedSelectedText_RoClass{
-	@include displayedSelectedText_RoStyle;
+.selectDropdownWrap_RoClass .displayedSelectedText_RoClass{
+	@include selectDropdownText_RoStyle;
 }
 
-.selectDropdownWrap_RoClass .displayedSelectedFlex_RoClass .displayedSelectedChevron_RoClass{
+.selectDropdownWrap_RoClass .displayedSelectedChevron_RoClass{
 	@include displayedSelectedChevron_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .selectDropdownOptionsWrap_RoClass{
+	@include selectDropdownOptionsWrap_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .searchOpts_RoClass{
+	@include searchOpts_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOpt_RoClass{
+	@include selectDropdownFlex_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .optIcon_RoClass{
+	@include selectDropdownIcon_RoStyle;
+}
+
+.selectDropdownWrap_RoClass .optText_RoClass{
+	@include selectDropdownText_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOpt_RoClass:hover, .selectDropdownOpt_RoClass:hover .optText_RoClass{
+	@include hoverSelectDropdownOpt_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOptionsWrap_RoClass::-webkit-scrollbar{
+	@include selectDropdownOptionsWrapScrollbar_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-track{
+	@include selectDropdownOptionsWrapTrack_RoStyle;
+}
+
+.selectDropdownWrap_RoClass	.selectDropdownOptionsWrap_RoClass::-webkit-scrollbar-thumb{
+	@include selectDropdownOptionsWrapThumb_RoStyle;
 }
 /*General Media*/
 /***********************************************************************************************************************************************************************************************************/

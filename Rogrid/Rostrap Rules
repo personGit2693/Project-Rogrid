@@ -491,10 +491,34 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 		• " --selectDropdownBorderWidth: value; " (Provide Select Dropdown border width) (selectDropdownWrap_RoClass)
 		• " --selectDropdownBorderColor: value; " (Provide Select Dropdown border color) (selectDropdownWrap_RoClass)
 		• " --selectDropdownBorderRadius: value; " (Provide Select Dropdown border radius) (selectDropdownWrap_RoClass)
-		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass)		
-		• " --displayedSelectedIcon: value; " (Provide Selected Option icon) (displayedSelectedIcon_RoClass)
-		• " --displayedSelectedIconSize: value; " (Provide Selected Option icon size) (displayedSelectedIcon_RoClass)
-		• " --displayedSelectedFSize: value; " (Provide Selected Option font size) (displayedSelectedText_RoClass)
-		• " --displayedSelectedFColor: value; " (Provide Selected Option font color) (displayedSelectedText_RoClass)
+		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass)		
+		• " --optIcon: value; " (Provide Option icon) (displayedSelectedIcon_RoClass, optIcon_RoClass)
+		• " --selectDropdownIconSize: value; " (Provide Option icon size) (displayedSelectedIcon_RoClass, optIcon_RoClass)
+		• " --selectDropdownFSize: value; " (Provide Option font size) (displayedSelectedText_RoClass, optText_RoClass)
+		• " --selectDropdownFColor: value; " (Provide Option font color) (displayedSelectedText_RoClass, optText_RoClass)
 		• " --selectDropdownChevron: value; " (Provide Chevron icon) (displayedSelectedChevron_RoClass)
 		• " --selectDropdownChevronSize: value; " (Provide Chevron size) (displayedSelectedChevron_RoClass)
+		• " --hoverOptBgColor: value; " (Provide Option bg color when hovered) (selectDropdownOpt_RoClass)
+		• " --hoverOptFColor: value; " (Provide Option font color when hovered) (selectDropdownOpt_RoClass)
+		• " --optWrapThumbBgColor: value; " (Provide Options Wrapper scroll thumb background color) (selectDropdownOptionsWrap_RoClass)
+	•Structure
+		<div class="selectDropdownWrap_RoClass">
+			<input type="hidden" id="mySelectDropdownValue">
+			<div class="displayedSelectedFlex_RoClass" title="Selected Text">
+				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
+				<div class="displayedSelectedText_RoClass">Selected Text</div>
+				<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('./src/Chevron Up.png');"></div>						
+			</div>
+			<div class="selectDropdownOptionsWrap_RoClass">
+				<div class="selectDropdownOpt_RoClass">
+					<input type="hidden" id="optValue_RoClass" value="Opt1">
+					<div class="optIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
+					<div class="optText_RoClass">Option 1</div>
+				</div>
+				<div class="selectDropdownOpt_RoClass">
+					<input type="hidden" id="optValue_RoClass" value="Opt2">
+					<div class="optIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
+					<div class="optText_RoClass">Option 2</div>
+				</div>
+			</div>
+		</div>
