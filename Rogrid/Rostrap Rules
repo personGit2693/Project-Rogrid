@@ -490,9 +490,9 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 	• Codes needed for providing styles
 		• " --selectDropdownWidth: value; " (Provide Select Dropdown width) (selectDropdownWrap_RoClass) 		
 		• " --selectDropdownBorderWidth: value; " (Provide Select Dropdown border width) (selectDropdownWrap_RoClass)
-		• " --selectDropdownBorderColor: value; " (Provide Select Dropdown border color) (selectDropdownWrap_RoClass)
+		• " --selectDropdownBorderColor: value; " (Provide Select Dropdown border color) (selectDropdownWrap_RoClass, searchOpts_RoClass)
 		• " --selectDropdownBorderRadius: value; " (Provide Select Dropdown border radius) (selectDropdownWrap_RoClass)
-		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass, searchOpts_RoClass)		
+		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass)		
 		• " --optIcon: value; " (Provide Option icon) (displayedSelectedIcon_RoClass, optIcon_RoClass)
 		• " --selectDropdownIconSize: value; " (Provide Option icon size) (displayedSelectedIcon_RoClass, optIcon_RoClass)
 		• " --selectDropdownFSize: value; " (Provide Option font size) (displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass)
