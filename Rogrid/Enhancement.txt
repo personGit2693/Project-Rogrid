@@ -1,5 +1,0 @@
-1. Documentation
-	*How to use chart; include on the instruction the adding of Plugin_GstaticChart Script.
-
-2. New Function
-	*Add Area chart for new type of chart.
