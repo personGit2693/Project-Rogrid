@@ -106,6 +106,7 @@
 				<div class="chartWrap_RoClass" id="pieChartWrap"></div>
 				<div class="chartWrap_RoClass" id="lineChartWrap"></div>
 				<div class="chartWrap_RoClass" id="barChartWrap"></div>
+				<div class="chartWrap_RoClass" id="areaChartWrap"></div>
 
 				<div class="calLite_RoClass" id="myCalendarLite">
 					<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">

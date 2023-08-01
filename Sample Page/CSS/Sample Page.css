@@ -1549,8 +1549,7 @@ button.iconBtn_RoClass {
   width: 100%;
   background-color: var(--selectDropdownBgColor);
   -webkit-transition: max-height 1s;
-  transition: max-height 1s;
-  border: 1px solid red; }
+  transition: max-height 1s; }
 
 .selectDropdownWrap_RoClass .searchOpts_RoClass {
   position: sticky;
@@ -3469,7 +3468,7 @@ div.footerWrap_RoClass > span.footerTxt_RoClass {
   /*Dropdown button list*/
   /*Chart Wrapper*/
   --chartWrapWidth: auto;
-  --chartWrapHeight: auto;
+  --chartWrapHeight: 250px;
   --chartWrapBorderWidth: 1px;
   --chartWrapBorderStyle: solid;
   --chartWrapBorderColor: yellow;

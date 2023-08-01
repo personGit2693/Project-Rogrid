@@ -140,6 +140,7 @@
 				<div class="chartWrap_RoClass" id="pieChartWrap"></div>
 				<div class="chartWrap_RoClass" id="lineChartWrap"></div>
 				<div class="chartWrap_RoClass" id="barChartWrap"></div>
+				<div class="chartWrap_RoClass" id="areaChartWrap"></div>
 
 				<div class="scdropdownSelBox_RoClass" id="scdropdownSelBox-Id">
 					<div class="scdropOptionCon_RoClass">

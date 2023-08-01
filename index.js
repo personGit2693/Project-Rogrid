@@ -14,7 +14,7 @@ let pieChartData_Array = [['Task','Hours per Day'],
 	['Commute',2],
 	['Watch TV', 2],
 	['Sleep',7]
-]
+];
 
 let pieChartOption_Obj = {
 	fontSize: 12,
@@ -47,7 +47,7 @@ let pieChartOption_Obj = {
 	pieSliceTextStyle:{
 		color: "white" 
 	}	
-}
+};
 
 const myPieChart = google.charts;
 
@@ -200,6 +200,80 @@ myBarChart.setOnLoadCallback(function(){
 	drawBarChart(barChartData_Array, barChartOption_Obj, "barChartWrap");
 });
 /*Bar Chart*/
+
+
+
+/*Area Chart*/
+let areaChartData_Array = [
+	['Year', 'Sales', 'Expenses'],
+	['2005', 1000, 400],
+	['2006', 1170, 460],
+	['2007', 660, 1120],
+	['2008', 1030, 540]
+];
+
+
+let areaChartOption_Obj = {
+	fontSize: 12,
+	fontName: "Calibri",
+	title: 'My Area Chart Title',
+	curveType: 'function',
+	titleTextStyle:{
+		color: "white",
+		fontSize: 16,
+		bold: false
+	},
+	backgroundColor:{
+		fill: "transparent",
+		stroke: "red",
+		strokeWidth: 2
+	},
+	chartArea:{
+		left: 60,
+		top: "auto",		
+		height: "auto",
+		width: "auto"
+	},
+	height: "auto",
+	width: "auto",				
+	legend:{
+		alignment: "start",
+		position: "right",
+		textStyle: { 
+			color: "white"
+		}
+	},
+	axisTitlesPosition: 'out',
+	hAxis: {
+		title: 'Year',
+		textStyle:{
+			color: 'white'
+		},
+		titleTextStyle:{
+			color: "white"
+		}			
+	},
+	vAxis: {
+		title: 'Popularity',
+		textStyle:{
+			color: "white"
+		},
+		titleTextStyle:{
+			color: "white"
+		}			
+	}		
+};
+
+
+const myAreaChart = google.charts;
+
+myAreaChart.load('current', {packages: ['corechart']});
+
+myAreaChart.setOnLoadCallback(function(){
+	drawAreaChart(areaChartData_Array, areaChartOption_Obj, "areaChartWrap");
+});
+/*Area Chart*/
+
 
 
 /*Date Range*/

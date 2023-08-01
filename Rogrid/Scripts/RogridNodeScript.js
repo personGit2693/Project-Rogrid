@@ -583,7 +583,6 @@ function drawLineChart(chartData_Array, chartOption_Obj, chartWrapperId){
 
 
 
-
 /****************************************************************************************************************************************************************************/ 
 /*Draw Bar Chart*/
 function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
@@ -595,6 +594,21 @@ function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
 	chart.draw(data, options);
 }
 /*Draw Bar Chart*/
+/****************************************************************************************************************************************************************************/ 
+
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Draw Area Chart*/
+function drawAreaChart(chartData_Array, chartOption_Obj, chartWrapperId){
+	const data = google.visualization.arrayToDataTable(chartData_Array);
+	const options = chartOption_Obj;
+
+	const chart = new google.visualization.AreaChart(document.getElementById(chartWrapperId));
+
+	chart.draw(data, options);
+}
+/*Draw Area Chart*/
 /****************************************************************************************************************************************************************************/ 
 
 
