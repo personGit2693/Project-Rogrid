@@ -31,10 +31,10 @@ let pieChartOption_Obj = {
 	},
 	chartArea:{
 		top: 20,		
-		height: 145,
+		height: "auto",
 		width: 'auto'
 	},
-	height: 200,
+	height: "auto",
 	width: 'auto',				
 	legend:{
 		alignment: "center",
@@ -71,7 +71,7 @@ let lineChartData_Array = [
 let lineChartOption_Obj = {
 	fontSize: 12,
 	fontName: "Calibri",
-	title: 'My Pie Chart Title',
+	title: 'My Line Chart Title',
 	titleTextStyle:{
 		color: "white",
 		fontSize: 16,
@@ -85,10 +85,10 @@ let lineChartOption_Obj = {
 	chartArea:{
 		left: 60,
 		top: "auto",		
-		height: 140,
+		height: "auto",
 		width: "auto"
 	},
-	height: 220,
+	height: "auto",
 	width: "auto",				
 	legend:{
 		alignment: "start",
@@ -157,10 +157,10 @@ let barChartOption_Obj = {
 	chartArea:{
 		left: "auto",
 		top: "auto",		
-		height: 140,
+		height: "auto",
 		width: "auto"
 	},
-	height: 220,
+	height: "auto",
 	width: "auto",				
 	legend:{
 		alignment: "start",
