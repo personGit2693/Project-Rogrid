@@ -619,7 +619,7 @@ function displayDateRangeCalLite(dateRange){
 	const dateRangeTooltipArrow = dateRange.querySelector(".dateRangeTooltipArrow_RoClass");
 	const dateRangeCalLiteWrap = dateRange.nextElementSibling;
 
-	if(dateRangeTooltipArrow.style.display == "block"){		
+	if(dateRangeTooltipArrow.style.display == "block"){
 		dateRangeCalLiteWrap.style.maxHeight = "0px";
 		dateRangeTooltipArrow.style.display = "none";
 	}else if(dateRangeTooltipArrow.style.display != "block"){		
