@@ -91,7 +91,6 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 
 
 
-
 	/*_Align the days index to days text until first day*/
 	const firstDay_Rogrid = monthTxt_Rogrid+" "+1+", "+year_Param;
 	const firstdayOfMonth_Rogrid = new Date(firstDay_Rogrid).getDay();
@@ -119,6 +118,20 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 		dayTxtDiv_Rogrid.addEventListener("click", function(){
 			/*Editable, you can add more event when date was selected*/
 			getCalendarLiteValue(year_Param, month_Param+1, this, calLite, calLiteValue);
+
+			/*For VMC CSAT*/
+			/*_Page Office JS*/
+			if(calLite.classList.contains("overallCalendar-Class") === true){
+				submitRequestOverallServRate();
+				submitRequestOverallStronglyAgree();
+				submitRequestOverallAgree();
+				submitRequestOverallNeither();
+				submitRequestOverallDisagree();
+				submitRequestOverallStronglyDisagree();
+				submitRequestOverallNoRating();
+			}
+			/*_Page Office JS*/
+			/*For VMC CSAT*/
 			/*Editable, you can add more event when date was selected*/
 
 			/*For Date Range only*/
