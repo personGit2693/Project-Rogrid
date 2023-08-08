@@ -652,15 +652,33 @@ function setDateRangeToText(dateRange, calLiteValue){
 function showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap_Height){
 	const selectDropdownOptionsWrap = displayedSelectedFlex.parentNode.querySelector(".selectDropdownOptionsWrap_RoClass");
 	const displayedSelectedChevron = displayedSelectedFlex.querySelector(".displayedSelectedChevron_RoClass");
+	const searchOpts = displayedSelectedFlex.parentNode.querySelector(".searchOpts_RoClass");
 
 	if(selectDropdownOptionsWrap.style.display != "block"){		
 		selectDropdownOptionsWrap.style.display = "block";
-		displayedSelectedChevron.style.transform = "rotateX(180deg)";
+		displayedSelectedChevron.style.transform = "rotateX(180deg)";		
 		selectDropdownOptionsWrap.style.maxHeight = selectDropdownOptionsWrap_Height;
+		searchOpts.focus();
 	}else if(selectDropdownOptionsWrap.style.display == "block"){
 		selectDropdownOptionsWrap.style.maxHeight = "0";
 		selectDropdownOptionsWrap.style.display = "none";
 		displayedSelectedChevron.style.transform = "rotateX(0deg)";
+	}	
+}
+
+
+function closeSelectDropdownOpts(){
+	const allSelectDropdownWrap = document.querySelectorAll(".selectDropdownWrap_RoClass");
+	
+	for(let index=0; index < allSelectDropdownWrap.length; index++){
+		const selectDropdownOptionsWrap = allSelectDropdownWrap[index].querySelector(".selectDropdownOptionsWrap_RoClass");
+		const displayedSelectedChevron = allSelectDropdownWrap[index].querySelector(".displayedSelectedChevron_RoClass");
+
+		if(selectDropdownOptionsWrap.style.display == "block"){
+			selectDropdownOptionsWrap.style.maxHeight = "0";
+			selectDropdownOptionsWrap.style.display = "none";
+			displayedSelectedChevron.style.transform = "rotateX(0deg)";
+		}		
 	}
 }
 
@@ -681,10 +699,11 @@ function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height)
 	displayedSelectedIcon.style.setProperty("--optIcon", getComputedStyle(optIcon).getPropertyValue('--optIcon'));
 	displayedSelectedText.innerText = optText.innerText;
 	/*Assign selectedOptValue value*/
+}
 
-	/*To Hide options*/
-	showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap_Height);
-	/*To Hide options*/
+
+function focusoutSearchSelectDrop(searchOpts, selectDropdownOptionsWrap_Height){
+	showSelectDropdownOpts(searchOpts.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass"), selectDropdownOptionsWrap_Height);
 }
 /*Display Select Dropdown Options*/
 /****************************************************************************************************************************************************************************/ 

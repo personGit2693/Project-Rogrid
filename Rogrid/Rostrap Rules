@@ -485,6 +485,8 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 			</div>
 		</div>
 
+
+Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts, true);" on every page js.
 * How to use Select Dropdown.
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
