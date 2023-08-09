@@ -322,15 +322,17 @@
 					</div>
 					<div class="selectDropdownOptionsWrap_RoClass">
 						<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
-						<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
-							<input type="hidden" class="optValue_RoClass" value="Opt1">
-							<div class="optIcon_RoClass" style="--optIcon: url('./src/china flag.png');"></div>
-							<div class="optText_RoClass">Option 1</div>
-						</div>
-						<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
-							<input type="hidden" class="optValue_RoClass" value="Opt2">
-							<div class="optIcon_RoClass" style="--optIcon: url('./src/usa flag.png');"></div>
-							<div class="optText_RoClass">Option 2</div>
+						<div class="selectDropdownOptsArea_RoClass">
+							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+								<input type="hidden" class="optValue_RoClass" value="Opt1">
+								<div class="optIcon_RoClass" style="--optIcon: url('./src/china flag.png');"></div>
+								<div class="optText_RoClass">Option 1</div>
+							</div>
+							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+								<input type="hidden" class="optValue_RoClass" value="Opt2">
+								<div class="optIcon_RoClass" style="--optIcon: url('./src/usa flag.png');"></div>
+								<div class="optText_RoClass">Option 2</div>
+							</div>
 						</div>
 					</div>
 				</div>							

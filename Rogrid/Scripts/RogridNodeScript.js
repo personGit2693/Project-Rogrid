@@ -687,9 +687,9 @@ function closeSelectDropdownOpts(){
 
 function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height){
 	const selectedOptValue = selectDropdownOpt.parentNode.parentNode.querySelector(".selectedOptValue_RoClass");
-	const displayedSelectedFlex = selectDropdownOpt.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
-	const displayedSelectedIcon = selectDropdownOpt.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
-	const displayedSelectedText = selectDropdownOpt.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
+	const displayedSelectedFlex = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
+	const displayedSelectedIcon = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
+	const displayedSelectedText = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
 
 	const optValue = selectDropdownOpt.querySelector(".optValue_RoClass");
 	const optIcon = selectDropdownOpt.querySelector(".optIcon_RoClass");
