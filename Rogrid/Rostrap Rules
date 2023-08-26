@@ -146,6 +146,8 @@ Modal Note: Invoke "showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)" 
 * How to use Custom Modal RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Prerequisite
+		•  Blurrer RoStrap
 	• Codes needed 
 		• " --modalWidth: value " (Provide the width of the modal) (For modalme_RoClass) 
 		• " --modalHeight: value " (Provide the height of the modal) (For modalme_RoClass)		
@@ -172,6 +174,8 @@ Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner a
 * How to use spinning loading
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Prerequisite
+		•  Blurrer RoStrap
 	• Codes needed 
 		• " --spinnerWidthHeight: value " (Provide the loading icon width and height) (For spinnerLoad_RoClass) 
 	• Structure
@@ -256,6 +260,7 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 	• Structure
 		<button class="iconBtn_RoClass"></button>
 
+
 * How to use custom radio button with Circle type & Check type RoStyle
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
@@ -286,8 +291,7 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 		</div>
 
 
-Calendar Lite Note: Calendar Lite can only be used one per page only.
-* How to use Calendar Lite RoStyle
+* How to use Calendar Lite Rostrap
 	• Import "RoStrap_Mixin" to your scss file.
 	• Codes needed 
 		• " --calendarHeadTxtFSize: value " (Provide header font size) (For calLiteMonthText_RoClass and calLiteYearText_RoClass)
@@ -296,7 +300,7 @@ Calendar Lite Note: Calendar Lite can only be used one per page only.
 	• Add Script "CalendarLite.js". 
 	• Invoke this function. 
 		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myCalendarLite')" 
-	• Customize Editable Section
+	• Customize Editable Section on CalendarLite.js
 	• Structure
 		<div class="calLite_RoClass" id="myCalendarLite">
 			<input type="hidden" name="calLite_Name" class="calLiteValue_RoClass">
@@ -448,6 +452,8 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
 	• Add Script "CalendarLite.js"
+	• Prerequisite
+		•  Calendar Lite RoStrap
 	• Invoke this function.
 		• "renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, 'myDateRangeFrom')" 
 	• Codes needed for providing styles 		

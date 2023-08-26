@@ -43,7 +43,7 @@ var year_Rogrid = new Date().getFullYear();
 
 /*Months Text Collection*/
 const monthsTxt_Array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var filteredDate = []; /*Editable, filtered date is a collection of date which have other details aside than normal date.*/
+var filteredDate = []; /*Editable, filtered date is a collection of dates which have other details aside than normal date.*/
 /*Months Text Collection*/
 
 
