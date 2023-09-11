@@ -70,11 +70,9 @@ const showBlurrerOnly = () =>{
 
 
 /*_Function to show modal*/
-const showMyMod = (blurrerClass_Param, modalClass_Param, modalInt_Param) =>{
-	const thisIsJapan_Class_Rogrid = document.getElementsByClassName(blurrerClass_Param)[0];
+const showMyMod = (modalClass_Param, modalInt_Param) =>{
 	const modal_Class_Rogrid = document.getElementsByClassName(modalClass_Param)[modalInt_Param];
-	thisIsJapan_Class_Rogrid.style.display = "block";
-	modal_Class_Rogrid.parentNode.style.display = "block";
+	modal_Class_Rogrid.parentNode.style.display = "flex";
 	modal_Class_Rogrid.style.display = "block";
 	asyncDelayModal(modalClass_Param, modalInt_Param);
 }
@@ -87,7 +85,9 @@ async function asyncDelayModal(demodalClass_Param, demodalInt_Param){
 
 	const promiseAnimateMod_Obj = new Promise((delayAnimateMod_Resolve) => {
 		setTimeout(function(){
-			demodal_Class_Rogrid.style.top = "50%";			
+			demodal_Class_Rogrid.parentNode.style.width = "100%";
+			demodal_Class_Rogrid.parentNode.style.height = "100%";
+			demodal_Class_Rogrid.style.transform = "scale(1)";			
 			delayAnimateMod_Resolve();
 		}, 1);		
 	});
@@ -97,13 +97,13 @@ async function asyncDelayModal(demodalClass_Param, demodalInt_Param){
 
 
 /*Function to close modal*/
-function closeMyMod(closeBlurrerClass_Param, closeModalClass_Param, closeModalInt_Param){
-	const closeThisIsJapan_Class_Rogrid = document.getElementsByClassName(closeBlurrerClass_Param)[0];
+function closeMyMod(closeModalClass_Param, closeModalInt_Param){
 	const closeModal_Class_Rogrid = document.getElementsByClassName(closeModalClass_Param)[closeModalInt_Param];
-
-	closeThisIsJapan_Class_Rogrid.style.display = "none";
+	closeModal_Class_Rogrid.parentNode.style.display = "none";
+	closeModal_Class_Rogrid.parentNode.style.width = "0px";
+	closeModal_Class_Rogrid.parentNode.style.height = "0px";
 	closeModal_Class_Rogrid.style.display = "none";
-	closeModal_Class_Rogrid.style.top = "40%";
+	closeModal_Class_Rogrid.style.transform = "scale(0)";
 }
 /*Function to close modal*/
 

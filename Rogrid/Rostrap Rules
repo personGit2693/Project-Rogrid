@@ -142,13 +142,12 @@
 		<div class="thisIsJapan_RoClass" style=" --putOnTop: integer; "></div>
 
 
-Modal Note: Invoke "showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)" function to show the modal. If you want to use blurrer only Invoke "showBlurrerOnly()" function
+Modal Note: Invoke "showMyMod('modalme_RoClass', index)" function to show the modal.
 * How to use Custom Modal RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
-	• Prerequisite
-		•  Blurrer RoStrap
 	• Codes needed 
+		• " --modalTop: value " (Provide the top position of the modal) (For modalme_RoClass) 
 		• " --modalWidth: value " (Provide the width of the modal) (For modalme_RoClass) 
 		• " --modalHeight: value " (Provide the height of the modal) (For modalme_RoClass)		
 		• " --modalBorderColor: value " (Provide the border color of the modal) (For modalme_RoClass)
@@ -162,7 +161,7 @@ Modal Note: Invoke "showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)" 
 			<div class="modalme_RoClass">
 				<div class="modalHeader_RoClass">
 					<div class="modalHeadTxt_RoClass">Value</div>
-					<div class="modalHeadClose_RoClass" onclick="closeMyMod('thisIsJapan_RoClass', 'modalme_RoClass', index)"><img src="../../src/closeModIcon.png"></div>
+					<div class="modalHeadClose_RoClass" onclick="closeMyMod('modalme_RoClass', index)"><img src="../../src/closeModIcon.png"></div>
 				</div>
 				<div class="modalBody_RoClass">
 					<!--Content Here-->

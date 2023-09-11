@@ -43,7 +43,7 @@
 			
 			<div style="position: relative;">
 				<div class="cusInputs_RoClass">					
-					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showSpinningLoad(), showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0)" onfocus="highlightInWrap(this, 'green')" required>
+					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showMyMod('modalme_RoClass', 0)" onfocus="highlightInWrap(this, 'green')" required>
 					<div class="placeholdme_RoClass">Some text here</div>
 				</div>
 
@@ -54,7 +54,7 @@
 					<input type="checkbox" id="sampleCheckbox-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
 				</div>
 
-				<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url('./src/searchIcon.png')">
+				<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url('./src/searchIcon.png')" onfocusout="showSpinningLoad()">
 				
 				<button class="normButton_RoClass">Normal button</button>
 
@@ -350,7 +350,7 @@
 		<div class="modalme_RoClass">
 			<div class="modalHeader_RoClass">
 				<div class="modalHeadTxt_RoClass">Modal head text</div>
-				<div class="modalHeadClose_RoClass" onclick="closeMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0)"><img src="./src/closeModIcon.png"></div>
+				<div class="modalHeadClose_RoClass" onclick="closeMyMod('modalme_RoClass', 0)"><img src="./src/closeModIcon.png"></div>
 			</div>
 			<div class="modalBody_RoClass">
 				Modal body here
@@ -428,6 +428,7 @@
 				Modal body here
 				Modal body here
 				Modal body here
+				<button onclick="alert('test')">hello</button>
 			</div>			
 		</div>	
 	</div>
