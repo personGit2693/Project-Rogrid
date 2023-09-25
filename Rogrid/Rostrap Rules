@@ -152,7 +152,7 @@ Modal Note: Invoke "showMyMod('modalme_RoClass', index)" function to show the mo
 		• " --modalHeight: value " (Provide the height of the modal) (For modalme_RoClass)		
 		• " --modalBorderColor: value " (Provide the border color of the modal) (For modalme_RoClass)
 		• " --modalBodyBgColor: value " (Provide the background color of the modal body) (For modalme_RoClass)
-		• " --modalHeaderBgColor: value " (Provide the background color of the modal header) (For modalme_RoClass)
+		• " --modalHeaderBgColor: value " (Provide the background color of the modal header) (For modalHeader_RoClass)
 		• " --modalHeaderFSize: value " (Provide the modal header font size) (For modalHeadTxt_RoClass)
 		• " --modalHeaderFColor: value " (Provide the modal header font color) (For modalHeadTxt_RoClass)
 		• " --modalCloseIconSize: value " (Provide the close icon size) (For modalHeadClose_RoClass)
