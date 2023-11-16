@@ -49,16 +49,16 @@
 		• --mainNavMenuFSize: value; (To provide main nav font size) (mainNavMenu_RoClass)
 		• --mainNavMenuBgColor: value; (To provide main nav background color) (mainNavMenu_RoClass) 
 		• --mainNavMenuFColor: value; (To provide main nav font color) (mainNavMenu_RoClass)
-		• --hoverMainNavMenuBgColor: value; (To provide main nav background color when hovered and active) (mainNavMenu_RoClass)
-		• --hoverMainNavMenuFColor: yellow;	(To provide main nav font color when hovered and active) (mainNavMenu_RoClass)
+		• --hoverMainNavMenuBgColor: value; (To provide main nav background color when hovered and active) (mainNavMenu_RoClass, activeMainNavMenu_RoClass)
+		• --hoverMainNavMenuFColor: yellow;	(To provide main nav font color when hovered and active) (mainNavMenu_RoClass, activeMainNavMenu_RoClass)
 
 		• --subNavMenuIconSize: value; (To provide sub nav icon size) (subNavMenuIconWrap_RoClass)
 		• --subNavMenuWrapBgColor: value; (To provide sub nav wrapper background color) (subNavMenuWrap_RoClass)
 		• --subNavMenuBgColor: value; (To provide sub nav background color) (subNavMenu_RoClass) 
 		• --subNavMenuFSize: value; (To provide sub nav font size) (subNavMenu_RoClass)
 		• --subNavMenuFColor: value; (To provide sub nav font color) (subNavMenu_RoClass)
-		• --hoverSubNavMenuBgColor: value; (To provide sub nav background color when hovered and active) (subNavMenu_RoClass)
-		• --hoverSubNavMenuFColor: value; (To provide sub nav font color when hovered and active) (subNavMenu_RoClass)
+		• --hoverSubNavMenuBgColor: value; (To provide sub nav background color when hovered and active) (subNavMenu_RoClass, activeSubNavMenu_RoClass)
+		• --hoverSubNavMenuFColor: value; (To provide sub nav font color when hovered and active) (subNavMenu_RoClass, activeSubNavMenu_RoClass)
 
 		• --chevronIconSize: value; (To provide chevron size) (chevronIconWrap_RoClass)
 
