@@ -281,3 +281,9 @@ myAreaChart.setOnLoadCallback(function(){
 renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myDateRangeFrom");
 renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myDateRangeTo");
 /*Date Range*/
+
+
+/*Box Loader*/
+const boxLoaderIndex = document.getElementById("boxLoaderIndex-Id");
+displayBoxLoader(boxLoaderIndex);
+/*Box Loader*/
