@@ -538,6 +538,8 @@ Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts,
 			</div>
 		</div>
 
+
+Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for displaying the box loader and " hideBoxLoader(boxLoaderWrap) " function for hiding.
 * How to use box loader.
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
