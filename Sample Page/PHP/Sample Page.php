@@ -290,6 +290,12 @@
 					</div>
 				</div>
 
+				<div class="boxLoaderWrap_RoClass" id="boxLoaderIndex-Id">
+					<div class="boxLoaderIcon_RoClass">
+						<img src="../../src/Spinner.gif">
+					</div>
+				</div>
+
 				<hr class="linethis_RoClass">
 				<div class=footerWrap_RoClass>
 					<span class="footerTxt_RoClass">&copy; 2023 Human Resource Information System. All rights reserved.</span>

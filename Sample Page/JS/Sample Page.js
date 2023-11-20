@@ -272,3 +272,9 @@ myAreaChart.setOnLoadCallback(function(){
 	drawAreaChart(areaChartData_Array, areaChartOption_Obj, "areaChartWrap");
 });
 /*Area Chart*/
+
+
+/*Box Loader*/
+const boxLoaderIndex = document.getElementById("boxLoaderIndex-Id");
+displayBoxLoader(boxLoaderIndex);
+/*Box Loader*/

@@ -1643,7 +1643,8 @@ button.iconBtn_RoClass {
 /*General Media*/
 .boxLoaderWrap_RoClass {
   position: relative;
-  display: flex;
+  display: none;
+  /*JS Change to flex*/
   box-sizing: border-box;
   overflow: hidden;
   width: auto;
