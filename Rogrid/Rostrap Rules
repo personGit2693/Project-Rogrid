@@ -543,9 +543,11 @@ Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for displaying the box
 * How to use box loader.
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Codes needed for providing styles
+		• " --boxLoaderIconSize: value; " (Provide the size of Box Loader Icon) (boxLoaderIcon_RoClass) 		
 	•Structure
 		<div class="boxLoaderWrap_RoClass">
-			<div class="boxLoader_RoClass">
+			<div class="boxLoaderIcon_RoClass">
 				<img src=" filename ">
 			</div>
 		</div>
