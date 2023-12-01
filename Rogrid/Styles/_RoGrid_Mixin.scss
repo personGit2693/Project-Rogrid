@@ -1440,6 +1440,22 @@
 }
 
 
+@mixin selectDropdownResetBtn_RoStyle{
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--selectDropdownResetBtnIcon);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--selectDropdownResetBtnSize);
+	height: var(--selectDropdownResetBtnSize);
+	flex-shrink: 0;
+}
+
+
 @mixin displayedSelectedChevron_RoStyle{
 	position: relative;
 	box-sizing: border-box;

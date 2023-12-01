@@ -1,9 +1,13 @@
 const scdropdownSelBox = document.getElementById("scdropdownSelBox-Id");
-
 createCusDropOptWoRogrid(scdropdownSelBox);
-document.body.addEventListener("click", closeSelectDropdownOpts, true);
 
+/*Select Dropdown*/
+document.body.addEventListener("click", closeSelectDropdownOpts, true);
+/*Select Dropdown*/
+
+/*Calendar Lite*/
 renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myCalendarLite");
+/*Calendar Lite*/
 
 //showMyMod('thisIsJapan_RoClass', 'modalme_RoClass', 0);
 

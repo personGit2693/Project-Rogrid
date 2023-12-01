@@ -688,6 +688,7 @@ function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height)
 	const displayedSelectedFlex = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
 	const displayedSelectedIcon = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
 	const displayedSelectedText = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
+	const displayedSelectedResetBtn = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedResetBtn_RoClass");
 
 	const optValue = selectDropdownOpt.querySelector(".optValue_RoClass");
 	const optIcon = selectDropdownOpt.querySelector(".optIcon_RoClass");
@@ -698,12 +699,45 @@ function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height)
 	displayedSelectedFlex.title = optText.innerText;
 	displayedSelectedIcon.style.setProperty("--optIcon", getComputedStyle(optIcon).getPropertyValue('--optIcon'));
 	displayedSelectedText.innerText = optText.innerText;
+	displayedSelectedResetBtn.style.display = "block";
 	/*Assign selectedOptValue value*/
 }
 
 
 function focusoutSearchSelectDrop(searchOpts, selectDropdownOptionsWrap_Height){
 	showSelectDropdownOpts(searchOpts.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass"), selectDropdownOptionsWrap_Height);
+}
+
+
+function resetSelectDropdown(resetSelDropBtn, resetSelDropTitle, resetSelDropIcon, resetSelDropText){
+
+	const selectedOptValue = resetSelDropBtn.parentNode.parentNode.querySelector(".selectedOptValue_RoClass");
+	const selectedFlex = resetSelDropBtn.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
+	const selectedIcon = resetSelDropBtn.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
+	const selectedText = resetSelDropBtn.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
+
+
+	/*Reset Area*/
+	/*_Reset Select Dropdown Value*/
+	selectedOptValue.value = "";
+	/*_Reset Select Dropdown Value*/
+
+	/*_Display none displayedSelectedResetBtn*/
+	resetSelDropBtn.style.display = "none";
+	/*_Display none displayedSelectedResetBtn*/
+
+	/*_Reset Title*/
+	selectedFlex.title = resetSelDropTitle;
+	/*_Reset Title*/
+
+	/*_Reset Icon*/
+	selectedIcon.style.setProperty("--optIcon", "url('"+resetSelDropIcon+"')");
+	/*_Reset Icon*/
+
+	/*_Reset Text*/
+	selectedText.innerText = resetSelDropText;
+	/*_Reset Text*/
+	/*Reset Area*/
 }
 /*Display Select Dropdown Options*/
 /****************************************************************************************************************************************************************************/ 

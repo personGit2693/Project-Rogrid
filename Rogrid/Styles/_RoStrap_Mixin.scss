@@ -792,6 +792,10 @@ button.iconBtn_RoClass{
 	@include selectDropdownText_RoStyle;
 }
 
+.selectDropdownWrap_RoClass .displayedSelectedResetBtn_RoClass{
+	@include selectDropdownResetBtn_RoStyle;
+}
+
 .selectDropdownWrap_RoClass .displayedSelectedChevron_RoClass{
 	@include displayedSelectedChevron_RoStyle;
 }

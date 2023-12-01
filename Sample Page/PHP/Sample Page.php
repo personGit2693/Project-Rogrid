@@ -273,6 +273,7 @@
 					<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '70px')">
 						<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('../../src/ph flag.png');"></div>
 						<div class="displayedSelectedText_RoClass">Selected Text</div>
+						<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/ph flag.png', 'Selected Text')"></div>
 						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 					</div>
 					<div class="selectDropdownOptionsWrap_RoClass">
