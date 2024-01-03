@@ -217,6 +217,14 @@ let areaChartOption_Obj = {
 	fontName: "Calibri",
 	title: 'My Area Chart Title',
 	curveType: 'function',
+	focusTarget: 'category',
+	crosshair:{
+		trigger: 'both',
+		orientation: 'both'
+	},
+	tooltip: { 
+		isHtml: true 
+	},
 	titleTextStyle:{
 		color: "white",
 		fontSize: 16,
