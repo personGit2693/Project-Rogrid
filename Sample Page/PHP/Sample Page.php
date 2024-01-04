@@ -79,26 +79,26 @@
 
 				<div class="radioCircleFlex_RoClass">
 					<label for="sampleRadioOneId" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
-					<input type="radio" id="sampleRadioOneId" name="sampleRadioName" onchange="radioCircleSelected(this, '#4BBAEF')" autocomplete="off">
+					<input type="radio" id="sampleRadioOneId" name="sampleRadioName" data-rogridradio-check="false" onclick="radioCircleSelected(this, '#4BBAEF')" autocomplete="off">
 					<!--<div class="radioCircleTxtLabel_RoClass">Some Text Here</div>-->
 					<div class="radioCircleIconLabel_RoClass"><img src="../../src/paypal icon.png"></div>
 				</div>
 				<div class="radioCircleFlex_RoClass">
 					<label for="sampleRadioTwoId" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
-					<input type="radio" id="sampleRadioTwoId" name="sampleRadioName" onchange="radioCircleSelected(this, '#4BBAEF')" autocomplete="off">
+					<input type="radio" id="sampleRadioTwoId" name="sampleRadioName" data-rogridradio-check="false" onclick="radioCircleSelected(this, '#4BBAEF')" autocomplete="off">
 					<!--<div class="radioCircleTxtLabel_RoClass">Some Text Here</div>-->
 					<div class="radioCircleIconLabel_RoClass"><img src="../../src/vmclogo.png"></div>
 				</div>
 
 				<div class="radioCheckFlex_RoClass">							
 					<label for="sampleRadioThreeId" class="customRadioCheck_RoClass"><img src="../../src/checkIcon.png"></label>
-					<input type="radio" id="sampleRadioThreeId" name="sampleCheckRadioName" onchange="radioCheckSelected(this)" autocomplete="off">					
+					<input type="radio" id="sampleRadioThreeId" name="sampleCheckRadioName" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">					
 					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->
 					<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/paypal icon.png"></div>
 				</div>
 				<div class="radioCheckFlex_RoClass">							
 					<label for="sampleRadioFourId" class="customRadioCheck_RoClass"><img src="../../src/checkIcon.png"></label>
-					<input type="radio" id="sampleRadioFourId" name="sampleCheckRadioName" onchange="radioCheckSelected(this)" autocomplete="off">					
+					<input type="radio" id="sampleRadioFourId" name="sampleCheckRadioName" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">					
 					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->
 					<div class="radioCheckIconLabel_RoClass" style=""><img src="../../src/vmclogo.png"></div>
 				</div>

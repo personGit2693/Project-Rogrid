@@ -392,18 +392,36 @@ const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param)
 /****************************************************************************************************************************************************************************/
 /*Function for checking and unchecking custom radio button*/
 const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
+
 	const origRadioBtnName_Rogrid = origRadioBtn_Elem.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
 
 	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
 
 	for(let index=0; origRadioBtnColl_Rogrid.length > index; index++){
+
 		const customRadioCircleBtn_Rogrid = origRadioBtnColl_Rogrid[index].previousElementSibling; /*Get the customized radio button or the label elem Section.*/		
 
 		/*_Checking which radio button is selected and design its customized radio button*/
 		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){
-			customRadioCircleBtn_Rogrid.style.boxShadow = "0px 0px 15px "+innerCircleColor;
-			customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = innerCircleColor;
+
+			if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "false"){
+				
+				origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "true");				
+				customRadioCircleBtn_Rogrid.style.boxShadow = "0px 0px 15px "+innerCircleColor;
+				customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = innerCircleColor;				
+
+			}else if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "true"){
+
+				origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "false");
+				origRadioBtnColl_Rogrid[index].checked = false;
+				customRadioCircleBtn_Rogrid.style.boxShadow = "none";
+				customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = "transparent";
+			}		
+
 		}else if(origRadioBtnColl_Rogrid[index] !== origRadioBtn_Elem){
+
+			origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "false");
+			origRadioBtnColl_Rogrid[index].checked = false;
 			customRadioCircleBtn_Rogrid.style.boxShadow = "none";
 			customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = "transparent";
 		}
@@ -413,6 +431,7 @@ const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
 
 
 const radioCheckSelected = (origRadioBtn_Elem) =>{
+
 	const origRadioBtnName_Rogrid = origRadioBtn_Elem.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
 
 	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
@@ -420,9 +439,25 @@ const radioCheckSelected = (origRadioBtn_Elem) =>{
 
 	/*_Checking which radio button is selected and make the customized check visible*/
 	for(let index=0; origRadioBtnColl_Rogrid.length > index; index++){
-		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){						
-			origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "visible";							
+
+		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){
+
+			if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "false"){
+
+				origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "true");
+				origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "visible";
+
+			}else if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "true"){
+
+				origRadioBtnColl_Rogrid[index].checked = false;
+				origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "false");
+				origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "hidden";	
+			}				
+
 		}else if(origRadioBtnColl_Rogrid[index] !== origRadioBtn_Elem){
+
+			origRadioBtnColl_Rogrid[index].checked = false;
+			origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "false");
 			origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "hidden";
 		}
 	}

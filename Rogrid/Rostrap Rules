@@ -277,14 +277,14 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 	• Structure
 		<div class="radioCircleFlex_RoClass"> <--Circle Type							
 			<label for="idHere" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
-			<input type="radio" id="idHere" name="nameHere" onchange="radioCircleSelected(this, innerCircleColor)" autocomplete="off">
+			<input type="radio" id="idHere" name="nameHere" data-rogridradio-check="false" onclick="radioCircleSelected(this, innerCircleColor)" autocomplete="off">
 			<div class="radioCircleTxtLabel_RoClass">Some Text Here</div> (For text label)
 			<div class="radioCircleIconLabel_RoClass"><img src="filename"></div> (For icon label)
 		</div>
 
 		<div class="radioCheckFlex_RoClass"> <--Check type							
 			<label for="idHere" class="customRadioCheck_RoClass"><img src="../../src/checkIcon.png"></label>
-			<input type="radio" id="idHere" name="nameHere" onchange="radioCheckSelected(this)" autocomplete="off">
+			<input type="radio" id="idHere" name="nameHere" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">
 			<div class="radioCheckTxtLabel_RoClass">Some Text Here</div> (For text label)
 			<div class="radioCheckIconLabel_RoClass" style=""><img src="filename"></div> (For icon label)
 		</div>
