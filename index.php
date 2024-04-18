@@ -140,49 +140,7 @@
 				<div class="chartWrap_RoClass" id="pieChartWrap"></div>
 				<div class="chartWrap_RoClass" id="lineChartWrap"></div>
 				<div class="chartWrap_RoClass" id="barChartWrap"></div>
-				<div class="chartWrap_RoClass" id="areaChartWrap"></div>
-
-				<div class="scdropdownSelBox_RoClass" id="scdropdownSelBox-Id">
-					<div class="scdropOptionCon_RoClass">
-						<label class="scdropOption_RoClass" for="bgHere1">
-							<input type="radio" name="namebg" value="test1" id="bgHere1">
-							<label for="bgHere1">Option one</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere2">
-							<input type="radio" name="namebg" value="test2" id="bgHere2">
-							<label for="bgHere2">Option two</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere3">
-							<input type="radio" name="namebg" value="test3" id="bgHere3">
-							<label for="bgHere3">Option three</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere4">
-							<input type="radio" name="namebg" value="test4" id="bgHere4">
-							<label for="bgHere4">Option Four</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere5">
-							<input type="radio" name="namebg" value="test5" id="bgHere5">
-							<label for="bgHere5">Option Five</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere6">
-							<input type="radio" name="namebg" value="test6" id="bgHere6">
-							<label for="bgHere6">Option Six</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere7">
-							<input type="radio" name="namebg" value="test7" id="bgHere7">
-							<label for="bgHere7">Option Seven</label>
-						</label>
-						<label class="scdropOption_RoClass" for="bgHere8">
-							<input type="radio" name="namebg" value="test8" id="bgHere8">
-							<label for="bgHere8">Option Eight</label>
-						</label>
-					</div>
-					<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('./src/Chevron Down.png');"></span><span class="scdropSelectedVal_RoClass">Selected Here</span></div>
-					<div class="scdropSearchboxWrap_RoClass">
-						<input type="text" placeholder="Start Typing...">
-					</div>
-					<input type="hidden" class="scDropdownVal_RoClass" autocomplete="off">
-				</div>
+				<div class="chartWrap_RoClass" id="areaChartWrap"></div>				
 
 				<div class="cusDroplistBtn_RoClass">
 					<div class="masterBtnWrap_RoClass" onclick="showActionButtons(this)">

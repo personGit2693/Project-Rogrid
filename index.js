@@ -1,6 +1,3 @@
-const scdropdownSelBox = document.getElementById("scdropdownSelBox-Id");
-createCusDropOptWoRogrid(scdropdownSelBox);
-
 /*Select Dropdown*/
 document.body.addEventListener("click", closeSelectDropdownOpts, true);
 /*Select Dropdown*/

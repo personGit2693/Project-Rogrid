@@ -467,86 +467,6 @@ const radioCheckSelected = (origRadioBtn_Elem) =>{
 /****************************************************************************************************************************************************************************/
 
 
-
-
-
-/****************************************************************************************************************************************************************************/ 
-/*Adding function to customized dropdown menu (Back-End list)*/
-
-/*_Function for clearing the event of scdropSelected_Rogrid*/
-const showOptionsWithClass = (dropdownSearchInput, scdropOptionCon, scdropSearchboxWrap) => {
-	dropdownSearchInput.value = "";			
-
-	scdropOptionCon.classList.add("scdropOptionConActive_RoClass");
-
-	scdropSearchboxWrap.classList.add("scdropSearchboxWrapActive_RoClass");
-
-	if(scdropOptionCon.classList.contains("scdropOptionConActive_RoClass")){			
-		dropdownSearchInput.focus();
-	}
-}
-/*_Function for clearing the event of scdropSelected_Rogrid*/
-
-
-function createCusDropOptWoRogrid(scdropdownSelBox_Param){
-
-	const scdropdownSelBox_Rogrid = scdropdownSelBox_Param;
-	const scdropSelected_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSelected_RoClass");
-	const scdropSelectedVal_Rogrid = scdropSelected_Rogrid.querySelector(".scdropSelectedVal_RoClass");
-	const scdropSearchboxWrap_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropSearchboxWrap_RoClass");
-	const dropdownSearchInput_Rogrid = scdropSearchboxWrap_Rogrid.children[0];
-	const scdropOptionCon_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scdropOptionCon_RoClass");
-	const scdropOption_Rogrid = scdropOptionCon_Rogrid.querySelectorAll(".scdropOption_RoClass");
-	const scdropOptionRadio_Rogrid = scdropOptionCon_Rogrid.querySelectorAll("input");
-	const scDropdownVal_Rogrid = scdropdownSelBox_Rogrid.querySelector(".scDropdownVal_RoClass");
-
-
-	/*_Show and hide options*/
-	scdropSelected_Rogrid.removeEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});		
-
-	scdropSelected_Rogrid.addEventListener("click", function(){showOptionsWithClass(dropdownSearchInput_Rogrid, scdropOptionCon_Rogrid, scdropSearchboxWrap_Rogrid);});
-	/*_Show and hide options*/
-
-
-	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/
-	scdropOptionRadio_Rogrid.forEach(perOptionForSel => {	
-		perOptionForSel.addEventListener("change", async function(){
-			const customDropdownPromise = new Promise(function(resolve){
-				scdropSelected_Rogrid.setAttribute("title", perOptionForSel.nextElementSibling.innerText);
-
-				scdropSelectedVal_Rogrid.innerText = perOptionForSel.nextElementSibling.innerText;
-
-				scDropdownVal_Rogrid.value = perOptionForSel.value;
-
-				resolve(true);
-			});
-
-			await customDropdownPromise;
-
-			scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
-
-			scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");		
-		});
-	});
-	/*_Assign title attribute for selected and assign value for customized dropdown element every click on option*/	
-
-
-	/*_Hide Search and Option list when focus out*/
-	dropdownSearchInput_Rogrid.addEventListener("focusout", () => {
-		scdropOptionCon_Rogrid.classList.remove("scdropOptionConActive_RoClass");
-
-		scdropSearchboxWrap_Rogrid.classList.remove("scdropSearchboxWrapActive_RoClass");
-	});
-	/*_Hide Search and Option list when focus out*/
-}
-
-/*Adding function to customized dropdown menu (Back-End list)*/
-/****************************************************************************************************************************************************************************/ 
-
-
-
-
-
 /****************************************************************************************************************************************************************************/ 
 /*Capture webpage*/
 const capturePage = (captureElemId_Param, thisElem_Param) => {
@@ -561,9 +481,6 @@ const capturePage = (captureElemId_Param, thisElem_Param) => {
 }
 /*Capture webpage*/
 /****************************************************************************************************************************************************************************/ 
-
-
-
 
 
 /****************************************************************************************************************************************************************************/ 

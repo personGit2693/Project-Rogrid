@@ -1,6 +1,3 @@
-const scdropdownSelBox = document.getElementById("scdropdownSelBox-Id");
-
-createCusDropOptWoRogrid(scdropdownSelBox);
 document.body.addEventListener("click", closeSelectDropdownOpts, true);
 
 renderCalLite(getNumberOfDays(month_Rogrid, year_Rogrid), month_Rogrid, year_Rogrid, "myCalendarLite");

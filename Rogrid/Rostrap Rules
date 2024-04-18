@@ -1,6 +1,6 @@
 * Rostrap Framework Rules
 	• Always Add the Rogrid Folder & src Folder into Project Folder
-	• Follow the Path Order when creating a New Page Folder (Project Folder/Page Folder/Files Folder)
+	• Follow the Path Order when creating a New Page Folder (Project Folder/Module Folders/Files Folders)
 * How to use Layout one Design
 	• Import "RoStrap_Mixin" to your scss file
 	• Add Script "RogridNodeLayOneNavScript.js" or "RogridNodeLayOneNavScript_Index.js"
@@ -192,22 +192,22 @@ Spinning loading Note: Invoke "showSpinningLoad()" function to display spinner a
 		• " --inputSearchLeftPadding: value " (Provide left padding) (For searchInput_RoClass)
 		• " --inputSearchBorderColor: value " (Provide border color) (For searchInput_RoClass)
 		• " --inputSearchBorderRadius: value " (Provide border radius) (For searchInput_RoClass)
-		• " --inputSearchIcon: value " (Provide search icon) (For searchInput_RoClass)
+		• " --inputSearchIcon: value " (Provide search icon. Inline Style Only) (For searchInput_RoClass)
 		• " --inputSearchIconHori: value " (Provide horizontal position of the icon) (For searchInput_RoClass)
-		• " --inputSearchIconSize: value " (Provide horizontal position of the icon) (For searchInput_RoClass)
+		• " --inputSearchIconSize: value " (Provide icon size) (For searchInput_RoClass)
 		• " --inputSearchFSize: value " (Provide font size) (For searchInput_RoClass)
 		• " --inputSearchFColor: value " (Provide font color) (For searchInput_RoClass)
 	• Structure
-	<input type="text" class="searchInput_RoClass" placeholder="Search...">
+	<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url(' filename ')">
 
-Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " function to create and show notification box with auto close and " notifyNodeBoxStay(boolean, message, wrapperID) " for stay.
+Notification Box Note: Invoke "notifyNodeBox(boolean, ' Sample Message ', ' wrapper-id ')" function to create and show notification box with auto close and "notifyNodeBoxStay(boolean, ' Sample Message ', ' wrapper-id ')" for stay. No need to copy paste the structure just invoke the function on your javascript. 
 * How to use Notification Box RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file.
 	• Codes needed 
 		• " --notiFSize: value " (Provide font size) (For notifyMessItem_Suc_RoClass or notifyMessItem_Failed_RoClass)
 		• " --notiCloseIconWidthHeight: value " (Provide close icon width and height) (For notifyCloseItem_Suc_RoClass or notifyCloseItem_Failed_RoClass)
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
-	• Different types of Notification Boxes
+	• Different types of Notification Boxes. (For guide only on how it was made)
 		• For Success Style
 			• "notifyFlex_Suc_RoClass" 
 			• "notifyMessItem_Suc_RoClass"
@@ -220,7 +220,7 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 			• "notifyCloseItem_Failed_RoClass"
 			• 'src="../../src/closeModIcon_Failed.png"'
 	• Structure
-		<div class="notifyFlex_Suc_RoClass">
+		<div class="notifyFlex_Suc_RoClass"> (For guide only on how it was made)
 			<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b>Message Here</div>
 			<div class="notifyCloseItem_Suc_RoClass">
 				<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">
@@ -239,8 +239,8 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 		• " --normBtnFSize: value " (Provide the button font size) (For normButton_RoClass)
 		• " --normBtnBgColor: value " (Provide the button background color) (For normButton_RoClass)
 		• " --normBtnFcolor: value " (Provide the button font color) (For normButton_RoClass)
-		• " --normBtnHovActFColor: value " (Provide the button font color) (For normButton_RoClass)
-		• " --normBtnHovActBgColor: value " (Provide the button font color) (For normButton_RoClass)
+		• " --normBtnHovActFColor: value " (Provide the button font color when active or hovered) (For normButton_RoClass)
+		• " --normBtnHovActBgColor: value " (Provide the button background color when active or hovered) (For normButton_RoClass)
 		
 	• Structure
 		<button class="normButton_RoClass">Button Text</button>
@@ -251,15 +251,16 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 		• " --iconBtnWidth: value " (Provide icon button width) (For iconBtn_RoClass)		
 		• " --iconBtnHeight: value " (Provide icon button height) (For iconBtn_RoClass)
 		• " --iconBtnBgColor: value " (Provide icon button background color) (For iconBtn_RoClass)
-		• " --iconBtnBgIcon: value " (Provide icon button an icon) (For iconBtn_RoClass)
+		• " --iconBtnBgIcon: value " (Provide icon button an icon, Inline Style Only) (For iconBtn_RoClass)
 		• " --iconBtnBgSize: value " (Provide icon button icon size) (For iconBtn_RoClass)
 		• " --iconBtnBorderWidth: value " (Provide icon button border thickness) (For iconBtn_RoClass)
 		• " --iconBtnBorderColor: value " (Provide icon button border color) (For iconBtn_RoClass)
 		• " --iconBtnBorderRadius: value " (Provide icon button border radius) (For iconBtn_RoClass)
 	• Structure
-		<button class="iconBtn_RoClass"></button>
+		<button class="iconBtn_RoClass" style="--iconBtnBgIcon: url(' filename ') "></button>
 
 
+Radio Button Note: The "colorName" parameter In "radioCircleSelected(this, ' colorName ')" function is for what color will be displayed when circle-type radio button was selected.
 * How to use custom radio button with Circle type & Check type RoStyle
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js" 
@@ -267,26 +268,24 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 		• " --cusRadioBorderWidth: value " (Provide custom radio circle border thickness) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
 		• " --cusRadioBorderColor: value " (Provide custom radio circle border color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
 		• " --cusRadioWidthHeight: value " (Provide custom radio circle width and height) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
-		• " --cusRadioBgColor: value " (Provide custom radio background color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)
-		
+		• " --cusRadioBgColor: value " (Provide custom radio background color) (For customRadioCircle_RoClass or customRadioCheck_RoClass)		
 		• " --cusRadioFWeight: value " (Provide font weight) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
 		• " --cusRadioFsize: value " (Provide font size) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
 		• " --cusRadioFColor: value " (Provide font color) (For radioCircleTxtLabel_RoClass or radioCheckTxtLabel_RoClass)
-
 		• " --radioIconLabelWidthHeight: value " (Provide label icon size) (For radioCircleIconLabel_RoClass or radioCheckIconLabel_RoClass)
 	• Structure
-		<div class="radioCircleFlex_RoClass"> <--Circle Type							
-			<label for="idHere" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
-			<input type="radio" id="idHere" name="nameHere" data-rogridradio-check="false" onclick="radioCircleSelected(this, innerCircleColor)" autocomplete="off">
-			<div class="radioCircleTxtLabel_RoClass">Some Text Here</div> (For text label)
-			<div class="radioCircleIconLabel_RoClass"><img src="filename"></div> (For icon label)
+		<div class="radioCircleFlex_RoClass"> <-- Circle-Type							
+			<label for=" sampleOption1-Id " class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
+			<input type="radio" id=" sampleOption1-Id " name="nameHere" data-rogridradio-check="false" onclick="radioCircleSelected(this, ' colorName ')" autocomplete="off">
+			<div class="radioCircleTxtLabel_RoClass">Some Text Here</div> <--For Text Label. Choose only one between Text Label and Icon Label.
+			<div class="radioCircleIconLabel_RoClass"><img src=" filename "></div> <--For Icon Label. Choose only one between Text Label and Icon Label.
 		</div>
 
-		<div class="radioCheckFlex_RoClass"> <--Check type							
-			<label for="idHere" class="customRadioCheck_RoClass"><img src="../../src/checkIcon.png"></label>
-			<input type="radio" id="idHere" name="nameHere" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">
-			<div class="radioCheckTxtLabel_RoClass">Some Text Here</div> (For text label)
-			<div class="radioCheckIconLabel_RoClass" style=""><img src="filename"></div> (For icon label)
+		<div class="radioCheckFlex_RoClass"> <-- Check-type							
+			<label for=" sampleOption2-Id " class="customRadioCheck_RoClass"><img src="../../src/checkIcon.png"></label>
+			<input type="radio" id=" sampleOption2-Id " name="nameHere" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">
+			<div class="radioCheckTxtLabel_RoClass">Some Text Here</div> <--For Text Label. Choose only one between Text Label and Icon Label.
+			<div class="radioCheckIconLabel_RoClass" style=""><img src=" filename "></div> <--For Icon Label. Choose only one between Text Label and Icon Label.
 		</div>
 
 
@@ -349,47 +348,7 @@ Notification Box Note: Invoke " notifyNodeBox(boolean, message, wrapperID) " fun
 					<!--Print Here-->										
 				</div>
 			</div>
-		</div>
-
-
-Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogrid()" or "createCusDropOptRogrid()" function as argument to add functionalities.
-* How to use Custom Dropdown.
-	• Import "RoStrap_Mixin" to your scss file. 
-	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
-	• Codes needed
-		• " --cusDropBorderWidth: value " (Provide custom dropdown border thickness) (For scdropdownSelBox_RoClass) 
-		• " --cusDropBorderColor: value " (Provide custom dropdown border color) (For scdropdownSelBox_RoClass) 
-		• " --cusDropBgColor: value " (Provide custom dropdown border background color) (For scdropdownSelBox_RoClass)
-		• " --cusDropSelFColor: value " (Provide custom dropdown selected font color) (For scdropSelected_RoClass)
-		• " --cusDropSearchBorderWidth: value " (Provide search input border thickness) (For scdropSearchboxWrap_RoClass>input)
-		• " --cusDropSearchBorderColor: value " (Provide search input border color) (For scdropSearchboxWrap_RoClass>input)
-		• " --cusDropSearchFColor: value " (Provide search input font color) (For scdropSearchboxWrap_RoClass>input)
-		• " --cusDropSearchBgColor: value " (Provide search input background color) (For scdropSearchboxWrap_RoClass>input)
-		• " --cusDropOptWrapBorderWidth: value " (Provide options wrapper border thickness) (For scdropOptionCon_RoClass)
-		• " --cusDropOptWrapBorderColor: value " (Provide options wrapper border color) (For scdropOptionCon_RoClass)
-		• " --cusDropOptWrapBgColor: value " (Provide options wrapper background color) (For scdropOptionCon_RoClass)
-		• " --cusDropOptWrapHeight: value " (Provide options wrapper height) (For scdropOptionCon_RoClass)
-		• " --cusDropOptWrapScrollColor: value " (Provide options wrapper scroll color) (For scdropOptionCon_RoClass)
-		• " --cusDropOptWrapScrollHovColor: value " (Provide options wrapper hovered scroll color) (For scdropOptionCon_RoClass)
-		• " --cusDropOptLabColor: value " (Provide options label font color) (For scdropOption_RoClass>label)
-		• " --cusDropOptHovLabBgColor: value " (Provide option hovered background color) (For scdropOption_RoClass>label)
-		• " --cusDropArrowWidthHeight: value " (Provide down arrow icon width and height) (For scdropSelected_RoClass>span)
-		• " --cusDropFsize: value " (Provide font size) (For scdropSelectedVal_RoClass, scdropSearchboxWrap_RoClass>input, scdropOption_RoClass>label)
-		• " --cusDropZIndex: value " (Provide z-index for per custom dropdown element) (For scdropdownSelBox_RoClass, scdropSearchboxWrap_RoClass, scdropOptionCon_RoClass)
-	• Structure						
-		<div class="scdropdownSelBox_RoClass"> <--Customized Dropdown Element itself
-			<div class="scdropOptionCon_RoClass"> <--Options Container
-				<label class="scdropOption_RoClass" for="bgHere1">
-					<input type="radio" name="namebg" value="test" id="bgHere1">
-					<label for="bgHere1">Bahay toro</label>
-				</label>
-			</div>
-			<div class="scdropSelected_RoClass"><span style="--cusDropSelArrowDownIcon: url('IconPathHere');"></span><span class="scdropSelectedVal_RoClass">Selected Value</span></div> <--Selected Area
-			<div class="scdropSearchboxWrap_RoClass"> <--Search Area Wrapper
-				<input type="text" placeholder="Start Typing..."> <--Search Input Section
-			</div>
-			<input type="hidden" class="scDropdownVal_RoClass" autocomplete="off"> <--Customized Dropdown Value
-		</div>							
+		</div>						
 	
 
 * How to use webpage screenshot function.
@@ -431,7 +390,7 @@ Custom Dropdown Note: Add scdropdownSelBox_RoClass into "createCusDropOptWoRogri
 		</div>
 
 
-Note: For more reference go to "index.js" or "Sample_Page.js" or read the documentation "https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery"
+Charts Note: For more reference go to "index.js" or "Sample_Page.js" or read the documentation "https://developers-dot-devsite-v2-prod.appspot.com/chart/interactive/docs/gallery"
 * How to use Chart.
 	• Import "RoStrap_Mixin" to your scss file. 
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
@@ -491,7 +450,7 @@ Note: For more reference go to "index.js" or "Sample_Page.js" or read the docume
 		</div>
 
 
-Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts, true);" on every page js.
+Dropdown Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts, true);" on every page js. The "height" parameter in showSelectDropdownOpts(this, ' height ') function is for the maximum visibility height for covering the options.
 * How to use Select Dropdown.
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
@@ -501,11 +460,11 @@ Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts,
 		• " --selectDropdownBorderColor: value; " (Provide Select Dropdown border color) (selectDropdownWrap_RoClass, searchOpts_RoClass)
 		• " --selectDropdownBorderRadius: value; " (Provide Select Dropdown border radius) (selectDropdownWrap_RoClass)
 		• " --selectDropdownBgColor: value; " (Provide Select Dropdown background color) (displayedSelectedFlex_RoClass, selectDropdownOptionsWrap_RoClass)		
-		• " --optIcon: value; " (Provide Option icon) (displayedSelectedIcon_RoClass, optIcon_RoClass)
+		• " --optIcon: value; " (Provide Option icon. Inline Style Only) (displayedSelectedIcon_RoClass, optIcon_RoClass)
 		• " --selectDropdownIconSize: value; " (Provide Option icon size) (displayedSelectedIcon_RoClass, optIcon_RoClass)
 		• " --selectDropdownFSize: value; " (Provide Option font size) (displayedSelectedText_RoClass, optText_RoClass, searchOpts_RoClass)
 		• " --selectDropdownFColor: value; " (Provide Option font color) (displayedSelectedText_RoClass, optText_RoClass)
-		• " --selectDropdownChevron: value; " (Provide Chevron icon) (displayedSelectedChevron_RoClass)
+		• " --selectDropdownChevron: value; " (Provide Chevron icon. Inline Style Only) (displayedSelectedChevron_RoClass)
 		• " --selectDropdownChevronSize: value; " (Provide Chevron size) (displayedSelectedChevron_RoClass)
 		• " --searchOptsBgColor: value; " (Provide Search Options Background Color) (searchOpts_RoClass)
 		• " --searchOptsFColor: value; " (Provide Search Options Font Color) (searchOpts_RoClass)
@@ -513,12 +472,12 @@ Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts,
 		• " --hoverOptFColor: value; " (Provide Option font color when hovered) (selectDropdownOpt_RoClass)
 		• " --selectDropdownScrollSize: value; " (Provide Options Wrapper scroll size) (selectDropdownOptionsWrap_RoClass)
 		• " --optWrapThumbBgColor: value; " (Provide Options Wrapper scroll thumb background color) (selectDropdownOptionsWrap_RoClass)		
-		• " --selectDropdownResetBtnIcon: url(' pathname ') " (Provide Reset Button Icon) (displayedSelectedResetBtn_RoClass)
+		• " --selectDropdownResetBtnIcon: url(' pathname ') " (Provide Reset Button Icon. Inline Style Only) (displayedSelectedResetBtn_RoClass)
 		• " --selectDropdownResetBtnSize: value; " (Provide Reset Button Icon Size) (displayedSelectedResetBtn_RoClass)
 	•Structure
 		<div class="selectDropdownWrap_RoClass">
 			<input type="hidden" class="selectedOptValue_RoClass">
-			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '70px')">
+			<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, ' height ')">
 				<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
 				<div class="displayedSelectedText_RoClass">Selected Text</div>
 				<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('./src/closeModIcon.png');" onclick="resetSelectDropdown(this, 'Please select from option', './src/ph flag.png', 'Selected Text')"></div>
@@ -527,12 +486,12 @@ Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts,
 			<div class="selectDropdownOptionsWrap_RoClass">
 				<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
 				<div class="selectDropdownOptsArea_RoClass">
-					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, ' height ')">
 						<input type="hidden" class="optValue_RoClass" value="Opt1">
 						<div class="optIcon_RoClass" style="--optIcon: url('./src/china flag.png');"></div>
 						<div class="optText_RoClass">Option 1</div>
 					</div>
-					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+					<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, ' height ')">
 						<input type="hidden" class="optValue_RoClass" value="Opt2">
 						<div class="optIcon_RoClass" style="--optIcon: url('./src/usa flag.png');"></div>
 						<div class="optText_RoClass">Option 2</div>
@@ -542,7 +501,7 @@ Note: Declaire "document.body.addEventListener("click", closeSelectDropdownOpts,
 		</div>
 
 
-Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for displaying the box loader and " hideBoxLoader(boxLoaderWrap) " function for hiding.
+Box-Loader Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for displaying the box loader and " hideBoxLoader(boxLoaderWrap) " function for hiding.
 * How to use box loader.
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
