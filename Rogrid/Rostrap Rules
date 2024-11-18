@@ -109,7 +109,7 @@
 * How to use footer RoStrap Style
 	• Import "RoStrap_Mixin" to your scss file
 	• Codes needed 
-		• " --footerBgColor: value " (Provide background color) (For footerTxt_RoClass)
+		• " --footerBgColor: value " (Provide background color) (For footerWrap_RoClass)
 		• " --footerFSize: value " (Provide font size) (For footerTxt_RoClass)
 		• " --footerFColor: value " (Provide font color) (For footerTxt_RoClass)
 	• Structure
