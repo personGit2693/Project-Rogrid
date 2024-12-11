@@ -378,7 +378,7 @@ Radio Button Note: The "colorName" parameter In "radioCircleSelected(this, ' col
 		• " --listBtnFColorha: value; " (Provide list button font color when hovered) (listBtn_RoClass)
 	• Structure
 		<div class="cusDroplistBtn_RoClass">
-			<div class="masterBtnWrap_RoClass">
+			<div class="masterBtnWrap_RoClass" onclick="showActionButtons(this)">
 				<button>Masterlist Button</button>
 				<div><img src="./src/Chevron Down.png"></div>
 			</div>					
