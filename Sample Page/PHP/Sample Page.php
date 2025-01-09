@@ -60,7 +60,7 @@
 			
 			<div style="position: relative;">
 				<div class="cusInputs_RoClass">					
-					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showMyMod('modalme_RoClass', 0)" onfocus="highlightInWrap(this, 'green')" required>
+					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showMyMod('testModal')" onfocus="highlightInWrap(this, 'green')" required>
 					<div class="placeholdme_RoClass">Some text here</div>
 				</div>
 
@@ -265,10 +265,10 @@
 
 
 	<div class="modalmeCon_RoClass" style="--topOnBlurrer: 1;">
-		<div class="modalme_RoClass">
+		<div class="modalme_RoClass" id="testModal">
 			<div class="modalHeader_RoClass">
 				<div class="modalHeadTxt_RoClass">Modal head text</div>
-				<div class="modalHeadClose_RoClass" onclick="closeMyMod('modalme_RoClass', 0)"><img src="../../src/closeModIcon.png"></div>
+				<div class="modalHeadClose_RoClass" onclick="closeMyMod(this)"><img src="../../src/closeModIcon.png"></div>
 			</div>
 			<div class="modalBody_RoClass">
 				Modal body here
