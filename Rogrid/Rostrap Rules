@@ -371,7 +371,7 @@ Radio Button Note: The "colorName" parameter In "radioCircleSelected(this, ' col
 		• " --droplistBtnPadding: value; " (Provide padding) (masterBtnWrap_RoClass>button and listBtn_RoClass)
 		• " --droplistBtnFColor: value; " (Provide font color) (masterBtnWrap_RoClass>button and listBtn_RoClass)
 		• " --dropListBtnFSize: value; " (Provide font size) (masterBtnWrap_RoClass>button and listBtn_RoClass)
-		• " --dropListBtnIconSize: value; " (Provide icon width and height) (masterBtnWrap_RoClass>button and listBtn_RoClass)
+		• " --dropListBtnIconSize: value; " (Provide icon width and height) (masterBtnWrap_RoClass>div)
 		• " --listBtnBorderWidth: value; " (Provide list button border thickness) (listBtn_RoClass)
 		• " --listBtnBorderColor: value; " (Provide list button border color) (listBtn_RoClass)
 		• " --listBtnBgColorha: value; " (Provide list button bg color when hovered) (listBtn_RoClass)
@@ -418,9 +418,9 @@ Charts Note: For more reference go to "index.js" or "Sample_Page.js" or read the
 		• " --dateRangeBorderRadius: value; " (Provide Date Range border radius) (dateRange_RoClass) 
 		• " --dateRangeBorderWidth: value; " (Provide Date Range border width) (dateRange_RoClass)
 		• " --dateRangeBorderColor: value; " (Provide Date Range border color) (dateRange_RoClass)
-		• " --dateRangePadding: value; " (Provide Date Range Details Wrapper padding) (dateRangeDatails_RoClass)
+		• " --dateRangePadding: value; " (Provide Date Range Details Wrapper padding) (dateRangeDetails_RoClass)
 		• " --dateRangeIconSize: value; " (Provide Date Range Calendar Icon Size) (dateRangeIcon_RoClass)
-		• " --dateRangeIcon: value; " (Provide Date Range Calendar Icon) (dateRangeIcon_RoClass)
+		• " --dateRangeIcon: value; " (Provide Date Range Calendar Icon. Inline Style Only) (dateRangeIcon_RoClass)
 		• " --dateRangeFSize: value; " (Provide Date Range Font Size) (dateRangeText_RoClass)
 		• " --dateRangeFColor: value; " (Provide Date Range Font Color) (dateRangeText_RoClass)
 		• " --dateRangeTooltipColor: value; " (Provide color for the Date Range tooltip arrow) (dateRangeTooltipArrow_RoClass)
@@ -430,7 +430,7 @@ Charts Note: For more reference go to "index.js" or "Sample_Page.js" or read the
 	•Structure
 		<div class="dateRangeWrap_RoClass">
 			<div class="dateRange_RoClass" onclick="displayDateRangeCalLite(this)">
-				<div class="dateRangeDatails_RoClass">
+				<div class="dateRangeDetails_RoClass">
 					<div class="dateRangeIcon_RoClass" style="--dateRangeIcon: url('./src/calendaricon white.png');"></div>
 					<div class="dateRangeText_RoClass"><span class="dateRangeFrom_RoClass">Date Start</span> - <span class="dateRangeTo_RoClass">Date Until</span></div>
 				</div>
