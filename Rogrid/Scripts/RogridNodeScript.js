@@ -711,3 +711,98 @@ function hideBoxLoader(boxLoaderWrap){
 }
 /*Box Loader*/
 /****************************************************************************************************************************************************************************/ 
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Step by step*/
+
+/*Prep vars*/
+var stepNumIndex_Rogrid = 0;
+/*Prep vars*/
+
+
+/*Function to lighten per step*/
+function nextStep(stepByStepItems_ClassName, stepSets_Classname){
+
+	const stepByStepItems = document.getElementsByClassName(stepByStepItems_ClassName);
+	const stepSets = document.getElementsByClassName(stepSets_Classname);
+
+	if(stepNumIndex_Rogrid < stepByStepItems.length){
+
+		let lining = stepByStepItems[stepNumIndex_Rogrid].children[0];
+		let numbering = stepByStepItems[stepNumIndex_Rogrid].children[1];
+		let definition = stepByStepItems[stepNumIndex_Rogrid].children[2];
+
+		/*Light the number of current step*/
+		lining.classList.add("stepByStepLineLight-Class");
+		numbering.classList.add("stepNumberLight-Class");
+		definition.classList.add("stepDefiLight-Class");
+		/*Light the number of current step*/
+		
+
+		/*Display the current step*/
+		for(let index=0; index < stepSets.length; index++){
+
+			if(index === stepNumIndex_Rogrid){
+
+				stepSets[index].style.display = "block";
+			}else if(index !== stepNumIndex_Rogrid){
+
+				stepSets[index].style.display = "none";
+			}
+		}
+		/*Display the current step*/		
+
+
+		stepNumIndex_Rogrid++;
+
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;		
+	}
+}
+/*Function to lighten per step*/
+
+
+/*Function to back step*/
+function backStep(stepByStepItems_ClassName, stepSets_Classname){
+
+	const stepByStepItems = document.getElementsByClassName(stepByStepItems_ClassName);	
+	const stepSets = document.getElementsByClassName(stepSets_Classname);
+
+	if(stepNumIndex_Rogrid > 1){		
+
+		stepNumIndex_Rogrid--;
+
+		let lining = stepByStepItems[stepNumIndex_Rogrid].children[0];
+		let numbering = stepByStepItems[stepNumIndex_Rogrid].children[1];
+		let definition = stepByStepItems[stepNumIndex_Rogrid].children[2];
+
+		/*Turn off light the number of current step*/
+		lining.classList.remove("stepByStepLineLight-Class");
+		numbering.classList.remove("stepNumberLight-Class");
+		definition.classList.remove("stepDefiLight-Class");
+		/*Turn off light the number of current step*/
+
+
+		/*Display the current step*/
+		for(let index=0; index < stepSets.length; index++){
+			
+			if(index === stepNumIndex_Rogrid){
+			
+				stepSets[index].style.display = "none";
+
+			}else if(index === stepNumIndex_Rogrid - 1){
+				
+				stepSets[index].style.display = "block";
+			}
+		}
+		/*Display the current step*/		
+		
+
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;				
+	}
+}
+/*Function to back step*/
+/*Step by step*/
+/****************************************************************************************************************************************************************************/
