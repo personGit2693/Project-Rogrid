@@ -734,9 +734,9 @@ function nextStep(stepByStepItems_ClassName, stepSets_Classname){
 		let definition = stepByStepItems[stepNumIndex_Rogrid].children[2];
 
 		/*Light the number of current step*/
-		lining.classList.add("stepByStepLineLight-Class");
-		numbering.classList.add("stepNumberLight-Class");
-		definition.classList.add("stepDefiLight-Class");
+		lining.classList.add("stepByStepLineLight_RoClass");
+		numbering.classList.add("stepNumberLight_RoClass");
+		definition.classList.add("stepDefiLight_RoClass");
 		/*Light the number of current step*/
 		
 
@@ -778,9 +778,9 @@ function backStep(stepByStepItems_ClassName, stepSets_Classname){
 		let definition = stepByStepItems[stepNumIndex_Rogrid].children[2];
 
 		/*Turn off light the number of current step*/
-		lining.classList.remove("stepByStepLineLight-Class");
-		numbering.classList.remove("stepNumberLight-Class");
-		definition.classList.remove("stepDefiLight-Class");
+		lining.classList.remove("stepByStepLineLight_RoClass");
+		numbering.classList.remove("stepNumberLight_RoClass");
+		definition.classList.remove("stepDefiLight_RoClass");
 		/*Turn off light the number of current step*/
 
 

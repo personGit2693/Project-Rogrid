@@ -761,6 +761,100 @@ button.iconBtn_RoClass{
 
 
 /***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Step By Step*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Media*/
+
+/*Step numbers*/
+.stepByStepFlex_RoClass{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	justify-content: center;
+	width: auto;
+
+	border: 1px solid yellow;
+}
+
+.stepByStepItem_RoClass{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: column nowrap;
+	align-items: center;
+	width: var(--stepByStepLineWidth);
+}
+
+.stepByStepLine_RoClass{
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	overflow: visible;
+	width: 100%;
+	border-width: var(--stepByStepLineBorderThickness);
+	border-color: var(--stepByStepLineBorderColor);
+	border-style: solid;
+	top: var(--stepByStepLineAlignHori);
+}
+
+.stepByStepLineLight_RoClass{
+	border-color: var(--stepByStepLineBorderColorLight);
+}
+
+.stepNumber_RoClass{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;	
+	background-color: gray;
+	font-family: var(--stepByStepFontFamily);
+	font-style: normal;
+	font-weight: bold;
+	font-size: var(--stepByStepNumberFontSize);
+	color: var(--stepByStepNumberFontColor);
+	padding: 4px;
+	text-align: center;
+	border-radius: 50%;
+	width: var(--stepByStepNumberWidth);
+}
+
+.stepNumberLight_RoClass{
+	background-color: var(--stepByStepNumberBgLight);
+	color: var(--stepByStepNumberFontColorLight);
+}
+
+.stepDefi_RoClass{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	font-family: var(--stepByStepFontFamily);
+	font-style: normal;
+	font-weight: normal;
+	font-size: var(--stepByStepTextFontSize);
+	text-align: center;
+	color: var(--stepByStepTextFontColor);
+}
+
+.stepDefiLight_RoClass{
+	color: var(--stepByStepTextFontColorLight);
+}
+/*Step numbers*/
+
+/*General Media*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Step By Step*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){
 	/*Style Here*/

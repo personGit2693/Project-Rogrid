@@ -234,7 +234,7 @@
 						<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('../../src/closeModIcon.png');" onclick="resetSelectDropdown(this, 'Please select from option', '../../src/ph flag.png', 'Selected Text')"></div>
 						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('../../src/Chevron Down.png');"></div>						
 					</div>
-					<div class="selectDropdownOptionsWrap_RoClass">
+					<div class="selectDropdownOptionsWrap_RoClass" style="z-index: 1;">
 						<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
 						<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
 							<input type="hidden" class="optValue_RoClass" value="Opt1">
@@ -247,6 +247,22 @@
 							<div class="optText_RoClass">Option 2</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="stepByStepFlex_RoClass">
+					<div class="stepByStepItem_RoClass">
+						<div class="stepByStepLine_RoClass"></div>
+						<div class="stepNumber_RoClass">1</div>
+						<div class="stepDefi_RoClass">Some Text Here for Step text Some Text Here for Step text Some Text Here for Step text Some Text Here for Step text</div>
+					</div>
+					<div class="stepByStepItem_RoClass">
+						<div class="stepByStepLine_RoClass"></div>
+						<div class="stepNumber_RoClass">2</div>
+						<div class="stepDefi_RoClass">Some Text Here for Step text</div>
+					</div>			
+				</div>
+				<div class="stepSets_RoClass">
+					Your Components Here
 				</div>
 
 				<div class="boxLoaderWrap_RoClass" id="boxLoaderIndex-Id">

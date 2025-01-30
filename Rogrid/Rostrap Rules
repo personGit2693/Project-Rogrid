@@ -513,3 +513,44 @@ Box-Loader Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for display
 				<img src=" filename ">
 			</div>
 		</div>
+
+
+* How to Step by Step.
+	• Import "RoStrap_Mixin" to your scss file.
+	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
+	• Codes needed for providing styles
+		• " --stepByStepLineWidth: value; " (Provide step by step line width) (stepByStepItem_RoClass)
+		• " --stepByStepLineBorderThickness: value; " (Provide line border width) (stepByStepLine_RoClass)
+		• " --stepByStepLineBorderColor: value; " (Provide line border color) (stepByStepLine_RoClass)
+		• " --stepByStepFontFamily: value; " (Provide step by step font family) (stepNumber_RoClass, stepDefi_RoClass)
+		• " --stepByStepNumberFontSize: value; " (Provide step by step number font size) (stepNumber_RoClass)
+		• " --stepByStepNumberFontColor: value; " (Provide step by step number font color) (stepNumber_RoClass)
+		• " --stepByStepNumberWidth: value; " (Provide step by step number width) (stepNumber_RoClass)
+		• " --stepByStepTextFontSize: value; " (Provide step by step text font size) (stepDefi_RoClass)
+		• " --stepByStepTextFontColor: value; " (Provide step by step text font color) (stepDefi_RoClass)
+		• " --stepByStepLineAlignHori: value; " (Align the line horizontally) (stepByStepLine_RoClass)
+		• " --stepByStepLineBorderColorLight: value; " (Provide line color when active) (stepByStepLineLight_RoClass)
+		• " --stepByStepNumberBgLight: value; " (Provide number background color when active) (stepNumberLight_RoClass)
+		• " --stepByStepNumberFontColorLight: value; " (Provide number font color when active) (stepNumberLight_RoClass)
+		• " --stepByStepTextFontColorLight: value; " (Provide step by step text font color when active) (stepDefiLight_RoClass)
+	•Structure
+		<!--Step numbers-->
+		<div class="stepByStepFlex_RoClass">
+			<div class="stepByStepItem_RoClass">
+				<div class="stepByStepLine_RoClass"></div>
+				<div class="stepNumber_RoClass">1</div>
+				<div class="stepDefi_RoClass">Some Text Here for Step text</div>
+			</div>
+			<div class="stepByStepItem_RoClass">
+				<div class="stepByStepLine_RoClass"></div>
+				<div class="stepNumber_RoClass">2</div>
+				<div class="stepDefi_RoClass">Some Text Here for Step text</div>
+			</div>			
+		</div>
+		<!--Step numbers-->
+
+		<!--Step content-->
+		<div class="stepSets_RoClass">
+			Your Components Here
+		</div>
+		<!--Step content-->

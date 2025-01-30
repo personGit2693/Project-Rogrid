@@ -273,21 +273,21 @@
 
 				<div class="selectDropdownWrap_RoClass">
 					<input type="hidden" class="selectedOptValue_RoClass">
-					<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '70px')">
+					<div class="displayedSelectedFlex_RoClass" title="Please select from option" onclick="showSelectDropdownOpts(this, '350px')">
 						<div class="displayedSelectedIcon_RoClass" style="--optIcon: url('./src/ph flag.png');"></div>
 						<div class="displayedSelectedText_RoClass">Selected Text</div>
 						<div class="displayedSelectedResetBtn_RoClass" style="--selectDropdownResetBtnIcon: url('./src/closeModIcon.png');" onclick="resetSelectDropdown(this, 'Please select from option', './src/ph flag.png', 'Selected Text')"></div>
 						<div class="displayedSelectedChevron_RoClass" style="--selectDropdownChevron: url('./src/Chevron Down.png');"></div>						
 					</div>
-					<div class="selectDropdownOptionsWrap_RoClass">
+					<div class="selectDropdownOptionsWrap_RoClass"style="z-index: 1;">
 						<input type="text" placeholder="Search Here" class="searchOpts_RoClass">
 						<div class="selectDropdownOptsArea_RoClass">
-							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '350px')">
 								<input type="hidden" class="optValue_RoClass" value="Opt1">
 								<div class="optIcon_RoClass" style="--optIcon: url('./src/china flag.png');"></div>
 								<div class="optText_RoClass">Option 1</div>
 							</div>
-							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '70px')">
+							<div class="selectDropdownOpt_RoClass" onclick="displaySelectedOpt(this, '350px')">
 								<input type="hidden" class="optValue_RoClass" value="Opt2">
 								<div class="optIcon_RoClass" style="--optIcon: url('./src/usa flag.png');"></div>
 								<div class="optText_RoClass">Option 2</div>
@@ -300,6 +300,22 @@
 					<div class="boxLoaderIcon_RoClass">
 						<img src="./src/Spinner.gif">
 					</div>
+				</div>
+
+				<div class="stepByStepFlex_RoClass">
+					<div class="stepByStepItem_RoClass">
+						<div class="stepByStepLine_RoClass"></div>
+						<div class="stepNumber_RoClass">1</div>
+						<div class="stepDefi_RoClass">Some Text Here for Step text Some Text Here for Step text Some Text Here for Step text Some Text Here for Step text</div>
+					</div>
+					<div class="stepByStepItem_RoClass">
+						<div class="stepByStepLine_RoClass"></div>
+						<div class="stepNumber_RoClass">2</div>
+						<div class="stepDefi_RoClass">Some Text Here for Step text</div>
+					</div>			
+				</div>
+				<div class="stepSets_RoClass">
+					Your Components Here
 				</div>							
 
 				<hr class="linethis_RoClass">
