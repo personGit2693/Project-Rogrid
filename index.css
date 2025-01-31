@@ -1511,8 +1511,7 @@ button.iconBtn_RoClass {
   overflow: visible;
   flex-flow: row nowrap;
   justify-content: center;
-  width: auto;
-  border: 1px solid yellow; }
+  width: auto; }
 
 .stepByStepItem_RoClass {
   position: relative;
