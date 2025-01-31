@@ -208,10 +208,14 @@
 	--stepByStepFontFamily: calibri;
 	--stepByStepNumberFontSize: 16px;
 	--stepByStepNumberFontColor: #ffffff;
-	--stepByStepNumberWidth: auto;
+	--stepByStepNumberWidth: 30px;
 	--stepByStepTextFontSize: 14px;
 	--stepByStepTextFontColor: #ffffff;
 	--stepByStepLineAlignHori: 13px;
+	--stepByStepLineBorderColorLight: green;
+	--stepByStepNumberBgLight: green;
+	--stepByStepNumberFontColorLight: yellow;
+	--stepByStepTextFontColorLight: green;
 	/*Step by Step*/
 }
 /*Root*/

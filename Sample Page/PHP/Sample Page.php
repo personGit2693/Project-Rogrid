@@ -206,13 +206,7 @@
 							<!--Print Here-->										
 						</div>
 					</div>
-				</div>
-
-				<!--
-				<div class="suggestion_RoClass">
-									
-				</div>
-				-->
+				</div>				
 
 				<div class="cusDroplistBtn_RoClass">
 					<div class="masterBtnWrap_RoClass" onclick="showActionButtons(this)">
@@ -249,7 +243,7 @@
 					</div>
 				</div>
 
-				<div class="stepByStepFlex_RoClass">
+				<div class="stepByStepFlex_RoClass" id="myStepByStep">
 					<div class="stepByStepItem_RoClass">
 						<div class="stepByStepLine_RoClass"></div>
 						<div class="stepNumber_RoClass">1</div>

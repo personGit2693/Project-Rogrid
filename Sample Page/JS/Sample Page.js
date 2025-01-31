@@ -283,3 +283,8 @@ myAreaChart.setOnLoadCallback(function(){
 const boxLoaderIndex = document.getElementById("boxLoaderIndex-Id");
 displayBoxLoader(boxLoaderIndex);
 /*Box Loader*/
+
+
+/*Step by Step*/
+nextStep("myStepByStep");
+/*Step by Step*/

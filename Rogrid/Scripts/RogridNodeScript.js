@@ -722,10 +722,11 @@ var stepNumIndex_Rogrid = 0;
 
 
 /*Function to lighten per step*/
-function nextStep(stepByStepItems_ClassName, stepSets_Classname){
+function nextStep(stepByStepFlex_id){
 
-	const stepByStepItems = document.getElementsByClassName(stepByStepItems_ClassName);
-	const stepSets = document.getElementsByClassName(stepSets_Classname);
+	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
+	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
+	const stepSets = stepByStepFlex.querySelectorAll(".stepSets_RoClass");
 
 	if(stepNumIndex_Rogrid < stepByStepItems.length){
 
@@ -764,10 +765,11 @@ function nextStep(stepByStepItems_ClassName, stepSets_Classname){
 
 
 /*Function to back step*/
-function backStep(stepByStepItems_ClassName, stepSets_Classname){
+function backStep(stepByStepFlex_id){
 
-	const stepByStepItems = document.getElementsByClassName(stepByStepItems_ClassName);	
-	const stepSets = document.getElementsByClassName(stepSets_Classname);
+	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
+	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
+	const stepSets = stepByStepFlex.querySelectorAll(".stepSets_RoClass");
 
 	if(stepNumIndex_Rogrid > 1){		
 

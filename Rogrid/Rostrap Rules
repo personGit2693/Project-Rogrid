@@ -515,6 +515,7 @@ Box-Loader Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for display
 		</div>
 
 
+Step by Step Note: Invoke "nextStep(stepByStepFlex_id)" to activate the step or next step and "backStep(stepByStepFlex_id)" for returning
 * How to Step by Step.
 	• Import "RoStrap_Mixin" to your scss file.
 	• Add Script "RogridNodeScript.js" or "RogridNodeScript_Index.js"
@@ -535,7 +536,7 @@ Box-Loader Note: Invoke " displayBoxLoader(boxLoaderWrap) " function for display
 		• " --stepByStepTextFontColorLight: value; " (Provide step by step text font color when active) (stepDefiLight_RoClass)
 	•Structure
 		<!--Step numbers-->
-		<div class="stepByStepFlex_RoClass">
+		<div class="stepByStepFlex_RoClass" id="stepByStepFlex_id">
 			<div class="stepByStepItem_RoClass">
 				<div class="stepByStepLine_RoClass"></div>
 				<div class="stepNumber_RoClass">1</div>
