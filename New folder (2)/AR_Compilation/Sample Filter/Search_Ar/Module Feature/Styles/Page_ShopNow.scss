@@ -1,0 +1,457 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import Mixins*/
+@import "Mixin_ShopNow";
+/*Import Mixins*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root{
+
+}
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Styles*/
+body{
+	margin: 0;
+	padding: 0;
+}
+
+#maincontainer{
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.main{
+	display: flex;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/*Left Side*/
+#container1{
+	display: flex;
+	position: relative;
+	overflow: auto;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	background-color: lightgray;
+	box-sizing: border-box;
+}
+
+#topBar{
+	display: flex;
+	position: relative;
+	flex-flow: row nowrap;
+	width: 90%;
+	height: 30px;
+	margin-top: 10px;
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+#myInput{
+	display: flex;
+	position: relative;
+	width: 300px;
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+#item1{
+	display: flex;
+	position: relative;
+	flex-flow: row wrap;
+	text-decoration: none;
+	box-sizing: border-box;
+	height: 100%;
+	width: 95%;
+	padding-bottom: 10px;
+	justify-content: space-evenly;
+}
+
+.cards{
+	display: flex;
+	position: relative;
+	margin: 7px;
+	height: 185px;
+	width: 180px;
+	background-color: white;
+	flex-flow: column wrap;
+	box-sizing: border-box;
+	border-radius: 15px;
+}
+
+.cards img{
+	margin-top: 10px;
+	height: 120px;
+	width: 120px;
+	box-sizing: border-box;
+}
+
+.tooltip{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  right: 40%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.cards span1{
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+.cards button{
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 12px;
+	width: 150px;
+	box-sizing: border-box;
+}
+
+.cards button1{
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 12px;
+	width: 150px;
+	box-sizing: border-box;
+}
+
+div .cards:hover{
+	box-shadow: 10px 10px 5px black;
+	border: 2px solid black;
+	border-radius: 25px;;
+	transition: .3s ease-in-out;
+}
+/*Left Side*/
+
+/*Right Side*/
+#container2{
+	display: flex;
+	position: relative;
+	flex-flow: column nowrap;
+	margin-left: 0;
+	background-color: ghostwhite;;
+	box-sizing: border-box;
+}
+
+#rightside{
+	display: flex;
+	position: relative;
+	margin-right: auto;
+	margin-top: 10px;
+	box-sizing: border-box;
+}
+
+#rightside img{
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+
+#rightside h1{
+	margin: auto;
+	font-size: 22px;
+	padding: 5px;
+	box-sizing: border-box;
+	border-left: 5px solid #3366ff;
+}
+
+#rightside1{
+	display: flex;
+	position: relative;
+	background-color: floralwhite;
+	border-style: inset;
+	box-sizing: border-box;
+}
+
+#rightside2{
+	display: flex;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+}
+
+#rightside2 h2{
+	display: flex;
+	position: relative;
+	font-size: 20px;
+	border-bottom: 5px solid #3366ff;
+}
+
+#rightside2 button{
+	margin-left: 7%;
+	background-color: #3366ff;
+	color: white;
+	border-radius: 12px;
+	margin-top: auto;
+	margin-bottom: auto;
+	box-sizing: border-box;
+}
+
+#content{
+	display: flex;
+	position: block;
+	overflow: auto;
+	margin-left: auto;
+	margin-right: auto;
+	flex-flow: column nowrap;
+	box-sizing: border-box;
+}
+
+h3{
+	margin-left: 20px;
+}
+/*Right Side*/
+/*General Styles*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+	/*Heading here*/
+	.main{
+		@include main-Smart;
+	}
+
+	/*Left Side*/
+	#container1{
+		margin: 2px;
+		margin-right: 5px;
+		@include container1-Smart;
+	}
+	/*Left Side*/
+
+	/*Right Side*/
+	#container2{
+		margin: 5px;
+		@include container2-Smart;
+	}
+
+	#rightside{
+		border-bottom: none;
+		margin-left: 20px;
+		flex-flow: row wrap;
+		height: 100%;
+		width: 40%;
+	}
+
+	#rightside img{
+		top: 1px;
+		margin-left: 5px;
+		width: 80px;
+		height: 80px;
+	}
+
+	#rightside h1{
+		@include rightside-h1-Smart;
+	}
+
+	#rightside1{
+		@include rightside1-Smart;
+	}
+
+	#rightside2{ 
+		margin-top: auto;
+		margin-bottom: auto;
+		@include rightside2-Smart;
+	}
+
+	#rightside2 h2{
+		padding: 5px;
+		@include rightside2-h2-Smart;
+	}
+
+	#rightside2 button{
+		@include rightside2-button-Smart;
+	}
+
+	#content{
+		@include content-Smart;
+	}
+
+	h3{
+		@include h3-Smart;
+		right: 50px;
+	}
+	/**Right Side*/
+
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+	/*Heading here*/
+	.main{
+		@include main-Smart;
+	}
+
+	/*Left Side*/
+	#container1{
+		margin: 5px;
+		margin-right: 5px;
+		@include container1-Smart;
+	}
+	/*Left Side*/
+
+	/*Right Side*/
+	#container2{
+		margin: 10px;
+		@include container2-Smart;
+	}
+
+	#rightside{
+		border-bottom: none;
+		flex-flow: column wrap;
+		height: 100%;	
+		width: 30%;	
+		margin-left: 20px;	
+	}
+
+	#rightside img{
+		top: 2px;	
+		margin-left: auto;	
+		margin-right: auto;	
+		width: 110px;
+		height: 110px;
+	}
+
+	#rightside h1{
+		@include rightside-h1-Smart;
+	}
+
+	#rightside1{
+		@include rightside1-Smart;
+	}
+
+	#rightside2{
+		margin-top: 0;
+		@include rightside2-Smart;
+	}
+
+	#rightside2 h2{
+		margin-left: auto; 		
+		margin-right: auto;	
+		margin-top: 5px;	
+		@include rightside2-h2-Smart;
+	}
+
+	#rightside2 button{
+		@include rightside2-button-Smart;
+	}
+
+	#content{
+		@include content-Smart;
+	}
+	
+	h3{
+		right: 200px;
+		@include h3-Smart;
+	}
+	/**Right Side*/
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1081px){
+	.main{
+		flex-flow: row nowrap;
+	}
+
+	/*Left Side*/
+	#container1{
+		margin: 30px;
+		margin-right: 0;
+		width: 70%;
+		border-radius: 10px 0px 0px 10px;
+	}
+	/*Left Side*/
+
+	/*Right Side*/
+	#container2{
+		width: 30%;
+		margin: 30px;
+		border-radius: 0px 10px 10px 0px;
+	}
+
+	#rightside{
+		margin-left: auto;
+		border-bottom: 3px solid black;
+	}
+
+	#rightside img{
+		margin-right: 5px;
+		width: 100px;
+		height: 100px;
+	}
+
+	#rightside1{
+		height: 70%;
+		width: 90%;
+		margin-top: 5%;
+		margin-left: auto;
+		margin-right: auto;
+		flex-flow: column nowrap;
+	}
+
+	#rightside2{
+		width: 90%;
+		height: 100px;
+		margin-top: 5%;
+	}
+
+	#rightside2 h2{
+		padding: 10px;
+	}
+
+	#rightside2 button{
+		height: 45px;
+	}
+
+	#content{
+		height: 80%;
+		width: 90%;
+	}
+	/*Right Side*/
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
