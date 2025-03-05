@@ -1571,6 +1571,13 @@ button.iconBtn_RoClass {
   color: var(--stepByStepTextFontColorLight); }
 
 /*Step numbers*/
+/*Step content*/
+.stepSets_RoClass {
+  position: relative;
+  box-sizing: border-box;
+  display: none; }
+
+/*Step content*/
 /*General Media*/
 /***********************************************************************************************************************************************************************************************************/
 /*Step By Step*/
