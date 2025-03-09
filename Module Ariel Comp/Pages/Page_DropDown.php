@@ -6,7 +6,7 @@
 	<title>eyyyy</title>
 	<link rel="stylesheet" type="text/css" href="../Styles/DropDown.css">
 </head>
-<body>
+
 	<details class="Aea_details-example">
 	    <summary>If you click me I will display a list of content</summary>
 	   
@@ -18,5 +18,5 @@
 
 
 	<script type="module" src="../Client Side/Controller_Click_DropDown.js"></script>
-</body>
+
 </html>
