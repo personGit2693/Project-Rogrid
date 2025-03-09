@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,6MAA6M;AAC7M,kBAAkB;AAGlB,kBAAkB;AAClB,6MAA6M;AAE7M,6MAA6M;AAC7M,iBAAiB;AACjB,gBAAgB;AA2BhB,gBAAgB;AAEhB,iBAAiB;AACjB,6MAA6M",
-"sources": ["Global_Mixin.scss"],
-"names": [],
-"file": "Global_Mixin.css"
-}
