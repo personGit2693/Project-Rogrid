@@ -1,0 +1,251 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import*/
+/***********************************************************************************************************************************************************************************************************/
+/*General Styles*/
+/*General Styles*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Media Queries*/
+/*Heading here*/
+/*Heading here*/
+/*Media Queries*/
+/***********************************************************************************************************************************************************************************************************/
+/*Import*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*General Styles*/
+/*Heading here*/
+body {
+  font-family: 'Brush Script MT', cursive; }
+
+#Feature {
+  border-bottom: 3px solid black; }
+
+.main {
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  box-sizing: border-box; }
+
+#container {
+  position: sticky;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  z-index: 2;
+  box-sizing: border-box; }
+
+#container img {
+  height: 100px;
+  box-sizing: border-box; }
+
+#wraper1 {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box; }
+
+#wraper2 {
+  position: relative;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box; }
+
+#wraper2 a {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box; }
+
+#wraper3 {
+  position: relative;
+  align-content: center;
+  font-size: 20px;
+  box-sizing: border-box; }
+
+#wraper3 button {
+  position: relative;
+  border: transparent;
+  font-weight: bold;
+  box-sizing: border-box; }
+
+#wraper3 a {
+  text-decoration: none;
+  color: white; }
+
+#header {
+  color: white; }
+
+/*Heading here*/
+/*Footer*/
+#footer {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #f2f2f2; }
+
+#innerfooter {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 15px;
+  box-sizing: border-box; }
+
+#innerfooter a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+#copyright {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; }
+
+#copyright img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 30px;
+  height: 30px; }
+
+#copyright p {
+  font-size: 18px; }
+
+/*Footer*/
+/*General Styles*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Media Queries*/
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width: 641px) {
+  /*Heading here*/
+  #container {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-flow: column nowrap; }
+
+  #wraper1 {
+    margin-left: auto;
+    margin-right: auto; }
+
+  #container img {
+    height: 80px; }
+
+  #wraper2 a {
+    font-size: 17px;
+    padding: 3px;
+    margin: 2px; }
+
+  #wraper3 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px; }
+
+  #wraper3 button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px; }
+
+  #wraper3 a {
+    border-radius: 10px; }
+
+  /*Heading here*/
+  /*Footer*/
+  #innerfooter {
+    margin-left: 0;
+    margin-right: 0; }
+
+  #innerfooter a {
+    margin-left: auto;
+    margin-right: auto; }
+
+  /*Footer*/ }
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width: 642px) and (max-width: 1080px) {
+  /*Heading here*/
+  #container {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-flow: row nowrap; }
+
+  #container img {
+    height: 80px; }
+
+  #wraper2 a {
+    font-size: 17px;
+    padding: 3px;
+    margin: 2px; }
+
+  #wraper3 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px; }
+
+  #wraper3 button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px; }
+
+  #wraper3 a {
+    border-radius: 10px; }
+
+  /*Heading here*/ }
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width: 1081px) {
+  /*Heading here*/
+  #container {
+    padding-left: 70px;
+    padding-right: 70px;
+    flex-flow: row nowrap; }
+
+  #wraper2 a {
+    font-size: 20px;
+    padding: 10px;
+    margin: 7px; }
+
+  #wraper3 button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px; }
+
+  #header {
+    border-radius: 12px; }
+
+  /*Heading here*/
+  /*Footer*/
+  #innerfooter {
+    margin-left: auto;
+    margin-right: auto; }
+
+  /*Footer*/ }
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+/*Media Queries*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*# sourceMappingURL=Global%20Style.css.map */
