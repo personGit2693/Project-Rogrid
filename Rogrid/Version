@@ -1,4 +1,4 @@
-Version: 3.3.1
+Version: 3.3.2
 
 Updates:
-1. Final Correction for Step By Step Component Codes and Algorithm.
+1. Improved step by step component with scroll to the top of its wrapper when next or back step triggered.
