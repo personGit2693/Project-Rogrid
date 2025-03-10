@@ -1,0 +1,13 @@
+Instruction******
+
+
+for Tooltip****
+
+  --CaptionIMGsize: 100px; 
+  --CaptionBoxWidth: 120px;
+  --CaptionBoxMaxHeight: 100px;
+  --CaptionScroll: auto;
+  --CaptionBackroundColor: black;
+  --CaptionTextColor: white;
+  --CaptionBorderRadius: 15px;
+  --CaptionPadding: 7px;
