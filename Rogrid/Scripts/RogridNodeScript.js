@@ -808,3 +808,19 @@ function backStep(stepByStepFlex_id, wrapper_id){
 /*Function to back step*/
 /*Step by step*/
 /****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Tabbed Page*/
+function controller_Tab_Switch(index) {
+    const contents = document.querySelectorAll('.RBTP-content');
+    const tabs = document.querySelectorAll('.RBTP-tab');
+
+    contents.forEach(content => content.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    contents[index].classList.add('active');
+    tabs[index].classList.add('active');
+}
+/*Tabbed Page*/
+/****************************************************************************************************************************************************************************/

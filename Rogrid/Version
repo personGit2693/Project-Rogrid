@@ -1,4 +1,5 @@
-Version: 3.3.2
+Version: 3.4
 
 Updates:
-1. Improved step by step component with scroll to the top of its wrapper when next or back step triggered.
+1. Tabbed Page Component is now available.
+2. Removed Documentation from Rogrid. (Documentation can only be found online)
