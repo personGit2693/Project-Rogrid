@@ -286,5 +286,5 @@ displayBoxLoader(boxLoaderIndex);
 
 
 /*Step by Step*/
-nextStep("myStepByStep");
+nextStep("myStepByStep", "mainLayoutWrapper");
 /*Step by Step*/

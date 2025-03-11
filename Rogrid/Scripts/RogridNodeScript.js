@@ -722,8 +722,9 @@ var stepNumIndex_Rogrid = 0;
 
 
 /*Function to lighten per step*/
-function nextStep(stepByStepFlex_id){
+function nextStep(stepByStepFlex_id, wrapper_id){
 
+	const wrapper = document.getElementById(wrapper_id);
 	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
 	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
 	const stepSets = document.getElementsByClassName("stepSets_RoClass");
@@ -757,16 +758,16 @@ function nextStep(stepByStepFlex_id){
 
 		stepNumIndex_Rogrid++;
 
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;		
+		wrapper.scrollTop = 0;		
 	}
 }
 /*Function to lighten per step*/
 
 
 /*Function to back step*/
-function backStep(stepByStepFlex_id){
+function backStep(stepByStepFlex_id, wrapper_id){
 
+	const wrapper = document.getElementById(wrapper_id);
 	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
 	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
 	const stepSets = document.getElementsByClassName("stepSets_RoClass");
@@ -801,10 +802,25 @@ function backStep(stepByStepFlex_id){
 		/*Display the current step*/		
 		
 
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;				
+		wrapper.scrollTop = 0;				
 	}
 }
 /*Function to back step*/
 /*Step by step*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Tabbed Page*/
+function controller_Tab_Switch(index) {
+    const contents = document.querySelectorAll('.RBTP-content');
+    const tabs = document.querySelectorAll('.RBTP-tab');
+
+    contents.forEach(content => content.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    contents[index].classList.add('active');
+    tabs[index].classList.add('active');
+}
+/*Tabbed Page*/
 /****************************************************************************************************************************************************************************/

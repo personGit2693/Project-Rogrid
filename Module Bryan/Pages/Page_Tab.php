@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabbed Page</title>
-    <link rel="stylesheet" href="./ProjectBry/CSS/RBTP_TabbedPage.css">
+    <link rel="stylesheet" href="../Styles/RBTP_TabbedPage.css">
 </head>
 
-
+<body>
     <!-- RBTP-tabs -->
     <div class="RBTP-tab-container">
         <div class="RBTP-tabs">
@@ -24,8 +24,9 @@
     </div>
 
     <!-- RBTP-tabs JS -->
-    <script type="module" src="./ProjectBry/Scripts/Controller_Tab_Switch.js"></script>
+    <script type="module" src="../Client Side/Controller_Tab_Switch.js"></script>
     <!-- RBTP-tabs JS -->
 
+</body>
 
 </html>
