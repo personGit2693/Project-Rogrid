@@ -1,0 +1,134 @@
+/***********************************************************************************************************************************************************************************************************/
+/*Import*/
+
+/*Import*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+:root{
+	--IconFontFamily: arian; 
+	--IconSize: 150px; /*To set the width and height of the container of the icons(miniTogglebox_ArIcon)*/
+	--IconBorderRadius: 12px;
+
+	--IconImageSize: 110px; /*To set the width and height of the image (.pic_ArIcon)*/
+	--IconTopTextHeight: 15px;  /* To set the height of the top text (topLogo_ArIcon)*/
+	--IconTopPosition: flex-end; /*To position the top text (topLogo_ArIcon)*/
+	--IconTopTextColor: blue; /*To set the text color (topLogo_ArIcon)*/
+	--IconTextSize: 18px; /*To set teh size of the Text (miniTogglebox_ArIcon > span)*/
+	--IconLowerTextColor: black; /*To set teh size of the Text (miniTogglebox_ArIcon > span)*/
+
+	--IconImageSizeHover: 115px; /*To modift the Image size when hover*/
+	--IconTransition: .2s ease-in-out;
+
+}
+/*Root*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*General Styles*/
+
+.miniTogglebox_ArIcon{
+	font-family: var(--IconFontFamily);
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	height: var(--IconSize);
+	width: var(--IconSize);
+	box-sizing: border-box;
+	border-radius: var(--IconBorderRadius);
+	padding: 4px;
+	margin: 10px;
+	text-decoration: none;
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+.topLogo_ArIcon{
+	display: flex;
+	position: relative;
+	flex-flow: row;
+	width: 100%;
+	font-size: var(--IconTopTextHeight);
+	font-weight: bold;
+	color: var(--IconTopTextColor);
+	box-sizing: border-box;
+	justify-content: var(--IconTopPosition);
+}
+.togglebox_ArIcon{
+	display: flex;
+	position: relative;
+	height: var(--IconImageSize);
+	width: var(--IconImageSize);
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+.pic_ArIcon{
+	background-position: center;
+	background-size: cover;
+	background-image: var(--IconBackgroundImage);
+
+}
+.miniTogglebox_ArIcon span{
+	text-align: center;
+	color: var(--IconLowerTextColor);
+	font-size: var(--IconTextSize);
+	box-sizing: border-box;
+}
+
+.miniTogglebox_ArIcon span:hover{
+	font-weight: 600;
+	box-sizing: border-box;
+	transition: var(--IconTransition);
+}
+
+.miniTogglebox_ArIcon:hover{
+	transition: var(--IconTransition);
+	box-sizing: border-box;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.togglebox_ArIcon:hover{
+	height: var(--IconImageSizeHover);
+	width: var(--IconImageSizeHover);
+	transition: var(--IconTransition);
+}
+/*For Icon section*/
+
+/*General Styles*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Media Queries*/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+   
+}
+/*Mobile*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Tablet*/
+@media all and (min-width:642px) and (max-width:1080px){
+    
+}
+/*Tablet*/
+/***********************************************************************************************************************************************************************************************************/
+
+
+/***********************************************************************************************************************************************************************************************************/
+/*Desktop*/
+@media all and (min-width:1081px){
+    
+}
+/*Desktop*/
+/***********************************************************************************************************************************************************************************************************/
+
+/*Media Queries*/
+/***********************************************************************************************************************************************************************************************************/
