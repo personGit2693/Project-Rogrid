@@ -8,7 +8,8 @@
   --CaptionPositionTop: 50px;
   --CaptionPositionLeft:50px;
   --CaptionIMGsize: 20px;
-  --CaptionMainContainer: 5px;
+  --CaptionMainContainerPadding: 5px;
+  --CaptionMainTextColor: black;
   --CaptionBoxWidth: 200px;
   --CaptionFont: 'Poppins', sans-serif;
   --CaptionSpace: 103%;
@@ -24,7 +25,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 /*Tool Tip*/
-.Ar_tooltip {
+.ar_tooltip {
   font-family: var(--CaptionFont);
   display: flex;
   top: var(--CaptionPositionTop);
@@ -34,15 +35,16 @@
   box-sizing: border-box;
   align-items: center;
   width: auto;
-  padding: var(--CaptionMainContainer); }
+  padding: var(--CaptionMainContainerPadding);
+  color: var(--CaptionMainTextColor); }
 
-.Ar_tooltip img {
+.ar_tooltip img {
   height: var(--CaptionIMGsize);
   width: var(--CaptionIMGsize);
   box-sizing: border-box;
   border: 2px solid red; }
 
-.Ar_tooltip .Ar_tooltiptext {
+.ar_tooltip .ar_tooltiptext {
   display: none;
   width: var(--CaptionBoxWidth);
   max-height: var(--CaptionBoxMaxHeight);
@@ -60,7 +62,7 @@
   opacity: 0;
   transition: 150ms transform; }
 
-.Ar_tooltip:hover .Ar_tooltiptext {
+.ar_tooltip:hover .ar_tooltiptext {
   display: block;
   cursor: help;
   opacity: 1; }
