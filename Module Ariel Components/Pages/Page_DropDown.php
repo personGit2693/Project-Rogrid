@@ -9,11 +9,9 @@
 
 	<details class="Aea_details-example">
 	    <summary>If you click me I will display a list of content</summary>
-	   
 	        <li>Option 1</li>
 	        <li>Option 2</li>
 	        <li>Option 3</li>
-	    
 	</details>
 
 
