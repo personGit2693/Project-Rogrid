@@ -38,7 +38,7 @@ body {
 
 
 
-.ar_tooltip {
+.Ar_tooltip {
     font-family:var(--CaptionFont);
     display: flex;
     top: var(--CaptionPositionTop);
@@ -52,14 +52,14 @@ body {
     color: var(--CaptionMainTextColor);
 }
 
-.ar_tooltip img{
+.Ar_tooltip img{
     height: var(--CaptionIMGsize);
     width: var(--CaptionIMGsize);
     box-sizing: border-box;
     border: 2px solid red;
 }
 
-.ar_tooltip .ar_tooltiptext{
+.Ar_tooltip .Ar_tooltiptext{
     display: none;
     width: var(--CaptionBoxWidth);
     max-height: var(--CaptionBoxMaxHeight);
@@ -79,7 +79,7 @@ body {
 }
 
 
-.ar_tooltip:hover .ar_tooltiptext {
+.Ar_tooltip:hover .Ar_tooltiptext {
     display: block;
     cursor: help;
     opacity: 1;

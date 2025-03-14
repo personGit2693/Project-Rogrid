@@ -8,16 +8,8 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-	--DropDownTextFont: arian;
-	--DropDownWidth: 450px;
-	--DropDownRadius: 15px;
 
-	--DropDownBorderWidth: 3px;
-	--DropDownBorderStyle: solid;
-	--DropDownBorderPadding: 4px;
-	--DropDownHeight: 45px;
 
-	--DropDownPositionText: none;
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -25,35 +17,44 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
+body{
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+	box-sizing: border-box;
+	border: 2px solid red;
+
+}
 
 .Aea_details-example{
-	font-family: var(--DropDownTextFont);
 	position: relative;
 	display: flex;
 	box-sizing: border-box;
 	flex-flow: column;
-	width: var(--DropDownWidth);
-	border-radius: var(--DropDownRadius);
-	border-width: var(--DropDownBorderWidth);
-	border-style: var(--DropDownBorderStyle);
+	width: 400px;
+	border-radius: 7px;
+	border: 2px solid black;
+	transition: .5s;
+	margin: auto;
+	margin-top: 30%;
 }
 
 .Aea_details-example summary{
 	align-content: center;
-	padding: var(--DropDownBorderPadding);
-	height: var(--DropDownHeight);
+	padding: 4px;
+	height: 40px;
 	box-sizing: border-box;
 }
 
 .Aea_details-example li{
 	align-content: center;
-	text-align: var(--DropDownPositionText);
-	padding: var(--DropDownBorderPadding);
-	height: var(--DropDownHeight);
+	height: 40px;
 	margin-right: 0;
-	list-style-type: none;
-	border-top-width: var(--DropDownBorderWidth);
-	border-top-style: var(--DropDownBorderStyle);
+		list-style-type: none;
+	border-top: 2px solid black;
 	box-sizing: border-box;
 }
 
