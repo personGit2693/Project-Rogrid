@@ -5,20 +5,20 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --toolTipPositionTop: 50px;
-  --toolTipPositionLeft:50px;
-  --toolTipFontFamily: 'Poppins', sans-serif;
-  --toolTipMainContainerFontSize: 15px;
-  --toolTipIMGsize: 20px;
-  --toolTipMainContainerPadding: 5px;
-  --toolTipMainTextColor: black;
-  --toolTipBoxWidth: auto;
-  --toolTipHoverTextFontSize:15px;
-  --toolTipSpace: 103%;
-  --toolTipBoxMaxHeight: auto;
-  --toolTipBackroundColor: black;
-  --toolTipTextColor: white;
-  --toolTipPadding: 7px; }
+  --CaptionPositionTop: 50px;
+  --CaptionPositionLeft:50px;
+  --CaptionIMGsize: 20px;
+  --CaptionMainContainerPadding: 5px;
+  --CaptionMainTextColor: black;
+  --CaptionBoxWidth: 200px;
+  --CaptionFont: 'Poppins', sans-serif;
+  --CaptionSpace: 103%;
+  --CaptionBoxMaxHeight: 100px;
+  --CaptionScroll: auto;
+  --CaptionBackroundColor: black;
+  --CaptionTextColor: white;
+  --CaptionBorderRadius: 15px;
+  --CaptionPadding: 7px; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -26,42 +26,41 @@
 /*General Styles*/
 /*Tool Tip*/
 .ar_tooltip {
-  font-family: var(--toolTipFontFamily);
+  font-family: var(--CaptionFont);
   display: flex;
-  top: var(--toolTipPositionTop);
-  left: var(--toolTipPositionLeft);
+  top: var(--CaptionPositionTop);
+  left: var(--CaptionPositionLeft);
   position: absolute;
+  border: 2px solid blue;
   box-sizing: border-box;
   align-items: center;
-  font-size: var(--toolTipMainContainerFontSize);
   width: auto;
-  padding: var(--toolTipMainContainerPadding);
-  color: var(--toolTipMainTextColor); }
+  padding: var(--CaptionMainContainerPadding);
+  color: var(--CaptionMainTextColor); }
 
 .ar_tooltip img {
-  height: var(--toolTipIMGsize);
-  width: var(--toolTipIMGsize);
-  box-sizing: border-box; }
+  height: var(--CaptionIMGsize);
+  width: var(--CaptionIMGsize);
+  box-sizing: border-box;
+  border: 2px solid red; }
 
-.ar_tooltiptext {
+.ar_tooltip .ar_tooltiptext {
   display: none;
-  width: var(--toolTipBoxWidth);
-  max-height: var(--toolTipBoxMaxHeight);
-  overflow: auto;
-  background-color: var(--toolTipBackroundColor);
-  color: var(--toolTipTextColor);
+  width: var(--CaptionBoxWidth);
+  max-height: var(--CaptionBoxMaxHeight);
+  overflow: var(--CaptionScroll);
+  background-color: var(--CaptionBackroundColor);
+  color: var(--CaptionTextColor);
   text-align: center;
-  border-radius: 15px;
-  padding: var(--toolTipPadding);
-  font-size: var(--toolTipHoverTextFontSize);
+  border-radius: var(--CaptionBorderRadius);
+  padding: var(--CaptionPadding);
   position: absolute;
   z-index: 1;
   top: 50%;
-  left: var(--toolTipSpace);
+  left: var(--CaptionSpace);
   transform: translateY(-50%);
   opacity: 0;
-  transition: 150ms transform;
-  white-space: nowrap; }
+  transition: 150ms transform; }
 
 .ar_tooltip:hover .ar_tooltiptext {
   display: block;

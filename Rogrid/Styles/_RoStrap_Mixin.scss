@@ -1825,6 +1825,56 @@ div.footerWrap_RoClass>span.footerTxt_RoClass{
 }
 /*Tabbed Page*/
 
+
+/*Tool Tip*/
+.ar_tooltip {
+    font-family:var(--CaptionFont);
+    display: flex;
+    top: var(--CaptionPositionTop);
+    left:var(--CaptionPositionLeft);
+    position: absolute;
+    border: 2px solid blue;
+    box-sizing: border-box;
+    align-items: center;
+    width: auto;
+    padding: var(--CaptionMainContainerPadding);
+    color: var(--CaptionMainTextColor);
+}
+
+.ar_tooltip img{
+    height: var(--CaptionIMGsize);
+    width: var(--CaptionIMGsize);
+    box-sizing: border-box;
+    border: 2px solid red;
+}
+
+.ar_tooltip .ar_tooltiptext{
+    display: none;
+    width: var(--CaptionBoxWidth);
+    max-height: var(--CaptionBoxMaxHeight);
+    overflow: var(--CaptionScroll);
+    background-color: var(--CaptionBackroundColor);
+    color: var(--CaptionTextColor);
+    text-align: center;
+    border-radius: var(--CaptionBorderRadius);
+    padding: var(--CaptionPadding);
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: var(--CaptionSpace);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: 150ms transform;
+}
+
+
+.ar_tooltip:hover .ar_tooltiptext {
+    display: block;
+    cursor: help;
+    opacity: 1;
+}
+/*Tool Tip*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
