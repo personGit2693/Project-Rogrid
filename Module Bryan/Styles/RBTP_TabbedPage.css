@@ -22,12 +22,12 @@
 /*General Styles*/
 /* Tab Container */
 .RBTP-tab-container {
-  display: block;
+  display: var(--RBTP-tab-container-diplay);
   border: 2px solid var(--RBTP-tab-border-color);
   border-radius: 8px;
   padding: var(--RBTP-tab-container-padding);
   background: var(--RBTP-tab-container-bg);
-  position: relative;
+  position: var(--RBTP-tab-container-position);
   text-align: center;
   box-sizing: border-box;
   border: 1px solid red;
@@ -51,14 +51,16 @@
 
 .RBTP-tab.active {
   border-bottom: 2px solid var(--RBTP-tab-active-border-color);
-  font-weight: var(--RBTP-tab-active-font-weight); }
+  font-weight: var(--RBTP-tab-active-font-weight);
+  font-family: var(--RBTP-tab-active-font-family); }
 
 /* Content */
 .RBTP-content {
   display: none;
   padding: 20px;
   font-size: var(--RBTP-content-font-size);
-  font-weight: var(--RBTP-tab-content-weight); }
+  font-weight: var(--RBTP-tab-content-weight);
+  font-family: var(--RBTP-tab-content-family); }
 
 .RBTP-content.active {
   display: block; }
