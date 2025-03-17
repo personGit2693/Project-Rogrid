@@ -5,7 +5,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --toolTipPositionTop: 50px;
+  --toolTipPositionTop: 55px;
   --toolTipPositionLeft:50px;
   --toolTipFontFamily: 'Poppins', sans-serif;
   --toolTipMainContainerFontSize: 15px;
