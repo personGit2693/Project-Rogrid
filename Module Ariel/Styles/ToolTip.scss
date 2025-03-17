@@ -8,21 +8,24 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-    --CaptionPositionTop: 50px;
-    --CaptionPositionLeft:50px;
+    --toolTipPositionTop: 50px;
+    --toolTipPositionLeft:50px;
 
-    --CaptionIMGsize: 20px; 
-    --CaptionMainContainerPadding: 5px;
-    --CaptionMainTextColor: black;
-    --CaptionBoxWidth: 200px;
-    --CaptionFont: 'Poppins', sans-serif;
-    --CaptionSpace: 103%;
-    --CaptionBoxMaxHeight: 100px;
-    --CaptionScroll: auto;
-    --CaptionBackroundColor: black;
-    --CaptionTextColor: white;
-    --CaptionBorderRadius: 15px;
-    --CaptionPadding: 7px;
+    --toolTipFontFamily: 'Poppins', sans-serif;
+    --toolTipMainContainerFontSize: 15px;
+    --toolTipIMGsize: 20px; 
+    --toolTipMainContainerPadding: 5px;
+    --toolTipMainTextColor: black;
+    --toolTipBoxWidth: auto;
+    --toolTipSpace: 103%;
+    --toolTipHoverTextFontSize:15px;
+    --toolTipBoxMaxHeight: auto;
+    --toolTipBackroundColor: black;
+    --toolTipTextColor: white;
+    --toolTipPadding: 7px;
+    --toolTipWhitespace: nowrap;
+
+
   
 }
 /*Root*/
@@ -39,43 +42,44 @@ body {
 
 
 .ar_tooltip {
-    font-family:var(--CaptionFont);
+    font-family:var(--toolTipFontFamily);
     display: flex;
-    top: var(--CaptionPositionTop);
-    left:var(--CaptionPositionLeft);
+    top: var(--toolTipPositionTop);
+    left:var(--toolTipPositionLeft);
     position: absolute;
-    border: 2px solid blue;
     box-sizing: border-box;
     align-items: center;
+    font-size: var(--toolTipMainContainerFontSize);
     width: auto;
-    padding: var(--CaptionMainContainerPadding);
-    color: var(--CaptionMainTextColor);
+    padding: var(--toolTipMainContainerPadding);
+    color: var(--toolTipMainTextColor);
 }
 
 .ar_tooltip img{
-    height: var(--CaptionIMGsize);
-    width: var(--CaptionIMGsize);
+    height: var(--toolTipIMGsize);
+    width: var(--toolTipIMGsize);
     box-sizing: border-box;
-    border: 2px solid red;
 }
 
-.ar_tooltip .ar_tooltiptext{
+.ar_tooltiptext{
     display: none;
-    width: var(--CaptionBoxWidth);
-    max-height: var(--CaptionBoxMaxHeight);
-    overflow: var(--CaptionScroll);
-    background-color: var(--CaptionBackroundColor);
-    color: var(--CaptionTextColor);
+    width: var(--toolTipBoxWidth);
+    max-height: var(--toolTipBoxMaxHeight);
+    overflow: auto;
+    background-color: var(--toolTipBackroundColor);
+    color: var(--toolTipTextColor);
     text-align: center;
-    border-radius: var(--CaptionBorderRadius);
-    padding: var(--CaptionPadding);
+    border-radius: 15px;
+    padding: var(--toolTipPadding);
     position: absolute;
     z-index: 1;
     top: 50%;
-    left: var(--CaptionSpace);
+    left: var(--toolTipSpace);
     transform: translateY(-50%);
     opacity: 0;
     transition: 150ms transform;
+    font-size: var(--toolTipHoverTextFontSize);
+    white-space: var(--toolTipWhitespace);
 }
 
 
