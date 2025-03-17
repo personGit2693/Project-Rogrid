@@ -1,0 +1,77 @@
+/***********************************************************************************************************************************************************************************************************/
+/* Import */
+
+/* Import */
+/***********************************************************************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************************************************************/
+/*Root*/
+
+/* Root */
+/***********************************************************************************************************************************************************************************************************/
+
+
+/* Global styling for the body */
+/* Custom button styling (no background here) */
+.custom-button-RB {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-between; /* Space out text and icon */
+    align-items: center; /* Center the content vertically */
+    font-family: var(--button-font-RB);
+    font-size: var(--button-font-size-RB);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: var(--buttonRB-from-top); /* Vertical position */
+    left: var(--buttonRB-from-left); /* Horizontal position */
+    width: var(--buttonRB-width); /* Make the button width responsive */
+    height: var(--buttonRB-height);
+    box-sizing: border-box; /* Include padding in the width */
+    border-radius: var(--button-border-radius-RB); /* Apply border-radius to container */
+    overflow: hidden; /* Ensure content respects border-radius */
+}
+
+/* Text container styling */
+.button-text-RB {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: bold;
+    padding: 20px;
+    background: var(--background-normal-text-RB); /* Apply green background to the text */
+    color: black; /* Text color */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+/* Icon container styling */
+.button-icon-RB {
+    display: flex; /* Flex container to center the icon */
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    background: var(--background-normal-icon-RB); /* Apply light green background to the icon */
+    height: 100%;
+    width: 30%; /* Icon container will take space based on content size */
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
+}
+
+/* Icon styling */
+.button-icon-RB img {
+    width: var(--button-icon-size-RB);
+    height: var(--button-icon-size-RB);
+}
+
+/* Hover effect: Lift the button */
+.custom-button-RB:hover {
+    transform: var(--buttonRB-transform); /* Move the button up slightly */
+}
+
+/* Active state: Change background color for text and icon on click */
+.custom-button-RB:active .button-text-RB {
+    background: var(--background-active-text-RB); /* Darker background on click for text */
+}
+
+.custom-button-RB:active .button-icon-RB {
+    background: var(--background-active-icon-RB); /* Darker background on click for icon */
+}
