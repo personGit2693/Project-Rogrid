@@ -8,8 +8,8 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-    --toolTipPositionTop: 50px;
-    --toolTipPositionLeft:50px;
+    --toolTipPositionTop: 40px;
+    --toolTipPositionLeft:40px;
 
     --toolTipFontFamily: 'Poppins', sans-serif;
     --toolTipMainContainerFontSize: 15px;
@@ -38,8 +38,6 @@ body {
  
 }
 /*Tool Tip*/
-
-
 
 .ar_tooltip {
     font-family:var(--toolTipFontFamily);
