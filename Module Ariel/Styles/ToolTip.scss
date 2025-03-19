@@ -7,23 +7,20 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
-:root{
-    --toolTipPositionTop: 45px;
-    --toolTipPositionLeft:45px;
-
+:root{    
     --toolTipFontFamily: 'Poppins', sans-serif;
     --toolTipMainContainerFontSize: 15px;
-    --toolTipIMGsize: 20px; 
+    --toolTipIMGsize: 40px; 
     --toolTipMainContainerPadding: 5px;
     --toolTipMainTextColor: black;
-    --toolTipBoxWidth: auto;
-    --toolTipSpace: 103%;
+    --toolTipBoxWidth: 200px;
+    --toolTipSpace: 100%;
     --toolTipHoverTextFontSize:15px;
-    --toolTipBoxMaxHeight: auto;
+    --toolTipBoxMaxHeight: 70px;
     --toolTipBackroundColor: black;
     --toolTipTextColor: white;
     --toolTipPadding: 7px;
-    --toolTipWhitespace: 'ss';
+    --toolTipWhitespace: normal;
 
 
   
@@ -38,12 +35,18 @@ body {
  
 }
 /*Tool Tip*/
+#tooltipWrap{
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    top: 0px;
+    width: 400px;
+}
+
 
 .ar_tooltip {
     font-family:var(--toolTipFontFamily);
     display: flex;
-    top: var(--toolTipPositionTop);
-    left:var(--toolTipPositionLeft);
     position: absolute;
     box-sizing: border-box;
     align-items: center;
