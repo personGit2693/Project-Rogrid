@@ -6,10 +6,16 @@
 	<title>caption</title>
 	<link rel="stylesheet" type="text/css" href="../Styles/Tooltip.css">
 </head>
-
 	
-	<div class="ar_tooltip"><div>hover me</div><img src="../../src/question.png">
-		<span class="ar_tooltiptext">caption eyy </span>
+	<div id="tooltipWrap" style="border: 1px solid yellow;">
+		<div class="ar_tooltip" style="border: 1px solid red;">
+			<div>hover me hover me hover me hover mehover me hover me hover me hover mehover me hover me hover me hover me</div>
+			<img src="../../src/question.png">
+			<span class="ar_tooltiptext">caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy  caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy caption eyycaption eyy caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy caption eyy</span>
+		</div>	
 	</div>
+	
+
+	<!--Rogie-->
  	
 
