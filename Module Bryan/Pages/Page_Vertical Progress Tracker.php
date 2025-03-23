@@ -11,7 +11,7 @@
     <!-- Vertical Progress Tracker -->
     <div class="rbpt-container">
         <!-- Apply the .rbpt-line-last class here -->
-        <div class="rbpt-line rbpt-line-last"></div> <!-- Line for the last step -->
+        <div class="rbpt-line"></div> <!-- Line for the last step -->
         
         <div class="rbpt-step">
             <div class="rbpt-time">2025-03-22 10:00 AM</div>

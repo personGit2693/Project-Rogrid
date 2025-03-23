@@ -7,13 +7,13 @@
 :root {
   --rbpt-container-width: 250px;
   --rbpt-container-left: 200px;
-  --rbpt-line-left: 26px;
+  --rbpt-line-left: 24px;
   --rbpt-line-top: 0;
   --rbpt-line-width: 4px;
   --rbpt-line-height: 50px;
   --rbpt-line-color: #ccc;
   --rbpt-step-margin-bottom: 30px;
-  --rbpt-image-size: 40px;
+  --rbpt-image-size: 50px;
   --rbpt-image-border-radius: 50%;
   --rbpt-image-border: 3px solid #ccc;
   --rbpt-image-bg-color: #fff;
@@ -63,6 +63,7 @@
   height: var(--rbpt-image-size);
   max-width: none;
   padding: 5px;
+  box-sizing: border-box;
   border-radius: var(--rbpt-image-border-radius);
   border: var(--rbpt-image-border);
   background-color: var(--rbpt-image-bg-color);
@@ -94,10 +95,6 @@
   font-size: var(--rbpt-time-font-size);
   color: var(--rbpt-time-color);
   font-family: var(--rbpt-time-font-family); }
-
-.rbpt-line-last {
-  background-color: var(--rbpt-line-last-step-color);
-  /* Line color for the last step */ }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
