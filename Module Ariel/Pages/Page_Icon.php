@@ -9,11 +9,11 @@
 
 		<a href="" class="miniTogglebox_ArIcon">
 			<div class="topLogo_ArIcon">New</div>
-			<div class="togglebox_ArIcon pic_ArIcon" style="--IconBackgroundImage: url('../../src/cashIn.png')"></div>
+			<div class="togglebox_ArIcon pic_ArIcon" style="--iconBackgroundImage: url('../../src/cashIn.png')"></div>
 			<span>Cash In</span>
 		</a>
 		<a href="" class="miniTogglebox_ArIcon">
-			<div class="togglebox_ArIcon pic_ArIcon" style="--IconBackgroundImage: url('../../src/icon2.png')"></div>
+			<div class="togglebox_ArIcon pic_ArIcon" style="--iconBackgroundImage: url('../../src/icon2.png')"></div>
 			<span>Details</span>
 		</a>
 
