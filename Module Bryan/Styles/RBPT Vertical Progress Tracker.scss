@@ -7,13 +7,16 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+
 :root {
 
-    --rbpt-container-left: 26px;
-    --rbpt-container-top: 100px;
     --rbpt-container-width: 250px;
+    --rbpt-container-left: 200px;
     
+    --rbpt-line-left: 24px;
+    --rbpt-line-top: 0;
     --rbpt-line-width: 4px;
+    --rbpt-line-height: 50px;
     --rbpt-line-color: #ccc;
     
     --rbpt-step-margin-bottom: 30px;
@@ -34,29 +37,33 @@
     --rbpt-font-family: 'Arial', sans-serif; /* Default font for the steps */
     --rbpt-last-step-font-family: 'Arial', sans-serif; /* Different font for the last step */
 
+    --rbpt-time-left: -160px;
+    --rbpt-time-top: 40%;
+    --rbpt-time-font-size: 14px;
+    --rbpt-time-color: #888;
+    --rbpt-time-font-family: 'Arial', sans-serif;
+
+    --rbpt-line-last-step-color: #28a745; /* Line color for last step */
+
 }
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 
-
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 
-
-/*Vertical Progress Tracker*/
 .rbpt-container {
     position: relative;
-    left: var(--rbpt-container-left);
-    top: var(--rbpt-container-top);
     width: var(--rbpt-container-width);
+    left: var(--rbpt-container-left);
 }
 
 .rbpt-line {
     position: absolute;
-    left: 26px;
-    top: 0;
+    left: var(--rbpt-line-left);
+    top: var(--rbpt-line-top); 
     width: var(--rbpt-line-width);
-    height: 100%;
+    height: calc(100% - var(--rbpt-line-height));
     background-color: var(--rbpt-line-color);
 }
 
@@ -70,6 +77,9 @@
 .rbpt-step img {
     width: var(--rbpt-image-size);
     height: var(--rbpt-image-size);
+    max-width: none;
+    padding: 5px;
+    box-sizing: border-box;
     border-radius: var(--rbpt-image-border-radius);
     border: var(--rbpt-image-border);
     background-color: var(--rbpt-image-bg-color);
@@ -94,8 +104,15 @@
     font-weight: var(--rbpt-last-step-font-weight);
     font-family: var(--rbpt-last-step-font-family); /* Apply a different font family for the last step */
 }
-/*Vertical Progress Tracker*/
 
+.rbpt-time {
+    position: absolute;
+    left: var(--rbpt-time-left);
+    top: var(--rbpt-time-top);
+    font-size: var(--rbpt-time-font-size);
+    color: var(--rbpt-time-color);
+    font-family: var(--rbpt-time-font-family);
+}
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
