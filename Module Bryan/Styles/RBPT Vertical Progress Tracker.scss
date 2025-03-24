@@ -46,6 +46,8 @@
     --rbpt-time-color: #888;
     --rbpt-time-font-family: 'Arial', sans-serif;
 
+    --rbpt-last-line-bg-color: green;
+
 }
 
 /*Root*/
@@ -145,7 +147,7 @@
 
 .rbpt-last-line {
     position: absolute;
-    background-color: green;
+    background-color: var(--rbpt-last-line-bg-color);
     width: 5px;
     left: var(--rbpt-line-left);
     top: 0; 
