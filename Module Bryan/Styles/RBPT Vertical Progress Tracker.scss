@@ -94,6 +94,8 @@
 
 .rbpt-step:last-child {
     margin-bottom: 0;
+    height: auto;
+    min-height: 100px;
 }
 
 .rbpt-step img {
@@ -112,11 +114,7 @@
     background-color: green;
 }
 
-.rbpt-step:last-child {
-    height: auto;
-    min-height: 100px;
 
-}
 
 .rbpt-text {
     margin-left: var(--rbpt-text-margin-left);
