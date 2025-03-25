@@ -1,19 +1,23 @@
 /*Import*/
-
+import {dropdownButton, optionsMenu, dropdownItems} from "./Element_Page_ProfileDropDown.js";
 /*Import*/ 
 
 
 /*Controller*/
-
-   const detailsElement = document.querySelector('.details-example');
-
-	detailsElement.addEventListener('toggle', event => {
-    if (event.target.open) {
-        console.log('open');
-    } else {
-        console.log('closed');
-    }
-});
+ // Toggle dropdown menu visibility
+         function controller_Click_DropDown() {
+            if (optionsMenu.style.display === "flex") {
+                optionsMenu.style.display = "none";
+            } else {
+                optionsMenu.style.display = "flex";
+            }
+        }
+        // Close dropdown menu if clicked outside
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".dropdown_ArFilter")) {
+                optionsMenu.style.display = "none";
+            }
+        });
 
 
        

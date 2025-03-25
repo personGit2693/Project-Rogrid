@@ -14,13 +14,17 @@
     --toolTipMainContainerPadding: 5px;
     --toolTipMainTextColor: black;
     --toolTipBoxWidth: 200px;
-    --toolTipSpace: 100%;
+    --toolTipSpace: 105%;
     --toolTipHoverTextFontSize:15px;
-    --toolTipBoxMaxHeight: 70px;
+    --toolTipBoxMaxHeight: 400px;
     --toolTipBackroundColor: black;
     --toolTipTextColor: white;
     --toolTipPadding: 7px;
     --toolTipWhitespace: normal;
+
+
+    --toolTipPointerPosition: 96%;
+    --toolTipPointerColor: transparent black transparent transparent;
 
 
   
@@ -39,8 +43,9 @@ body {
     position: relative;
     box-sizing: border-box;
     overflow: visible;
-    top: 0px;
+    top: 100px;
     width: 400px;
+
 }
 
 
@@ -66,10 +71,10 @@ body {
     display: none;
     width: var(--toolTipBoxWidth);
     max-height: var(--toolTipBoxMaxHeight);
-    overflow: auto;
     background-color: var(--toolTipBackroundColor);
     color: var(--toolTipTextColor);
     text-align: center;
+    overflow: auto;
     border-radius: 15px;
     padding: var(--toolTipPadding);
     position: absolute;
@@ -83,11 +88,25 @@ body {
     white-space: var(--toolTipWhitespace);
 }
 
+.ar_tooltip::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: var(--toolTipPointerPosition);
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--toolTipPointerColor);
+}
 
 .ar_tooltip:hover .ar_tooltiptext {
     display: block;
     cursor: help;
     opacity: 1;
+}
+.ar_tooltip:hover::after{
+    display: block;
 }
 
 /*Tool Tip*/
