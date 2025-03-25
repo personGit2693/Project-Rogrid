@@ -35,7 +35,7 @@
   font-family: var(--profileDropDownFontFamily);
   top: 100px;
   left: 300px;
-  height: 100px;
+  height: var(--profileDropDownMainContainer);
   width: var(--profileDropDownMainContainer);
   border: 2px solid green;
   box-sizing: border-box;
