@@ -10,12 +10,14 @@
 :root{    
   
   --profileDropDownFontFamily: Arial, Helvetica, sans-serif;
-  --profileDropDownMainContainer: 200px;
-  --profileDropDownMainContainerPadding: 7px;
+  --profileDropDownMainContainerSize: auto;
+  --profileDropDownMainContainerPadding: 5px;
   --profileDropDownMainContainerFontSize: 20px;
-  --profileDropDownMainContainerImg: 55px;
+  --profileDropDownMainContainerImgSize: 55px;
   --profileDropDownImgMarginRight: 5px;
-  --profileDropDownArrowDown: 18px;
+
+  --profileDropDownArrowDownMarginLeft: 3px;
+  --profileDropDownArrowDownSize: 22px;
   --profileDropDownCursor: pointer;
   --profileDropDownBoxSize: 220px;
 
@@ -27,7 +29,7 @@
   --profileDropDownBoxImgSize: 25px;
   --profileDropDownBoxImgMargin: 3px;
 
-  --profileDropDownMainContainerImgHover: 60px;
+  --profileDropDownMainContainerImgSizeHover: 60px;
   --profileDropDownBoxFontSizeHover: 14px;
   --profileDropDownBoxTextColorHover: blue;
 }
@@ -40,29 +42,28 @@
 
 .ar_ProfileMaincontainer{
     display: flex;
-    position: absolute;
+    position: relative;
     font-family: var(--profileDropDownFontFamily);
-    top: 100px;
-    left: 300px;
     height: var(--profileDropDownMainContainer);
     width: var(--profileDropDownMainContainer);
     border: 2px solid green;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    padding: var(--profileDropDownMainContainerPadding);
 }
-#ar_ProfileRightside{
+.ar_ProfileRightside{
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
-    padding: var(--profileDropDownMainContainerPadding);
     font-size: var(--profileDropDownMainContainerFontSize);
+    padding: var(--profileDropDownMainContainerPadding);
 }
 
-#ar_ProfileRightside img{
-    width: var(--profileDropDownMainContainerImg);
-    height: var(--profileDropDownMainContainerImg);
+.ar_ProfileRightside img{
+    width: var(--profileDropDownMainContainerImgSize);
+    height: var(--profileDropDownMainContainerImgSize);
     border-radius: 50%;
     margin-right: var(--profileDropDownImgMarginRight);
     border: 1px solid black;
@@ -71,12 +72,14 @@
 .dropdown_ArFilter {
     display: flex;
     position: relative;
-    width: var(--profileDropDownArrowDown);
-    height: var(--profileDropDownArrowDown);
+    margin-left: var(--profileDropDownArrowDownMarginLeft);
+    width: var(--profileDropDownArrowDownSize);
+    height: var(--profileDropDownArrowDownSize);
     flex-flow: column;
     border-radius: 2px;
     z-index: 5;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 .dropdown-button_ArFilter {
     display: flex;
@@ -138,9 +141,9 @@
 }
 
 /*Hover*/
-#ar_ProfileRightside img:hover{
-    width: var(--profileDropDownMainContainerImgHover);
-    height: var(--profileDropDownMainContainerImgHover);
+.ar_ProfileRightside img:hover{
+    width: var(--profileDropDownMainContainerImgSizeHover);
+    height: var(--profileDropDownMainContainerImgSizeHover);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     transition: .2s ease-in-out;
     box-sizing: border-box;
