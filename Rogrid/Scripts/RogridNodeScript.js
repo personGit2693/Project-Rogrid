@@ -1,14 +1,21 @@
 /****************************************************************************************************************************************************************************/
 /*cusInputs_RoClass highlight focus*/
-const highlightInWrap = (inputs_Param, fontColorValue) =>{
-	inputs_Param.parentNode.style.borderColor = fontColorValue;
-	inputs_Param.parentNode.children[1].style.color = fontColorValue;
+const highlightInWrap = (inputId, fontColorValue, ) =>{
+
+	const inputText = document.getElementById(inputId);
+
+	inputText.parentElement.style.borderColor = fontColorValue;
+	inputText.parentElement.children[1].style.color = fontColorValue;
 }
 
-const lowlightInWrap = (inputs_Param, fontColorValue) =>{
-	if(inputs_Param.value==""){
-		inputs_Param.parentNode.style.borderColor = fontColorValue;
-		inputs_Param.parentNode.children[1].style.color = fontColorValue;
+const lowlightInWrap = (inputId, fontColorValue) =>{
+
+	const inputText = document.getElementById(inputId);
+
+	if(inputText.value==""){
+
+		inputText.parentElement.style.borderColor = fontColorValue;
+		inputText.parentElement.children[1].style.color = fontColorValue;
 	}
 }
 /*cusInputs_RoClass highlight focus*/
@@ -40,16 +47,17 @@ if(document.getElementsByClassName("currentDate_RoClass").length != 0){
 
 /****************************************************************************************************************************************************************************/
 /*Check and uncheck Custom Checkbox*/
+const checkCusCheckBox = (checkBoxId) =>{
 
-const checkCusCheckBox = (realCheckboxElem_Param) =>{
-	const checkImageElem_Rogrid = realCheckboxElem_Param.previousElementSibling.children[0].children[0]; /*check image element*/
-	if(realCheckboxElem_Param.checked === true){
-		checkImageElem_Rogrid.style.visibility = "visible";
-	}else if(realCheckboxElem_Param.checked === false){
-		checkImageElem_Rogrid.style.visibility = "hidden";
+	const inputCheckbox = document.getElementById(checkBoxId);
+
+	const checkImageElem_Rogrid = inputCheckbox.previousElementSibling.children[0].children[0]; /*check image element*/
+	if(inputCheckbox.checked === true){
+		checkImageElem_Rogrid.style.visibility = "visible";		
+	}else if(inputCheckbox.checked === false){
+		checkImageElem_Rogrid.style.visibility = "hidden";		
 	}
 }
-
 /*Check and uncheck Custom Checkbox*/
 /****************************************************************************************************************************************************************************/
 
@@ -73,7 +81,7 @@ const showBlurrerOnly = () =>{
 const showMyMod = (elemId) =>{	
 	const elem = document.getElementById(elemId);
 
-	elem.parentNode.style.display = "flex";
+	elem.parentElement.style.display = "flex";
 	elem.style.display = "block";
 	asyncDelayModal(elemId);
 }
@@ -86,8 +94,8 @@ async function asyncDelayModal(elemId){
 
 	const promiseAnimateMod_Obj = new Promise((delayAnimateMod_Resolve) => {
 		setTimeout(function(){
-			elem.parentNode.style.width = "100%";
-			elem.parentNode.style.height = "100%";
+			elem.parentElement.style.width = "100%";
+			elem.parentElement.style.height = "100%";
 			elem.style.transform = "scale(1)";			
 			delayAnimateMod_Resolve();
 		}, 1);		
@@ -99,11 +107,11 @@ async function asyncDelayModal(elemId){
 
 /*Function to close modal*/
 function closeMyMod(elem){
-	elem.parentNode.parentNode.parentNode.style.display = "none";
-	elem.parentNode.parentNode.parentNode.style.width = "0px";
-	elem.parentNode.parentNode.parentNode.style.height = "0px";
-	elem.parentNode.parentNode.style.display = "none";
-	elem.parentNode.parentNode.style.transform = "scale(0)";
+	elem.parentElement.parentElement.parentElement.style.display = "none";
+	elem.parentElement.parentElement.parentElement.style.width = "0px";
+	elem.parentElement.parentElement.parentElement.style.height = "0px";
+	elem.parentElement.parentElement.style.display = "none";
+	elem.parentElement.parentElement.style.transform = "scale(0)";
 }
 /*Function to close modal*/
 
@@ -148,7 +156,7 @@ const removeSpinningLoad = () => {
 /****************************************************************************************************************************************************************************/
 /*Function for removing notification box*/
 const removeNotiBox = (notiBoxCloseImg_Rogrid_Param) =>{
-	const notiBoxElem_Rogrid = notiBoxCloseImg_Rogrid_Param.parentNode.parentNode;
+	const notiBoxElem_Rogrid = notiBoxCloseImg_Rogrid_Param.parentElement.parentElement;
 	notiBoxElem_Rogrid.remove();
 }
 /*Function for removing notification box*/
@@ -391,9 +399,11 @@ const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param)
 
 /****************************************************************************************************************************************************************************/
 /*Function for checking and unchecking custom radio button*/
-const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
+const radioCircleSelected = (radioId, innerCircleColor) =>{
 
-	const origRadioBtnName_Rogrid = origRadioBtn_Elem.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
+	const inputRadio = document.getElementById(radioId);
+
+	const origRadioBtnName_Rogrid = inputRadio.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
 
 	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
 
@@ -402,7 +412,7 @@ const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
 		const customRadioCircleBtn_Rogrid = origRadioBtnColl_Rogrid[index].previousElementSibling; /*Get the customized radio button or the label elem Section.*/		
 
 		/*_Checking which radio button is selected and design its customized radio button*/
-		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){
+		if(origRadioBtnColl_Rogrid[index] === inputRadio){
 
 			if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "false"){
 				
@@ -418,7 +428,7 @@ const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
 				customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = "transparent";
 			}		
 
-		}else if(origRadioBtnColl_Rogrid[index] !== origRadioBtn_Elem){
+		}else if(origRadioBtnColl_Rogrid[index] !== inputRadio){
 
 			origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "false");
 			origRadioBtnColl_Rogrid[index].checked = false;
@@ -430,9 +440,11 @@ const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor) =>{
 }
 
 
-const radioCheckSelected = (origRadioBtn_Elem) =>{
+const radioCheckSelected = (radioId) =>{
 
-	const origRadioBtnName_Rogrid = origRadioBtn_Elem.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
+	const inputRadio = document.getElementById(radioId);
+
+	const origRadioBtnName_Rogrid = inputRadio.getAttribute("name"); /*Get the original button name to filter only the involved radio buttons Section.*/
 
 	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
 	
@@ -440,7 +452,7 @@ const radioCheckSelected = (origRadioBtn_Elem) =>{
 	/*_Checking which radio button is selected and make the customized check visible*/
 	for(let index=0; origRadioBtnColl_Rogrid.length > index; index++){
 
-		if(origRadioBtnColl_Rogrid[index] === origRadioBtn_Elem){
+		if(origRadioBtnColl_Rogrid[index] === inputRadio){
 
 			if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "false"){
 
@@ -454,7 +466,7 @@ const radioCheckSelected = (origRadioBtn_Elem) =>{
 				origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "hidden";	
 			}				
 
-		}else if(origRadioBtnColl_Rogrid[index] !== origRadioBtn_Elem){
+		}else if(origRadioBtnColl_Rogrid[index] !== inputRadio){
 
 			origRadioBtnColl_Rogrid[index].checked = false;
 			origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "false");
@@ -604,9 +616,9 @@ function setDateRangeToText(dateRange, calLiteValue){
 /****************************************************************************************************************************************************************************/ 
 /*Display Select Dropdown Options*/
 function showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap_Height){
-	const selectDropdownOptionsWrap = displayedSelectedFlex.parentNode.querySelector(".selectDropdownOptionsWrap_RoClass");
+	const selectDropdownOptionsWrap = displayedSelectedFlex.parentElement.querySelector(".selectDropdownOptionsWrap_RoClass");
 	const displayedSelectedChevron = displayedSelectedFlex.querySelector(".displayedSelectedChevron_RoClass");
-	const searchOpts = displayedSelectedFlex.parentNode.querySelector(".searchOpts_RoClass");
+	const searchOpts = displayedSelectedFlex.parentElement.querySelector(".searchOpts_RoClass");
 
 	if(selectDropdownOptionsWrap.style.display != "block"){		
 		selectDropdownOptionsWrap.style.display = "block";
@@ -638,11 +650,11 @@ function closeSelectDropdownOpts(){
 
 
 function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height){
-	const selectedOptValue = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".selectedOptValue_RoClass");
-	const displayedSelectedFlex = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
-	const displayedSelectedIcon = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
-	const displayedSelectedText = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
-	const displayedSelectedResetBtn = selectDropdownOpt.parentNode.parentNode.parentNode.querySelector(".displayedSelectedResetBtn_RoClass");
+	const selectedOptValue = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".selectedOptValue_RoClass");
+	const displayedSelectedFlex = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass");
+	const displayedSelectedIcon = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedIcon_RoClass");
+	const displayedSelectedText = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedText_RoClass");
+	const displayedSelectedResetBtn = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedResetBtn_RoClass");
 
 	const optValue = selectDropdownOpt.querySelector(".optValue_RoClass");
 	const optIcon = selectDropdownOpt.querySelector(".optIcon_RoClass");
@@ -650,25 +662,25 @@ function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height)
 
 	/*Assign selectedOptValue value*/
 	selectedOptValue.value = optValue.value;
-	displayedSelectedFlex.title = optText.innerText;
+	displayedSelectedFlex.title = optText.innerText.trim();;
 	displayedSelectedIcon.style.setProperty("--optIcon", getComputedStyle(optIcon).getPropertyValue('--optIcon'));
-	displayedSelectedText.innerText = optText.innerText;
+	displayedSelectedText.innerText = optText.innerText.trim();;
 	displayedSelectedResetBtn.style.display = "block";
 	/*Assign selectedOptValue value*/
 }
 
 
 function focusoutSearchSelectDrop(searchOpts, selectDropdownOptionsWrap_Height){
-	showSelectDropdownOpts(searchOpts.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass"), selectDropdownOptionsWrap_Height);
+	showSelectDropdownOpts(searchOpts.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass"), selectDropdownOptionsWrap_Height);
 }
 
 
 function resetSelectDropdown(resetSelDropBtn, resetSelDropTitle, resetSelDropIcon, resetSelDropText){
 
-	const selectedOptValue = resetSelDropBtn.parentNode.parentNode.querySelector(".selectedOptValue_RoClass");
-	const selectedFlex = resetSelDropBtn.parentNode.parentNode.querySelector(".displayedSelectedFlex_RoClass");
-	const selectedIcon = resetSelDropBtn.parentNode.parentNode.querySelector(".displayedSelectedIcon_RoClass");
-	const selectedText = resetSelDropBtn.parentNode.parentNode.querySelector(".displayedSelectedText_RoClass");
+	const selectedOptValue = resetSelDropBtn.parentElement.parentElement.querySelector(".selectedOptValue_RoClass");
+	const selectedFlex = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass");
+	const selectedIcon = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedIcon_RoClass");
+	const selectedText = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedText_RoClass");
 
 
 	/*Reset Area*/
@@ -689,7 +701,7 @@ function resetSelectDropdown(resetSelDropBtn, resetSelDropTitle, resetSelDropIco
 	/*_Reset Icon*/
 
 	/*_Reset Text*/
-	selectedText.innerText = resetSelDropText;
+	selectedText.innerText = resetSelDropText.trim();
 	/*_Reset Text*/
 	/*Reset Area*/
 }
@@ -806,6 +818,34 @@ function backStep(stepByStepFlex_id, wrapper_id){
 	}
 }
 /*Function to back step*/
+
+
+/*Function to reset step*/
+function resetStep(stepByStepFlex_id, wrapper_id){
+
+	const wrapper = document.getElementById(wrapper_id);
+	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
+	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
+	const stepSets = document.getElementsByClassName("stepSets_RoClass");
+
+	for(let index=0; index < stepNumIndex_Rogrid; index++){
+
+		let lining = stepByStepItems[index].children[0];
+		let numbering = stepByStepItems[index].children[1];
+		let definition = stepByStepItems[index].children[2];
+
+		/*Turn off light the number of current step*/
+		lining.classList.remove("stepByStepLineLight_RoClass");
+		numbering.classList.remove("stepNumberLight_RoClass");
+		definition.classList.remove("stepDefiLight_RoClass");
+		/*Turn off light the number of current step*/
+		
+		stepSets[index].style.display = "none";
+	}
+
+	stepNumIndex_Rogrid = 0;
+}
+/*Function to reset step*/
 /*Step by step*/
 /****************************************************************************************************************************************************************************/
 

@@ -43,7 +43,7 @@
 			
 			<div style="position: relative;">
 				<div class="cusInputs_RoClass">					
-					<input type="text" onfocusout="lowlightInWrap(this, '#ffffff'), showMyMod('testModal')" onfocus="highlightInWrap(this, 'green')" required>
+					<input type="text" id="myInput1" onfocusout="lowlightInWrap('myInput1', '#ffffff'), showMyMod('testModal')" onfocus="highlightInWrap('myInput1', 'green')" required>
 					<div class="placeholdme_RoClass">Some text here</div>
 				</div>
 
@@ -51,7 +51,7 @@
 
 				<div class="cusCheckBoxPaper_RoClass">
 					<label for="sampleCheckbox-Id">Sample checkbox:<div class="boxme_RoClass"><img src="./src/checkIcon.png"></div></label>
-					<input type="checkbox" id="sampleCheckbox-Id" onchange="checkCusCheckBox(this)" autocomplete="off">
+					<input type="checkbox" id="sampleCheckbox-Id" onchange="checkCusCheckBox('sampleCheckbox-Id')" autocomplete="off">
 				</div>
 
 				<input type="text" class="searchInput_RoClass" placeholder="Search..." style="--inputSearchIcon: url('./src/searchIcon.png')" onfocusout="showSpinningLoad()">
@@ -62,13 +62,13 @@
 
 				<div class="radioCircleFlex_RoClass">
 					<label for="sampleRadioOneId" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
-					<input type="radio" id="sampleRadioOneId" name="sampleRadioName" data-rogridradio-check="false" onclick="radioCircleSelected(this, '#4BBAEF')" autocomplete="off">
+					<input type="radio" id="sampleRadioOneId" name="sampleRadioName" data-rogridradio-check="false" onclick="radioCircleSelected('sampleRadioOneId', '#4BBAEF')" autocomplete="off">
 					<!--<div class="radioCircleTxtLabel_RoClass">Some Text Here</div>-->
 					<div class="radioCircleIconLabel_RoClass"><img src="./src/paypal icon.png"></div>
 				</div>
 				<div class="radioCircleFlex_RoClass">
 					<label for="sampleRadioTwoId" class="customRadioCircle_RoClass"><span class="innerCircle_RoClass"></span></label>
-					<input type="radio" id="sampleRadioTwoId" name="sampleRadioName" data-rogridradio-check="false" onclick="radioCircleSelected(this, '#4BBAEF')" autocomplete="off">
+					<input type="radio" id="sampleRadioTwoId" name="sampleRadioName" data-rogridradio-check="false" onclick="radioCircleSelected('sampleRadioTwoId', '#4BBAEF')" autocomplete="off">
 					<!--<div class="radioCircleTxtLabel_RoClass">Some Text Here</div>-->
 					<div class="radioCircleIconLabel_RoClass"><img src="./src/vmclogo.png"></div>
 				</div>
@@ -76,13 +76,13 @@
 				<div class="radioCheckFlex_RoClass">
 					<div class="radioCheckIconLabel_RoClass" style=""><img src="./src/paypal icon.png"></div>							
 					<label for="sampleRadioThreeId" class="customRadioCheck_RoClass"><img src="./src/checkIcon.png"></label>
-					<input type="radio" id="sampleRadioThreeId" name="sampleCheckRadioName" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">					
+					<input type="radio" id="sampleRadioThreeId" name="sampleCheckRadioName" data-rogridradio-check="false" onclick="radioCheckSelected('sampleRadioThreeId')" autocomplete="off">					
 					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->					
 				</div>
 				<div class="radioCheckFlex_RoClass">
 					<div class="radioCheckIconLabel_RoClass" style=""><img src="./src/vmclogo.png"></div>							
 					<label for="sampleRadioFourId" class="customRadioCheck_RoClass"><img src="./src/checkIcon.png"></label>
-					<input type="radio" id="sampleRadioFourId" name="sampleCheckRadioName" data-rogridradio-check="false" onclick="radioCheckSelected(this)" autocomplete="off">					
+					<input type="radio" id="sampleRadioFourId" name="sampleCheckRadioName" data-rogridradio-check="false" onclick="radioCheckSelected('sampleRadioFourId')" autocomplete="off">					
 					<!--<div class="radioCheckTxtLabel_RoClass">Some Text Here</div>-->					
 				</div>
 
