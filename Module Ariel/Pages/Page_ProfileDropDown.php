@@ -9,7 +9,7 @@
 <body>
 	
 	<div class="ar_ProfileMaincontainer">
-		<div id="ar_ProfileRightside">
+		<div class="ar_ProfileRightside">
 			<img src="../../src/bector.jpg">
 			<div>Bector</div>
 		</div>
