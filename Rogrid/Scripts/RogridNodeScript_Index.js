@@ -1,6 +1,6 @@
 /****************************************************************************************************************************************************************************/
 /*cusInputs_RoClass highlight focus*/
-const highlightInWrap = (inputId, fontColorValue, ) =>{
+const highlightInWrap = (inputId, fontColorValue) =>{
 
 	const inputText = document.getElementById(inputId);
 
