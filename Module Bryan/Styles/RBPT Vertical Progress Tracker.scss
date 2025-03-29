@@ -19,13 +19,11 @@
     --rbpt-first-step-font-size: 20px;
     --rbpt-first-step-font-family: sans-serif;
 
-    --rbpt-line-left: 137px;
+    --rbpt-line-left: 139px;
     --rbpt-line-top: 0;
     --rbpt-line-width: 4px;
     --rbpt-line-height: 50px;
     --rbpt-line-color: #ccc;
-    
-    --rbpt-step-margin-bottom: 30px;
     
     --rbpt-image-size: 50px;
     --rbpt-image-border: 3px solid #ccc;
@@ -46,7 +44,7 @@
     --rbpt-time-color: #888;
     --rbpt-time-font-family: 'Arial', sans-serif;
 
-    --rbpt-last-line-bg-color: green;
+    --rbpt-last-line-bg-color: linear-gradient(to bottom, #ccc 20%, green 20%);
 
 }
 
@@ -59,9 +57,9 @@
 .rbpt-container {
     position: absolute;
     width: var(--rbpt-container-width);
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px; 
     border: 1px solid gray;
-    background: linear-gradient(to bottom, #ffffff, #f7f7f7); /* Light gradient background */
+    background: linear-gradient(to bottom, #ffffff, #f7f7f7);
 }
 
 .rbpt-first-step {
@@ -86,11 +84,20 @@
     background-color: var(--rbpt-line-color);
 }
 
+.rbpt-first-line {
+    position: absolute;
+    left: var(--rbpt-line-left);
+    width: var(--rbpt-line-width);
+    height: 50%;
+    bottom: 0;
+    background-color: var(--rbpt-line-color);
+}
+
 .rbpt-step {
     display: flex;
     align-items: center;
-    margin-bottom: var(--rbpt-step-margin-bottom);
     position: relative;
+    padding: 12px;
     flex-direction: row;
 }
 
@@ -116,13 +123,11 @@
     background-color: green;
 }
 
-
-
 .rbpt-text {
     margin-left: var(--rbpt-text-margin-left);
     font-size: var(--rbpt-text-font-size);
     color: var(--rbpt-text-color);
-    font-family: var(--rbpt-font-family); /* Apply the font family variable */
+    font-family: var(--rbpt-font-family);
     width: 300px;
     box-sizing: border-box;
     min-height: 50px;
@@ -133,7 +138,7 @@
     color: var(--rbpt-last-step-color);
     font-size: var(--rbpt-text-font-size);
     font-weight: var(--rbpt-last-step-font-weight);
-    font-family: var(--rbpt-last-step-font-family); /* Apply a different font family for the last step */
+    font-family: var(--rbpt-last-step-font-family);
 }
 
 .rbpt-time {
@@ -142,19 +147,16 @@
     font-size: var(--rbpt-time-font-size);
     color: var(--rbpt-time-color);
     font-family: var(--rbpt-time-font-family);
-
 }
 
 .rbpt-last-line {
     position: absolute;
-    background-color: var(--rbpt-last-line-bg-color);
-    width: 5px;
+    background: var(--rbpt-last-line-bg-color);
+    width: var(--rbpt-line-width);
     left: var(--rbpt-line-left);
     top: 0; 
-    height: 100%; 
+    height: 50%; 
 }
-
-
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
