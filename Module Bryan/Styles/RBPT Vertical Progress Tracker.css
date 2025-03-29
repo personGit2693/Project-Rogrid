@@ -5,16 +5,19 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --rbpt-container-width: 250px;
-  --rbpt-container-left: 200px;
-  --rbpt-line-left: 24px;
+  --rbpt-container-width: 400px;
+  --rbpt-first-step-border: 1px solid #ccc;
+  --rbpt-first-step-bg-color: #f7f7f7;
+  --rbpt-first-step-text-align: center;
+  --rbpt-first-step-font-weight: bold;
+  --rbpt-first-step-font-size: 20px;
+  --rbpt-first-step-font-family: sans-serif;
+  --rbpt-line-left: 139px;
   --rbpt-line-top: 0;
   --rbpt-line-width: 4px;
   --rbpt-line-height: 50px;
   --rbpt-line-color: #ccc;
-  --rbpt-step-margin-bottom: 30px;
   --rbpt-image-size: 50px;
-  --rbpt-image-border-radius: 50%;
   --rbpt-image-border: 3px solid #ccc;
   --rbpt-image-bg-color: #fff;
   --rbpt-text-margin-left: 15px;
@@ -27,51 +30,73 @@
   /* Default font for the steps */
   --rbpt-last-step-font-family: 'Arial', sans-serif;
   /* Different font for the last step */
-  --rbpt-time-left: -160px;
-  --rbpt-time-top: 40%;
   --rbpt-time-font-size: 14px;
   --rbpt-time-color: #888;
   --rbpt-time-font-family: 'Arial', sans-serif;
-  --rbpt-line-last-step-color: #28a745;
-  /* Line color for last step */ }
+  --rbpt-last-line-bg-color: linear-gradient(to bottom, #ccc 20%, green 20%); }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 .rbpt-container {
-  position: relative;
+  position: absolute;
   width: var(--rbpt-container-width);
-  left: var(--rbpt-container-left); }
+  border-radius: 10px;
+  border: 1px solid gray;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7); }
+
+.rbpt-first-step {
+  border: var(--rbpt-first-step-border);
+  position: relative;
+  background-color: var(--rbpt-first-step-bg-color);
+  text-align: var(--rbpt-first-step-text-align);
+  font-weight: var(--rbpt-first-step-font-weight);
+  font-size: var(--rbpt-first-step-font-size);
+  font-family: var(--rbpt-first-step-font-family);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px; }
 
 .rbpt-line {
   position: absolute;
   left: var(--rbpt-line-left);
   top: var(--rbpt-line-top);
   width: var(--rbpt-line-width);
-  height: calc(100% - var(--rbpt-line-height));
+  height: 100%;
+  background-color: var(--rbpt-line-color); }
+
+.rbpt-first-line {
+  position: absolute;
+  left: var(--rbpt-line-left);
+  width: var(--rbpt-line-width);
+  height: 50%;
+  bottom: 0;
   background-color: var(--rbpt-line-color); }
 
 .rbpt-step {
   display: flex;
   align-items: center;
-  margin-bottom: var(--rbpt-step-margin-bottom);
-  position: relative; }
+  position: relative;
+  padding: 12px;
+  flex-direction: row; }
+
+.rbpt-step:last-child {
+  margin-bottom: 0;
+  height: auto;
+  min-height: 100px; }
 
 .rbpt-step img {
   width: var(--rbpt-image-size);
   height: var(--rbpt-image-size);
-  max-width: none;
   padding: 5px;
   box-sizing: border-box;
-  border-radius: var(--rbpt-image-border-radius);
   border: var(--rbpt-image-border);
   background-color: var(--rbpt-image-bg-color);
   position: relative; }
 
 .rbpt-step:last-child img {
   border-color: #28a745;
-  /* Green border for latest step */
   background-color: green; }
 
 .rbpt-text {
@@ -79,22 +104,31 @@
   font-size: var(--rbpt-text-font-size);
   color: var(--rbpt-text-color);
   font-family: var(--rbpt-font-family);
-  /* Apply the font family variable */ }
+  width: 300px;
+  box-sizing: border-box;
+  min-height: 50px;
+  padding: 20px; }
 
 .rbpt-text.rbpt-last-step {
   color: var(--rbpt-last-step-color);
   font-size: var(--rbpt-text-font-size);
   font-weight: var(--rbpt-last-step-font-weight);
-  font-family: var(--rbpt-last-step-font-family);
-  /* Apply a different font family for the last step */ }
+  font-family: var(--rbpt-last-step-font-family); }
 
 .rbpt-time {
-  position: absolute;
-  left: var(--rbpt-time-left);
-  top: var(--rbpt-time-top);
+  position: relative;
+  margin: 10px;
   font-size: var(--rbpt-time-font-size);
   color: var(--rbpt-time-color);
   font-family: var(--rbpt-time-font-family); }
+
+.rbpt-last-line {
+  position: absolute;
+  background: var(--rbpt-last-line-bg-color);
+  width: var(--rbpt-line-width);
+  left: var(--rbpt-line-left);
+  top: 0;
+  height: 50%; }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
