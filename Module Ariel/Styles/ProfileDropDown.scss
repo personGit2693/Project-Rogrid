@@ -10,7 +10,8 @@
 :root{    
   
   --profileDropDownFontFamily: Arial, Helvetica, sans-serif;
-  --profileDropDownMainContainerSize: auto;
+  
+  --profileDropDownContentPosition: flex-end;
   --profileDropDownMainContainerPadding: 5px;
   --profileDropDownMainContainerFontSize: 20px;
   --profileDropDownMainContainerImgSize: 55px;
@@ -39,16 +40,18 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
+.ar_ProfileDropDown{
+    display: flex;  
+    justify-content: var(--profileDropDownContentPosition);
+    box-sizing: border-box;
+}
 
 .ar_ProfileMaincontainer{
     display: flex;
     position: relative;
     font-family: var(--profileDropDownFontFamily);
-    height: var(--profileDropDownMainContainer);
-    width: var(--profileDropDownMainContainer);
     border: 2px solid green;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     padding: var(--profileDropDownMainContainerPadding);
 }
