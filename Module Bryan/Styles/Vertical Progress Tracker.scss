@@ -14,17 +14,10 @@
 
     --rbpt-first-step-border: 1px solid #ccc;
     --rbpt-first-step-bg-color: #f7f7f7;
-    --rbpt-first-step-text-align: center;
     --rbpt-first-step-font-weight: bold;
     --rbpt-first-step-font-size: 20px;
     --rbpt-first-step-font-family: sans-serif;
 
-    --rbpt-line-left: 139px;
-    --rbpt-line-top: 0;
-    --rbpt-line-width: 4px;
-    --rbpt-line-height: 50px;
-    --rbpt-line-color: #ccc;
-    
     --rbpt-image-size: 50px;
     --rbpt-image-border: 3px solid #ccc;
     --rbpt-image-bg-color: #fff;
@@ -44,7 +37,7 @@
     --rbpt-time-color: #888;
     --rbpt-time-font-family: 'Arial', sans-serif;
 
-    --rbpt-last-line-bg-color: linear-gradient(to bottom, #ccc 20%, green 20%);
+    --rbpt-last-line-bg-color: green;
 
 }
 
@@ -66,7 +59,6 @@
     border: var(--rbpt-first-step-border);
     position: relative;
     background-color: var(--rbpt-first-step-bg-color);
-    text-align: var(--rbpt-first-step-text-align);
     font-weight: var(--rbpt-first-step-font-weight);
     font-size: var(--rbpt-first-step-font-size);
     font-family: var(--rbpt-first-step-font-family);
@@ -77,34 +69,34 @@
 
 .rbpt-line {
     position: absolute;
-    left: var(--rbpt-line-left);
-    top: var(--rbpt-line-top); 
-    width: var(--rbpt-line-width);
+    left: 37%;
+    top: 0; 
+    width: 4px;
     height: 100%;
-    background-color: var(--rbpt-line-color);
+    background-color: #ccc;
 }
 
 .rbpt-first-line {
     position: absolute;
-    left: var(--rbpt-line-left);
-    width: var(--rbpt-line-width);
-    height: 50%;
-    bottom: 0;
-    background-color: var(--rbpt-line-color);
+    left: 37%;
+    width: 4px;
+    height: 100%;
+    top: 20px;
+    overflow: hidden;
+    background-color: #ccc;
 }
 
 .rbpt-step {
     display: flex;
-    align-items: center;
     position: relative;
-    padding: 12px;
-    flex-direction: row;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .rbpt-step:last-child {
     margin-bottom: 0;
     height: auto;
-    min-height: 100px;
+    align-items: center;
 }
 
 .rbpt-step img {
@@ -131,7 +123,8 @@
     width: 300px;
     box-sizing: border-box;
     min-height: 50px;
-    padding: 20px;
+    text-align: center;
+    align-content: center;
 }
 
 .rbpt-text.rbpt-last-step {
@@ -139,6 +132,10 @@
     font-size: var(--rbpt-text-font-size);
     font-weight: var(--rbpt-last-step-font-weight);
     font-family: var(--rbpt-last-step-font-family);
+    text-align: center;
+    align-content: center;
+    align-items: normal;
+    
 }
 
 .rbpt-time {
@@ -152,10 +149,11 @@
 .rbpt-last-line {
     position: absolute;
     background: var(--rbpt-last-line-bg-color);
-    width: var(--rbpt-line-width);
-    left: var(--rbpt-line-left);
+    width: 4px;
+    left: 37%;
     top: 0; 
     height: 50%; 
+
 }
 
 /*General Styles*/
