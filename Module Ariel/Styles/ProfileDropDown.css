@@ -12,11 +12,12 @@
   --profileDropDownSpaceBetween: 5px;
   --profileDropDownArrowSize: 17px;
   --profileDropDownDistanceBox: 0%;
-  --profileDropDownMarginLeft: 10px;
+  --profileDropDownBoxMarginLeft: 10px;
   --profileDropDownBoxTextSize: 15px;
   --profileDropDownIconSize: 18px;
-  --profileDropDownImgSizeHover: 60px;
   --profileDropDownPointerPositionLeft: 65%;
+  /*Hover*/
+  --profileDropDownImgSizeHover: 60px;
   --profileDropDownBoxTextSizeHover: 18px; }
 
 /*Root*/
@@ -69,7 +70,7 @@
   width: auto;
   height: auto;
   margin-top: var(--profileDropDownDistanceBox);
-  margin-left: var(--profileDropDownMarginLeft);
+  margin-left: var(--profileDropDownBoxMarginLeft);
   flex-flow: column;
   border-radius: 12px;
   z-index: 5;
@@ -99,14 +100,6 @@
   margin-right: 5px;
   box-sizing: border-box; }
 
-/*Hover*/
-.ar_ProfileDropdown img:hover {
-  width: var(--profileDropDownImgSizeHover);
-  height: var(--profileDropDownImgSizeHover);
-  box-shadow: #26394d 0px 20px 30px -10px;
-  transition: .2s ease-in-out;
-  box-sizing: border-box; }
-
 .ar-ProfiledDropdownContent::after {
   content: "";
   position: absolute;
@@ -116,6 +109,14 @@
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent white transparent; }
+
+/*Hover*/
+.ar_ProfileDropdown img:hover {
+  width: var(--profileDropDownImgSizeHover);
+  height: var(--profileDropDownImgSizeHover);
+  box-shadow: #26394d 0px 20px 30px -10px;
+  transition: .2s ease-in-out;
+  box-sizing: border-box; }
 
 .ar-ProfiledDropdownContent a:hover {
   font-size: var(--profileDropDownBoxTextSizeHover);
