@@ -8,25 +8,22 @@
 </head>
 <body>
 	
-
-	<div class="ar_ProfileDropDown">
-		<div class="ar_ProfileMaincontainer">
-			<div class="ar_ProfileRightside">
-				<img src="../../src/bector.jpg">
-				<div>Bector</div>
-			</div>
-			<div class="dropdown_ArFilter" onclick="controller_Click_DropDown()">
-				<div class="dropdown-button_ArFilter pic_ArFilter" style="--profileDropDownArrowDownImg: url('../../src/ArrowDown.png')"></div>
-			    <!-- Dropdown list items-->
-				<div class="menu_ArFilter" id="optionsMenu_ArFilter">
-			    	<a href="" class="menu-item_ArFilter dottedUnderline"><img src="../../src/EditProfile.png" class="ar_SubPic">Edit Profile</a>
-			    	<a href="" class="menu-item_ArFilter dottedUnderline"><img src="../../src/gear_purple.png" class="ar_SubPic">Settings</a>
-			    	<a href="" class="menu-item_ArFilter"><img src="../../src/logouticon black.png" class="ar_SubPic">Logout</a>
-				</div>
-			</div>
-		</div>	
+	<div class="ar_ProfileDropdownContainer">
+		<div class="ar_ProfileDropdown">
+			<img src="../../src/bector.jpg">
+			<span>Bector</span>
+			<div class="dropdown-button_ArFilter pic_ArFilter" style="--profileDropDownArrowDownImg: url('../../src/ArrowDown.png')"></div>
+		</div>
+		<div class="ar-ProfiledDropdownContent">
+			<a href="" class="menu-item_ArFilter dottedUnderline"><img src="../../src/EditProfile.png" class="ar_SubPic">Edit Profile</a>
+			<a href="" class="menu-item_ArFilter dottedUnderline"><img src="../../src/gear_purple.png" class="ar_SubPic">Settings</a>
+			<a href="" class="menu-item_ArFilter"><img src="../../src/logouticon black.png" class="ar_SubPic">Logout</a>
+		</div>
 	</div>
-			
+
+	
+
+	
 
 	
 <script type="module" src="../Client Side/Controller_Click_DropDown.js"></script>
