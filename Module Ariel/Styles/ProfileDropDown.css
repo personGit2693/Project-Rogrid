@@ -6,95 +6,70 @@
 /*Root*/
 :root {
   --profileDropDownFontFamily: Arial, Helvetica, sans-serif;
-  --profileDropDownContentPosition: flex-end;
-  --profileDropDownMainContainerPadding: 5px;
-  --profileDropDownMainContainerFontSize: 20px;
-  --profileDropDownMainContainerImgSize: 55px;
-  --profileDropDownImgMarginRight: 5px;
-  --profileDropDownArrowDownMarginLeft: 3px;
-  --profileDropDownArrowDownSize: 22px;
-  --profileDropDownCursor: pointer;
-  --profileDropDownBoxSize: 220px;
-  --profileDropDownBoxDistance: 200%;
-  --profileDropDownBoxPadding: 7px;
-  --profileDropDownBoxTextSize: 12px;
-  --profileDropDownBoxTextPadding: 8px;
-  --profileDropDownUnderline: double;
-  --profileDropDownBoxImgSize: 25px;
-  --profileDropDownBoxImgMargin: 3px;
-  --profileDropDownMainContainerImgSizeHover: 60px;
-  --profileDropDownBoxFontSizeHover: 14px;
-  --profileDropDownBoxTextColorHover: blue; }
+  --profileDropDownPadding: 3px;
+  --profileDropDownFontSize: 18px;
+  --profileDropDownImgSize: 53px;
+  --profileDropDownSpaceBetween: 5px;
+  --profileDropDownArrowSize: 17px;
+  --profileDropDownDistanceBox: 0%;
+  --profileDropDownMarginLeft: 10px;
+  --profileDropDownBoxTextSize: 15px;
+  --profileDropDownIconSize: 18px;
+  --profileDropDownImgSizeHover: 60px;
+  --profileDropDownPointerPositionLeft: 65%;
+  --profileDropDownBoxTextSizeHover: 18px; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-.ar_ProfileDropDown {
-  display: flex;
-  justify-content: var(--profileDropDownContentPosition);
+.ar_ProfileDropdownContainer {
+  display: inline-block;
   box-sizing: border-box; }
 
-.ar_ProfileMaincontainer {
+.ar_ProfileDropdown {
   display: flex;
-  position: relative;
   font-family: var(--profileDropDownFontFamily);
-  border: 2px solid green;
-  box-sizing: border-box;
+  position: relative;
   align-items: center;
-  padding: var(--profileDropDownMainContainerPadding); }
-
-.ar_ProfileRightside {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--profileDropDownMainContainerFontSize);
-  padding: var(--profileDropDownMainContainerPadding); }
-
-.ar_ProfileRightside img {
-  width: var(--profileDropDownMainContainerImgSize);
-  height: var(--profileDropDownMainContainerImgSize);
-  border-radius: 50%;
-  margin-right: var(--profileDropDownImgMarginRight);
-  border: 1px solid black;
+  padding: var(--profileDropDownPadding);
+  font-size: var(--profileDropDownFontSize);
   box-sizing: border-box; }
 
-.dropdown_ArFilter {
+.ar_ProfileDropdown img {
   display: flex;
   position: relative;
-  margin-left: var(--profileDropDownArrowDownMarginLeft);
-  width: var(--profileDropDownArrowDownSize);
-  height: var(--profileDropDownArrowDownSize);
-  flex-flow: column;
-  border-radius: 2px;
-  z-index: 5;
-  box-sizing: border-box;
-  flex-shrink: 0; }
+  flex-flow: row;
+  height: var(--profileDropDownImgSize);
+  width: var(--profileDropDownImgSize);
+  margin-right: var(--profileDropDownSpaceBetween);
+  border-radius: 50px;
+  box-sizing: border-box; }
 
 .dropdown-button_ArFilter {
   display: flex;
   position: relative;
   flex-flow: column;
   border-radius: 12px;
-  height: 100%;
-  width: 100%;
+  height: var(--profileDropDownArrowSize);
+  width: var(--profileDropDownArrowSize);
   box-sizing: border-box;
-  cursor: var(--profileDropDownCursor);
-  background-color: transparent; }
+  background-color: transparent;
+  margin-left: var(--profileDropDownSpaceBetween);
+  box-sizing: border-box; }
 
 .pic_ArFilter {
   background-position: center;
   background-size: cover;
   background-image: var(--profileDropDownArrowDownImg); }
 
-.menu_ArFilter {
+.ar-ProfiledDropdownContent {
   display: none;
   position: absolute;
-  width: var(--profileDropDownBoxSize);
+  width: auto;
   height: auto;
-  margin-top: var(--profileDropDownBoxDistance);
-  right: 0%;
+  margin-top: var(--profileDropDownDistanceBox);
+  margin-left: var(--profileDropDownMarginLeft);
   flex-flow: column;
   border-radius: 12px;
   z-index: 5;
@@ -102,52 +77,48 @@
   background-color: white;
   vertical-align: baseline;
   box-sizing: border-box;
-  padding: var(--profileDropDownBoxPadding);
+  padding: 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; }
 
-.menu_ArFilter a {
+.ar-ProfiledDropdownContent a {
   display: flex;
   position: relative;
+  flex-flow: row;
   text-decoration: none;
   color: black;
   font-size: var(--profileDropDownBoxTextSize);
-  padding: var(--profileDropDownBoxTextPadding);
+  padding: 5px;
   align-items: center;
   box-sizing: border-box; }
 
-.dottedUnderline {
-  border-bottom-style: var(--profileDropDownUnderline);
-  box-sizing: border-box; }
-
 .ar_SubPic {
-  height: var(--profileDropDownBoxImgSize);
-  width: var(--profileDropDownBoxImgSize);
+  height: var(--profileDropDownIconSize);
+  width: var(--profileDropDownIconSize);
   padding: 2px;
-  margin-left: var(--profileDropDownBoxImgMargin);
-  margin-right: var(--profileDropDownBoxImgMargin);
+  margin-left: 5px;
+  margin-right: 5px;
   box-sizing: border-box; }
 
 /*Hover*/
-.ar_ProfileRightside img:hover {
-  width: var(--profileDropDownMainContainerImgSizeHover);
-  height: var(--profileDropDownMainContainerImgSizeHover);
+.ar_ProfileDropdown img:hover {
+  width: var(--profileDropDownImgSizeHover);
+  height: var(--profileDropDownImgSizeHover);
   box-shadow: #26394d 0px 20px 30px -10px;
   transition: .2s ease-in-out;
   box-sizing: border-box; }
 
-.menu_ArFilter::after {
+.ar-ProfiledDropdownContent::after {
   content: "";
   position: absolute;
   bottom: 100%;
-  left: 75%;
+  left: var(--profileDropDownPointerPositionLeft);
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent white transparent; }
 
-.menu_ArFilter a:hover {
-  font-size: var(--profileDropDownBoxFontSizeHover);
-  color: var(--profileDropDownBoxTextColorHover);
+.ar-ProfiledDropdownContent a:hover {
+  font-size: var(--profileDropDownBoxTextSizeHover);
   transition: .2s ease-in-out;
   box-sizing: border-box; }
 
