@@ -13,9 +13,9 @@
         <!-- Apply the .rbpt-line-last class here -->
 
         <div class="rbpt-step">
-            <div class="rbpt-time">2025-03-22 12:30 PM</div>
+            <div class="rbpt-initial-hieght"></div>
+            <div class="rbpt-time">2025-03-22 12:30 PM </div>
             <div class="rbpt-line-wrap">
-                <div class="rbpt-line-empty"></div>
                 <img src="../../src/checkIcon.png" alt="Tracker">
                 <div class="rbpt-line"></div>
             </div>
@@ -23,9 +23,9 @@
         </div>
 
         <div class="rbpt-step">
+            <div class="rbpt-initial-hieght"></div>
             <div class="rbpt-time">2025-03-22 04:00 PM</div>
             <div class="rbpt-line-wrap">
-                <div class="rbpt-line"></div>
                 <img src="../../src/checkIcon.png" alt="Tracker">
                 <div class="rbpt-line"></div>
             </div>
@@ -33,9 +33,9 @@
         </div>
 
         <div class="rbpt-step">
+            <div class="rbpt-initial-hieght"></div>
             <div class="rbpt-time">2025-03-22 05:00 PM</div>
             <div class="rbpt-line-wrap">
-                <div class="rbpt-line"></div>
                 <img src="../../src/checkIcon.png" alt="Tracker">
                 <div class="rbpt-line"></div>
             </div>
@@ -43,23 +43,23 @@
         </div>
 
         <div class="rbpt-step">
+            <div class="rbpt-initial-hieght"></div>
             <div class="rbpt-time">2025-03-22 06:00 PM</div>
             <div class="rbpt-line-wrap">
-                <div class="rbpt-line"></div>
                 <img src="../../src/checkIcon.png" alt="Tracker">
-                <div class="rbpt-line"></div>
+                <div class="rbpt-line-last"></div>
             </div>
             <div class="rbpt-text">Add Here </div>
         </div>
 
         <div class="rbpt-step">
+            <div class="rbpt-initial-hieght"></div>
             <div class="rbpt-time">2025-03-22 06:00 PM</div>
             <div class="rbpt-line-wrap">
-                <div class="rbpt-line"></div>
                 <img src="../../src/complete icon purple.png" alt="Tracker">
                 <div class="rbpt-line-empty"></div>
             </div>
-            <div class="rbpt-text">Delivered Delivered </div>
+            <div class="rbpt-text">Delivered </div>
         </div>
 
     </div>

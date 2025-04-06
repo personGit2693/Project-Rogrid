@@ -13,7 +13,6 @@
   --rbpt-image-size: 50px;
   --rbpt-image-border: 3px solid #ccc;
   --rbpt-image-bg-color: #fff;
-  --rbpt-text-margin-left: 15px;
   --rbpt-text-font-size: 16px;
   --rbpt-text-color: #333;
   /* Font Family Variables */
@@ -42,10 +41,8 @@
 .rbpt-step {
   display: flex;
   position: relative;
-  min-height: 100%;
-  height: 110px;
-  box-sizing: border-box;
-  justify-content: space-around; }
+  max-height: 100%;
+  box-sizing: border-box; }
 
 .rbpt-line {
   position: relative;
@@ -60,6 +57,15 @@
   width: 4px;
   height: 100%;
   background: var(--rbpt-background-color);
+  flex-direction: row;
+  z-index: 10; }
+
+.rbpt-line-last {
+  position: relative;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: green;
   flex-direction: row;
   z-index: 10; }
 
@@ -83,26 +89,31 @@
   border-color: #28a745;
   background-color: green; }
 
+.rbpt-initial-hieght {
+  display: flex;
+  position: relative;
+  height: 80px;
+  visibility: none; }
+
 .rbpt-text {
-  margin-left: var(--rbpt-text-margin-left);
+  margin-left: 15px;
   font-size: var(--rbpt-text-font-size);
   color: var(--rbpt-text-color);
   font-family: var(--rbpt-font-family);
   width: 250px;
-  height: auto;
   box-sizing: border-box;
   text-align: center;
-  align-content: center;
   position: relative; }
 
 .rbpt-time {
   position: relative;
-  margin: 10px;
   width: 140px;
   font-size: var(--rbpt-time-font-size);
   color: var(--rbpt-time-color);
   font-family: var(--rbpt-time-font-family);
-  align-content: center; }
+  box-sizing: border-box;
+  margin-right: 15px;
+  margin-left: 5px; }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
