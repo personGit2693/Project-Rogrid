@@ -5,8 +5,7 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --rbpt-container-width: 400px;
-  --rbpt-first-step-border: 1px solid #ccc;
+  --rbpt-background-color: #f7f7f7;
   --rbpt-first-step-bg-color: #f7f7f7;
   --rbpt-first-step-font-weight: bold;
   --rbpt-first-step-font-size: 20px;
@@ -17,17 +16,12 @@
   --rbpt-text-margin-left: 15px;
   --rbpt-text-font-size: 16px;
   --rbpt-text-color: #333;
-  --rbpt-last-step-color: red;
-  --rbpt-last-step-font-weight: bold;
   /* Font Family Variables */
   --rbpt-font-family: 'Arial', sans-serif;
   /* Default font for the steps */
-  --rbpt-last-step-font-family: 'Arial', sans-serif;
-  /* Different font for the last step */
   --rbpt-time-font-size: 14px;
   --rbpt-time-color: #888;
-  --rbpt-time-font-family: 'Arial', sans-serif;
-  --rbpt-last-line-bg-color: green; }
+  --rbpt-time-font-family: 'Arial', sans-serif; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -35,49 +29,46 @@
 /*General Styles*/
 .rbpt-container {
   position: absolute;
-  width: var(--rbpt-container-width);
+  display: flex;
+  top: 100px;
+  left: 100px;
+  width: auto;
   border-radius: 10px;
-  border: 1px solid gray;
-  background: linear-gradient(to bottom, #ffffff, #f7f7f7); }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--rbpt-background-color); }
 
-.rbpt-first-step {
-  border: var(--rbpt-first-step-border);
+.rbpt-step {
+  display: flex;
   position: relative;
-  background-color: var(--rbpt-first-step-bg-color);
-  font-weight: var(--rbpt-first-step-font-weight);
-  font-size: var(--rbpt-first-step-font-size);
-  font-family: var(--rbpt-first-step-font-family);
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 20px; }
+  min-height: 100%;
+  height: 110px;
+  box-sizing: border-box;
+  justify-content: space-around; }
 
 .rbpt-line {
-  position: absolute;
-  left: 37%;
+  position: relative;
   top: 0;
   width: 4px;
   height: 100%;
   background-color: #ccc; }
 
-.rbpt-first-line {
-  position: absolute;
-  left: 37%;
+.rbpt-line-empty {
+  position: relative;
+  top: 0;
   width: 4px;
   height: 100%;
-  top: 20px;
-  overflow: hidden;
-  background-color: #ccc; }
+  background: var(--rbpt-background-color);
+  flex-direction: row;
+  z-index: 10; }
 
-.rbpt-step {
-  display: flex;
+.rbpt-line-wrap {
   position: relative;
-  padding: 20px;
-  box-sizing: border-box; }
-
-.rbpt-step:last-child {
-  margin-bottom: 0;
-  height: auto;
-  align-items: center; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%; }
 
 .rbpt-step img {
   width: var(--rbpt-image-size);
@@ -97,35 +88,21 @@
   font-size: var(--rbpt-text-font-size);
   color: var(--rbpt-text-color);
   font-family: var(--rbpt-font-family);
-  width: 300px;
+  width: 250px;
+  height: auto;
   box-sizing: border-box;
-  min-height: 50px;
-  text-align: center;
-  align-content: center; }
-
-.rbpt-text.rbpt-last-step {
-  color: var(--rbpt-last-step-color);
-  font-size: var(--rbpt-text-font-size);
-  font-weight: var(--rbpt-last-step-font-weight);
-  font-family: var(--rbpt-last-step-font-family);
   text-align: center;
   align-content: center;
-  align-items: normal; }
+  position: relative; }
 
 .rbpt-time {
   position: relative;
   margin: 10px;
+  width: 140px;
   font-size: var(--rbpt-time-font-size);
   color: var(--rbpt-time-color);
-  font-family: var(--rbpt-time-font-family); }
-
-.rbpt-last-line {
-  position: absolute;
-  background: var(--rbpt-last-line-bg-color);
-  width: 4px;
-  left: 37%;
-  top: 0;
-  height: 50%; }
+  font-family: var(--rbpt-time-font-family);
+  align-content: center; }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/

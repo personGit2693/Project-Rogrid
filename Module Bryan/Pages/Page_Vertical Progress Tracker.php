@@ -13,46 +13,55 @@
         <!-- Apply the .rbpt-line-last class here -->
 
         <div class="rbpt-step">
-            <div class="rbpt-first-line"></div>
-            <div class="rbpt-time">2025-03-22 10:00 AM</div>
-            <img src="../../src/checkIcon.png" alt="Tracker">
+            <div class="rbpt-time">2025-03-22 12:30 PM</div>
+            <div class="rbpt-line-wrap">
+                <div class="rbpt-line-empty"></div>
+                <img src="../../src/checkIcon.png" alt="Tracker">
+                <div class="rbpt-line"></div>
+            </div>
             <div class="rbpt-text">Order Placed </div>
         </div>
 
         <div class="rbpt-step">
-            <div class="rbpt-line"></div>
-            <div class="rbpt-time">2025-03-22 12:30 PM</div>
-            <img src="../../src/checkIcon.png" alt="Tracker">
+            <div class="rbpt-time">2025-03-22 04:00 PM</div>
+            <div class="rbpt-line-wrap">
+                <div class="rbpt-line"></div>
+                <img src="../../src/checkIcon.png" alt="Tracker">
+                <div class="rbpt-line"></div>
+            </div>
             <div class="rbpt-text">Shipped</div>
         </div>
 
         <div class="rbpt-step">
-            <div class="rbpt-line"></div>
-            <div class="rbpt-time">2025-03-22 04:00 PM</div>
-            <img src="../../src/checkIcon.png" alt="Tracker">
+            <div class="rbpt-time">2025-03-22 05:00 PM</div>
+            <div class="rbpt-line-wrap">
+                <div class="rbpt-line"></div>
+                <img src="../../src/checkIcon.png" alt="Tracker">
+                <div class="rbpt-line"></div>
+            </div>
             <div class="rbpt-text">Out for Delivery</div>
         </div>
 
         <div class="rbpt-step">
-            <div class="rbpt-line"></div>
-            <div class="rbpt-time">2025-03-22 05:00 PM</div>
-            <img src="../../src/checkIcon.png" alt="Tracker">
-            <div class="rbpt-text">Add Here</div>
-        </div>
-
-        <div class="rbpt-step">
-            <div class="rbpt-line"></div>
             <div class="rbpt-time">2025-03-22 06:00 PM</div>
-            <img src="../../src/checkIcon.png" alt="Tracker">
+            <div class="rbpt-line-wrap">
+                <div class="rbpt-line"></div>
+                <img src="../../src/checkIcon.png" alt="Tracker">
+                <div class="rbpt-line"></div>
+            </div>
             <div class="rbpt-text">Add Here </div>
         </div>
 
         <div class="rbpt-step">
-            <div class="rbpt-last-line"></div>
-            <div class="rbpt-time">2025-03-22 07:30 PM</div>
-            <img src="../../src/complete icon purple.png" alt="Progress">
-            <div class="rbpt-text rbpt-last-step">Delivered Delivered </div>
+            <div class="rbpt-time">2025-03-22 06:00 PM</div>
+            <div class="rbpt-line-wrap">
+                <div class="rbpt-line"></div>
+                <img src="../../src/complete icon purple.png" alt="Tracker">
+                <div class="rbpt-line-empty"></div>
+            </div>
+            <div class="rbpt-text">Delivered Delivered </div>
         </div>
+
     </div>
     <!-- Vertical Progress Tracker -->
 
