@@ -65,7 +65,7 @@
   top: 0;
   width: 4px;
   height: 100%;
-  background: green;
+  background: linear-gradient(to bottom, #ccc 50%, green 50%);
   flex-direction: row;
   z-index: 10; }
 
