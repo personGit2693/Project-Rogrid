@@ -55,3 +55,31 @@ window.controller_Btn_FilterItems = controller_Btn_FilterItems;
 /*Export*/
 export default controller_Btn_FilterItems;
 /*Export*/
+function controller_Click_ImageModal() {
+      const modal = document.querySelector('.ar_Modal');
+      const modalImage = document.querySelector('.img01');
+      const closeButton = document.querySelector('.close');
+      const thumbnail = document.querySelector('.ar_ModalImg');
+
+      // Check if the modal is currently displayed
+      if (modal.style.display === "block") {
+          // If the modal is already visible, close it
+          modal.style.display = "none";
+      } else {
+          // If the modal is not visible, open it
+          modal.style.display = "block";
+          modalImage.src = thumbnail.src; // Set the image source to the clicked thumbnail
+      }
+
+      // Close the modal when the close button is clicked
+      closeButton.onclick = function() {
+          modal.style.display = "none";
+      }
+
+      // Close the modal when the background (modal) is clicked
+      window.onclick = function(event) {
+          if (event.target === modal) {
+              modal.style.display = "none";
+          }
+      }
+  }

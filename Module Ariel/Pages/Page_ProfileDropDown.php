@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<div class="ar_ProfileDropdownContainer">
+	<div class="ar_ProfileDropdownContainer" onclick="controller_Click_DropDown()">
 		<div class="ar_ProfileDropdown">
 			<img src="../../src/bector.jpg">
 			<span>Bector</span>
@@ -26,7 +26,7 @@
 	
 
 	
-
+<script type="module" src="../Client Side/Controller_Click_DropDown.js"></script>
 
 
 	

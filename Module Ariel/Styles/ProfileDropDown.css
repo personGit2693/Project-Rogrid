@@ -106,10 +106,11 @@
   border-style: solid;
   border-color: transparent transparent white transparent; }
 
-/*Hover*/
-.ar_ProfileDropdownContainer:hover .ar-ProfiledDropdownContent {
-  display: block; }
+/*Hover
 
+.ar_ProfileDropdownContainer:hover .ar-ProfiledDropdownContent{
+    display: block;
+}*/
 .ar_ProfileDropdown img:hover {
   width: var(--profileDropDownImgSizeHover);
   height: var(--profileDropDownImgSizeHover);
