@@ -6,36 +6,22 @@
 /*Controller*/
  
 
- document.addEventListener('DOMContentLoaded', function () {
-  const dropdowns = document.querySelectorAll('.ar_ProfileDropdownContainer');
+  // Toggle dropdown menu visibility
+const optionsMenu = document.querySelector(".ar-ProfiledDropdownContent");
 
-  // Handle clicking on each profile to toggle dropdown visibility
-  dropdowns.forEach(dropdown => {
-    const profile = dropdown.querySelector('.ar_ProfileDropdown');
-    const dropdownContent = dropdown.querySelector('.ar-ProfiledDropdownContent');
-
-    profile.addEventListener('click', function (event) {
-      event.stopPropagation(); // Prevent this click from closing the dropdown immediately
-      const isOpen = dropdownContent.style.display === 'block';
-      // Close all dropdowns
-      document.querySelectorAll('.ar-ProfiledDropdownContent').forEach(content => content.style.display = 'none');
-      // Toggle the clicked dropdown if it wasn't already open
-      if (!isOpen) {
-        dropdownContent.style.display = 'block';
-      }
-    });
-  });
-
-  // Close all dropdowns when clicking anywhere outside
-  document.addEventListener('click', function (event) {
-    dropdowns.forEach(dropdown => {
-      const dropdownContent = dropdown.querySelector('.ar-ProfiledDropdownContent');
-      if (!dropdown.contains(event.target)) {
-        dropdownContent.style.display = 'none';
-      }
-    });
-  });
-});
+         function controller_Click_DropDown() {
+            if (optionsMenu.style.display === "flex") {
+                optionsMenu.style.display = "none";
+            } else {
+                optionsMenu.style.display = "flex";
+            }
+        }
+        // Close dropdown menu if clicked outside
+        document.addEventListener("click", (event) => {
+            if (!event.target.closest(".ar_ProfileDropdownContainer")) {
+                optionsMenu.style.display = "none";
+            }
+        });
 
        
 /*Controller*/
