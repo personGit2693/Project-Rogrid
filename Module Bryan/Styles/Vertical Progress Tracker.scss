@@ -12,19 +12,12 @@
 
     --rbpt-background-color: #f7f7f7;
 
-    --rbpt-first-step-bg-color: #f7f7f7;
-    --rbpt-first-step-font-weight: bold;
-    --rbpt-first-step-font-size: 20px;
-    --rbpt-first-step-font-family: sans-serif;
-
     --rbpt-image-size: 50px;
     --rbpt-image-border: 3px solid #ccc;
     --rbpt-image-bg-color: #fff;
     
     --rbpt-text-font-size: 16px;
     --rbpt-text-color: #333;
-    
-    /* Font Family Variables */
     --rbpt-font-family: 'Arial', sans-serif; /* Default font for the steps */
 
     --rbpt-time-font-size: 14px;
@@ -42,8 +35,6 @@
 .rbpt-container {
     position: absolute;
     display: flex;  
-    top: 100px;
-    left: 100px;
     width: auto;
     border-radius: 10px; 
     flex-direction: column;         
@@ -57,6 +48,8 @@
     position: relative;
     max-height: 100%;
     box-sizing: border-box;
+    width: 100%;
+
 }
 
 .rbpt-line {
@@ -93,6 +86,7 @@
     flex-direction: column;         
     align-items: center;
     min-height: 100%;
+    border: 2px solid red;
 }
 
 .rbpt-step img {
@@ -110,7 +104,7 @@
     background-color: green;
 }
 
-.rbpt-initial-hieght {
+.rbpt-initial-h {
     display: flex;
     position: relative;
     height: 80px;
@@ -122,21 +116,25 @@
     font-size: var(--rbpt-text-font-size);
     color: var(--rbpt-text-color);
     font-family: var(--rbpt-font-family);
-    width: 250px;
     box-sizing: border-box;
-    text-align: center;
+    text-align: left;
     position: relative;
+    padding-right: 10px;
+    width: 100%;
 }
 
 .rbpt-time {
     position: relative;
-    width: 140px;
+    width: 100%;
+    max-width: 148px;
     font-size: var(--rbpt-time-font-size);
     color: var(--rbpt-time-color);
     font-family: var(--rbpt-time-font-family);
     box-sizing: border-box;
     margin-right: 15px;
     margin-left: 5px;
+    border: 2px solid green;
+    padding-left: 10px;
 }
 
 /*General Styles*/
