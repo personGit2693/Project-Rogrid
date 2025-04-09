@@ -59,7 +59,7 @@
                 <img src="../../src/complete icon purple.png" alt="Tracker">
                 <div class="rbpt-line-empty"></div>
             </div>
-            <div class="rbpt-text">Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered Delivered </div>
+            <div class="rbpt-text">Delivered </div>
         </div>
 
     </div>
