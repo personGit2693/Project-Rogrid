@@ -1,5 +1,5 @@
  /*Import*/
-
+import {optionsMenu} from "./Element_Page_ProfileDropDown.js";
 /*Import*/ 
 
 
@@ -7,21 +7,20 @@
  
 
   // Toggle dropdown menu visibility
-const optionsMenu = document.querySelector(".ar-ProfiledDropdownContent");
+     function controller_Click_DropDown() {
 
-         function controller_Click_DropDown() {
-            if (optionsMenu.style.display === "flex") {
-                optionsMenu.style.display = "none";
-            } else {
-                optionsMenu.style.display = "flex";
-            }
+        if (optionsMenu.style.display === "flex") {
+            optionsMenu.style.display = "none";
+        } else {
+            optionsMenu.style.display = "flex";
         }
-        // Close dropdown menu if clicked outside
-        document.addEventListener("click", (event) => {
-            if (!event.target.closest(".ar_ProfileDropdownContainer")) {
-                optionsMenu.style.display = "none";
-            }
-        });
+    }
+    // Close dropdown menu if clicked outside
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".ar_ProfileDropdownContainer")) {
+            optionsMenu.style.display = "none";
+        }
+    });
 
        
 /*Controller*/
