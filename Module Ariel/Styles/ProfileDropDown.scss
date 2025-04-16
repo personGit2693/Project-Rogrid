@@ -16,7 +16,7 @@
   --profileDropDownArrowSize: 17px;
   --profileDropDownBoxTextSize: 15px;
   --profileDropDownIconSize: 18px;
-  --profileDropDownPointerPositionLeft: 25px;
+
   --profileDropDownFontFamilyMenu: Arial, Helvetica, sans-serif;
 /*Hover*/
   --profileDropDownImgSizeHover: 60px;
@@ -118,7 +118,7 @@
     content: "";
     position: absolute;
     bottom: 100%;
-    left: var(--profileDropDownPointerPositionLeft);
+    left: 25px;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
