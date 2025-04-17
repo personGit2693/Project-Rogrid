@@ -1,26 +1,24 @@
- /*Import*/
-import {optionsMenu} from "./Element_Page_ProfileDropDown.js";
+/*Import*/
+
 /*Import*/ 
 
 
 /*Controller*/
  
 
-  // Toggle dropdown menu visibility
-     function controller_Click_DropDown() {
+// Toggle dropdown menu visibility
+ function controller_Click_DropDown(elemId) {
 
-        if (optionsMenu.style.display === "flex") {
-            optionsMenu.style.display = "none";
-        } else {
-            optionsMenu.style.display = "flex";
-        }
+    const profileDropdownContainer = document.getElementById(elemId)
+    const ar_ProfiledDropdownContent = profileDropdownContainer.querySelector('.ar-ProfiledDropdownContent')
+
+
+    if (ar_ProfiledDropdownContent.style.display === "flex") {
+        ar_ProfiledDropdownContent.style.display = "none";
+    } else {
+        ar_ProfiledDropdownContent.style.display = "flex";
     }
-    // Close dropdown menu if clicked outside
-    document.addEventListener("click", (event) => {
-        if (!event.target.closest(".ar_ProfileDropdownContainer")) {
-            optionsMenu.style.display = "none";
-        }
-    });
+}
 
        
 /*Controller*/
