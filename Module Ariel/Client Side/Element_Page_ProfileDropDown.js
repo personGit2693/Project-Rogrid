@@ -1,1 +1,1 @@
-export const optionsMenu = document.querySelector(".ar-ProfiledDropdownContent");
+export const ar_ProfiledDropdownContent = document.querySelectorAll(".ar-ProfiledDropdownContent");
