@@ -5,112 +5,87 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --rbpt-background-color: #f7f7f7;
-  --rbpt-image-size: 50px;
-  --rbpt-image-border: 3px solid #ccc;
-  --rbpt-image-bg-color: #fff;
-  --rbpt-text-font-size: 16px;
-  --rbpt-text-color: #333;
-  --rbpt-font-family: 'Arial', sans-serif;
-  /* Default font for the steps */
-  --rbpt-time-font-size: 14px;
-  --rbpt-time-color: #888;
-  --rbpt-time-font-family: 'Arial', sans-serif; }
+  /* Font-related Variables */
+  --label-font-size-RB: 16px;
+  --label-font-weight-RB: bold;
+  --label-font-family-RB: Arial, sans-serif;
+  --description-font-size-RB: 10px;
+  --description-font-family-RB: Arial, sans-serif;
+  --description-font-weight-RB: normal;
+  /* Color-related Variables */
+  --label-color-RB: white;
+  --description-color-RB: #888;
+  --panel-background-RB: #121212;
+  --toggle-button-background-RB: #1e1e1e;
+  --toggle-button-color-RB: white;
+  --toggle-button-hover-background-RB: #333;
+  --toggle-button-active-background-RB: #1e90ff;
+  --toggle-button-active-color-RB: white;
+  /* Background Color Variables */
+  --panel-background-color-RB: #121212;
+  --label-background-color-RB: transparent;
+  --toggle-button-background-color-RB: #1e1e1e;
+  --active-toggle-button-background-color-RB: #1e90ff;
+  /* Cursor-related Variables */
+  --default-cursor-RB: pointer;
+  --slider-cursor-RB: none;
+  --toggle-button-cursor-RB: pointer; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-.rbpt-container {
-  position: absolute;
-  display: flex;
-  width: auto;
-  border-radius: 10px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--rbpt-background-color); }
+.settings-panel-RB {
+  background-color: var(--panel-background-color-RB);
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
 
-.rbpt-step {
-  display: flex;
-  position: relative;
-  max-height: 100%;
-  box-sizing: border-box;
-  width: 100%; }
+.setting-group-RB {
+  margin-bottom: 30px; }
 
-.rbpt-line {
-  position: relative;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background-color: #ccc; }
+.setting-group-RB label {
+  display: block;
+  color: var(--label-color-RB);
+  background-color: var(--label-background-color-RB);
+  font-family: var(--label-font-family-RB);
+  margin-bottom: 10px;
+  font-size: var(--label-font-size-RB);
+  font-weight: var(--label-font-weight-RB); }
 
-.rbpt-line-empty {
-  position: relative;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--rbpt-background-color);
-  flex-direction: row;
-  z-index: 10; }
+.setting-description-RB {
+  font-size: var(--description-font-size-RB);
+  font-family: var(--description-font-family-RB);
+  color: var(--description-color-RB);
+  margin: 4px 0 8px 0;
+  font-weight: var(--description-font-weight-RB); }
 
-.rbpt-line-last {
-  position: relative;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, #ccc 50%, green 50%);
-  flex-direction: row;
-  z-index: 10; }
-
-.rbpt-line-wrap {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100%; }
-
-.rbpt-step img {
-  width: var(--rbpt-image-size);
-  height: var(--rbpt-image-size);
-  padding: 5px;
-  box-sizing: border-box;
-  border: var(--rbpt-image-border);
-  background-color: var(--rbpt-image-bg-color);
-  position: relative; }
-
-.rbpt-step:last-child img {
-  border-color: #28a745;
-  background-color: green; }
-
-.rbpt-initial-h {
-  display: flex;
-  position: relative;
-  height: 80px;
-  visibility: none; }
-
-.rbpt-text {
-  margin-left: 15px;
-  font-size: var(--rbpt-text-font-size);
-  color: var(--rbpt-text-color);
-  font-family: var(--rbpt-font-family);
-  box-sizing: border-box;
-  text-align: left;
-  position: relative;
-  padding-right: 10px;
-  width: 100%; }
-
-.rbpt-time {
-  position: relative;
+.slider-RB {
   width: 100%;
-  min-width: 148px;
-  font-size: var(--rbpt-time-font-size);
-  color: var(--rbpt-time-color);
-  font-family: var(--rbpt-time-font-family);
-  box-sizing: border-box;
-  margin-right: 15px;
-  margin-left: 5px;
-  padding-left: 10px; }
+  height: 6px;
+  border-radius: 5px;
+  cursor: var(--slider-cursor-RB); }
+
+.toggle-options-RB {
+  display: flex;
+  gap: 10px; }
+
+.toggle-options-RB button {
+  flex: 1;
+  background-color: var(--toggle-button-background-color-RB);
+  color: var(--toggle-button-color-RB);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: var(--toggle-button-cursor-RB); }
+
+.toggle-options-RB button:hover {
+  background-color: var(--toggle-button-hover-background-RB); }
+
+.toggle-options-RB .active-RB {
+  background-color: var(--toggle-button-active-background-RB);
+  color: var(--toggle-button-active-color-RB); }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
@@ -131,4 +106,4 @@
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=Vertical%20Progress%20Tracker.css.map */
+/*# sourceMappingURL=Settings%20UI%20RB.css.map */
