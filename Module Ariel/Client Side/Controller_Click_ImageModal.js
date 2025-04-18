@@ -1,15 +1,13 @@
 /*Import*/
-
+import { modal, modalImage, closeButton } from './Element_Page_ImageModal.js';
 /*Import*/ 
 
 
 /*Controller*/
 
-function controller_Click_ImageModal() {
-      const modal = document.querySelector('.ar_Modal');
-      const modalImage = document.querySelector('.img01');
-      const closeButton = document.querySelector('.close');
-      const thumbnail = document.querySelector('.ar_ModalImg');
+function controller_Click_ImageModal(elemId) {
+    
+    const thumbnail = document.getElementById(elemId)
 
       // Check if the modal is currently displayed
       if (modal.style.display === "block") {
@@ -19,11 +17,6 @@ function controller_Click_ImageModal() {
           // If the modal is not visible, open it
           modal.style.display = "block";
           modalImage.src = thumbnail.src; // Set the image source to the clicked thumbnail
-      }
-
-      // Close the modal when the close button is clicked
-      closeButton.onclick = function() {
-          modal.style.display = "none";
       }
   }
 /*Controller*/
