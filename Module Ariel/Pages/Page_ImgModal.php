@@ -8,15 +8,38 @@
 </head>
 <body>
 
-<img class="ar_ModalImg" src="../../src/gm.jpg" alt="Snow" onclick="controller_Click_ImageModal()">
+	<img class="ar_ModalImg" id="imageModalone" src="../../src/gm.jpg" alt="Snow" onclick="controller_Click_ImageModal('imageModalone')">
 	
 	<div class="ar_Modal">
-		<span class="close">&times;</span>
+		<span class="close" onclick="controller_Click_ImageModalClose()">&times;</span>
 		<img class="modal-content img01">
 	</div>
 	
 
 
-<script type="module" src="../Client Side/Controller_Click_ImageModal.js"></script>
+
+	<img class="ar_ModalImg" id="imageModaltwo" src="../../src/os.jpg" alt="Snow" onclick="controller_Click_ImageModal('imageModaltwo')">
+	
+	<div class="ar_Modal">
+		<span class="close" onclick="controller_Click_ImageModalClose()">&times;</span>
+		<img class="modal-content img01">
+	</div>
+
+
+	<img class="ar_ModalImg" id="imageModal3" src="../../src/oh.jpg" alt="Snow" onclick="controller_Click_ImageModal('imageModal3')">
+	
+	<div class="ar_Modal">
+		<span class="close" onclick="controller_Click_ImageModalClose()">&times;</span>
+		<img class="modal-content img01">
+	</div>
+
+
+
+	<script type="module" src="../Client Side/Controller_Click_ImageModal.js"></script>
+	<script type="module" src="../Client Side/Controller_Click_ImageModalClose.js"></script>
+
+	<!--Executor-->
+	<script type="module" src="../Client Side/Executor_Page_ImageModal.js"></script>
+	<!--Executor-->
 </body>
 </html>

@@ -1,8 +1,3 @@
-
-export const modal = document.getElementsByClassName("ar_Modal")
-export const img = document.getElementsByClassName("ar_ModalImg")
-export const modalImg = document.getElementsByClassName("img01")
-export const captionText = document.getElementsByClassName("ar_ModalCaption")
-export const span = document.getElementsByClassName("close")[0];
-
-
+export const modal = document.querySelector('.ar_Modal');
+export const modalImage = document.querySelector('.img01');
+export const closeButton = document.querySelector('.close');
