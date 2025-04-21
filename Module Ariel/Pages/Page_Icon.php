@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Icon</title>
-	<link rel="stylesheet" type="text/css" href="../Styles/Icon.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/Page_Icon.css">
 </head>
 
 		<a href="" class="miniTogglebox_ArIcon">
