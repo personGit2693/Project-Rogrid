@@ -16,6 +16,9 @@
     --rbpt-image-border: 3px solid #ccc;
     --rbpt-image-bg-color: #fff;
     
+    --rbpt-border-active: #28a745;
+    --rbpt-background-active: green;
+
     --rbpt-text-font-size: 16px;
     --rbpt-text-color: #333;
     --rbpt-font-family: 'Arial', sans-serif; /* Default font for the steps */
@@ -25,8 +28,9 @@
     --rbpt-time-font-family: 'Arial', sans-serif;
 
     /* line colors */
-    --rbpt-line-background: #ccc;
-    --rbpt-line-last-background: linear-gradient(to bottom, #ccc 50%, green 50%);
+    --rbpt-line-background: yellowgreen;
+    --rbpt-line-last-background: darkgreen;
+    --rbpt-line-toArrive-background: #ccc;
 }
 
 /*Root*/
@@ -58,6 +62,7 @@
     min-height: 100px;
     box-sizing: border-box;
     width: 100%;
+    flex-shrink: 1;
 }
 
 .rbpt-line {
@@ -66,16 +71,7 @@
     width: 4px;
     height: 100%;
     background-color: var(--rbpt-line-background);
-}
-
-.rbpt-line-empty {
-    position: relative;
-    top: 0; 
-    width: 4px;
-    height: 100%;
-    background: var(--rbpt-background-color);
-    flex-direction: row;
-    z-index: 10;
+    flex-shrink: 0;
 }
 
 .rbpt-line-last {
@@ -85,7 +81,15 @@
     height: 100%;
     background: var(--rbpt-line-last-background);
     flex-direction: row;
-    z-index: 10;
+}
+
+.rbpt-line-toArrive {
+    position: relative;
+    top: 0; 
+    width: 4px;
+    height: 100%;
+    background: var(--rbpt-line-toArrive-background);
+    flex-direction: row;
 }
 
 .rbpt-line-wrap {
@@ -106,12 +110,10 @@
     position: relative;
 }
 
-.rbpt-step:last-child img {
-    border-color: #28a745; 
-    background-color: green;
+.rbpt-active-logo {
+    border-color: var(--rbpt-border-active) !important;
+    background-color: var(--rbpt-background-active) !important;
 }
-
-
 
 .rbpt-text {
     position: relative;
@@ -121,9 +123,9 @@
     font-family: var(--rbpt-font-family);
     box-sizing: border-box;
     text-align: left;
-    position: relative;
     padding-right: 5px;
     width: 100%;
+    flex-shrink: 1;
 }
 
 .rbpt-time {

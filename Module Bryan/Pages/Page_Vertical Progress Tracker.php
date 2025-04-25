@@ -27,14 +27,14 @@
                     <img src="../../src/checkIcon.png" alt="Tracker">
                     <div class="rbpt-line"></div>
                 </div>
-                <div class="rbpt-text">Shipped</div>
+                <div class="rbpt-text">Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped </div>
             </div>
 
             <div class="rbpt-step">
                 <div class="rbpt-time">2025-03-22 05:00 PM</div>
                 <div class="rbpt-line-wrap">
                     <img src="../../src/checkIcon.png" alt="Tracker">
-                    <div class="rbpt-line"></div>
+                    <div class="rbpt-line-last"></div>
                 </div>
                 <div class="rbpt-text">Out for Delivery </div>
             </div>
@@ -43,8 +43,8 @@
                 
                 <div class="rbpt-time">2025-03-22 06:00 PM</div>
                 <div class="rbpt-line-wrap">
-                    <img src="../../src/checkIcon.png" alt="Tracker">
-                    <div class="rbpt-line-last"></div>
+                    <img src="../../src/checkIcon.png" alt="Tracker" class="rbpt-active-logo">
+                    <div class="rbpt-line-toArrive"></div>
                 </div>
                 <div class="rbpt-text">Add Here </div>
             </div>
@@ -53,7 +53,6 @@
                 <div class="rbpt-time">2025-03-22 06:00 PM</div>
                 <div class="rbpt-line-wrap">
                     <img src="../../src/complete icon purple.png" alt="Tracker">
-                    <div class="rbpt-line-empty"></div>
                 </div>
                 <div class="rbpt-text">Delivered </div>
             </div>
