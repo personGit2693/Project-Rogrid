@@ -24,6 +24,9 @@
     --rbpt-time-color: #888;
     --rbpt-time-font-family: 'Arial', sans-serif;
 
+    /* line colors */
+    --rbpt-line-background: #ccc;
+    --rbpt-line-last-background: linear-gradient(to bottom, #ccc 50%, green 50%);
 }
 
 /*Root*/
@@ -32,8 +35,14 @@
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 
-.rbpt-container {
+.testwrap {
     position: absolute;
+    display: flex;
+    width: auto;
+}
+
+.rbpt-container {
+    position: relative;
     display: flex;  
     width: auto;
     border-radius: 10px; 
@@ -46,10 +55,9 @@
 .rbpt-step {
     display: flex;
     position: relative;
-    max-height: 100%;
+    min-height: 100px;
     box-sizing: border-box;
     width: 100%;
-
 }
 
 .rbpt-line {
@@ -57,7 +65,7 @@
     top: 0; 
     width: 4px;
     height: 100%;
-    background-color: #ccc;
+    background-color: var(--rbpt-line-background);
 }
 
 .rbpt-line-empty {
@@ -75,7 +83,7 @@
     top: 0; 
     width: 4px;
     height: 100%;
-    background: linear-gradient(to bottom, #ccc 50%, green 50%);
+    background: var(--rbpt-line-last-background);
     flex-direction: row;
     z-index: 10;
 }
@@ -103,14 +111,10 @@
     background-color: green;
 }
 
-.rbpt-initial-h {
-    display: flex;
-    position: relative;
-    height: 80px;
-    visibility: none;
-}
+
 
 .rbpt-text {
+    position: relative;
     margin-left: 15px;
     font-size: var(--rbpt-text-font-size);
     color: var(--rbpt-text-color);
@@ -118,14 +122,14 @@
     box-sizing: border-box;
     text-align: left;
     position: relative;
-    padding-right: 10px;
+    padding-right: 5px;
     width: 100%;
 }
 
 .rbpt-time {
     position: relative;
     width: 100%;
-    min-width: 148px;
+    max-width: 190px;
     font-size: var(--rbpt-time-font-size);
     color: var(--rbpt-time-color);
     font-family: var(--rbpt-time-font-family);
