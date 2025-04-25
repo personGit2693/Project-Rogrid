@@ -27,7 +27,7 @@
                     <img src="../../src/checkIcon.png" alt="Tracker">
                     <div class="rbpt-line"></div>
                 </div>
-                <div class="rbpt-text">Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped Shipped </div>
+                <div class="rbpt-text">Shipped </div>
             </div>
 
             <div class="rbpt-step">
