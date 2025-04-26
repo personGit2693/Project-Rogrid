@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Profile DropDown</title>
-	<link rel="stylesheet" type="text/css" href="../Styles/ProfileDropDown.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/Page_ProfileDropDown.css">
 </head>
 <body>
 	

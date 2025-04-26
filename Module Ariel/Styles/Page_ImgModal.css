@@ -5,90 +5,66 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --toolTipFontFamily: 'Poppins', sans-serif;
-  --toolTipMainContainerFontSize: 15px;
-  --toolTipIMGsize: 40px;
-  --toolTipMainContainerPadding: 5px;
-  --toolTipMainTextColor: black;
-  --toolTipBoxWidth: 200px;
-  --toolTipSpace: 105%;
-  --toolTipHoverTextFontSize:15px;
-  --toolTipBoxMaxHeight: 400px;
-  --toolTipBackroundColor: black;
-  --toolTipTextColor: white;
-  --toolTipPadding: 7px;
-  --toolTipWhitespace: normal;
-  --toolTipPointerPosition: 96%;
-  --toolTipPointerColor: transparent black transparent transparent; }
+  --modalImageHeight: 250px;
+  --modalImageWidth: 400px;
+  --modalImageClickHeight:300px;
+  --modalImageClickWidth: 450px; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-/*Tool Tip*/
-#tooltipWrap {
-  position: relative;
-  box-sizing: border-box;
-  overflow: visible;
-  top: 100px;
-  width: 400px; }
-
-.ar_tooltip {
-  font-family: var(--toolTipFontFamily);
-  display: flex;
-  position: absolute;
-  box-sizing: border-box;
-  align-items: center;
-  font-size: var(--toolTipMainContainerFontSize);
-  width: auto;
-  padding: var(--toolTipMainContainerPadding);
-  color: var(--toolTipMainTextColor); }
-
-.ar_tooltip img {
-  height: var(--toolTipIMGsize);
-  width: var(--toolTipIMGsize);
-  box-sizing: border-box; }
-
-.ar_tooltiptext {
+.ar_Modal {
   display: none;
-  width: var(--toolTipBoxWidth);
-  max-height: var(--toolTipBoxMaxHeight);
-  background-color: var(--toolTipBackroundColor);
-  color: var(--toolTipTextColor);
-  text-align: center;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   overflow: auto;
-  border-radius: 15px;
-  padding: var(--toolTipPadding);
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  left: var(--toolTipSpace);
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: 150ms transform;
-  font-size: var(--toolTipHoverTextFontSize);
-  white-space: var(--toolTipWhitespace); }
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+  justify-content: center;
+  align-items: center; }
 
-.ar_tooltip::after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 50%;
-  left: var(--toolTipPointerPosition);
-  margin-top: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--toolTipPointerColor); }
+.ar_ModalImg {
+  height: var(--modalImageHeight);
+  width: var(--modalImageWidth); }
 
-.ar_tooltip:hover .ar_tooltiptext {
+/* Modal content 
+
+  display: block;*/
+.modal-content {
   display: block;
-  cursor: help;
-  opacity: 1; }
+  position: absolute;
+  height: var(--modalImageClickHeight);
+  width: var(--modalImageClickWidth);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-.ar_tooltip:hover::after {
-  display: block; }
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer; }
 
-/*Tool Tip*/
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none; }
+
+/* Optional: Style image to be clickable */
+.ar_ModalImg {
+  cursor: pointer; }
+
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -104,4 +80,4 @@
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=ToolTip.css.map */
+/*# sourceMappingURL=Page_ImgModal.css.map */

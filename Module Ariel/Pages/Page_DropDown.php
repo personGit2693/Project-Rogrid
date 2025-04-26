@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>eyyyy</title>
-	<link rel="stylesheet" type="text/css" href="../Styles/DropDown.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/Page_DropDown.css">
 </head>
 
 	<details class="Aea_details-example">
