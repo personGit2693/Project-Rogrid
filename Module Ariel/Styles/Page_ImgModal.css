@@ -7,8 +7,8 @@
 :root {
   --modalImageHeight: 250px;
   --modalImageWidth: 400px;
-  --modalImageClickHeight:900px;
-  --modalImageClickWidth: 700px; }
+  --modalImageClickHeight:500px;
+  --modalImageClickWidth: 600px; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
@@ -26,13 +26,11 @@
   background-color: black;
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
-  border: 2px solid green; }
+  /* Black w/ opacity */ }
 
 .ar_ModalImg {
   height: var(--modalImageHeight);
-  width: var(--modalImageWidth);
-  border: 2px solid blue; }
+  width: var(--modalImageWidth); }
 
 /* Modal content 
   display: block;*/
@@ -40,12 +38,11 @@
   display: flex;
   position: relative;
   overflow: auto;
-  max-height: var(--modalImageClickHeight);
+  height: var(--modalImageClickHeight);
   width: var(--modalImageClickWidth);
   margin: auto;
   margin-top: 7%;
-  box-sizing: border-box;
-  border: 2px solid hotpink; }
+  box-sizing: border-box; }
 
 /* Close button */
 .close {
@@ -84,32 +81,5 @@
 /*Desktop*/
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
-/*.modal-content {
-  display: block;
-  position: absolute;
-  height: var(--modalImageClickHeight);
-  width: var(--modalImageClickWidth);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid hotpink;
-}
-
-
-
-.modal-content {
-  display: flex;
-  position: absolute;
-  height: var(--modalImageClickHeight);
-  width: var(--modalImageClickWidth);
-  
-  border: 2px solid hotpink;
-
-  
-
-  border: 2px solid hotpink;
-}
-
-*/
 
 /*# sourceMappingURL=Page_ImgModal.css.map */

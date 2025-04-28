@@ -8,8 +8,8 @@
   --modalImageHeight: 250px;
   --modalImageWidth: 400px;
 
-  --modalImageClickHeight:900px;
-  --modalImageClickWidth: 700px;
+  --modalImageClickHeight:500px;
+  --modalImageClickWidth: 600px;
 }
 
 /*Root*/
@@ -30,7 +30,7 @@
 
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-  border: 2px solid green;
+
 
 }
 
@@ -39,7 +39,7 @@
 
   height: var(--modalImageHeight);
   width: var(--modalImageWidth);
-  border: 2px solid blue;
+ 
 }
 /* Modal content 
   display: block;*/
@@ -47,12 +47,12 @@
   display: flex;
   position: relative;
   overflow: auto;
-  max-height: var(--modalImageClickHeight);
+  height: var(--modalImageClickHeight);
   width: var(--modalImageClickWidth);
   margin: auto;
   margin-top: 7%;
   box-sizing: border-box;
-  border: 2px solid hotpink;
+  
 }
 
 
@@ -107,30 +107,3 @@
 }
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
-/*.modal-content {
-  display: block;
-  position: absolute;
-  height: var(--modalImageClickHeight);
-  width: var(--modalImageClickWidth);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 2px solid hotpink;
-}
-
-
-
-.modal-content {
-  display: flex;
-  position: absolute;
-  height: var(--modalImageClickHeight);
-  width: var(--modalImageClickWidth);
-  
-  border: 2px solid hotpink;
-
-  
-
-  border: 2px solid hotpink;
-}
-
-*/
