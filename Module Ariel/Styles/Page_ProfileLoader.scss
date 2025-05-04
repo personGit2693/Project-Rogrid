@@ -57,19 +57,31 @@
 .ar_Profileinfo {
   flex: 1;
   display: flex;
+  position: relative;
   flex-direction: column;
   gap: 11px;
   padding: 5px;
+  margin: 10px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+
  
 }
 
 .ar_ProfileLoaderLine {
+  display: flex;
+  position: relative;
   height: 20px;
   width: 80%;
   border-radius: 4px;
   background: var(--profileLoaderLinearGradient);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+
+ 
 }
 
 .ar_ProfileLoaderLine.short {
@@ -101,6 +113,15 @@
     50% {
       background-color: var(--profileLoaderContainerSecondaryBackroungColor);
     }
+  }
+
+  .sample{
+    display: flex;
+    position: relative;
+    height: 100px;
+    width: 800px;
+
+    border: 2px solid green;
   }
 
 /*General Styles*/

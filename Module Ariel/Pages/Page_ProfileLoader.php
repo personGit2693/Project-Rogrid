@@ -24,5 +24,14 @@
 			</div>
 		</div>
 	</div>
+
+
+	<div class="sample">
+		<div class="ar_Profileinfo">
+				<div class="ar_ProfileLoaderLine short"></div>
+				<div class="ar_ProfileLoaderLine"></div>
+			
+			</div>
+	</div>
 </body>
 </html>
