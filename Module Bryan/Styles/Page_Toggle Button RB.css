@@ -5,67 +5,96 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root {
-  --RBTP-tab-container-padding: 10px;
-  --RBTP-tab-container-bg: #f9f9f9;
-  --RBTP-tab-border-color: #ccc;
-  --RBTP-tab-font-size: 16px;
-  --RBTP-tab-font-weight: normal;
-  --RBTP-tab-font-color: #000;
-  --RBTP-tab-active-font-weight: bold;
-  --RBTP-tab-active-border-color: #007BFF;
-  --RBTP-content-font-size: 16px;
-  --RBTP-tab-content-weight: normal; }
+  /* General variables */
+  --toggle-width-RB: 80px;
+  --toggle-height-RB: 40px;
+  --off-color-RB: red;
+  --on-color-RB: #28c76f;
+  --icon-font-size-RB: calc(var(--toggle-height-RB) * 0.5);
+  --icon-color-RB: white; }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-/* Tab Container */
-.RBTP-tab-container {
-  display: var(--RBTP-tab-container-diplay);
-  border: 2px solid var(--RBTP-tab-border-color);
-  border-radius: 8px;
-  padding: var(--RBTP-tab-container-padding);
-  background: var(--RBTP-tab-container-bg);
-  position: var(--RBTP-tab-container-position);
-  text-align: center;
-  box-sizing: border-box;
-  border: 1px solid red;
-  margin: 0; }
-
-/* Tab Container */
-/* Tabs */
-.RBTP-tabs {
-  display: flex;
-  justify-content: center;
-  border-bottom: 2px solid var(--RBTP-tab-border-color); }
-
-.RBTP-tab {
-  padding: 10px 20px;
+.toggle-switch-RB {
+  position: relative;
+  width: var(--toggle-width-RB);
+  height: var(--toggle-height-RB);
+  border-radius: 40px;
+  background-color: var(--off-color-RB);
+  transition: background-color 0.3s ease;
   cursor: pointer;
-  border: none;
-  background: none;
-  font-size: var(--RBTP-tab-font-size);
-  font-weight: var(--RBTP-tab-font-weight);
-  color: var(--RBTP-tab-font-color); }
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  align-content: center; }
 
-.RBTP-tab.active {
-  border-bottom: 2px solid var(--RBTP-tab-active-border-color);
-  font-weight: var(--RBTP-tab-active-font-weight);
-  font-family: var(--RBTP-tab-active-font-family); }
+.toggle-input-RB {
+  opacity: 0;
+  width: 0;
+  height: 0; }
 
-/* Content */
-.RBTP-content {
-  display: none;
-  padding: 20px;
-  font-size: var(--RBTP-content-font-size);
-  font-weight: var(--RBTP-tab-content-weight);
-  font-family: var(--RBTP-tab-content-family); }
+.slider-RB {
+  display: flex;
+  justify-content: space-between;
+  /* Spread icons between start and end */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 40px;
+  transition: background-color 0.3s ease; }
 
-.RBTP-content.active {
-  display: block; }
+.slider-RB::before {
+  content: '';
+  position: absolute;
+  height: 80%;
+  width: 45%;
+  left: 2%;
+  bottom: 10%;
+  background-color: var(--icon-color-RB);
+  transition: left 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
 
-/* Tabs */
+.icon-RB {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--icon-font-size-RB);
+  color: var(--icon-color-RB);
+  pointer-events: none; }
+
+.check-RB {
+  left: 10%;
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+
+.cross-RB {
+  right: 10%;
+  opacity: 1;
+  transition: opacity 0.3s ease; }
+
+.toggle-input-RB:checked + .slider-RB {
+  background-color: var(--on-color-RB); }
+
+.toggle-input-RB:checked + .slider-RB::before {
+  left: calc(100% - 47%); }
+
+.toggle-input-RB:checked + .slider-RB .check-RB {
+  opacity: 1; }
+
+.toggle-input-RB:checked + .slider-RB .cross-RB {
+  opacity: 0; }
+
+.toggle-input-RB:not(:checked) + .slider-RB .check-RB {
+  opacity: 0; }
+
+.toggle-input-RB:not(:checked) + .slider-RB .cross-RB {
+  opacity: 1; }
+
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -85,4 +114,4 @@
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=RBTP_TabbedPage.css.map */
+/*# sourceMappingURL=Page_Toggle%20Button%20RB.css.map */

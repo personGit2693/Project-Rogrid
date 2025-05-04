@@ -4,78 +4,88 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+:root {
+  /* Font-related Variables */
+  --label-font-size-RB: 16px;
+  --label-font-weight-RB: bold;
+  --label-font-family-RB: Arial, sans-serif;
+  --description-font-size-RB: 10px;
+  --description-font-family-RB: Arial, sans-serif;
+  --description-font-weight-RB: normal;
+  /* Color-related Variables */
+  --label-color-RB: white;
+  --description-color-RB: #888;
+  --panel-background-RB: #121212;
+  --toggle-button-background-RB: #1e1e1e;
+  --toggle-button-color-RB: white;
+  --toggle-button-hover-background-RB: #333;
+  --toggle-button-active-background-RB: #1e90ff;
+  --toggle-button-active-color-RB: white;
+  /* Background Color Variables */
+  --panel-background-color-RB: #121212;
+  --label-background-color-RB: transparent;
+  --toggle-button-background-color-RB: #1e1e1e;
+  --active-toggle-button-background-color-RB: #1e90ff;
+  /* Cursor-related Variables */
+  --default-cursor-RB: pointer;
+  --slider-cursor-RB: none;
+  --toggle-button-cursor-RB: pointer; }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-.rb-breadcrumb {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  /* Reset margin */
-  padding: 0;
-  position: absolute;
-  /* Allow for absolute positioning */
-  top: var(--rb-button-from-top);
-  /* Vertical position */
-  left: var(--rb-button-from-left);
-  /* Horizontal position */
-  width: var(--rb-button-width);
-  /* Make width responsive */
-  height: var(--rb-button-height);
-  /* Make height responsive */ }
+.settings-panel-RB {
+  background-color: var(--panel-background-color-RB);
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
 
-/* Apply margin-right and other styles to breadcrumb items */
-.rb-breadcrumb > li {
-  margin-right: var(--rb-button-margin-right);
-  /* Gap between breadcrumb items */
-  position: relative; }
+.setting-group-RB {
+  margin-bottom: 30px; }
 
-/* Angled breadcrumb link */
-.rb-breadcrumb > li > a {
+.setting-group-RB label {
   display: block;
-  text-decoration: none;
-  padding: 10px 25px;
-  transform: skew(20deg);
-  /* Angle effect */
-  transition: background 0.3s ease, color 0.3s ease; }
+  color: var(--label-color-RB);
+  background-color: var(--label-background-color-RB);
+  font-family: var(--label-font-family-RB);
+  margin-bottom: 10px;
+  font-size: var(--label-font-size-RB);
+  font-weight: var(--label-font-weight-RB); }
 
-/* Apply specific background colors and font colors using the defined variables */
-.rb-breadcrumb > li:first-child > a {
-  background: var(--rb-color-home);
-  color: var(--rb-font-color-home); }
+.setting-description-RB {
+  font-size: var(--description-font-size-RB);
+  font-family: var(--description-font-family-RB);
+  color: var(--description-color-RB);
+  margin: 4px 0 8px 0;
+  font-weight: var(--description-font-weight-RB); }
 
-.rb-breadcrumb > li:nth-child(2) > a {
-  background: var(--rb-color-about);
-  color: var(--rb-font-color-about); }
+.slider-RB {
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  cursor: var(--slider-cursor-RB); }
 
-.rb-breadcrumb > li:nth-child(3) > a {
-  background: var(--rb-color-product);
-  color: var(--rb-font-color-product); }
+.toggle-options-RB {
+  display: flex;
+  gap: 10px; }
 
-.rb-breadcrumb > li:nth-child(4) > a {
-  background: var(--rb-color-services);
-  color: var(--rb-font-color-services); }
+.toggle-options-RB button {
+  flex: 1;
+  background-color: var(--toggle-button-background-color-RB);
+  color: var(--toggle-button-color-RB);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: var(--toggle-button-cursor-RB); }
 
-/* Contact item with defined background and font color */
-.rb-breadcrumb > li:nth-child(5) > a {
-  background: var(--rb-color-contact);
-  color: var(--rb-font-color-contact); }
+.toggle-options-RB button:hover {
+  background-color: var(--toggle-button-hover-background-RB); }
 
-/* Straighten the text */
-.rb-breadcrumb > li > a span {
-  display: inline-block;
-  transform: skew(-20deg); }
-
-/* Hover effect for breadcrumb links */
-.rb-breadcrumb > li > a:hover {
-  filter: brightness(0.85); }
-
-/* Current page breadcrumb item (Contact) */
-.rb-breadcrumb > li.current > a {
-  background: var(--rb-color-contact);
-  color: var(--rb-font-color-contact); }
+.toggle-options-RB .active-RB {
+  background-color: var(--toggle-button-active-background-RB);
+  color: var(--toggle-button-active-color-RB); }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
@@ -96,4 +106,4 @@
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=Bread-RB.css.map */
+/*# sourceMappingURL=Page_Settings%20UI%20RB.css.map */
