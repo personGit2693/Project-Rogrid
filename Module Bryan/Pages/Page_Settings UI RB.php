@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="../Styles/Page_Settings UI RB.css" />
   </head>
   <body>
-    <div class="settings-panel-RB">
+    <div id="myWrapper">
       <div class="setting-group-RB">
         <label>Graphics</label>
         <p class="setting-description-RB">Adjust the visual quality of the game.</p>
         <div class="toggle-options-RB">
           <button>Low</button>
-          <button class="active-RB">Medium</button>
+          <button>Medium</button>
           <button>High</button>
+          <button>Option4</button>
         </div>
       </div>
+    </div>
+    <!--<div class="settings-panel-RB">-->
+      
 
+      <!--
       <div class="setting-group-RB">
         <label>Music</label>
         <p class="setting-description-RB">Toggle game music and control volume.</p>
@@ -56,11 +61,9 @@
         </div>
       </div>
     </div>
+      -->
 
-
-    <script type="module">
-      import controller_ToggleGroups from '../Client Side/Controller_Btn_SettingsUiRB.js';
-      controller_ToggleGroups();
-    </script>
+<script type="module" src="../Client Side/Executor_Page_Settings UI RB.js"></script>
+    
   </body>
 </html>

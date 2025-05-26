@@ -6,27 +6,21 @@
 /*Root*/
 :root {
   /* Font-related Variables */
-  --label-font-size-RB: 16px;
-  --label-font-weight-RB: bold;
+  --label-font-size-RB: 30px;
+  --label-font-weight-RB: normal;
   --label-font-family-RB: Arial, sans-serif;
   --description-font-size-RB: 10px;
   --description-font-family-RB: Arial, sans-serif;
   --description-font-weight-RB: normal;
-  /* Color-related Variables */
   --label-color-RB: white;
   --description-color-RB: #888;
-  --panel-background-RB: #121212;
-  --toggle-button-background-RB: #1e1e1e;
   --toggle-button-color-RB: white;
   --toggle-button-hover-background-RB: #333;
   --toggle-button-active-background-RB: #1e90ff;
   --toggle-button-active-color-RB: white;
   /* Background Color Variables */
-  --panel-background-color-RB: #121212;
-  --label-background-color-RB: transparent;
   --toggle-button-background-color-RB: #1e1e1e;
-  --active-toggle-button-background-color-RB: #1e90ff;
-  /* Cursor-related Variables */
+  /* Cursor-related Slided */
   --default-cursor-RB: pointer;
   --slider-cursor-RB: none;
   --toggle-button-cursor-RB: pointer; }
@@ -36,11 +30,17 @@
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 .settings-panel-RB {
-  background-color: var(--panel-background-color-RB);
+  position: relative;
   padding: 30px;
   border-radius: 12px;
-  width: 350px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
+
+#myWrapper {
+  position: relative;
+  width: 100%;
+  border: 2px solid red;
+  background-color: #121212;
+  align-content: center; }
 
 .setting-group-RB {
   margin-bottom: 30px; }
@@ -48,7 +48,6 @@
 .setting-group-RB label {
   display: block;
   color: var(--label-color-RB);
-  background-color: var(--label-background-color-RB);
   font-family: var(--label-font-family-RB);
   margin-bottom: 10px;
   font-size: var(--label-font-size-RB);
@@ -84,6 +83,10 @@
   background-color: var(--toggle-button-hover-background-RB); }
 
 .toggle-options-RB .active-RB {
+  background-color: var(--toggle-button-active-background-RB);
+  color: var(--toggle-button-active-color-RB); }
+
+.toggle-options-RB .active-RB:hover {
   background-color: var(--toggle-button-active-background-RB);
   color: var(--toggle-button-active-color-RB); }
 
