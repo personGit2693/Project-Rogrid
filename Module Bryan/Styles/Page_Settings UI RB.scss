@@ -9,13 +9,33 @@
 /*Root*/
 
 :root {
-  /* General variables */
-  --toggle-width-RB: 80px;
-  --toggle-height-RB: 40px;
-  --off-color-RB: red;
-  --on-color-RB: #28c76f;
-  --icon-font-size-RB: 20px;
-  --icon-color-RB: white;
+  /* Font-related Variables */
+  --label-font-size-RB: 30px;
+  --label-font-weight-RB: normal;
+  --label-font-family-RB: Arial, sans-serif;
+
+
+  --description-font-size-RB: 10px;
+  --description-font-family-RB: Arial, sans-serif;
+  --description-font-weight-RB: normal;
+
+  // /* Color-related Variables */
+  --label-color-RB: white;
+  --description-color-RB: #888;
+  
+  --toggle-button-color-RB: white;
+  --toggle-button-hover-background-RB: #333;
+  --toggle-button-active-background-RB: #1e90ff;
+  --toggle-button-active-color-RB: white;
+  
+  /* Background Color Variables */
+
+  --toggle-button-background-color-RB: #1e1e1e;
+
+  /* Cursor-related Slided */
+  --default-cursor-RB: pointer;
+  --slider-cursor-RB: none;
+  --toggle-button-cursor-RB: pointer;
 }
 
 /*Root*/
@@ -24,95 +44,78 @@
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 
-.toggle-switch-RB {
+
+
+.settings-panel-RB {
+  position: relative; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+#myWrapper {
   position: relative;
-  width: var(--toggle-width-RB);
-  height: var(--toggle-height-RB);
-  border-radius: 40px;
-  background-color: var(--off-color-RB);
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  align-items: center;
+  width: 100%;
+  border: 2px solid red;
+  background-color: #121212;
   align-content: center;
 }
 
-.toggle-input-RB {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.setting-group-RB {
+  margin-bottom: 30px;
+}
+
+.setting-group-RB label {
+  display: block;
+  color: var(--label-color-RB);
+  font-family: var(--label-font-family-RB);
+  margin-bottom: 10px;
+  font-size: var(--label-font-size-RB);
+  font-weight: var(--label-font-weight-RB);
+}
+
+.setting-description-RB {
+  font-size: var(--description-font-size-RB);
+  font-family: var(--description-font-family-RB);
+  color: var(--description-color-RB);
+  margin: 4px 0 8px 0;
+  font-weight: var(--description-font-weight-RB);
 }
 
 .slider-RB {
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  cursor: var(--slider-cursor-RB);
+}
+
+.toggle-options-RB {
   display: flex;
-  justify-content: space-between; /* Spread icons between start and end */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 40px;
-
-  transition: background-color 0.3s ease;
+  gap: 10px;
 }
 
-.slider-RB::before {
-  content: '';
-  position: absolute;
-  height: 80%;
-  width: 45%;
-  left: 2%;
-  bottom: 10%;
-  background-color: var(--icon-color-RB);
-  transition: transform 0.3s ease;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+.toggle-options-RB button {
+  flex: 1;
+  background-color: var(--toggle-button-background-color-RB);
+  color: var(--toggle-button-color-RB);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: var(--toggle-button-cursor-RB);
 }
 
-.icon-RB {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: var(--icon-font-size-RB);
-  color: var(--icon-color-RB);
-  pointer-events: none;
+.toggle-options-RB button:hover {
+  background-color: var(--toggle-button-hover-background-RB);
 }
 
-.check-RB {
-  left: 10%;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.toggle-options-RB .active-RB {
+  background-color: var(--toggle-button-active-background-RB);
+  color: var(--toggle-button-active-color-RB);
 }
 
-.cross-RB {
-  right: 10%;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.toggle-input-RB:checked + .slider-RB {
-  background-color: var(--on-color-RB);
-}
-
-.toggle-input-RB:checked + .slider-RB::before {
-  transform: translateX(110%);
-}
-
-.toggle-input-RB:checked + .slider-RB .check-RB {
-  opacity: 1;
-}
-
-.toggle-input-RB:checked + .slider-RB .cross-RB {
-  opacity: 0;
-}
-
-.toggle-input-RB:not(:checked) + .slider-RB .check-RB {
-  opacity: 0;
-}
-
-.toggle-input-RB:not(:checked) + .slider-RB .cross-RB {
-  opacity: 1;
+.toggle-options-RB .active-RB:hover {
+  background-color: var(--toggle-button-active-background-RB);
+  color: var(--toggle-button-active-color-RB);
 }
 
 /*General Styles*/

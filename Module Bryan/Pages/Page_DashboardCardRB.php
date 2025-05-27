@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DashboardCardRB</title>
-    <link rel="stylesheet" href="../Styles/DashboardCardRB.css">
+    <link rel="stylesheet" href="../Styles/Page_DashboardCardRB.css">
 </head>
 
 <body>

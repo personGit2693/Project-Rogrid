@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Mode Toggle</title>
-    <link rel="stylesheet" href="../Styles/DarkMode_RBS.css">
+    <link rel="stylesheet" href="../Styles/Page_DarkMode_RBS.css">
 </head>
 <body>
 

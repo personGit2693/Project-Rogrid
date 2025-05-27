@@ -25,7 +25,7 @@ function controller_Btn_SettingsUiRB() {
 /* Controller */
 
 /* Declare Global */
-window.controller_ToggleGroups = controller_Btn_SettingsUiRB;  // Expose new function name globally
+window.controller_Btn_SettingsUiRB = controller_Btn_SettingsUiRB;  // Expose new function name globally
 /* Declare Global */
 
 /* Export */

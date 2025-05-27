@@ -1,152 +1,159 @@
 /***********************************************************************************************************************************************************************************************************/
 /* Import */
+
 /* Import */
 /***********************************************************************************************************************************************************************************************************/
+
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+
 /* Root */
 /***********************************************************************************************************************************************************************************************************/
+
 /* General */
 .DashboardCardRB {
-  display: flex;
-  position: absolute;
-  top: var(--dashboard-cardRB-top);
-  /* Use the variable */
-  left: var(--dashboard-cardRB-left);
-  /* Use the variable */
-  gap: 30px;
-  /* Spacing between cards */
-  justify-content: center; }
+    display: flex;
+    position: absolute;
+    top: var(--dashboard-cardRB-top); /* Use the variable */
+    left: var(--dashboard-cardRB-left); /* Use the variable */
+    gap: 30px; /* Spacing between cards */
+    justify-content: center;
+}
 
 /* Card Styles */
 .cardRB {
-  background-color: var(--cardRB-bg-color);
-  border-radius: var(--cardRB-border-radius);
-  box-shadow: var(--cardRB-box-shadow);
-  padding: 20px 20px 20px 80px;
-  /* Extra left padding for logo */
-  width: var(--cardRB-width);
-  /* Use the variable */
-  height: var(--cardRB-height);
-  /* Use the variable */
-  min-width: 300px;
-  min-height: 250px;
-  display: flex;
-  flex-direction: column;
-  /* Stack children vertically */
-  position: relative;
-  /* For logo positioning */ }
+    background-color: var(--cardRB-bg-color); 
+    border-radius: var(--cardRB-border-radius);
+    box-shadow: var(--cardRB-box-shadow);
+    padding: 20px 20px 20px 80px; /* Extra left padding for logo */
+    width: var(--cardRB-width);  /* Use the variable */
+    height: var(--cardRB-height);  /* Use the variable */
+    min-width: 300px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;  /* Stack children vertically */
+    position: relative; /* For logo positioning */
+}
 
 .cardRB:hover {
-  transform: var(--cardRB-hover);
-  /* Use the variable */ }
+    transform: var(--cardRB-hover); /* Use the variable */
+}
 
 /* Header Styles */
+
 .card-titleRB {
-  display: flex;
-  align-items: center; }
+    display: flex;
+    align-items: center;
+}
 
 .card-logoRB {
-  position: absolute;
-  top: 30px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%; }
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
 
 /* Typography */
 .CardheaderRB {
-  font-size: var(--cardRB-header-font-size);
-  /* Use the variable */
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 0;
-  /* Remove the bottom margin to eliminate space */ }
+    font-size: var(--cardRB-header-font-size); /* Use the variable */
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;  /* Remove the bottom margin to eliminate space */
+}
 
 .card-header-descriptionRB {
-  font-size: var(--card-header-descriptionRB-font-size);
-  /* Use the variable */
-  color: #777;
-  margin-top: 0;
-  /* Optional: remove space above this element if needed */ }
+    font-size: var(--card-header-descriptionRB-font-size); /* Use the variable */
+    color: #777;
+    margin-top: 0;  /* Optional: remove space above this element if needed */
+}
 
 .card-header-descriptionRB2 {
-  font-size: var(--card-header-descriptionRB2-font-size);
-  /* Use the variable */
-  color: #777;
-  margin-top: 30px;
-  /* Apply margin-top here */ }
+    font-size: var(--card-header-descriptionRB2-font-size); /* Use the variable */
+    color: #777;
+    margin-top: 30px; /* Apply margin-top here */
+}
 
 /* Progress Bar */
 .card-progressRB {
-  margin: 15px 0;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  height: 8px;
-  overflow: hidden; }
+    margin: 15px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    height: 8px;
+    overflow: hidden;
+}
 
 .progress-barRB {
-  background-color: #4caf50;
-  height: 100%; }
+    background-color: #4caf50;
+    height: 100%;
+}
 
 /* Footer Styles */
 .card-footerRB {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
-  /* Prevent the footer from shrinking */
-  margin-top: auto;
-  /* This pushes the footer to the bottom */ }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;  /* Prevent the footer from shrinking */
+    margin-top: auto; /* This pushes the footer to the bottom */
+}
 
 .card-dateRB {
-  position: relative;
-  background-color: #ddd;
-  border-radius: 5px;
-  padding: 15px 20px;
-  font-size: var(--cardRB-date-font-size);
-  /* Use the variable */ }
+    position: relative;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: var(--cardRB-date-font-size); /* Use the variable */
+}
 
 .teamRB img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-left: -10px;
-  /* Overlap effect */
-  border: 2px solid white;
-  object-fit: cover; }
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: -10px; /* Overlap effect */
+    border: 2px solid white;
+    object-fit: cover;
+}
 
 /* General */
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/
-/***********************************************************************************************************************************************************************************************************/
-/*Mobile*/
-@media all and (max-width: 641px) {
-  .DashboardCardRB {
-    flex-direction: column;
-    align-items: center; }
 
-  .cardRB {
-    width: 150px;
-    /* Use the variable */
-    height: 150px;
-    /* Use the variable */ } }
+/***********************************************************************************************************************************************************************************************************/
+/*Mobile*/
+@media all and (max-width:641px){
+    .DashboardCardRB {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cardRB {
+        width: 150px;  /* Use the variable */
+        height: 150px;  /* Use the variable */
+
+    }
+}
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
+
 /***********************************************************************************************************************************************************************************************************/
 /*PC*/
-@media all and (min-width: 642px) {
-  /*Navigation Area*/ }
+@media all and (min-width:642px){
+    /*Navigation Area*/
+}
 /*PC*/
 /***********************************************************************************************************************************************************************************************************/
+
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
+@media all and (min-width:1081px){
+    
+}
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
+
 /*Media Queries*/
 /***********************************************************************************************************************************************************************************************************/
-
-/*# sourceMappingURL=DashboardCardRB.css.map */
