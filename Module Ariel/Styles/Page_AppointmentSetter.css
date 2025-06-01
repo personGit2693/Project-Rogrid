@@ -4,6 +4,11 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+:root {
+  --aSetterFontFamily: 'Arial', sans-serif;
+  --aSetterHeaderFontSize: 27px;
+  --aSetterDaysTextSize: 18px; }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -13,15 +18,15 @@
   position: relative;
   flex-flow: column;
   box-sizing: border-box;
-  border: 2px solid red; }
+  font-family: var(--aSetterFontFamily); }
 
 .ar_ASetterDate {
   display: flex;
   position: relative;
+  flex-flow: row wrap;
   box-sizing: border-box;
-  font-size: 25px;
-  padding: 5px;
-  border: 2px solid blue; }
+  font-size: var(--aSetterHeaderFontSize);
+  padding: 5px; }
 
 .ar_Date {
   margin-left: 7px;
@@ -29,6 +34,42 @@
   padding: 3px;
   border-radius: 25px;
   box-sizing: border-box; }
+
+.ar_Days {
+  display: flex;
+  position: relative;
+  flex-flow: row;
+  padding-left: 5px;
+  font-size: var(--aSetterDaysTextSize);
+  font-weight: bold;
+  border-bottom: 2.5px solid blue;
+  box-sizing: border-box; }
+
+.ar-AppointmentTime {
+  font-size: 13.5px;
+  font-style: oblique;
+  padding-left: 15px;
+  box-sizing: border-box; }
+
+.ar_subAppointmentTime {
+  padding-left: 18px;
+  margin: 1px;
+  box-sizing: border-box; }
+
+.ar-individualTime {
+  padding: 4px;
+  font-weight: 500;
+  border-radius: 7px;
+  border: 0.5px solid black;
+  margin-bottom: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-out, border 0.3s ease-out; }
+
+.ar-individualTime:hover {
+  background-color: #80bfff;
+  border: 2px solid black;
+  box-sizing: border-box;
+  text-decoration: underline; }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
