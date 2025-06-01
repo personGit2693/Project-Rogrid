@@ -18,13 +18,12 @@
   height: var(--profileContainerHeight);
   width: var(--profileContainerwidth);
   border-radius: 10px;
-  overflow: hidden;
-  border: 2px solid green; }
+  overflow: hidden; }
 
 .ar_ProfileLoaderLine {
   display: flex;
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;

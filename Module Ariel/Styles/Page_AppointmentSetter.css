@@ -1,98 +1,89 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Import Mixins*/
-
 /*Import Mixins*/
 /***********************************************************************************************************************************************************************************************************/
-
-
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
-:root{
---profileContainerHeight: 150px;
---profileContainerwidth: 450px;
-  
+:root {
+  --aSetterFontFamily: 'Arial', sans-serif;
+  --aSetterHeaderFontSize: 27px;
+  --aSetterDaysTextSize: 18px; }
 
-}
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
-
-
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-.ar_ProfileContainer{
+.ar_ASetter {
   display: flex;
   position: relative;
-  height: var(--profileContainerHeight);
-  width: var(--profileContainerwidth);
-  border-radius: 10px;
-  overflow: hidden;
-  
-}
-
-
-
-.ar_ProfileLoaderLine {
-  display: flex;
-  position: relative;
-  height: auto;
-  width: 100%;
-  overflow: hidden;
+  flex-flow: column;
   box-sizing: border-box;
-  background: linear-gradient(
-  100deg,
-  #e6e6e6 30%,
-  #d9d9d9 50%,
-  #cccccc 70%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
+  font-family: var(--aSetterFontFamily); }
 
+.ar_ASetterDate {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  font-size: var(--aSetterHeaderFontSize);
+  padding: 5px; }
 
+.ar_Date {
+  margin-left: 7px;
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 25px;
+  box-sizing: border-box; }
 
-  @keyframes shimmer {
-    0% {
-      background-position: 150% 0;
-  }
-    100% {
-      background-position: -150% 0;
-    }
-  }
+.ar_Days {
+  display: flex;
+  position: relative;
+  flex-flow: row;
+  padding-left: 5px;
+  font-size: var(--aSetterDaysTextSize);
+  font-weight: bold;
+  border-bottom: 2.5px solid blue;
+  box-sizing: border-box; }
 
-  @keyframes pulseBg {
-    0%, 100% {
-      background-color: #ffffff;
-    }
-    50% {
-      background-color: #f2f2f2;
-    }
-  }
+.ar-AppointmentTime {
+  font-size: 13.5px;
+  font-style: oblique;
+  padding-left: 15px;
+  box-sizing: border-box; }
 
- 
+.ar_subAppointmentTime {
+  padding-left: 18px;
+  margin: 1px;
+  box-sizing: border-box; }
+
+.ar-individualTime {
+  padding: 4px;
+  font-weight: 500;
+  border-radius: 7px;
+  border: 0.5px solid black;
+  margin-bottom: 3px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-out, border 0.3s ease-out; }
+
+.ar-individualTime:hover {
+  background-color: #80bfff;
+  border: 2px solid black;
+  box-sizing: border-box;
+  text-decoration: underline; }
+
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
-
-
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
-@media all and (max-width:641px){
-}
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
-
-
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){
-}
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
-
-
 /***********************************************************************************************************************************************************************************************************/
 /*Desktop*/
-@media all and (min-width:1081px){
-}
 /*Desktop*/
 /***********************************************************************************************************************************************************************************************************/
 
+/*# sourceMappingURL=Page_AppointmentSetter.css.map */
