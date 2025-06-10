@@ -1,6 +1,7 @@
 /****************************************************************************************************************************************************************************/
 /*cusInputs_RoClass highlight focus*/
-const highlightInWrap = (inputId, fontColorValue) =>{
+
+const highlightInWrap = (inputs_Param, fontColorValue, inputId) =>{
 
 	const inputText = document.getElementById(inputId);
 
@@ -8,7 +9,7 @@ const highlightInWrap = (inputId, fontColorValue) =>{
 	inputText.parentElement.children[1].style.color = fontColorValue;
 }
 
-const lowlightInWrap = (inputId, fontColorValue) =>{
+const lowlightInWrap = (inputs_Param, fontColorValue, inputId) =>{
 
 	const inputText = document.getElementById(inputId);
 
@@ -18,6 +19,7 @@ const lowlightInWrap = (inputId, fontColorValue) =>{
 		inputText.parentElement.children[1].style.color = fontColorValue;
 	}
 }
+
 /*cusInputs_RoClass highlight focus*/
 /****************************************************************************************************************************************************************************/
 
@@ -29,13 +31,13 @@ const lowlightInWrap = (inputId, fontColorValue) =>{
 /*Display current date*/
 
 if(document.getElementsByClassName("currentDate_RoClass").length != 0){
-	/*_currentDate_RoClass Element where to display current date*/
+	/*currentDate_RoClass Element where to display current date*/
 	const currentDate_RoClass_Rogrid = document.getElementsByClassName("currentDate_RoClass")[0];
 
 	const dateInstance_Rogrid = new Date();
 
 	currentDate_RoClass_Rogrid.innerText = dateInstance_Rogrid.toDateString();
-	/*_currentDate_RoClass Element where to display current date*/
+	/*currentDate_RoClass Element where to display current date*/
 }
 
 /*Display current date*/
@@ -47,17 +49,27 @@ if(document.getElementsByClassName("currentDate_RoClass").length != 0){
 
 /****************************************************************************************************************************************************************************/
 /*Check and uncheck Custom Checkbox*/
-const checkCusCheckBox = (checkBoxId) =>{
+
+const checkCusCheckBox = (realCheckboxElem_Param, checkBoxId) =>{
 
 	const inputCheckbox = document.getElementById(checkBoxId);
 
+	const checkBoxme_Rogrid = inputCheckbox.previousElementSibling.children[0];
 	const checkImageElem_Rogrid = inputCheckbox.previousElementSibling.children[0].children[0]; /*check image element*/
-	if(inputCheckbox.checked === true){
-		checkImageElem_Rogrid.style.visibility = "visible";		
-	}else if(inputCheckbox.checked === false){
+
+	if(checkBoxme_Rogrid.getAttribute("data-rogridcheckbox-check") == "false"){
+
+		checkImageElem_Rogrid.style.visibility = "visible";
+		inputCheckbox.checked = true;
+		checkBoxme_Rogrid.setAttribute("data-rogridcheckbox-check", "true");		
+	}else if(checkBoxme_Rogrid.getAttribute("data-rogridcheckbox-check") == "true"){
+
 		checkImageElem_Rogrid.style.visibility = "hidden";		
+		inputCheckbox.checked = false;
+		checkBoxme_Rogrid.setAttribute("data-rogridcheckbox-check", "false");
 	}
 }
+
 /*Check and uncheck Custom Checkbox*/
 /****************************************************************************************************************************************************************************/
 
@@ -69,15 +81,15 @@ const checkCusCheckBox = (checkBoxId) =>{
 /*Show and Close Custom Modal*/
 
 
-/*_Function to show blurrer only*/
+/*Function to show blurrer only*/
 const showBlurrerOnly = () =>{
 	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
 	thisIsJapan_Class_Rogrid.style.display = "block";
 }
-/*_Function to show blurrer only*/
+/*Function to show blurrer only*/
 
 
-/*_Function to show modal*/
+/*Function to show modal*/
 const showMyMod = (elemId) =>{	
 	const elem = document.getElementById(elemId);
 
@@ -85,7 +97,7 @@ const showMyMod = (elemId) =>{
 	elem.style.display = "block";
 	asyncDelayModal(elemId);
 }
-/*_Function to show modal*/
+/*Function to show modal*/
 
 
 /*Async function to delay the animation for showing modal*/
@@ -125,7 +137,7 @@ function closeMyMod(elem){
 /****************************************************************************************************************************************************************************/
 /*Spinning Loading*/
 
-/*_Function for showing the spinner loading*/
+/*Function for showing the spinner loading*/
 const showSpinningLoad = () => {
 	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
 	const spinnerLoad_RoClass_Rogrid = document.getElementsByClassName("spinnerLoad_RoClass")[0];
@@ -133,10 +145,10 @@ const showSpinningLoad = () => {
 	spinnerLoad_RoClass_Rogrid.style.display = "block";
 	thisIsJapan_Class_Rogrid.style.display = "block";
 }
-/*_Function for showing the spinner loading*/
+/*Function for showing the spinner loading*/
 
 
-/*_Function for closing the spinner loading*/
+/*Function for closing the spinner loading*/
 const removeSpinningLoad = () => {
 	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
 	const spinnerLoad_RoClass_Rogrid = document.getElementsByClassName("spinnerLoad_RoClass")[0];
@@ -144,7 +156,7 @@ const removeSpinningLoad = () => {
 	spinnerLoad_RoClass_Rogrid.style.display = "none";
 	thisIsJapan_Class_Rogrid.style.display = "none";
 }
-/*_Function for closing the spinner loading*/
+/*Function for closing the spinner loading*/
 
 /*Spinning Loading*/
 /****************************************************************************************************************************************************************************/
@@ -191,13 +203,13 @@ const notifyNodeBox = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
 	const notifBoxWrapperId_Rogrid = document.getElementById(wrapperId_Param);
 
 	if(resultBool_Param == true){
-		/*_<div class="notifyFlex_Suc_RoClass">*/
+		/*<div class="notifyFlex_Suc_RoClass">*/
 		const notifyFlex_Suc_RoClass_Rogrid = document.createElement("div");
 		notifyFlex_Suc_RoClass_Rogrid.className = "notifyFlex_Suc_RoClass";
-		/*_<div class="notifyFlex_Suc_RoClass">*/
+		/*<div class="notifyFlex_Suc_RoClass">*/
 
 
-		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
 		const notifyMessItem_Suc_RoClass_Rogrid = document.createElement("div");
 		notifyMessItem_Suc_RoClass_Rogrid.className = "notifyMessItem_Suc_RoClass";
 
@@ -209,44 +221,44 @@ const notifyNodeBox = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
 
 		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
 		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
 
 
-		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+		/*<div class="notifyCloseItem_Suc_RoClass">*/
 		const notifyCloseItem_Suc_RoClass_Rogrid = document.createElement("div");
 		notifyCloseItem_Suc_RoClass_Rogrid.className = "notifyCloseItem_Suc_RoClass";
-		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+		/*<div class="notifyCloseItem_Suc_RoClass">*/
 
 
-		/*_<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
 		const closeNotiBoxImg_Suc_Rogrid = document.createElement("img");
 		closeNotiBoxImg_Suc_Rogrid.setAttribute("src", "../../src/closeModIcon_Suc.png");
 		closeNotiBoxImg_Suc_Rogrid.addEventListener("click", function(){
 			removeNotiBox(this); /*From framework*/
 		});
-		/*_<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
 
 
-		/*_Append*/
+		/*Append*/
 		notifyCloseItem_Suc_RoClass_Rogrid.appendChild(closeNotiBoxImg_Suc_Rogrid);
 		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyMessItem_Suc_RoClass_Rogrid);
 		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyCloseItem_Suc_RoClass_Rogrid);
 		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Suc_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*_Append*/
+		/*Append*/
 
 
-		/*_Execute Notification Box Timeout*/
+		/*Execute Notification Box Timeout*/
 		removeNotiBox_Timeout(closeNotiBoxImg_Suc_Rogrid);
-		/*_Execute Notification Box Timeout*/
+		/*Execute Notification Box Timeout*/
 
 	}else if(resultBool_Param == false){
-		/*_<div class="notifyFlex_Failed_RoClass">*/
+		/*<div class="notifyFlex_Failed_RoClass">*/
 		const notifyFlex_Failed_RoClass_Rogrid = document.createElement("div");
 		notifyFlex_Failed_RoClass_Rogrid.className = "notifyFlex_Failed_RoClass";
-		/*_<div class="notifyFlex_Failed_RoClass">*/
+		/*<div class="notifyFlex_Failed_RoClass">*/
 
 
-		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
 		const notifyMessItem_Failed_RoClass_Rogrid = document.createElement("div");
 		notifyMessItem_Failed_RoClass_Rogrid.className = "notifyMessItem_Failed_RoClass";
 
@@ -258,36 +270,36 @@ const notifyNodeBox = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
 
 		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
 		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
 
 
-		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+		/*<div class="notifyCloseItem_Failed_RoClass">*/
 		const notifyCloseItem_Failed_RoClass_Rogrid = document.createElement("div");
 		notifyCloseItem_Failed_RoClass_Rogrid.className = "notifyCloseItem_Failed_RoClass";
-		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+		/*<div class="notifyCloseItem_Failed_RoClass">*/
 
 
-		/*_<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
 		const closeNotiBoxImg_Failed_Rogrid = document.createElement("img");
 		closeNotiBoxImg_Failed_Rogrid.setAttribute("src", "../../src/closeModIcon_Failed.png");
 		closeNotiBoxImg_Failed_Rogrid.addEventListener("click", function(){
 			removeNotiBox(this); /*From framework*/
 		});
-		/*_<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
 
 
-		/*_Append*/
+		/*Append*/
 		notifyCloseItem_Failed_RoClass_Rogrid.appendChild(closeNotiBoxImg_Failed_Rogrid);
 		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyMessItem_Failed_RoClass_Rogrid);
 		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyCloseItem_Failed_RoClass_Rogrid);
 		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Failed_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*_Append*/
+		/*Append*/
 		
 
 
-		/*_Execute Notification Box Timeout*/
+		/*Execute Notification Box Timeout*/
 		removeNotiBox_Timeout(closeNotiBoxImg_Failed_Rogrid);
-		/*_Execute Notification Box Timeout*/
+		/*Execute Notification Box Timeout*/
 	}
 }
 /*Function for creating notification box with auto close*/
@@ -303,13 +315,13 @@ const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param)
 	const notifBoxWrapperId_Rogrid = document.getElementById(wrapperId_Param);
 
 	if(resultBool_Param == true){
-		/*_<div class="notifyFlex_Suc_RoClass">*/
+		/*<div class="notifyFlex_Suc_RoClass">*/
 		const notifyFlex_Suc_RoClass_Rogrid = document.createElement("div");
 		notifyFlex_Suc_RoClass_Rogrid.className = "notifyFlex_Suc_RoClass";
-		/*_<div class="notifyFlex_Suc_RoClass">*/
+		/*<div class="notifyFlex_Suc_RoClass">*/
 
 
-		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
 		const notifyMessItem_Suc_RoClass_Rogrid = document.createElement("div");
 		notifyMessItem_Suc_RoClass_Rogrid.className = "notifyMessItem_Suc_RoClass";
 
@@ -321,38 +333,38 @@ const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param)
 
 		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
 		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*_<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
 
 
-		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+		/*<div class="notifyCloseItem_Suc_RoClass">*/
 		const notifyCloseItem_Suc_RoClass_Rogrid = document.createElement("div");
 		notifyCloseItem_Suc_RoClass_Rogrid.className = "notifyCloseItem_Suc_RoClass";
-		/*_<div class="notifyCloseItem_Suc_RoClass">*/
+		/*<div class="notifyCloseItem_Suc_RoClass">*/
 
 
-		/*_<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
 		const closeNotiBoxImg_Suc_Rogrid = document.createElement("img");
 		closeNotiBoxImg_Suc_Rogrid.setAttribute("src", "../../src/closeModIcon_Suc.png");
 		closeNotiBoxImg_Suc_Rogrid.addEventListener("click", function(){
 			removeNotiBox(this); /*From framework*/
 		});
-		/*_<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
 
 
-		/*_Append*/
+		/*Append*/
 		notifyCloseItem_Suc_RoClass_Rogrid.appendChild(closeNotiBoxImg_Suc_Rogrid);
 		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyMessItem_Suc_RoClass_Rogrid);
 		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyCloseItem_Suc_RoClass_Rogrid);
 		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Suc_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*_Append*/
+		/*Append*/
 	}else if(resultBool_Param == false){
-		/*_<div class="notifyFlex_Failed_RoClass">*/
+		/*<div class="notifyFlex_Failed_RoClass">*/
 		const notifyFlex_Failed_RoClass_Rogrid = document.createElement("div");
 		notifyFlex_Failed_RoClass_Rogrid.className = "notifyFlex_Failed_RoClass";
-		/*_<div class="notifyFlex_Failed_RoClass">*/
+		/*<div class="notifyFlex_Failed_RoClass">*/
 
 
-		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
 		const notifyMessItem_Failed_RoClass_Rogrid = document.createElement("div");
 		notifyMessItem_Failed_RoClass_Rogrid.className = "notifyMessItem_Failed_RoClass";
 
@@ -364,30 +376,30 @@ const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param)
 
 		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
 		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*_<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
+		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
 
 
-		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+		/*<div class="notifyCloseItem_Failed_RoClass">*/
 		const notifyCloseItem_Failed_RoClass_Rogrid = document.createElement("div");
 		notifyCloseItem_Failed_RoClass_Rogrid.className = "notifyCloseItem_Failed_RoClass";
-		/*_<div class="notifyCloseItem_Failed_RoClass">*/
+		/*<div class="notifyCloseItem_Failed_RoClass">*/
 
 
-		/*_<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
 		const closeNotiBoxImg_Failed_Rogrid = document.createElement("img");
 		closeNotiBoxImg_Failed_Rogrid.setAttribute("src", "../../src/closeModIcon_Failed.png");
 		closeNotiBoxImg_Failed_Rogrid.addEventListener("click", function(){
 			removeNotiBox(this); /*From framework*/
 		});
-		/*_<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
+		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
 
 
-		/*_Append*/
+		/*Append*/
 		notifyCloseItem_Failed_RoClass_Rogrid.appendChild(closeNotiBoxImg_Failed_Rogrid);
 		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyMessItem_Failed_RoClass_Rogrid);
 		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyCloseItem_Failed_RoClass_Rogrid);
 		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Failed_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*_Append*/
+		/*Append*/
 	}
 }
 /*Function for creating notification box without auto close*/
@@ -399,7 +411,7 @@ const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param)
 
 /****************************************************************************************************************************************************************************/
 /*Function for checking and unchecking custom radio button*/
-const radioCircleSelected = (radioId, innerCircleColor) =>{
+const radioCircleSelected = (origRadioBtn_Elem, innerCircleColor, radioId) =>{
 
 	const inputRadio = document.getElementById(radioId);
 
@@ -411,12 +423,13 @@ const radioCircleSelected = (radioId, innerCircleColor) =>{
 
 		const customRadioCircleBtn_Rogrid = origRadioBtnColl_Rogrid[index].previousElementSibling; /*Get the customized radio button or the label elem Section.*/		
 
-		/*_Checking which radio button is selected and design its customized radio button*/
+		/*Checking which radio button is selected and design its customized radio button*/
 		if(origRadioBtnColl_Rogrid[index] === inputRadio){
 
 			if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "false"){
 				
 				origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "true");				
+				origRadioBtnColl_Rogrid[index].checked = true;
 				customRadioCircleBtn_Rogrid.style.boxShadow = "0px 0px 15px "+innerCircleColor;
 				customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = innerCircleColor;				
 
@@ -426,7 +439,7 @@ const radioCircleSelected = (radioId, innerCircleColor) =>{
 				origRadioBtnColl_Rogrid[index].checked = false;
 				customRadioCircleBtn_Rogrid.style.boxShadow = "none";
 				customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = "transparent";
-			}		
+			}
 
 		}else if(origRadioBtnColl_Rogrid[index] !== inputRadio){
 
@@ -435,12 +448,12 @@ const radioCircleSelected = (radioId, innerCircleColor) =>{
 			customRadioCircleBtn_Rogrid.style.boxShadow = "none";
 			customRadioCircleBtn_Rogrid.children[0].style.backgroundColor = "transparent";
 		}
-		/*_Checking which radio button is selected and design its customized radio button*/
+		/*Checking which radio button is selected and design its customized radio button*/
 	}
 }
 
 
-const radioCheckSelected = (radioId) =>{
+const radioCheckSelected = (origRadioBtn_Elem, radioId) =>{
 
 	const inputRadio = document.getElementById(radioId);
 
@@ -449,13 +462,14 @@ const radioCheckSelected = (radioId) =>{
 	const origRadioBtnColl_Rogrid = document.getElementsByName(origRadioBtnName_Rogrid); /*Filter only the involved original button and collect them Section.*/
 	
 
-	/*_Checking which radio button is selected and make the customized check visible*/
+	/*Checking which radio button is selected and make the customized check visible*/
 	for(let index=0; origRadioBtnColl_Rogrid.length > index; index++){
 
 		if(origRadioBtnColl_Rogrid[index] === inputRadio){
 
 			if(origRadioBtnColl_Rogrid[index].getAttribute("data-rogridradio-check") == "false"){
 
+				origRadioBtnColl_Rogrid[index].checked = true;
 				origRadioBtnColl_Rogrid[index].setAttribute("data-rogridradio-check", "true");
 				origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "visible";
 
@@ -473,7 +487,7 @@ const radioCheckSelected = (radioId) =>{
 			origRadioBtnColl_Rogrid[index].previousElementSibling.children[0].style.visibility = "hidden";
 		}
 	}
-	/*_Checking which radio button is selected and make the customized check visible*/
+	/*Checking which radio button is selected and make the customized check visible*/
 }
 /*Function for checking and unchecking custom radio button*/
 /****************************************************************************************************************************************************************************/
@@ -662,9 +676,9 @@ function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height)
 
 	/*Assign selectedOptValue value*/
 	selectedOptValue.value = optValue.value;
-	displayedSelectedFlex.title = optText.innerText.trim();;
+	displayedSelectedFlex.title = optText.innerText.trim();
 	displayedSelectedIcon.style.setProperty("--optIcon", getComputedStyle(optIcon).getPropertyValue('--optIcon'));
-	displayedSelectedText.innerText = optText.innerText.trim();;
+	displayedSelectedText.innerText = optText.innerText.trim();
 	displayedSelectedResetBtn.style.display = "block";
 	/*Assign selectedOptValue value*/
 }
@@ -675,8 +689,10 @@ function focusoutSearchSelectDrop(searchOpts, selectDropdownOptionsWrap_Height){
 }
 
 
-function resetSelectDropdown(resetSelDropBtn, resetSelDropTitle, resetSelDropIcon, resetSelDropText){
+function resetSelectDropdown(resetSelDropBtnId, resetSelDropTitle, resetSelDropIcon, resetSelDropText){
 
+	const resetSelDropBtn = document.getElementById(resetSelDropBtnId); 
+	
 	const selectedOptValue = resetSelDropBtn.parentElement.parentElement.querySelector(".selectedOptValue_RoClass");
 	const selectedFlex = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass");
 	const selectedIcon = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedIcon_RoClass");
@@ -684,25 +700,25 @@ function resetSelectDropdown(resetSelDropBtn, resetSelDropTitle, resetSelDropIco
 
 
 	/*Reset Area*/
-	/*_Reset Select Dropdown Value*/
+	/*Reset Select Dropdown Value*/
 	selectedOptValue.value = "";
-	/*_Reset Select Dropdown Value*/
+	/*Reset Select Dropdown Value*/
 
-	/*_Display none displayedSelectedResetBtn*/
+	/*Display none displayedSelectedResetBtn*/
 	resetSelDropBtn.style.display = "none";
-	/*_Display none displayedSelectedResetBtn*/
+	/*Display none displayedSelectedResetBtn*/
 
-	/*_Reset Title*/
+	/*Reset Title*/
 	selectedFlex.title = resetSelDropTitle;
-	/*_Reset Title*/
+	/*Reset Title*/
 
-	/*_Reset Icon*/
+	/*Reset Icon*/
 	selectedIcon.style.setProperty("--optIcon", "url('"+resetSelDropIcon+"')");
-	/*_Reset Icon*/
+	/*Reset Icon*/
 
-	/*_Reset Text*/
+	/*Reset Text*/
 	selectedText.innerText = resetSelDropText.trim();
-	/*_Reset Text*/
+	/*Reset Text*/
 	/*Reset Area*/
 }
 /*Display Select Dropdown Options*/
@@ -847,20 +863,4 @@ function resetStep(stepByStepFlex_id, wrapper_id){
 }
 /*Function to reset step*/
 /*Step by step*/
-/****************************************************************************************************************************************************************************/
-
-
-/****************************************************************************************************************************************************************************/
-/*Tabbed Page*/
-function controller_Tab_Switch(index) {
-    const contents = document.querySelectorAll('.RBTP-content');
-    const tabs = document.querySelectorAll('.RBTP-tab');
-
-    contents.forEach(content => content.classList.remove('active'));
-    tabs.forEach(tab => tab.classList.remove('active'));
-
-    contents[index].classList.add('active');
-    tabs[index].classList.add('active');
-}
-/*Tabbed Page*/
 /****************************************************************************************************************************************************************************/

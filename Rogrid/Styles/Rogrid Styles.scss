@@ -34,6 +34,57 @@
 }
 /*Basic Button*/
 
+
+/*Modal First Model*/
+.modal_con_rg{
+	position: fixed;
+	display: none;
+	overflow: auto;
+	box-sizing: border-box;
+	border: 1px solid grey;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 0px;
+	height: 0px;
+	background-color: rgba(237, 231, 225 ,0.5);		
+	flex-flow: column nowrap;
+	align-items: center;
+	transition: width 0.5s ease-out 0s, height 0.5s ease-out 1s;
+}
+
+.modal_rg{
+	position: absolute;
+	display: none;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: var(--modal_rg_width);
+	height: var(--modal_rg_height);
+	top: var(--modal_rg_top);
+	border-radius: 7px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--modal_rg_bordercolor);
+	background-color: var(--modal_rg_bgcolor);
+	transition: top 0.5s ease-out 0s;
+	flex-shrink: 0;
+	transform: scale(0);
+	transition: transform 0.3s ease-out 1.5s;
+}
+
+.modal_head_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	width: auto;
+	top: 0px;		
+	flex-wrap: nowrap;
+	flex-direction: row;
+	background-color: var(--modal_head_rg_bgcolor);
+}
+/*Modal First Model*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
