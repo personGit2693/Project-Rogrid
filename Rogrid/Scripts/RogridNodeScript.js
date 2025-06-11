@@ -1,7 +1,7 @@
 /****************************************************************************************************************************************************************************/
 /*cusInputs_RoClass highlight focus*/
 
-const highlightInWrap = (inputs_Param, fontColorValue, inputId) =>{
+const highlightInWrap = (fontColorValue, inputId) =>{
 
 	const inputText = document.getElementById(inputId);
 
@@ -9,7 +9,7 @@ const highlightInWrap = (inputs_Param, fontColorValue, inputId) =>{
 	inputText.parentElement.children[1].style.color = fontColorValue;
 }
 
-const lowlightInWrap = (inputs_Param, fontColorValue, inputId) =>{
+const lowlightInWrap = (fontColorValue, inputId) =>{
 
 	const inputText = document.getElementById(inputId);
 
@@ -90,7 +90,7 @@ const showBlurrerOnly = () =>{
 
 
 /*Function to show modal*/
-const showMyMod = (elemId) =>{	
+function showMyMod(elemId){	
 	const elem = document.getElementById(elemId);
 
 	elem.parentElement.style.display = "flex";
@@ -118,12 +118,14 @@ async function asyncDelayModal(elemId){
 
 
 /*Function to close modal*/
-function closeMyMod(elem){
-	elem.parentElement.parentElement.parentElement.style.display = "none";
-	elem.parentElement.parentElement.parentElement.style.width = "0px";
-	elem.parentElement.parentElement.parentElement.style.height = "0px";
-	elem.parentElement.parentElement.style.display = "none";
-	elem.parentElement.parentElement.style.transform = "scale(0)";
+function closeMyMod(elemId){
+	const elem = document.getElementById(elemId);
+
+	elem.parentElement.style.display = "none";
+	elem.parentElement.style.width = "0px";
+	elem.parentElement.style.height = "0px";
+	elem.style.display = "none";
+	elem.style.transform = "scale(0)";
 }
 /*Function to close modal*/
 

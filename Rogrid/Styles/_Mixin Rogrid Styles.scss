@@ -5,4 +5,18 @@
 	background-color: var(--btn_rg_active_bgcolor);
 }
 /*Basic Button*/
+
+
+/*Inputs*/
+@mixin input_rg_placeholder{
+	position: absolute;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	z-index: -1;
+	transition: top 0.1s linear 0s, font-size 0.1s linear 0s;
+	text-overflow: ellipsis;
+}
+/*Inputs*/
 /***********************************************************************************************************************************************************************************************************/
