@@ -1,26 +1,26 @@
 /****************************************************************************************************************************************************************************/
-/*cusInputs_RoClass highlight focus*/
+/*input_rg focus and focus out*/
 
-const highlightInWrap = (fontColorValue, inputId) =>{
+function input_rg_focus(fcolor, inputId){
 
-	const inputText = document.getElementById(inputId);
+	const inputElem = document.getElementById(inputId);
 
-	inputText.parentElement.style.borderColor = fontColorValue;
-	inputText.parentElement.children[1].style.color = fontColorValue;
+	inputElem.parentElement.style.borderColor = fcolor;
+	inputElem.parentElement.children[1].style.color = fcolor;
 }
 
-const lowlightInWrap = (fontColorValue, inputId) =>{
+function input_rg_out(fcolor, inputId){
 
-	const inputText = document.getElementById(inputId);
+	const inputElem = document.getElementById(inputId);
 
-	if(inputText.value==""){
+	if(inputElem.value==""){
 
-		inputText.parentElement.style.borderColor = fontColorValue;
-		inputText.parentElement.children[1].style.color = fontColorValue;
+		inputElem.parentElement.style.borderColor = fcolor;
+		inputElem.parentElement.children[1].style.color = fcolor;
 	}
 }
 
-/*cusInputs_RoClass highlight focus*/
+/*input_rg focus and focus out*/
 /****************************************************************************************************************************************************************************/
 
 
