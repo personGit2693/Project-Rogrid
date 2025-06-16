@@ -9,6 +9,7 @@
 <body>
 
 	<div class="ar_PrescriptionMain">
+
 		<div class="ar_prescriptContainer">
 			<div class="ar_PrescriptHead">Prescription's</div>
 
@@ -21,7 +22,14 @@
 			</div>
 		</div>
 
-		<ul id="product-list">
+
+		<div class="ar_prescriptFillup">
+			<input type="text" class="ar-prescription-name" placeholder="Product name (e.g., Lisinopril 20mg)">
+			<input type="date" class="ar-prescription-date">
+			<button class="ar_addPrecsriptionBTN" onclick="controller_Btn_AddPrescriptions()">Add Prescription</button>
+		</div>
+
+		<ul class="ar-prescriptionList">
 			<li data-name="Amlodipine 10mg" data-date="2023-01-10">Amlodipine 10mg  - 2023-01-10</li>
 			<li data-name="Metoprolol 50mg"  data-date="2023-03-05">Metoprolol 50mg -  2023-03-05</li>
 			<li data-name="Farxiga 10mg"  data-date="2023-02-20">Farxiga 10mg -  2023-02-20</li>
@@ -35,5 +43,18 @@
 
 	<script type="module" src="../Client Side/Controller_Click_PrescriptionDropDown.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_FilterItems.js"></script>
+	<script type="module" src="../Client Side/Controller_Btn_AddPrescriptions.js"></script>
+
+	<script>
+		 function createListItem(name, date) {
+      const newItem = document.createElement("li");
+      newItem.setAttribute("data-name", name);
+      newItem.setAttribute("data-date", date);
+      newItem.textContent = `${name} - ${date}`;
+
+      const list = document.querySelector(".ar-prescriptionList");
+      list.appendChild(newItem);
+    }
+	</script>
 </body>
 </html>

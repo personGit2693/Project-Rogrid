@@ -4,42 +4,37 @@
 
 
 /*Controller*/
+
 let sortOrder = {
-    date: 'asc',
-    name: 'asc'
+    name: 'asc',
+    date: 'asc'
 };
 
 function controller_Btn_FilterItems(attribute) {
-    // Prevent sorting if attribute is not allowed
-    if (!sortOrder.hasOwnProperty(attribute)) return;
+      const list = document.querySelector(".ar-prescriptionList");
+      const items = Array.from(list.children);
 
-    const productList = document.getElementById('product-list');
-    const items = Array.from(productList.children);
-    
-    items.sort((a, b) => {
+      items.sort((a, b) => {
         let valueA = a.getAttribute(`data-${attribute}`);
         let valueB = b.getAttribute(`data-${attribute}`);
 
         if (attribute === 'date') {
-            valueA = new Date(valueA);
-            valueB = new Date(valueB);
+          valueA = new Date(valueA);
+          valueB = new Date(valueB);
         }
 
         if (sortOrder[attribute] === 'asc') {
-            return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+          return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
         } else {
-            return valueA > valueB ? -1 : valueA < valueB ? 1 : 0;
+          return valueA > valueB ? -1 : valueA < valueB ? 1 : 0;
         }
-    });
+      });
 
-    // Toggle sort order for next click
-    sortOrder[attribute] = sortOrder[attribute] === 'asc' ? 'desc' : 'asc';
+      items.forEach(item => list.appendChild(item));
 
-    // Re-append sorted items
-    productList.innerHTML = '';
-    items.forEach(item => productList.appendChild(item));
-}
-
+      // Toggle sort order for next click
+      sortOrder[attribute] = sortOrder[attribute] === 'asc' ? 'desc' : 'asc';
+    }
 /*Controller*/
 
 
