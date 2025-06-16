@@ -1,7 +1,7 @@
-Version: 3.5
+Version: 4
 
 Updates:
-1. Input, checkbox, radio button functions have updates with their parameters; "this" as parameter is now replaced by input's I.Ds.
-2. Step by step is now have a reset function.
-3. Trimming space for every dropdown option value.
-4. parentNode is replaced with parentElement.
+1. Provided Major Revisions on Dependencies Files.
+2. "Rogrid Styles.scss" new scss file should be imported.
+3. Renamed function names.
+4. Decreased required parameters.
