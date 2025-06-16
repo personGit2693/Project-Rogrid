@@ -4,11 +4,17 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
+:root {
+  --prescriptionFontFamily: Arial, Helvetica, sans-serif;
+  --prescriptionColorTheme: #4caf50;
+  --prescriptionColorThemeHover: #80c883; }
+
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 .ar_PrescriptionMain {
+  font-size: var(--prescriptionFontFamily);
   display: flex;
   position: relative;
   flex-flow: column;
@@ -21,7 +27,8 @@
   box-sizing: border-box;
   padding: 5px;
   align-items: center;
-  border-bottom: 3px solid #4CAF50;
+  border-bottom: 3px solid;
+  border-color: var(--prescriptionColorTheme);
   margin-right: 7px;
   margin-left: 7px; }
 
@@ -51,7 +58,8 @@
   padding: 5px;
   margin-left: -105px;
   background-color: whitesmoke;
-  border: 2px solid green; }
+  border: 2px solid;
+  border-color: var(--prescriptionColorTheme); }
 
 .pic_Filter {
   background-position: center;
@@ -78,7 +86,7 @@ input[type="date"] {
   padding: 9px 9px;
   font-size: 16px;
   color: #fff;
-  background-color: #4CAF50;
+  background-color: var(--prescriptionColorTheme);
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -89,12 +97,20 @@ input[type="date"] {
   padding: 5px;
   margin-left: 10px; }
 
-.ar-prescriptionList li {
+.ar_precriptMedicationList {
   padding: 10px;
+  font-size: 17px;
   background-color: #fff;
   margin-bottom: 5px;
-  border-left: 4px solid #4CAF50;
+  border-left: 4px solid var(--prescriptionColorTheme);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+
+.ar_precriptMedicationList:hover {
+  background-color: var(--prescriptionColorThemeHover); }
+
+.ar_prescriptButton:hover {
+  background-color: var(--prescriptionColorThemeHover);
+  border-radius: 7px; }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/

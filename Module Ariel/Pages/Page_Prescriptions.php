@@ -16,8 +16,8 @@
 			<div class="ar_prescriptSorting" id="Prescription" onclick="controller_Click_PrescriptionDropDown('Prescription')">
 				<div class="ar_prescriptSort pic_Filter" style="--profileDropDownArrowDownImg: url('../../src/ArrowDown.png')"></div>
 				<div class="ar-PrescriptFilter">
-					<button class="menu-item_ArFilter" onclick="controller_Btn_FilterItems('name')">Sort by Name (Asc/Desc)</button>
-					<button class="menu-item_ArFilter" onclick="controller_Btn_FilterItems('date')">Sort by Date (Asc/Desc)</button>
+					<button class="ar_prescriptButton" onclick="controller_Btn_FilterItems('name')">Sort by Name (Asc/Desc)</button>
+					<button class="ar_prescriptButton" onclick="controller_Btn_FilterItems('date')">Sort by Date (Asc/Desc)</button>
 				</div>
 			</div>
 		</div>
@@ -30,10 +30,10 @@
 		</div>
 
 		<ul class="ar-prescriptionList">
-			<li data-name="Amlodipine 10mg" data-date="2023-01-10">Amlodipine 10mg  - 2023-01-10</li>
-			<li data-name="Metoprolol 50mg"  data-date="2023-03-05">Metoprolol 50mg -  2023-03-05</li>
-			<li data-name="Farxiga 10mg"  data-date="2023-02-20">Farxiga 10mg -  2023-02-20</li>
-			<li data-name="Hydralazine 10mg"  data-date="2023-01-25">Hydralazine 10mg  - 2023-01-25</li>
+			<li class="ar_precriptMedicationList" data-name="Amlodipine 10mg" data-date="2023-01-10">Amlodipine 10mg  - 2023-01-10</li>
+			<li class="ar_precriptMedicationList" data-name="Metoprolol 50mg"  data-date="2023-03-05">Metoprolol 50mg -  2023-03-05</li>
+			<li class="ar_precriptMedicationList" data-name="Farxiga 10mg"  data-date="2023-02-20">Farxiga 10mg -  2023-02-20</li>
+			<li class="ar_precriptMedicationList" data-name="Hydralazine 10mg"  data-date="2023-01-25">Hydralazine 10mg  - 2023-01-25</li>
 		</ul>
 	</div>
 
@@ -45,16 +45,5 @@
 	<script type="module" src="../Client Side/Controller_Btn_FilterItems.js"></script>
 	<script type="module" src="../Client Side/Controller_Btn_AddPrescriptions.js"></script>
 
-	<script>
-		 function createListItem(name, date) {
-      const newItem = document.createElement("li");
-      newItem.setAttribute("data-name", name);
-      newItem.setAttribute("data-date", date);
-      newItem.textContent = `${name} - ${date}`;
-
-      const list = document.querySelector(".ar-prescriptionList");
-      list.appendChild(newItem);
-    }
-	</script>
 </body>
 </html>
