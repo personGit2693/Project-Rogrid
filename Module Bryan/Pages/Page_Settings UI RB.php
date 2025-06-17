@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Styles/Page_Settings UI RB.css" />
   </head>
   <body>
+
     <div id="myWrapper">
       <div class="setting-group-RB">
         <label>Graphics</label>
