@@ -8,9 +8,10 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Root*/
 :root{
-  --aSetterFontFamily: 'Arial', sans-serif;;
-  --aSetterHeaderFontSize: 27px;
-  --aSetterDaysTextSize: 18px;
+	--prescriptionFontFamily: Arial, Helvetica, sans-serif;
+	--prescriptionColorTheme: #4caf50;
+
+	--prescriptionColorThemeHover: #80c883;
 
 }
 /*Root*/
@@ -19,85 +20,123 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
-.ar_ASetter{
-  display: flex;
-  position: relative;
-  flex-flow: column;
-  box-sizing: border-box;
-  font-family: var(--aSetterFontFamily);
+
+.ar_PrescriptionMain{
+	font-size: var(--prescriptionFontFamily);
+	display: flex;
+	position: relative;
+	flex-flow: column;
+	box-sizing: border-box;
 }
 
-.ar_ASetterDate{
-  display: flex;
-  position: relative;
-  flex-flow: row wrap;
-  box-sizing: border-box;
-  font-size: var(--aSetterHeaderFontSize);
-  padding: 5px;
+.ar_prescriptContainer{
+	display: flex;
+	position: relative;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding: 5px;
+	align-items: center;
+	border-bottom: 3px solid;
+	border-color: var(--prescriptionColorTheme);
+	margin-right: 7px;
+	margin-left: 7px;
 }
 
-.ar_Date{
-  margin-left: 7px;
-  border: 2px solid black;
-  padding: 3px;
-  border-radius: 25px;
-  box-sizing: border-box;
+.ar_PrescriptHead{
+	display: flex;
+	position: relative;
+	font-size: 30px;
+	
+	font-weight: bold;
+	box-sizing: border-box;
+
 }
 
-.ar_Days{
-  display: flex;
-  position: relative;
-  flex-flow: row;
-  padding-left: 5px;
-  font-size: var(--aSetterDaysTextSize);
-  font-weight: bold;
-  border-bottom: 2.5px solid blue;
-  box-sizing: border-box;
- 
+.ar_prescriptSort{
+	display: flex;
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
 }
 
-.ar-AppointmentTime{
-  font-size: 13.5px;
-  font-style: oblique;
-  padding-left: 15px;
-   box-sizing: border-box;
+.ar-PrescriptFilter{
+	display: none;
+    position: absolute;
+    flex-flow: column;
+    border-radius: 7px;
+    z-index: 5;
+    align-content: center;
+    background-color: white;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-left: -105px;
+    background-color: whitesmoke;
+    border: 2px solid;
+    border-color: var(--prescriptionColorTheme);
 }
 
-.ar_subAppointmentTime{
-  padding-left: 18px;
-  margin: 1px;
-  box-sizing: border-box;
+.pic_Filter{
+    background-position: center;
+    background-size: cover;
+    background-image: var(--profileDropDownArrowDownImg);
+}
+
+.ar-PrescriptFilter button{
+	border: none;
+	background-color: whitesmoke;
+}
+
+.ar_prescriptFillup {
+	margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+input[type="text"],
+input[type="date"] {
+	padding: 8px;
+	margin-right: 10px;
+	font-size: 13px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.ar_addPrecsriptionBTN {
+	padding: 9px 9px;
+	font-size: 16px;
+	color: #fff;
+	background-color: var(--prescriptionColorTheme);
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 
-.ar-individualTime{
-  padding: 4px;
-  font-weight: 500;
-  border-radius: 7px;
-  border: 0.5px solid black;
-  margin-bottom: 3px;
-  box-sizing: border-box;
-  transition: background-color 0.3s ease-out, border 0.3s ease-out;
+.ar-prescriptionList {
+	list-style-type: none;
+	padding: 5px;
+	margin-left: 10px;
 }
 
-.ar_aSButton{
-  margin-top: 15px;
-  margin-left: 7px;
+.ar_precriptMedicationList{
+	padding: 10px;
+	font-size: 17px;
+	background-color: #fff;
+	margin-bottom: 5px;
+	border-left: 4px solid var(--prescriptionColorTheme);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.ar-individualTime:hover{
-  background-color: #80bfff;
-  border: 1.2px solid black;
-  border-radius: 11px;
-  box-sizing: border-box;
-  text-decoration: underline;
+.ar_precriptMedicationList:hover{
+	background-color: var(--prescriptionColorThemeHover);
 }
 
-.ar_submite:hover{
-  background-color: #80bfff;
-  border: 2px solid black;
-  box-sizing: border-box;
-  border-radius: 11px;
+
+.ar_prescriptButton:hover{
+	background-color: var(--prescriptionColorThemeHover);
+	border-radius: 7px;
 }
 
 /*General Styles*/

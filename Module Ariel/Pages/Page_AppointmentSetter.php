@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="sampleContainer">
+
 	<div class="ar_ASetter">
 		<div class="ar_ASetterDate">Appointment Date<input type="date" class="ar_Date"></div>
 
@@ -127,9 +127,13 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="ar_aSButton">
+		<button class="ar_submite">Submite</button>
+		</div>
 	</div>
 
-</div>
+
 
 
 

@@ -65,11 +65,22 @@
   box-sizing: border-box;
   transition: background-color 0.3s ease-out, border 0.3s ease-out; }
 
+.ar_aSButton {
+  margin-top: 15px;
+  margin-left: 7px; }
+
 .ar-individualTime:hover {
+  background-color: #80bfff;
+  border: 1.2px solid black;
+  border-radius: 11px;
+  box-sizing: border-box;
+  text-decoration: underline; }
+
+.ar_submite:hover {
   background-color: #80bfff;
   border: 2px solid black;
   box-sizing: border-box;
-  text-decoration: underline; }
+  border-radius: 11px; }
 
 /*General Styles*/
 /***********************************************************************************************************************************************************************************************************/
