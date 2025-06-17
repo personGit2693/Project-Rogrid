@@ -19,4 +19,17 @@
 	text-overflow: ellipsis;
 }
 /*Inputs*/
+
+
+/*Layout (First Model)*/
+@mixin mone_burger_rg_smart{
+	display: inline-block;
+}
+
+@mixin mone_title_rg_pc{
+	flex-flow: row wrap;
+	align-items: center;
+	align-content: flex-start;
+}
+/*Layout (First Model)*/
 /***********************************************************************************************************************************************************************************************************/

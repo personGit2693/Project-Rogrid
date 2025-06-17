@@ -7,124 +7,84 @@ document.body.style.overflow = "hidden";
 /****************************************************************************************************************************************************************************/
 
 
-
-
-
 /****************************************************************************************************************************************************************************/
 /*Layout one Left Side Item display*/
 
-/*_Prep variables*/
+/**Prep variables*/
 var burgerClicked_Rogrid = false;
 var leftSideItemShow_Rogrid = false;
-/*_Prep variables*/
+/**Prep variables*/
 
 
-
-/*_Left Side Item Itself*/
-const sidemecha_RoClass_Rogrid = document.getElementsByClassName("sidemecha_RoClass")[0];
-/*_Left Side Item Itself*/
-
-
+/**Left Side Item Itself*/
+const mone_side_rg = document.getElementsByClassName("mone_side_rg")[0];
+const mone_side_rg_width = mone_side_rg.getAttribute("data-side-width");
+/**Left Side Item Itself*/
 
 
-/*_Burger Icon Wrapper and img Elements*/
-const burger_RoClass_Rogrid = document.getElementsByClassName("burger_RoClass")[0];
-const burgerIcon_RoClass_Rogrid = document.getElementsByClassName("burgerIcon_RoClass")[0];
-burgerIcon_RoClass_Rogrid.src = "../../src/burgericon.png";
-/*_Burger Icon Wrapper img Elements*/
+/**Burger Icon Wrapper and img Elements*/
+const mone_burger_rg = document.getElementsByClassName("mone_burger_rg")[0];
+const mone_burger_image_rg = document.getElementsByClassName("mone_burger_image_rg")[0];
+mone_burger_image_rg.src = "./../../src/burgericon.png";
+/**Burger Icon Wrapper img Elements*/
 
 
-
-/*_Function to check the size of the screen*/
+/**Function to check the size of the screen*/
 const checkWinLeftSideItem = (win_Width_Param, win_Height_Param) =>{	
-	sidemecha_RoClass_Rogrid.style.transition = "none";
+	mone_side_rg.style.transition = "none";
 
-	if(win_Width_Param >= 1081 && win_Width_Param <= 1600){
+	if(win_Width_Param >= 1081){
 		burgerClicked_Rogrid = false;
 		leftSideItemShow_Rogrid = false;
 
-		sidemecha_RoClass_Rogrid.style.width = "250px";
+		mone_side_rg.style.width = mone_side_rg_width;
 
-		burgerIcon_RoClass_Rogrid.src = "../../src/burgericon.png";
-	}else if(win_Width_Param >= 1601){
-		burgerClicked_Rogrid = false;
-		leftSideItemShow_Rogrid = false;
-
-		sidemecha_RoClass_Rogrid.style.width = "270px";
-
-		burgerIcon_RoClass_Rogrid.src = "../../src/burgericon.png";
-	}else if(win_Width_Param <= 641 && burgerClicked_Rogrid == false){
-		sidemecha_RoClass_Rogrid.style.width = "0px";
-	}else if(win_Width_Param >= 642 && win_Width_Param <= 1080 && burgerClicked_Rogrid == false){
-		sidemecha_RoClass_Rogrid.style.width = "0px";
-	}else if(win_Width_Param <= 641 && burgerClicked_Rogrid == true && leftSideItemShow_Rogrid == true){
-		sidemecha_RoClass_Rogrid.style.width = "180px";
-	}else if(win_Width_Param >= 642 && win_Width_Param <= 1080 && burgerClicked_Rogrid == true && leftSideItemShow_Rogrid == true){
-		sidemecha_RoClass_Rogrid.style.width = "200px";
+		mone_burger_image_rg.src = "./../../src/burgericon.png";
+	}else if(win_Width_Param <= 1080 && burgerClicked_Rogrid == false){
+		mone_side_rg.style.width = "0px";
+	}else if(win_Width_Param <= 1080 && burgerClicked_Rogrid == true && leftSideItemShow_Rogrid == true){
+		mone_side_rg.style.width = mone_side_rg_width;
 	}
 }
 
-/*_Function to check the size of the screen*/
+/**Function to check the size of the screen*/
 
 
-
-
-
-
-/*_Add event to body with checkWinLeftSideItem method*/
+/**Add event to body with checkWinLeftSideItem method*/
 window.addEventListener("resize", function(){
 	checkWinLeftSideItem(window.innerWidth, window.innerHeight);
 });
-/*_Add event to body with checkWinLeftSideItem method*/
+/**Add event to body with checkWinLeftSideItem method*/
 
 
-
-
-
-
-
-
-
-/*_Function for displaying and closing nav*/
+/**Function for displaying and closing nav*/
 const showLeftSideItem = (win_Width_Param, win_Height_Param) =>{
 	burgerClicked_Rogrid = true;
-	sidemecha_RoClass_Rogrid.style.transition = "width 0.3s linear 0s";
+	mone_side_rg.style.transition = "width 0.3s linear 0s";
 
-	if(leftSideItemShow_Rogrid === false && win_Width_Param <= 641){
-		sidemecha_RoClass_Rogrid.style.width = "180px";
+	if(leftSideItemShow_Rogrid === false && win_Width_Param <= 1080){
 
-		burgerIcon_RoClass_Rogrid.src = "../../src/burgericon_active.png";
-
+		mone_side_rg.style.width = mone_side_rg_width;
+		mone_burger_image_rg.src = "./../../src/burgericon_active.png";
 		leftSideItemShow_Rogrid = true;
-	}else if(leftSideItemShow_Rogrid === false && win_Width_Param >= 642 && win_Width_Param <= 1080){
-		sidemecha_RoClass_Rogrid.style.width = "200px";
+	}else if(leftSideItemShow_Rogrid === true && win_Width_Param <= 1080){
 
-		burgerIcon_RoClass_Rogrid.src = "../../src/burgericon_active.png";
-
-		leftSideItemShow_Rogrid = true;
-	}else if(leftSideItemShow_Rogrid === true){
-		sidemecha_RoClass_Rogrid.style.width = "0px";
-
-		burgerIcon_RoClass_Rogrid.src = "../../src/burgericon.png";
-
+		mone_side_rg.style.width = "0px";
+		mone_burger_image_rg.src = "./../../src/burgericon.png";
 		leftSideItemShow_Rogrid = false;
 	}
 }
-/*_Function for displaying and closing nav*/
+/**Function for displaying and closing nav*/
 
 
-
-/*_Add event to burger_RoClass_Rogrid with showLeftSideItem method*/
-burger_RoClass_Rogrid.addEventListener("click", function(){
+/**Add event to mone_burger_rg with showLeftSideItem method*/
+mone_burger_rg.addEventListener("click", function(){
 	showLeftSideItem(window.innerWidth, window.innerHeight);
 });
-/*_Add event to burger_RoClass_Rogrid with showLeftSideItem method*/
+/**Add event to mone_burger_rg with showLeftSideItem method*/
 
 /*Layout one Left Side Item display*/
 /****************************************************************************************************************************************************************************/
-
-
-
 
 
 /****************************************************************************************************************************************************************************/
