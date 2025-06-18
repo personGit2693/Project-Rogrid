@@ -8,7 +8,7 @@ document.body.style.overflow = "hidden";
 
 
 /****************************************************************************************************************************************************************************/
-/*Layout one Left Side Item display*/
+/*Page Layout (First Model)*/
 
 /**Prep variables*/
 var burgerClicked_Rogrid = false;
@@ -83,7 +83,7 @@ mone_burger_rg.addEventListener("click", function(){
 });
 /**Add event to mone_burger_rg with showLeftSideItem method*/
 
-/*Layout one Left Side Item display*/
+/*Page Layout (First Model)*/
 /****************************************************************************************************************************************************************************/
 
 

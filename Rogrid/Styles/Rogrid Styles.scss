@@ -26,11 +26,11 @@
 }
 
 .btn_rg:hover{
-	@include btn_rg_active;
+	@include btn_rg_active_general;
 }
 
 .btn_rg:active{
-	@include btn_rg_active;
+	@include btn_rg_active_general;
 }
 /*Basic Button*/
 
@@ -177,8 +177,8 @@
 	color: var(--input_rg_color);
 }
 
-.input_rg_placeholder{
-	@include input_rg_placeholder;	
+.input_placeholder_rg{
+	@include input_placeholder_rg_general;	
 	width: 95%;
 	top:50%; 
 	transform: translateY(-50%); 	
@@ -186,8 +186,8 @@
 	color: var(--input_rg_color);	
 }
 
-.input_rg_upplaceholder{
-	@include input_rg_placeholder;
+.input_upplaceholder_rg{
+	@include input_placeholder_rg_general;
 	width: 95%;
 	top:33%; 
 	transform: translateY(-50%);	
@@ -195,10 +195,10 @@
 	color: var(--input_rg_color); 	
 }
 
-.input_rg input:focus + .input_rg_placeholder,
-.input_rg input:not(:focus):valid + .input_rg_placeholder,
-.input_rg input:focus + .input_rg_upplaceholder,
-.input_rg input:not(:focus):valid + .input_rg_upplaceholder{
+.input_rg input:focus + .input_placeholder_rg,
+.input_rg input:not(:focus):valid + .input_placeholder_rg,
+.input_rg input:focus + .input_upplaceholder_rg,
+.input_rg input:not(:focus):valid + .input_upplaceholder_rg{
 	top: 0px;
 	transform: none;
 	font-size: var(--input_rg_active_fsize);
@@ -313,7 +313,7 @@
 /*Radio Button*/
 
 
-/*Layout (First Model)*/
+/*Page Layout (First Model)*/
 *{
 	box-sizing: border-box;	
 	margin: 0px;
@@ -459,7 +459,63 @@
 	white-space: normal;
 	width: auto;				
 }
-/*Layout (First Model)*/
+/*Page Layout (First Model)*/
+
+
+/*Side Navigation Menu*/
+.nav_rg{
+	@include nav_rg_general;
+	background-color: var(--nav_rg_bgcolor);	
+	color: var(--nav_rg_color);	
+}
+
+.nav_active_rg{
+	@include nav_rg_general;
+	@include nav_active_rg_general;
+}
+
+.nav_icon_rg{
+	@include nav_icon_rg_general;		
+	background-image: var(--nav_icon_rg_img);	
+}
+
+.nav_active_icon_rg{
+	@include nav_icon_rg_general;		
+	@include nav_active_icon_rg_general;
+}
+
+.nav_rg:hover{	
+	@include nav_active_rg_general;
+}
+
+.nav_rg:hover .nav_icon_rg{
+	@include nav_active_icon_rg_general;
+}
+
+.nav_label_rg{
+	position: relative;
+	display: block;
+	overflow: visible;
+	box-sizing: border-box;
+	white-space: normal;	
+	width: 100%;
+}
+
+/**Collapsable*/
+.nav_arrow_rg{
+	@include nav_arrow_rg_general;
+	transform: rotate(0deg);
+}
+
+.nav_active_arrow_rg{
+	@include nav_arrow_rg_general;
+	transform: rotate(90deg);
+}
+
+.nav_arrow_img_rg{
+	@include nav_arrow_img_rg_general;
+}
+/*Side Navigation Menu*/
 
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
@@ -471,16 +527,15 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
 @media all and (max-width:641px){
-	/*Layout (First Model)*/
+	/*Page Layout (First Model)*/
 	.mone_burger_rg{		
 		@include mone_burger_rg_smart;
 	}
 
 	.mone_title_rg{
-		flex-flow: column nowrap;
-		align-items: center;
+		@include mone_title_rg_smart;
 	}
-	/*Layout (First Model)*/
+	/*Page Layout (First Model)*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -489,15 +544,15 @@
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
 @media all and (min-width:642px) and (max-width:1080px){		
-	/*Layout (First Model)*/
-	.mone_title_rg{
+	/*Page Layout (First Model)*/
+	.mone_burger_rg{
 		@include mone_burger_rg_smart;
 	}
 
 	.mone_title_rg{
-		@include mone_title_rg_pc;
+		@include mone_title_rg_smart;
 	}
-	/*Layout (First Model)*/
+	/*Page Layout (First Model)*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -506,15 +561,17 @@
 /***********************************************************************************************************************************************************************************************************/
 /*PC*/
 @media all and (min-width:1081px){
-	/*Layout (First Model)*/
+	/*Page Layout (First Model)*/
 	.mone_burger_rg{
 		display: none;
 	}
 
 	.mone_title_rg{
-		@include mone_title_rg_pc;
+		flex-flow: row wrap;
+		align-items: center;
+		align-content: flex-start;
 	}	
-	/*Layout (First Model)*/
+	/*Page Layout (First Model)*/
 }
 /*PC*/
 /***********************************************************************************************************************************************************************************************************/
