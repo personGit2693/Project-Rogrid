@@ -93,15 +93,19 @@ mone_burger_rg.addEventListener("click", function(){
 /*Collapse Navigation Menu*/
 
 /**Function for collapsing the collapsable Nav Menu*/
-const collapseMenu = (mainNavMenu) => {
-	const chevronIconWrap = (mainNavMenu.querySelector(".chevronIconWrap_RoClass") != null) ? mainNavMenu.querySelector(".chevronIconWrap_RoClass") : mainNavMenu.querySelector(".activeChevronIconWrap_RoClass");
+function collapseMenu(nav_rg, nav_sub_height_rg){
 
-	if(mainNavMenu.nextElementSibling.style.maxHeight == "0px"){
-		mainNavMenu.nextElementSibling.style.maxHeight = "1000px"; /*Editable*/
-		chevronIconWrap.style.transform = "rotate(90deg)";
-	}else if(mainNavMenu.nextElementSibling.style.maxHeight != "0px"){
-		mainNavMenu.nextElementSibling.style.maxHeight = "0px";
-		chevronIconWrap.style.transform = "rotate(0deg)";
+	const nav_arrow_rg = (nav_rg.querySelector(".nav_arrow_rg") != null) ? nav_rg.querySelector(".nav_arrow_rg") : nav_rg.querySelector(".nav_active_arrow_rg");
+	const nav_sub_rg = nav_rg.nextElementSibling;
+
+	if(nav_sub_rg.style.maxHeight == "0px"){
+
+		nav_sub_rg.style.maxHeight = nav_sub_height_rg;
+		nav_arrow_rg.style.transform = "rotate(90deg)";
+	}else if(nav_sub_rg.style.maxHeight != "0px"){
+
+		nav_sub_rg.style.maxHeight = "0px";
+		nav_arrow_rg.style.transform = "rotate(0deg)";
 	}			
 		
 }

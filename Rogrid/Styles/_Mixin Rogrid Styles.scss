@@ -69,6 +69,7 @@
 @mixin nav_active_icon_rg_general{
 	background-image: var(--nav_active_icon_rg_img);
 }
+
 /**Collapsable*/
 @mixin nav_arrow_rg_general{
 	position: relative;
@@ -88,5 +89,6 @@
 	width: 100%;
 	height: 100%;
 }
+/**Collapsable*/
 /*Side Navigation Menu*/
 /***********************************************************************************************************************************************************************************************************/

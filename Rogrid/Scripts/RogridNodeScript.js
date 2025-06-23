@@ -635,15 +635,18 @@ function setDateRangeToText(dateRange, calLiteValue){
 
 /****************************************************************************************************************************************************************************/ 
 /*Display Select Dropdown Options*/
-function showSelectDropdownOpts(displayedSelectedFlex, selectDropdownOptionsWrap_Height){
-	const selectDropdownOptionsWrap = displayedSelectedFlex.parentElement.querySelector(".selectDropdownOptionsWrap_RoClass");
+function showSelectArea(select_rg_id, select_area_rg_height){
+
+	const select_rg = document.getElementById(select_rg_id);
+
+	const selectDropdownOptionsWrap = select_rg.querySelector(".select_area_rg");
 	const displayedSelectedChevron = displayedSelectedFlex.querySelector(".displayedSelectedChevron_RoClass");
 	const searchOpts = displayedSelectedFlex.parentElement.querySelector(".searchOpts_RoClass");
 
 	if(selectDropdownOptionsWrap.style.display != "block"){		
 		selectDropdownOptionsWrap.style.display = "block";
 		displayedSelectedChevron.style.transform = "rotateX(180deg)";		
-		selectDropdownOptionsWrap.style.maxHeight = selectDropdownOptionsWrap_Height;
+		selectDropdownOptionsWrap.style.maxHeight = select_area_rg_height;
 		searchOpts.focus();
 	}else if(selectDropdownOptionsWrap.style.display == "block"){
 		selectDropdownOptionsWrap.style.maxHeight = "0";

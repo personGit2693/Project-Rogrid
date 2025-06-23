@@ -464,8 +464,7 @@
 
 /*Side Navigation Menu*/
 .nav_rg{
-	@include nav_rg_general;
-	background-color: var(--nav_rg_bgcolor);	
+	@include nav_rg_general;	
 	color: var(--nav_rg_color);	
 }
 
@@ -515,7 +514,188 @@
 .nav_arrow_img_rg{
 	@include nav_arrow_img_rg_general;
 }
+
+.nav_sub_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: var(--nav_sub_rg_bgcolor);
+	transition: max-height 0.5s;		
+	-webkit-transition: max-height 0.5s;
+}
 /*Side Navigation Menu*/
+
+/*Select Dropdown*/
+/**Selected Area*/
+.select_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;		
+	cursor: pointer;
+}
+
+.selected_cr_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	align-items: center;	
+	background-color: var(--select_cr_rg_bgcolor);
+}
+
+.select_icon_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--select_icon_rg_img);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--select_icon_rg_size);
+	height: var(--select_icon_rg_size);
+	flex-shrink: 0;
+}
+
+.select_text_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	text-overflow: ellipsis;
+	color: var(--select_text_rg_color);
+}
+
+.select_reset_rg{
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--select_reset_rg_img);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--select_rg_size);
+	height: var(--select_rg_size);
+	flex-shrink: 0;
+}
+
+.select_arrow_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--select_arrow_rg_img);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--select_rg_size);
+	height: var(--select_rg_size);
+	flex-shrink: 0;
+	transform: rotateX(0deg);
+	-webkit-transition: transform 0.5s;
+	transition: transform 0.5s;
+}
+/**Selected Area*/
+
+
+/**Options Area*/
+.select_area_rg{
+	position: absolute;
+	display: none;
+	box-sizing: border-box;
+	overflow: auto;
+	max-height: 0;
+	width: 100%;
+	background-color: var(--select_area_rg_bgcolor);
+	-webkit-transition: max-height 1s;
+	transition: max-height 1s;
+}
+
+.select_find_rg{
+	position: sticky;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;	
+	top: 0;
+	z-index: 1;	
+	color: var(--select_find_rg_color);	
+}
+
+.select_opts_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+/* width */
+.select_opts_rg::-webkit-scrollbar {
+	width: clamp(3px, 1vw, 6px);
+}
+
+/* Track */
+.select_opts_rg::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px gray; 
+	border-radius: 10px;
+}
+
+/* Handle */
+.select_opts_rg::-webkit-scrollbar-thumb {
+	background: var(--select_opts_rg_scrollcolor);
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+.select_opts_rg::-webkit-scrollbar-thumb:hover {
+	background: var(--select_opts_rg_active_scrollcolor);
+}
+
+.select_opt_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	align-items: center;	
+}
+
+.select_optval_rg{
+	/*This is just the input hidden*/
+}
+
+.select_opticon_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background-image: var(--select_opticon_rg_img);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	width: var(--select_rg_size);
+	height: var(--select_rg_size);
+	flex-shrink: 0;
+}
+
+.select_opttxt_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 100%;
+	text-overflow: ellipsis;	
+}
+
+.select_opt_rg:hover, .select_opt_rg:hover .select_opttxt_rg{
+	background-color: var(--select_active_opt_rg_bgcolor);
+	color: var(--select_active_opt_rg_color);
+}
+/**Options Area*/
+/*Select Dropdown*/
 
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
