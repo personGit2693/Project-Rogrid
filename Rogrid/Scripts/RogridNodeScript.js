@@ -631,106 +631,85 @@ function setDateRangeToText(dateRange, calLiteValue){
 /****************************************************************************************************************************************************************************/ 
 
 
-
-
 /****************************************************************************************************************************************************************************/ 
-/*Display Select Dropdown Options*/
+/*Select Dropdown*/
 function showSelectArea(select_rg_id, select_area_rg_height){
 
 	const select_rg = document.getElementById(select_rg_id);
+	const select_arrow_rg = select_rg.querySelector(".select_arrow_rg");
+	const select_area_rg = select_rg.querySelector(".select_area_rg");
+	const select_find_rg = select_rg.querySelector(".select_find_rg");		
 
-	const selectDropdownOptionsWrap = select_rg.querySelector(".select_area_rg");
-	const displayedSelectedChevron = displayedSelectedFlex.querySelector(".displayedSelectedChevron_RoClass");
-	const searchOpts = displayedSelectedFlex.parentElement.querySelector(".searchOpts_RoClass");
+	if(select_area_rg.style.display != "block"){
 
-	if(selectDropdownOptionsWrap.style.display != "block"){		
-		selectDropdownOptionsWrap.style.display = "block";
-		displayedSelectedChevron.style.transform = "rotateX(180deg)";		
-		selectDropdownOptionsWrap.style.maxHeight = select_area_rg_height;
-		searchOpts.focus();
-	}else if(selectDropdownOptionsWrap.style.display == "block"){
-		selectDropdownOptionsWrap.style.maxHeight = "0";
-		selectDropdownOptionsWrap.style.display = "none";
-		displayedSelectedChevron.style.transform = "rotateX(0deg)";
+		select_area_rg.style.display = "block";
+		select_arrow_rg.style.transform = "rotateX(180deg)";		
+		select_area_rg.style.maxHeight = select_area_rg_height;
+		select_find_rg.focus();
+	}else if(select_area_rg.style.display == "block"){
+
+		select_area_rg.style.maxHeight = "0";
+		select_area_rg.style.display = "none";
+		select_arrow_rg.style.transform = "rotateX(0deg)";
 	}	
 }
 
 
-function closeSelectDropdownOpts(){
-	const allSelectDropdownWrap = document.querySelectorAll(".selectDropdownWrap_RoClass");
+function uncollapseSelectAreas(){
+	const select_rg_array = document.querySelectorAll(".select_rg");
 	
-	for(let index=0; index < allSelectDropdownWrap.length; index++){
-		const selectDropdownOptionsWrap = allSelectDropdownWrap[index].querySelector(".selectDropdownOptionsWrap_RoClass");
-		const displayedSelectedChevron = allSelectDropdownWrap[index].querySelector(".displayedSelectedChevron_RoClass");
+	for(let index=0; index < select_rg_array.length; index++){
+		const select_area_rg = select_rg_array[index].querySelector(".select_area_rg");
+		const select_arrow_rg = select_rg_array[index].querySelector(".select_arrow_rg");
 
-		if(selectDropdownOptionsWrap.style.display == "block"){
-			selectDropdownOptionsWrap.style.maxHeight = "0";
-			selectDropdownOptionsWrap.style.display = "none";
-			displayedSelectedChevron.style.transform = "rotateX(0deg)";
+		if(select_area_rg.style.display == "block"){
+
+			select_area_rg.style.maxHeight = "0";
+			select_area_rg.style.display = "none";
+			select_arrow_rg.style.transform = "rotateX(0deg)";
 		}		
 	}
 }
 
 
-function displaySelectedOpt(selectDropdownOpt, selectDropdownOptionsWrap_Height){
-	const selectedOptValue = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".selectedOptValue_RoClass");
-	const displayedSelectedFlex = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass");
-	const displayedSelectedIcon = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedIcon_RoClass");
-	const displayedSelectedText = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedText_RoClass");
-	const displayedSelectedResetBtn = selectDropdownOpt.parentElement.parentElement.parentElement.querySelector(".displayedSelectedResetBtn_RoClass");
+function assignOptValue(select_rg_id, select_opt_rg_key, default_opt_bool){	
 
-	const optValue = selectDropdownOpt.querySelector(".optValue_RoClass");
-	const optIcon = selectDropdownOpt.querySelector(".optIcon_RoClass");
-	const optText = selectDropdownOpt.querySelector(".optText_RoClass");
-
-	/*Assign selectedOptValue value*/
-	selectedOptValue.value = optValue.value;
-	displayedSelectedFlex.title = optText.innerText.trim();
-	displayedSelectedIcon.style.setProperty("--optIcon", getComputedStyle(optIcon).getPropertyValue('--optIcon'));
-	displayedSelectedText.innerText = optText.innerText.trim();
-	displayedSelectedResetBtn.style.display = "block";
-	/*Assign selectedOptValue value*/
-}
+	/*Selected Area*/
+	const select_rg = document.getElementById(select_rg_id);
+	const select_crval_rg = select_rg.querySelector(".select_crval_rg");
+	const select_cr_rg = select_rg.querySelector(".select_cr_rg");	
+	const select_icon_rg = select_rg.querySelector(".select_icon_rg");
+	const select_text_rg = select_rg.querySelector(".select_text_rg");
+	const select_reset_rg = select_rg.querySelector(".select_reset_rg");	
+	/*Selected Area*/
 
 
-function focusoutSearchSelectDrop(searchOpts, selectDropdownOptionsWrap_Height){
-	showSelectDropdownOpts(searchOpts.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass"), selectDropdownOptionsWrap_Height);
-}
-
-
-function resetSelectDropdown(resetSelDropBtnId, resetSelDropTitle, resetSelDropIcon, resetSelDropText){
-
-	const resetSelDropBtn = document.getElementById(resetSelDropBtnId); 
+	/*Options Area*/	
+	const data_opt_key = `[data-opt-key="${select_opt_rg_key}"]`;
+	const select_opt_rg = select_rg.querySelector(data_opt_key);
+	const select_optval_rg = select_opt_rg.querySelector(".select_optval_rg");
+	const select_opticon_rg = select_opt_rg.querySelector(".select_opticon_rg");
+	const select_opttxt_rg = select_opt_rg.querySelector(".select_opttxt_rg");	
+	/*Options Area*/
 	
-	const selectedOptValue = resetSelDropBtn.parentElement.parentElement.querySelector(".selectedOptValue_RoClass");
-	const selectedFlex = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedFlex_RoClass");
-	const selectedIcon = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedIcon_RoClass");
-	const selectedText = resetSelDropBtn.parentElement.parentElement.querySelector(".displayedSelectedText_RoClass");
+
+	/*Assigning value*/
+	select_crval_rg.value = select_optval_rg.value;
+	select_cr_rg.title = select_opttxt_rg.innerText.trim();
+	select_icon_rg.style.setProperty("--select_icon_rg_img", getComputedStyle(select_opticon_rg).getPropertyValue('--select_opticon_rg_img'));
+	select_text_rg.innerText = select_opttxt_rg.innerText.trim();	
+	/*Assigning value*/
 
 
-	/*Reset Area*/
-	/*Reset Select Dropdown Value*/
-	selectedOptValue.value = "";
-	/*Reset Select Dropdown Value*/
-
-	/*Display none displayedSelectedResetBtn*/
-	resetSelDropBtn.style.display = "none";
-	/*Display none displayedSelectedResetBtn*/
-
-	/*Reset Title*/
-	selectedFlex.title = resetSelDropTitle;
-	/*Reset Title*/
-
-	/*Reset Icon*/
-	selectedIcon.style.setProperty("--optIcon", "url('"+resetSelDropIcon+"')");
-	/*Reset Icon*/
-
-	/*Reset Text*/
-	selectedText.innerText = resetSelDropText.trim();
-	/*Reset Text*/
-	/*Reset Area*/
+	/*Show Reset Button*/
+	if(default_opt_bool !== undefined && default_opt_bool === true){
+		select_reset_rg.style.display = "none";
+	}else{
+		select_reset_rg.style.display = "block";
+	}
+	/*Show Reset Button*/
 }
-/*Display Select Dropdown Options*/
+/*Select Dropdown*/
 /****************************************************************************************************************************************************************************/ 
 
 
