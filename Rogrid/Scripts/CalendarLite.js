@@ -4,7 +4,7 @@
 
 /*Current Date*/
 
-/*_Current Day*/
+/**Current Day*/
 var day_Rogrid = new Date().getDate();
 var dayValue_Rogrid = day_Rogrid;
 if(dayValue_Rogrid < 10){
@@ -12,10 +12,10 @@ if(dayValue_Rogrid < 10){
 }else if(dayValue_Rogrid >= 10){
 	dayValue_Rogrid = dayValue_Rogrid;
 }
-/*_Current Day*/
+/**Current Day*/
 
 
-/*_Current Month*/
+/**Current Month*/
 var month_Rogrid = new Date().getMonth();
 var monthValue_Rogrid = month_Rogrid+1;
 if(monthValue_Rogrid < 10){
@@ -23,19 +23,19 @@ if(monthValue_Rogrid < 10){
 }else if(monthValue_Rogrid >= 10){
 	monthValue_Rogrid = monthValue_Rogrid;
 }
-/*_Current Month*/
+/**Current Month*/
 
 
-/*_Current Year*/
+/**Current Year*/
 var year_Rogrid = new Date().getFullYear();
-/*_Current Year*/
+/**Current Year*/
 
 
-/*_Calendar Lite Hidden input for Calendar Lite Value*/
+/**Calendar Lite Hidden input for Calendar Lite Value*/
 //var hiddenCalLiteVal_ID_Rogrid = document.getElementById("calLite_ID");
 //hiddenCalLiteVal_ID_Rogrid.value = year_Rogrid+"-"+monthValue_Rogrid+"-"+dayValue_Rogrid;
 //hiddenCalLiteVal_ID_Rogrid.value = "";
-/*_Calendar Lite Hidden input for Calendar Lite Value*/
+/**Calendar Lite Hidden input for Calendar Lite Value*/
 
 /*Current Date*/
 
@@ -68,30 +68,30 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 	const calLiteYearBtnValue = calLite.querySelector(".calLiteYearBtnValue_RoClass");
 	
 
-	/*_Assign inital value for month button*/
+	/**Assign inital value for month button*/
 	calLiteMonthBtnValue.value = month_Param;
 	calLiteYearBtnValue.value = year_Param;
-	/*_Assign inital value for month button*/
+	/**Assign inital value for month button*/
 
 
-	/*_Print Month and Year Inner Text*/
+	/**Print Month and Year Inner Text*/
 	const monthTxt_Rogrid = monthsTxt_Array[month_Param];
 	calLiteMonthText.innerText = monthTxt_Rogrid;
 	
 	calLiteYearText.innerText = year_Param;
-	/*_Print Month and Year Inner Text*/
+	/**Print Month and Year Inner Text*/
 
 
 
-	/*_Clear days text to avoid overlaping*/
+	/**Clear days text to avoid overlaping*/
 	for(let index=0; index < calLiteDaysIndex.children.length; index++){
 		calLiteDaysIndex.children[index].innerHTML = "";
 	}	
-	/*_Clear days text to avoid overlaping*/
+	/**Clear days text to avoid overlaping*/
 
 
 
-	/*_Align the days index to days text until first day*/
+	/**Align the days index to days text until first day*/
 	const firstDay_Rogrid = monthTxt_Rogrid+" "+1+", "+year_Param;
 	const firstdayOfMonth_Rogrid = new Date(firstDay_Rogrid).getDay();
 
@@ -104,11 +104,11 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 
 		calLiteDaysIndex.children[index].appendChild(blankDayTxtDiv_Rogrid);
 	}
-	/*_Align the days index to days text until first day*/
+	/**Align the days index to days text until first day*/
 
 
 
-	/*_Creating days per week loop*/
+	/**Creating days per week loop*/
 	for(let index=1; index <= getNumberOfDays_Param; index++){
 		const dayText_Rogrid = document.createTextNode(index);
 		const dayTxtDiv_Rogrid = document.createElement("div");		
@@ -135,7 +135,7 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 
 
 
-		/*_ _Setting Attribute per day number div*/
+		/** _Setting Attribute per day number div*/
 		let attriMonth_Rogrid = month_Param+1;
 		if(attriMonth_Rogrid < 10){
 			attriMonth_Rogrid = "0"+attriMonth_Rogrid;
@@ -146,7 +146,7 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 			attriDay_Rogrid = "0"+attriDay_Rogrid;
 		}
 		dayTxtDiv_Rogrid.setAttribute("data-dayDate", year_Param+"-"+attriMonth_Rogrid+"-"+attriDay_Rogrid);
-		/*_ _Setting Attribute per day number div*/		
+		/** _Setting Attribute per day number div*/		
 
 		
 		const perDate_Rogrid = year_Param+"-"+attriMonth_Rogrid+"-"+attriDay_Rogrid;
@@ -169,7 +169,7 @@ const renderCalLite = (getNumberOfDays_Param, month_Param, year_Param, calLite_P
 
 		calLiteDaysIndex.children[dayOfWeek_Rogrid].appendChild(dayTxtDiv_Rogrid);
 	}
-	/*_Creating days per week loop*/
+	/**Creating days per week loop*/
 }
 /*Function to Populate Calendar Lite*/
 
@@ -248,7 +248,7 @@ const getCalendarLiteValue = (calLiteYearVal_Param, calLiteMonth_Param, dayNumDi
 	calLiteValue_Param.value = calLiteYearVal_Param+"-"+calLiteMonth_Param+"-"+calLiteDay_Param;
 	
 
-	/*_Coloring bg and font selected day*/
+	/**Coloring bg and font selected day*/
 	const dayNumber_Rogrid_Coll = calLite_Param.querySelectorAll(".calLiteDayNum_RoClass");
 	for(let index=0; index<dayNumber_Rogrid_Coll.length; index++){
 		if(dayNumber_Rogrid_Coll[index] == dayNumDivElem_Param){
@@ -268,7 +268,7 @@ const getCalendarLiteValue = (calLiteYearVal_Param, calLiteMonth_Param, dayNumDi
 			/*Editable, logic and action for not selected date*/					
 		}
 	}	
-	/*_Coloring bg and font selected day*/	
+	/**Coloring bg and font selected day*/	
 }
 /*Function for clicking days on calender lite*/
 

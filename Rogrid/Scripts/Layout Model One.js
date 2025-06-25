@@ -85,29 +85,3 @@ mone_burger_rg.addEventListener("click", function(){
 
 /*Page Layout (First Model)*/
 /****************************************************************************************************************************************************************************/
-
-
-/****************************************************************************************************************************************************************************/
-/*Collapse Navigation Menu*/
-
-/**Function for collapsing the collapsable Nav Menu*/
-function collapseMenu(nav_rg, nav_sub_height_rg){
-
-	const nav_arrow_rg = (nav_rg.querySelector(".nav_arrow_rg") != null) ? nav_rg.querySelector(".nav_arrow_rg") : nav_rg.querySelector(".nav_active_arrow_rg");
-	const nav_sub_rg = nav_rg.nextElementSibling;
-
-	if(nav_sub_rg.style.maxHeight == "0px"){
-
-		nav_sub_rg.style.maxHeight = nav_sub_height_rg;
-		nav_arrow_rg.style.transform = "rotate(90deg)";
-	}else if(nav_sub_rg.style.maxHeight != "0px"){
-
-		nav_sub_rg.style.maxHeight = "0px";
-		nav_arrow_rg.style.transform = "rotate(0deg)";
-	}			
-		
-}
-/**Function for collapsing the collapsable Nav Menu*/
-
-/*Collapse Navigation Menu*/
-/****************************************************************************************************************************************************************************/
