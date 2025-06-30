@@ -344,25 +344,25 @@
 }
 
 /* width */
-.mone_side_rg::-webkit-scrollbar, .mone_body_rg::-webkit-scrollbar{
-	width: clamp(3px, 1vw, 6px);
+.mone_side_rg::-webkit-scrollbar, .mone_body_rg::-webkit-scrollbar, body::-webkit-scrollbar{
+	width: var(--mone_rg_scrollwidth);
 }
 
 /* Track */
-.mone_side_rg::-webkit-scrollbar-track, .mone_body_rg::-webkit-scrollbar-track{
+.mone_side_rg::-webkit-scrollbar-track, .mone_body_rg::-webkit-scrollbar-track, body::-webkit-scrollbar-track{
 	box-shadow: inset 0 0 5px gray; 
 	border-radius: 10px;
 }
 
 /* Handle */
-.mone_side_rg::-webkit-scrollbar-thumb, .mone_body_rg::-webkit-scrollbar-thumb {
-	background: var(--mone_side_rg_scrollcolor);
+.mone_side_rg::-webkit-scrollbar-thumb, .mone_body_rg::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+	background: var(--mone_rg_scrollcolor);
 	border-radius: 10px;
 }
 
 /* Handle on hover */
-.mone_side_rg::-webkit-scrollbar-thumb:hover, .mone_body_rg::-webkit-scrollbar-thumb:hover {
-	background: var(--mone_side_rg_active_scrollcolor); 
+.mone_side_rg::-webkit-scrollbar-thumb:hover, .mone_body_rg::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+	background: var(--mone_rg_active_scrollcolor); 
 }
 
 .mone_sidecon_rg{
@@ -704,6 +704,93 @@
 }
 /**Options Area*/
 /*Select Dropdown*/
+
+
+/*Calendar Model One*/
+.cmo_rg{
+	position: relative;		
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;	
+	background-color: var(--cmo_rg_bgcolor);
+}
+
+.cmo_head_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;	
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 10px var(--cmo_head_rg_sdcolor);
+}
+
+.cmo_ym_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;	
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cmo_monthtxt_rg, .cmo_yeartxt_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;	
+	white-space: nowrap;	
+}
+
+.cmo_btn_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--cmo_btn_rg_size);
+	height: var(--cmo_btn_rg_size);
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+.cmo_btnimg_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+.cmo_columns_rg, .cmo_days_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+
+.cmo_daytxt_rg, .cmo_day_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--cmo_day_rg_width);	
+	text-align: center;	
+}
+
+
+/**Highlights, Clicked*/
+.cmo_day_rg_click{
+	background-color: var(--cmo_day_rg_click_bgcolor);
+	color: var(--cmo_day_rg_click_color);
+}
+
+.cmo_day_rg_high{
+	background-color: var(--cmo_day_rg_high_bgcolor);
+	color: var(--cmo_day_rg_high_color);
+}
+/**Highlights, Active, Clicked*/
+/*Calendar Model One*/
 
 /*General*/
 /***********************************************************************************************************************************************************************************************************/

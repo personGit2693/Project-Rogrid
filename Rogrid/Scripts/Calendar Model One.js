@@ -1,21 +1,13 @@
 /****************************************************************************************************************************************************************************/
 /*Calendar Model One*/
 
-
 /*Current Date*/
 /**Current Day*/
 var cmo_crday = new Date().getDate();
-if(cmo_crday < 10){
-	cmo_crday = "0"+cmo_crday;
-}
 /**Current Day*/
 
 /**Current Month*/
 var cmo_crmonth = new Date().getMonth();
-cmo_crmonth += 1;
-if(cmo_crmonth < 10){
-	cmo_crmonth = "0"+cmo_crmonth;
-}
 /**Current Month*/
 
 /**Current Year*/
@@ -26,7 +18,7 @@ var cmo_cryear = new Date().getFullYear();
 
 /*Months Text Collection*/
 const cmo_months_array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var cmo_highlightdates_array = []; /*Editable*/
+var cmo_highlightdates_array = [];
 /*Months Text Collection*/
 
 
@@ -94,12 +86,11 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		cmo_div_day.className = "cmo_day_rg";		
 		cmo_div_day.addEventListener("click", function(){
 
-			/*Editable, you can add more event when date was selected*/
+			/*Event when date was selected*/
 			assigncmoValue(cmo_year, cmo_month+1, this, cmo_rg, cmo_value_rg);			
-			/*Editable, you can add more event when date was selected*/
+			/*Event when date was selected*/
 
-			/*For Date Range only*/
-			/*Editable*/
+			/*For Date Range only*/			
 			if(cmo_rg.classList.contains("cmo_range_rg") === true){
 				
 				if(cmo_rg.classList.contains("cmo_rangefrom_rg") === true){
@@ -107,8 +98,7 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 				}else if(cmo_rg.classList.contains("cmo_rangeto_rg") === true){
 					setDateRangeToText(cmo_rg.parentElement.previousElementSibling, cmo_value_rg);
 				}				
-			}			
-			/*Editable*/
+			}						
 			/*For Date Range only*/
 		});
 
@@ -129,18 +119,10 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		/***Setting Attribute per day number div*/		
 		
 		
-		if(cmo_filterdate_rg_array.includes(data_cmo_date)){
-
-			/*Editable, change font color and bg color when data_cmo_date is on cmo_filterdate_rg_array*/
-			cmo_div_day.style.backgroundColor = "green";
-			cmo_div_day.style.color = "#ffffff";
-			/*Editable, change font color and bg color when data_cmo_date is on cmo_filterdate_rg_array*/
-		}else if(!cmo_filterdate_rg_array.includes(data_cmo_date)){
-
-			/*Editable, change font color and bg color when data_cmo_date is not on cmo_filterdate_rg_array*/
-			cmo_div_day.style.backgroundColor = "transparent";
-			cmo_div_day.style.color = "black";
-			/*Editable, change font color and bg color when data_cmo_date is not on cmo_filterdate_rg_array*/
+		if(cmo_highlightdates_array.includes(data_cmo_date)){
+			cmo_div_day.classList.toggle("cmo_day_rg_high");			
+		}else if(data_cmo_date === cmo_value_rg.value){
+			cmo_div_day.classList.toggle("cmo_day_rg_click");
 		}		
 
 
@@ -239,23 +221,13 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 
 		if(cmo_day_rg_array[index] == cmo_div_day){
 
-			/*Editable, change font color and bg color of the selected date*/
-			cmo_day_rg_array[index].style.backgroundColor = "#44D3A3"; 
-			cmo_day_rg_array[index].style.color = "#ffffff";
-			/*Editable, change font color and bg color of the selected date*/
-		}else if(cmo_day_rg_array[index] != cmo_div_day){
-
-			/*Editable, logic and action for not selected date*/
-			if(cmo_filterdate_rg_array.includes(cmo_day_rg_array[index].getAttribute("data-cmo-date"))){
-
-				cmo_day_rg_array[index].style.backgroundColor = "green";
-				cmo_day_rg_array[index].style.color = "#ffffff";
-			}else{
-
-				cmo_day_rg_array[index].style.backgroundColor = "transparent";
-				cmo_day_rg_array[index].style.color = "black";
+			/*Change font color and bg color of the selected date*/
+			if(!cmo_day_rg_array[index].classList.contains("cmo_day_rg_click")){
+				cmo_day_rg_array[index].classList.toggle("cmo_day_rg_click");
 			}
-			/*Editable, logic and action for not selected date*/					
+			/*Change font color and bg color of the selected date*/
+		}else if(cmo_day_rg_array[index] != cmo_div_day){
+			cmo_day_rg_array[index].classList.remove("cmo_day_rg_click");
 		}
 	}	
 	/**Coloring bg and font selected day*/	
