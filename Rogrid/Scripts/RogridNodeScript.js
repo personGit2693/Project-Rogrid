@@ -878,3 +878,43 @@ function collapseMenu(nav_rg, nav_sub_height_rg){
 
 /*Collapse Navigation Menu*/
 /****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/ 
+/*Display Date Range Calendar Lite*/
+function displayCalendars(range_rg_id){
+
+	const range_rg = document.getElementById(range_rg_id);
+	const range_arrow_rg = range_rg.querySelector(".range_arrow_rg");
+	const range_cmo_rg = range_rg.querySelector(".range_cmo_rg");
+
+	if(range_arrow_rg.style.display == "block"){	
+
+		range_cmo_rg.style.maxHeight = "0px";
+		range_arrow_rg.style.display = "none";
+	}else if(range_arrow_rg.style.display != "block"){
+
+		range_cmo_rg.style.maxHeight = "1000px";
+		range_arrow_rg.style.display = "block";
+	}
+}
+
+function setRangeFrom(range_rg_id, cmo_value_rg){
+
+	const range_rg = document.getElementById(range_rg_id);
+	const cmo_value_date = new Date(cmo_value_rg.value);
+	const range_from_rg = range_rg.querySelector(".range_from_rg");
+
+	range_from_rg.innerText = cmo_value_date.toLocaleDateString();
+}
+
+function setRangeTo(range_rg_id, cmo_value_rg){
+
+	const range_rg = document.getElementById(range_rg_id);
+	const cmo_value_date = new Date(cmo_value_rg.value);
+	const range_to_rg = range_rg.querySelector(".range_to_rg");
+
+	range_to_rg.innerText = cmo_value_date.toLocaleDateString();
+}
+/*Display Date Range Calendar Lite*/
+/****************************************************************************************************************************************************************************/ 

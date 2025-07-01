@@ -449,41 +449,6 @@ function drawAreaChart(chartData_Array, chartOption_Obj, chartWrapperId){
 
 
 /****************************************************************************************************************************************************************************/ 
-/*Display Date Range Calendar Lite*/
-function displayDateRangeCalLite(dateRange){
-	const dateRangeTooltipArrow = dateRange.querySelector(".dateRangeTooltipArrow_RoClass");
-	const dateRangeCalLiteWrap = dateRange.nextElementSibling;
-
-	if(dateRangeTooltipArrow.style.display == "block"){		
-		dateRangeCalLiteWrap.style.maxHeight = "0px";
-		dateRangeTooltipArrow.style.display = "none";
-	}else if(dateRangeTooltipArrow.style.display != "block"){		
-		dateRangeCalLiteWrap.style.maxHeight = "1000px";
-		dateRangeTooltipArrow.style.display = "block";
-	}
-}
-
-function setDateRangeFromText(dateRange, calLiteValue){
-	const newDateFormatFrom = new Date(calLiteValue.value);
-	
-	const dateRangeFrom = dateRange.querySelector(".dateRangeFrom_RoClass");
-
-	dateRangeFrom.innerText = newDateFormatFrom.toLocaleDateString();
-}
-
-function setDateRangeToText(dateRange, calLiteValue){
-	const newDateFormatTo = new Date(calLiteValue.value);
-	
-	const dateRangeTo = dateRange.querySelector(".dateRangeTo_RoClass");
-
-	dateRangeTo.innerText = newDateFormatTo.toLocaleDateString();
-}
-/*Display Date Range Calendar Lite*/
-/****************************************************************************************************************************************************************************/ 
-
-
-
-/****************************************************************************************************************************************************************************/ 
 /*Box Loader*/
 function displayBoxLoader(boxLoaderWrap){
 

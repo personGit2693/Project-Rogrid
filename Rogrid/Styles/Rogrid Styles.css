@@ -11,6 +11,8 @@
 /**Collapsable*/
 /**Collapsable*/
 /*Side Navigation Menu*/
+/*Date Range*/
+/*Date Range*/
 /***********************************************************************************************************************************************************************************************************/
 /*Imports*/
 /***********************************************************************************************************************************************************************************************************/
@@ -780,6 +782,78 @@
 
 /**Highlights, Active, Clicked*/
 /*Calendar Model One*/
+/*Date Range*/
+.range_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  width: auto; }
+
+.range_head_rg {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  width: auto;
+  cursor: pointer; }
+
+.range_details_rg {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+
+.range_icon_rg {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  width: var(--range_icon_rg_size);
+  height: var(--range_icon_rg_size);
+  background-color: transparent;
+  background-image: var(--range_icon_rg_img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0; }
+
+.range_texts_rg {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  white-space: nowrap;
+  color: var(--range_texts_rg_color); }
+
+.range_arrow_rg {
+  position: absolute;
+  box-sizing: border-box;
+  display: none;
+  border-width: 7px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: var(--range_arrow_rg_color);
+  border-left-color: transparent;
+  width: 10px; }
+
+.range_cmo_rg {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  max-height: 0px;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-between;
+  transition: max-height 0.5s;
+  -webkit-transition: max-height 0.5s;
+  /*top: var(--range_cmo_rg_top);*/ }
+
+.cmo_range_rg {
+  width: 100%; }
+
+/*Date Range*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -795,7 +869,12 @@
     flex-flow: column nowrap;
     align-items: center; }
 
-  /*Page Layout (First Model)*/ }
+  /*Page Layout (First Model)*/
+  /*Date Range*/
+  .range_cmo_rg {
+    flex-flow: column nowrap; }
+
+  /*Date Range*/ }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -809,7 +888,12 @@
     flex-flow: column nowrap;
     align-items: center; }
 
-  /*Page Layout (First Model)*/ }
+  /*Page Layout (First Model)*/
+  /*Date Range*/
+  .range_cmo_rg {
+    flex-flow: column nowrap; }
+
+  /*Date Range*/ }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
@@ -824,7 +908,12 @@
     align-items: center;
     align-content: flex-start; }
 
-  /*Page Layout (First Model)*/ }
+  /*Page Layout (First Model)*/
+  /*Date Range*/
+  .range_cmo_rg {
+    flex-flow: row nowrap; }
+
+  /*Date Range*/ }
 /*PC*/
 /***********************************************************************************************************************************************************************************************************/
 /*Media Queries*/

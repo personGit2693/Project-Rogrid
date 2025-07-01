@@ -94,9 +94,9 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 			if(cmo_rg.classList.contains("cmo_range_rg") === true){
 				
 				if(cmo_rg.classList.contains("cmo_rangefrom_rg") === true){
-					setDateRangeFromText(cmo_rg.parentElement.previousElementSibling, cmo_value_rg);
+					setRangeFrom(cmo_rg.parentElement.parentElement.id, cmo_value_rg);
 				}else if(cmo_rg.classList.contains("cmo_rangeto_rg") === true){
-					setDateRangeToText(cmo_rg.parentElement.previousElementSibling, cmo_value_rg);
+					setRangeTo(cmo_rg.parentElement.parentElement.id, cmo_value_rg);
 				}				
 			}						
 			/*For Date Range only*/
