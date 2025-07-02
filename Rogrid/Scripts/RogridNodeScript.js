@@ -885,6 +885,7 @@ function collapseMenu(nav_rg, nav_sub_height_rg){
 function displayCalendars(range_rg_id){
 
 	const range_rg = document.getElementById(range_rg_id);
+	const range_arrowpad_rg = range_rg.querySelector(".range_arrowpad_rg");
 	const range_arrow_rg = range_rg.querySelector(".range_arrow_rg");
 	const range_cmo_rg = range_rg.querySelector(".range_cmo_rg");
 
@@ -892,10 +893,12 @@ function displayCalendars(range_rg_id){
 
 		range_cmo_rg.style.maxHeight = "0px";
 		range_arrow_rg.style.display = "none";
+		range_arrowpad_rg.style.display = "none";
 	}else if(range_arrow_rg.style.display != "block"){
 
 		range_cmo_rg.style.maxHeight = "1000px";
 		range_arrow_rg.style.display = "block";
+		range_arrowpad_rg.style.display = "flex";
 	}
 }
 
