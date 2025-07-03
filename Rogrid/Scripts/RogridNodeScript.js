@@ -24,9 +24,6 @@ function input_rg_out(fcolor, inputId){
 /****************************************************************************************************************************************************************************/
 
 
-
-
-
 /****************************************************************************************************************************************************************************/
 /*Display current date*/
 
@@ -44,37 +41,31 @@ if(document.getElementsByClassName("currentDate_RoClass").length != 0){
 /****************************************************************************************************************************************************************************/
 
 
-
-
-
 /****************************************************************************************************************************************************************************/
-/*Check and uncheck Custom Checkbox*/
+/*Checkbox*/
 
-const checkCusCheckBox = (realCheckboxElem_Param, checkBoxId) =>{
+function checkcbox(cb_input_rg_id){
 
-	const inputCheckbox = document.getElementById(checkBoxId);
+	const cb_input_rg = document.getElementById(cb_input_rg_id);
+	const cb_rg = cb_input_rg.parentElement;
+	const cb_box_rg = cb_rg.querySelector(".cb_box_rg");
+	const cb_icon_rg = cb_rg.querySelector(".cb_icon_rg");	
 
-	const checkBoxme_Rogrid = inputCheckbox.previousElementSibling.children[0];
-	const checkImageElem_Rogrid = inputCheckbox.previousElementSibling.children[0].children[0]; /*check image element*/
+	if(cb_rg.getAttribute("data-cb") == "false"){
 
-	if(checkBoxme_Rogrid.getAttribute("data-rogridcheckbox-check") == "false"){
+		cb_icon_rg.style.visibility = "visible";
+		cb_input_rg.checked = true;
+		cb_rg.setAttribute("data-cb", "true");		
+	}else if(cb_rg.getAttribute("data-cb") == "true"){
 
-		checkImageElem_Rogrid.style.visibility = "visible";
-		inputCheckbox.checked = true;
-		checkBoxme_Rogrid.setAttribute("data-rogridcheckbox-check", "true");		
-	}else if(checkBoxme_Rogrid.getAttribute("data-rogridcheckbox-check") == "true"){
-
-		checkImageElem_Rogrid.style.visibility = "hidden";		
-		inputCheckbox.checked = false;
-		checkBoxme_Rogrid.setAttribute("data-rogridcheckbox-check", "false");
+		cb_icon_rg.style.visibility = "hidden";		
+		cb_input_rg.checked = false;
+		cb_rg.setAttribute("data-cb", "false");
 	}
 }
 
-/*Check and uncheck Custom Checkbox*/
+/*Checkbox*/
 /****************************************************************************************************************************************************************************/
-
-
-
 
 
 /****************************************************************************************************************************************************************************/

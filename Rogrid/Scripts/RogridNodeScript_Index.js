@@ -44,39 +44,6 @@ if(document.getElementsByClassName("currentDate_RoClass").length != 0){
 /****************************************************************************************************************************************************************************/
 
 
-
-
-
-/****************************************************************************************************************************************************************************/
-/*Check and uncheck Custom Checkbox*/
-
-const checkCusCheckBox = (realCheckboxElem_Param, checkBoxId) =>{
-
-	const inputCheckbox = document.getElementById(checkBoxId);
-
-	const checkBoxme_Rogrid = inputCheckbox.previousElementSibling.children[0];
-	const checkImageElem_Rogrid = inputCheckbox.previousElementSibling.children[0].children[0]; /*check image element*/
-
-	if(checkBoxme_Rogrid.getAttribute("data-rogridcheckbox-check") == "false"){
-
-		checkImageElem_Rogrid.style.visibility = "visible";
-		inputCheckbox.checked = true;
-		checkBoxme_Rogrid.setAttribute("data-rogridcheckbox-check", "true");		
-	}else if(checkBoxme_Rogrid.getAttribute("data-rogridcheckbox-check") == "true"){
-
-		checkImageElem_Rogrid.style.visibility = "hidden";		
-		inputCheckbox.checked = false;
-		checkBoxme_Rogrid.setAttribute("data-rogridcheckbox-check", "false");
-	}
-}
-
-/*Check and uncheck Custom Checkbox*/
-/****************************************************************************************************************************************************************************/
-
-
-
-
-
 /****************************************************************************************************************************************************************************/
 /*Spinning Loading*/
 
