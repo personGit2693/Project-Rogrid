@@ -938,6 +938,61 @@
 }
 /*Checkbox*/
 
+
+/*Notification Model One*/
+@keyframes ntfone_rg_keyframes {
+	from{
+		display: none;
+		max-height: 0px;
+	}
+
+	to{
+		display: flex;
+		max-height: 1000px;
+	}
+}
+
+.ntfone_rg{
+	position: relative;
+	display: none;	
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	max-height: 0px;
+	animation-fill-mode: forwards;
+	background-color: var(--ntfone_rg_bgcolor);
+}
+
+.ntfone_mess_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	white-space: normal;
+	word-break: keep-all;
+	flex-shrink: 1;
+	width: 100%;	
+}
+
+.ntfone_close_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-shrink: 0;
+	width: var(--ntfone_close_rg_size);
+	height: var(--ntfone_close_rg_size);
+	cursor: pointer;
+	align-self: flex-start;
+}
+
+.ntfone_icon_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+/*Notification Model One*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 

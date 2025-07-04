@@ -77,9 +77,10 @@ const removeSpinningLoad = () => {
 
 /****************************************************************************************************************************************************************************/
 /*Function for removing notification box*/
-const removeNotiBox = (notiBoxCloseImg_Rogrid_Param) =>{
-	const notiBoxElem_Rogrid = notiBoxCloseImg_Rogrid_Param.parentElement.parentElement;
-	notiBoxElem_Rogrid.remove();
+function removeNotification(ntfone_icon_rg){
+
+	const ntfone_rg = ntfone_icon_rg.parentElement.parentElement;
+	ntfone_rg.remove();
 }
 /*Function for removing notification box*/
 /****************************************************************************************************************************************************************************/
