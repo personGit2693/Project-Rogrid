@@ -123,7 +123,6 @@ function closeMyMod(elemId){
 /****************************************************************************************************************************************************************************/
 
 
-
 /****************************************************************************************************************************************************************************/
 /*Spinning Loading*/
 
@@ -152,9 +151,6 @@ const removeSpinningLoad = () => {
 /****************************************************************************************************************************************************************************/
 
 
-
-
-
 /****************************************************************************************************************************************************************************/
 /*Function for removing notification box*/
 const removeNotiBox = (notiBoxCloseImg_Rogrid_Param) =>{
@@ -163,9 +159,6 @@ const removeNotiBox = (notiBoxCloseImg_Rogrid_Param) =>{
 }
 /*Function for removing notification box*/
 /****************************************************************************************************************************************************************************/
-
-
-
 
 
 /****************************************************************************************************************************************************************************/
@@ -182,221 +175,6 @@ async function removeNotiBox_Timeout(notiboxImg_Param){
 }
 /*Function to auto remove the Notification Box*/
 /****************************************************************************************************************************************************************************/
-
-
-
-
-
-/****************************************************************************************************************************************************************************/
-/*Function for creating notification box with auto close*/
-const notifyNodeBox = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
-	const notifBoxWrapperId_Rogrid = document.getElementById(wrapperId_Param);
-
-	if(resultBool_Param == true){
-		/*<div class="notifyFlex_Suc_RoClass">*/
-		const notifyFlex_Suc_RoClass_Rogrid = document.createElement("div");
-		notifyFlex_Suc_RoClass_Rogrid.className = "notifyFlex_Suc_RoClass";
-		/*<div class="notifyFlex_Suc_RoClass">*/
-
-
-		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
-		const notifyMessItem_Suc_RoClass_Rogrid = document.createElement("div");
-		notifyMessItem_Suc_RoClass_Rogrid.className = "notifyMessItem_Suc_RoClass";
-
-		const notifyMessBoldTag_Rogrid = document.createElement("b");
-		const notifyMessBoldTag_InnerTEXT = document.createTextNode("SUCCESS! ");
-		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
-
-		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
-
-		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
-		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
-
-
-		/*<div class="notifyCloseItem_Suc_RoClass">*/
-		const notifyCloseItem_Suc_RoClass_Rogrid = document.createElement("div");
-		notifyCloseItem_Suc_RoClass_Rogrid.className = "notifyCloseItem_Suc_RoClass";
-		/*<div class="notifyCloseItem_Suc_RoClass">*/
-
-
-		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
-		const closeNotiBoxImg_Suc_Rogrid = document.createElement("img");
-		closeNotiBoxImg_Suc_Rogrid.setAttribute("src", "../../src/closeModIcon_Suc.png");
-		closeNotiBoxImg_Suc_Rogrid.addEventListener("click", function(){
-			removeNotiBox(this); /*From framework*/
-		});
-		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
-
-
-		/*Append*/
-		notifyCloseItem_Suc_RoClass_Rogrid.appendChild(closeNotiBoxImg_Suc_Rogrid);
-		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyMessItem_Suc_RoClass_Rogrid);
-		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyCloseItem_Suc_RoClass_Rogrid);
-		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Suc_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*Append*/
-
-
-		/*Execute Notification Box Timeout*/
-		removeNotiBox_Timeout(closeNotiBoxImg_Suc_Rogrid);
-		/*Execute Notification Box Timeout*/
-
-	}else if(resultBool_Param == false){
-		/*<div class="notifyFlex_Failed_RoClass">*/
-		const notifyFlex_Failed_RoClass_Rogrid = document.createElement("div");
-		notifyFlex_Failed_RoClass_Rogrid.className = "notifyFlex_Failed_RoClass";
-		/*<div class="notifyFlex_Failed_RoClass">*/
-
-
-		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
-		const notifyMessItem_Failed_RoClass_Rogrid = document.createElement("div");
-		notifyMessItem_Failed_RoClass_Rogrid.className = "notifyMessItem_Failed_RoClass";
-
-		const notifyMessBoldTag_Rogrid = document.createElement("b");
-		const notifyMessBoldTag_InnerTEXT = document.createTextNode("Failed! ");
-		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
-
-		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
-
-		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
-		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
-
-
-		/*<div class="notifyCloseItem_Failed_RoClass">*/
-		const notifyCloseItem_Failed_RoClass_Rogrid = document.createElement("div");
-		notifyCloseItem_Failed_RoClass_Rogrid.className = "notifyCloseItem_Failed_RoClass";
-		/*<div class="notifyCloseItem_Failed_RoClass">*/
-
-
-		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
-		const closeNotiBoxImg_Failed_Rogrid = document.createElement("img");
-		closeNotiBoxImg_Failed_Rogrid.setAttribute("src", "../../src/closeModIcon_Failed.png");
-		closeNotiBoxImg_Failed_Rogrid.addEventListener("click", function(){
-			removeNotiBox(this); /*From framework*/
-		});
-		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
-
-
-		/*Append*/
-		notifyCloseItem_Failed_RoClass_Rogrid.appendChild(closeNotiBoxImg_Failed_Rogrid);
-		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyMessItem_Failed_RoClass_Rogrid);
-		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyCloseItem_Failed_RoClass_Rogrid);
-		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Failed_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*Append*/
-		
-
-
-		/*Execute Notification Box Timeout*/
-		removeNotiBox_Timeout(closeNotiBoxImg_Failed_Rogrid);
-		/*Execute Notification Box Timeout*/
-	}
-}
-/*Function for creating notification box with auto close*/
-/****************************************************************************************************************************************************************************/
-
-
-
-
-
-/****************************************************************************************************************************************************************************/
-/*Function for creating notification box without auto close*/
-const notifyNodeBoxStay = (resultBool_Param, notiMessage_Param, wrapperId_Param) =>{
-	const notifBoxWrapperId_Rogrid = document.getElementById(wrapperId_Param);
-
-	if(resultBool_Param == true){
-		/*<div class="notifyFlex_Suc_RoClass">*/
-		const notifyFlex_Suc_RoClass_Rogrid = document.createElement("div");
-		notifyFlex_Suc_RoClass_Rogrid.className = "notifyFlex_Suc_RoClass";
-		/*<div class="notifyFlex_Suc_RoClass">*/
-
-
-		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
-		const notifyMessItem_Suc_RoClass_Rogrid = document.createElement("div");
-		notifyMessItem_Suc_RoClass_Rogrid.className = "notifyMessItem_Suc_RoClass";
-
-		const notifyMessBoldTag_Rogrid = document.createElement("b");
-		const notifyMessBoldTag_InnerTEXT = document.createTextNode("SUCCESS! ");
-		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
-
-		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
-
-		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
-		notifyMessItem_Suc_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*<div class="notifyMessItem_Suc_RoClass"><b>SUCCESS!</b> Message Here</div>*/
-
-
-		/*<div class="notifyCloseItem_Suc_RoClass">*/
-		const notifyCloseItem_Suc_RoClass_Rogrid = document.createElement("div");
-		notifyCloseItem_Suc_RoClass_Rogrid.className = "notifyCloseItem_Suc_RoClass";
-		/*<div class="notifyCloseItem_Suc_RoClass">*/
-
-
-		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
-		const closeNotiBoxImg_Suc_Rogrid = document.createElement("img");
-		closeNotiBoxImg_Suc_Rogrid.setAttribute("src", "../../src/closeModIcon_Suc.png");
-		closeNotiBoxImg_Suc_Rogrid.addEventListener("click", function(){
-			removeNotiBox(this); /*From framework*/
-		});
-		/*<img src="../../src/closeModIcon_Suc.png" onclick="removeNotiBox(this)">*/
-
-
-		/*Append*/
-		notifyCloseItem_Suc_RoClass_Rogrid.appendChild(closeNotiBoxImg_Suc_Rogrid);
-		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyMessItem_Suc_RoClass_Rogrid);
-		notifyFlex_Suc_RoClass_Rogrid.appendChild(notifyCloseItem_Suc_RoClass_Rogrid);
-		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Suc_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*Append*/
-	}else if(resultBool_Param == false){
-		/*<div class="notifyFlex_Failed_RoClass">*/
-		const notifyFlex_Failed_RoClass_Rogrid = document.createElement("div");
-		notifyFlex_Failed_RoClass_Rogrid.className = "notifyFlex_Failed_RoClass";
-		/*<div class="notifyFlex_Failed_RoClass">*/
-
-
-		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
-		const notifyMessItem_Failed_RoClass_Rogrid = document.createElement("div");
-		notifyMessItem_Failed_RoClass_Rogrid.className = "notifyMessItem_Failed_RoClass";
-
-		const notifyMessBoldTag_Rogrid = document.createElement("b");
-		const notifyMessBoldTag_InnerTEXT = document.createTextNode("Failed! ");
-		notifyMessBoldTag_Rogrid.appendChild(notifyMessBoldTag_InnerTEXT);
-
-		const notifyMess_InnerText = document.createTextNode(notiMessage_Param);
-
-		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMessBoldTag_Rogrid);
-		notifyMessItem_Failed_RoClass_Rogrid.appendChild(notifyMess_InnerText);
-		/*<div class="notifyMessItem_Failed_RoClass"><b>Failed!</b> Message Here</div>*/
-
-
-		/*<div class="notifyCloseItem_Failed_RoClass">*/
-		const notifyCloseItem_Failed_RoClass_Rogrid = document.createElement("div");
-		notifyCloseItem_Failed_RoClass_Rogrid.className = "notifyCloseItem_Failed_RoClass";
-		/*<div class="notifyCloseItem_Failed_RoClass">*/
-
-
-		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
-		const closeNotiBoxImg_Failed_Rogrid = document.createElement("img");
-		closeNotiBoxImg_Failed_Rogrid.setAttribute("src", "../../src/closeModIcon_Failed.png");
-		closeNotiBoxImg_Failed_Rogrid.addEventListener("click", function(){
-			removeNotiBox(this); /*From framework*/
-		});
-		/*<img src="../../src/closeModIcon_Failed.png" onclick="removeNotiBox(this)">*/
-
-
-		/*Append*/
-		notifyCloseItem_Failed_RoClass_Rogrid.appendChild(closeNotiBoxImg_Failed_Rogrid);
-		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyMessItem_Failed_RoClass_Rogrid);
-		notifyFlex_Failed_RoClass_Rogrid.appendChild(notifyCloseItem_Failed_RoClass_Rogrid);
-		notifBoxWrapperId_Rogrid.insertBefore(notifyFlex_Failed_RoClass_Rogrid, notifBoxWrapperId_Rogrid.firstChild);
-		/*Append*/
-	}
-}
-/*Function for creating notification box without auto close*/
-/****************************************************************************************************************************************************************************/
-
-
-
 
 
 /****************************************************************************************************************************************************************************/
@@ -525,8 +303,6 @@ const showActionButtons = (masterBtnWrap) =>{
 /****************************************************************************************************************************************************************************/ 
 
 
-
-
 /****************************************************************************************************************************************************************************/ 
 /*Draw Pie Chart*/
 function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
@@ -539,8 +315,6 @@ function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
 }
 /*Draw Pie Chart*/
 /****************************************************************************************************************************************************************************/ 
-
-
 
 
 /****************************************************************************************************************************************************************************/ 
@@ -557,7 +331,6 @@ function drawLineChart(chartData_Array, chartOption_Obj, chartWrapperId){
 /****************************************************************************************************************************************************************************/ 
 
 
-
 /****************************************************************************************************************************************************************************/ 
 /*Draw Bar Chart*/
 function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
@@ -572,7 +345,6 @@ function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
 /****************************************************************************************************************************************************************************/ 
 
 
-
 /****************************************************************************************************************************************************************************/ 
 /*Draw Area Chart*/
 function drawAreaChart(chartData_Array, chartOption_Obj, chartWrapperId){
@@ -585,7 +357,6 @@ function drawAreaChart(chartData_Array, chartOption_Obj, chartWrapperId){
 }
 /*Draw Area Chart*/
 /****************************************************************************************************************************************************************************/ 
-
 
 
 /****************************************************************************************************************************************************************************/ 
@@ -912,3 +683,14 @@ function setRangeTo(range_rg_id, cmo_value_rg){
 }
 /*Display Date Range Calendar Lite*/
 /****************************************************************************************************************************************************************************/ 
+
+
+/****************************************************************************************************************************************************************************/
+/*Notification Model One*/
+function removeNotification(ntfone_rg_id){
+
+	const ntfone_rg = document.getElementById(ntfone_rg_id);	
+	ntfone_rg.remove();
+}
+/*Notification Model One*/
+/****************************************************************************************************************************************************************************/

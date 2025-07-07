@@ -959,8 +959,12 @@
 	overflow: hidden;
 	flex-flow: row nowrap;
 	max-height: 0px;
-	animation-fill-mode: forwards;
+	top: 0px;
+	animation-name: ntfone_rg_keyframes;
 	background-color: var(--ntfone_rg_bgcolor);
+	animation-fill-mode: forwards;
+	transition: all 0.1s linear;
+
 }
 
 .ntfone_mess_rg{
