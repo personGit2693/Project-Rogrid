@@ -919,16 +919,16 @@
     max-height: 1000px; } }
 .ntfone_rg {
   position: relative;
-  display: none;
   box-sizing: border-box;
   overflow: hidden;
   flex-flow: row nowrap;
-  max-height: 0px;
-  top: 0px;
-  animation-name: ntfone_rg_keyframes;
   background-color: var(--ntfone_rg_bgcolor);
-  animation-fill-mode: forwards;
-  transition: all 0.1s linear; }
+  max-height: 0px;
+  animation-name: ntfone_rg_keyframes;
+  animation-duration: var(--ntfone_rg_duration); }
+
+.ntfone_rg_stay {
+  animation-fill-mode: forwards; }
 
 .ntfone_mess_rg {
   position: relative;
@@ -957,6 +957,56 @@
   height: 100%; }
 
 /*Notification Model One*/
+/*Stepper*/
+.step_rg {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap;
+  justify-content: center; }
+
+.step_item_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  width: var(--step_item_rg_width); }
+
+.step_tube_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  overflow: visible;
+  border-width: 0px; }
+
+.step_line_rg {
+  position: absolute;
+  box-sizing: border-box;
+  overflow: visible;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  border-width: var(--step_line_rg_borderwidth);
+  border-color: var(--step_line_rg_bordercolor);
+  border-style: solid; }
+
+.step_num_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: var(--step_num_rg_bgcolor);
+  text-align: center;
+  border-radius: 50%;
+  width: var(--step_num_rg_width);
+  color: var(--step_num_rg_color); }
+
+.step_activeline_rg {
+  border-color: var(--step_active_rg_bordercolor); }
+
+.step_activenum_rg {
+  color: var(--step_active_rg_color); }
+
+/*Stepper*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
