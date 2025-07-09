@@ -305,11 +305,11 @@ const showActionButtons = (masterBtnWrap) =>{
 
 /****************************************************************************************************************************************************************************/ 
 /*Draw Pie Chart*/
-function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
+function drawPieChart(chartData_Array, chartOption_Obj, chartparentElementId){
 	const data = google.visualization.arrayToDataTable(chartData_Array);
 	const options = chartOption_Obj;
 
-	const chart = new google.visualization.PieChart(document.getElementById(chartWrapperId));
+	const chart = new google.visualization.PieChart(document.getElementById(chartparentElementId));
 
 	chart.draw(data, options);
 }
@@ -319,11 +319,11 @@ function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
 
 /****************************************************************************************************************************************************************************/ 
 /*Draw Line Chart*/
-function drawLineChart(chartData_Array, chartOption_Obj, chartWrapperId){
+function drawLineChart(chartData_Array, chartOption_Obj, chartparentElementId){
 	const data = google.visualization.arrayToDataTable(chartData_Array);
 	const options = chartOption_Obj;
 
-	const chart = new google.visualization.LineChart(document.getElementById(chartWrapperId));
+	const chart = new google.visualization.LineChart(document.getElementById(chartparentElementId));
 
 	chart.draw(data, options);
 }
@@ -333,11 +333,11 @@ function drawLineChart(chartData_Array, chartOption_Obj, chartWrapperId){
 
 /****************************************************************************************************************************************************************************/ 
 /*Draw Bar Chart*/
-function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
+function drawBarChart(chartData_Array, chartOption_Obj, chartparentElementId){
 	const data = google.visualization.arrayToDataTable(chartData_Array);
 	const options = chartOption_Obj;
 
-	const chart = new google.visualization.BarChart(document.getElementById(chartWrapperId));
+	const chart = new google.visualization.BarChart(document.getElementById(chartparentElementId));
 
 	chart.draw(data, options);
 }
@@ -347,11 +347,11 @@ function drawBarChart(chartData_Array, chartOption_Obj, chartWrapperId){
 
 /****************************************************************************************************************************************************************************/ 
 /*Draw Area Chart*/
-function drawAreaChart(chartData_Array, chartOption_Obj, chartWrapperId){
+function drawAreaChart(chartData_Array, chartOption_Obj, chartparentElementId){
 	const data = google.visualization.arrayToDataTable(chartData_Array);
 	const options = chartOption_Obj;
 
-	const chart = new google.visualization.AreaChart(document.getElementById(chartWrapperId));
+	const chart = new google.visualization.AreaChart(document.getElementById(chartparentElementId));
 
 	chart.draw(data, options);
 }
@@ -492,127 +492,131 @@ function hideBoxLoader(boxLoaderWrap){
 
 
 /****************************************************************************************************************************************************************************/ 
-/*Step by step*/
+/*Stepper*/
 
 /*Prep vars*/
-var stepNumIndex_Rogrid = 0;
+var stepper_index = 0;
 /*Prep vars*/
 
 
-/*Function to lighten per step*/
-function nextStep(stepByStepFlex_id, wrapper_id){
+/*Function to set the active step*/
+function nextStep(parentElement_id, step_rg_id, step_content_rg_id){
 
-	const wrapper = document.getElementById(wrapper_id);
-	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
-	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
-	const stepSets = document.getElementsByClassName("stepSets_RoClass");
+	const parentElement = document.getElementById(parentElement_id);
+	const step_rg = document.getElementById(step_rg_id);
+	const step_item_rg = step_rg.querySelectorAll(".step_item_rg");
+	const step_content_rg = document.getElementById(step_content_rg_id);
+	const step_set_rg = step_content_rg.querySelectorAll(".step_set_rg");
 
-	if(stepNumIndex_Rogrid < stepByStepItems.length){
+	if(stepper_index < step_item_rg.length){
 
-		let lining = stepByStepItems[stepNumIndex_Rogrid].children[0];
-		let numbering = stepByStepItems[stepNumIndex_Rogrid].children[1];
-		let definition = stepByStepItems[stepNumIndex_Rogrid].children[2];
+		let step_line_rg = step_item_rg[stepper_index].querySelectorAll(".step_line_rg");
+		let step_num_rg = step_item_rg[stepper_index].querySelectorAll(".step_num_rg");
+		let step_text_rg = step_item_rg[stepper_index].querySelectorAll(".step_text_rg");
 
 		/*Light the number of current step*/
-		lining.classList.add("stepByStepLineLight_RoClass");
-		numbering.classList.add("stepNumberLight_RoClass");
-		definition.classList.add("stepDefiLight_RoClass");
+		step_line_rg.classList.add("step_activeline_rg");
+		step_num_rg.classList.add("step_activenum_rg");
+		step_text_rg.classList.add("step_activenum_rg");
 		/*Light the number of current step*/
 		
 
 		/*Display the current step*/
-		for(let index=0; index < stepSets.length; index++){
+		for(let index=0; index < step_set_rg.length; index++){
 
-			if(index === stepNumIndex_Rogrid){
+			if(index === stepper_index){
 
-				stepSets[index].style.display = "block";
-			}else if(index !== stepNumIndex_Rogrid){
+				step_set_rg[index].style.display = "block";
+			}else if(index !== stepper_index){
 
-				stepSets[index].style.display = "none";
+				step_set_rg[index].style.display = "none";
 			}
 		}
 		/*Display the current step*/		
 
 
-		stepNumIndex_Rogrid++;
+		stepper_index++;
 
-		wrapper.scrollTop = 0;		
+		parentElement.scrollTop = 0;		
 	}
 }
-/*Function to lighten per step*/
+/*Function to set the active step*/
 
 
 /*Function to back step*/
-function backStep(stepByStepFlex_id, wrapper_id){
+function backStep(parentElement_id, step_rg_id, step_content_rg_id){
 
-	const wrapper = document.getElementById(wrapper_id);
-	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
-	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
-	const stepSets = document.getElementsByClassName("stepSets_RoClass");
+	const parentElement = document.getElementById(parentElement_id);
+	const step_rg = document.getElementById(step_rg_id);
+	const step_item_rg = step_rg.querySelectorAll(".step_item_rg");
+	const step_content_rg = document.getElementById(step_content_rg_id);
+	const step_set_rg = step_content_rg.querySelectorAll(".step_set_rg");
 
-	if(stepNumIndex_Rogrid > 1){		
+	if(stepper_index > 1){		
 
-		stepNumIndex_Rogrid--;
+		stepper_index--;
 
-		let lining = stepByStepItems[stepNumIndex_Rogrid].children[0];
-		let numbering = stepByStepItems[stepNumIndex_Rogrid].children[1];
-		let definition = stepByStepItems[stepNumIndex_Rogrid].children[2];
+		let step_line_rg = step_item_rg[stepper_index].querySelectorAll(".step_line_rg");
+		let step_num_rg = step_item_rg[stepper_index].querySelectorAll(".step_num_rg");
+		let step_text_rg = step_item_rg[stepper_index].querySelectorAll(".step_text_rg");
 
 		/*Turn off light the number of current step*/
-		lining.classList.remove("stepByStepLineLight_RoClass");
-		numbering.classList.remove("stepNumberLight_RoClass");
-		definition.classList.remove("stepDefiLight_RoClass");
+		step_line_rg.classList.remove("step_activeline_rg");
+		step_num_rg.classList.remove("step_activenum_rg");
+		step_text_rg.classList.remove("step_activenum_rg");
 		/*Turn off light the number of current step*/
 
 
 		/*Display the current step*/
-		for(let index=0; index < stepSets.length; index++){
+		for(let index=0; index < step_set_rg.length; index++){
 			
-			if(index === stepNumIndex_Rogrid){
+			if(index === stepper_index){
 			
-				stepSets[index].style.display = "none";
+				step_set_rg[index].style.display = "none";
 
-			}else if(index === stepNumIndex_Rogrid - 1){
+			}else if(index === stepper_index - 1){
 				
-				stepSets[index].style.display = "block";
+				step_set_rg[index].style.display = "block";
 			}
 		}
 		/*Display the current step*/		
 		
 
-		wrapper.scrollTop = 0;				
+		parentElement.scrollTop = 0;				
 	}
 }
 /*Function to back step*/
 
 
 /*Function to reset step*/
-function resetStep(stepByStepFlex_id, wrapper_id){
+function resetStep(parentElement_id, step_rg_id, step_content_rg_id){
 
-	const wrapper = document.getElementById(wrapper_id);
-	const stepByStepFlex = document.getElementById(stepByStepFlex_id);
-	const stepByStepItems = stepByStepFlex.querySelectorAll(".stepByStepItem_RoClass");
-	const stepSets = document.getElementsByClassName("stepSets_RoClass");
+	const parentElement = document.getElementById(parentElement_id);
+	const step_rg = document.getElementById(step_rg_id);
+	const step_item_rg = step_rg.querySelectorAll(".step_item_rg");
+	const step_content_rg = document.getElementById(step_content_rg_id);
+	const step_set_rg = step_content_rg.querySelectorAll(".step_set_rg");
 
-	for(let index=0; index < stepNumIndex_Rogrid; index++){
+	for(let index=0; index < stepper_index; index++){
 
-		let lining = stepByStepItems[index].children[0];
-		let numbering = stepByStepItems[index].children[1];
-		let definition = stepByStepItems[index].children[2];
+		let step_line_rg = step_item_rg[index].children[0];
+		let step_num_rg = step_item_rg[index].children[1];
+		let step_text_rg = step_item_rg[index].children[2];
 
 		/*Turn off light the number of current step*/
-		lining.classList.remove("stepByStepLineLight_RoClass");
-		numbering.classList.remove("stepNumberLight_RoClass");
-		definition.classList.remove("stepDefiLight_RoClass");
+		step_line_rg.classList.remove("step_activeline_rg");
+		step_num_rg.classList.remove("step_activenum_rg");
+		step_text_rg.classList.remove("step_activenum_rg");
 		/*Turn off light the number of current step*/
 		
-		stepSets[index].style.display = "none";
+		step_set_rg[index].style.display = "none";
 	}
 
-	stepNumIndex_Rogrid = 0;
+	stepper_index = 0;
 }
 /*Function to reset step*/
-/*Step by step*/
+
+/*Stepper*/
 /****************************************************************************************************************************************************************************/
 
 

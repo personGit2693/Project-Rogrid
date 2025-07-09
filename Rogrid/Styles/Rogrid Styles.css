@@ -1006,6 +1006,16 @@
 .step_activenum_rg {
   color: var(--step_active_rg_color); }
 
+.step_content_rg {
+  position: relative;
+  box-sizing: border-box;
+  border: 0px solid transparent; }
+
+.step_set_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: none; }
+
 /*Stepper*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
