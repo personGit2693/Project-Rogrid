@@ -970,21 +970,22 @@
   position: relative;
   box-sizing: border-box;
   overflow: visible;
-  width: var(--step_item_rg_width); }
+  width: 100%; }
 
 .step_tube_rg {
   position: relative;
-  display: block;
+  display: flex;
   box-sizing: border-box;
   overflow: visible;
-  border-width: 0px; }
+  border-width: 0px;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
 
 .step_line_rg {
   position: absolute;
   box-sizing: border-box;
   overflow: visible;
-  top: 50%;
-  transform: translateY(-50%);
   width: 100%;
   border-width: var(--step_line_rg_borderwidth);
   border-color: var(--step_line_rg_bordercolor);
@@ -1000,11 +1001,22 @@
   width: var(--step_num_rg_width);
   color: var(--step_num_rg_color); }
 
+.step_text_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  text-align: center;
+  color: var(--step_text_rg_color); }
+
 .step_activeline_rg {
-  border-color: var(--step_active_rg_bordercolor); }
+  border-color: var(--step_activeline_rg_bordercolor); }
 
 .step_activenum_rg {
-  color: var(--step_active_rg_color); }
+  color: var(--step_activenum_rg_color);
+  background-color: var(--step_activenum_rg_bgcolor); }
+
+.step_activetext_rg {
+  color: var(--step_activetext_rg_color); }
 
 .step_content_rg {
   position: relative;

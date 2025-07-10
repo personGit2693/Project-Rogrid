@@ -510,14 +510,14 @@ function nextStep(parentElement_id, step_rg_id, step_content_rg_id){
 
 	if(stepper_index < step_item_rg.length){
 
-		let step_line_rg = step_item_rg[stepper_index].querySelectorAll(".step_line_rg");
-		let step_num_rg = step_item_rg[stepper_index].querySelectorAll(".step_num_rg");
-		let step_text_rg = step_item_rg[stepper_index].querySelectorAll(".step_text_rg");
+		let step_line_rg = step_item_rg[stepper_index].querySelector(".step_line_rg");
+		let step_num_rg = step_item_rg[stepper_index].querySelector(".step_num_rg");
+		let step_text_rg = step_item_rg[stepper_index].querySelector(".step_text_rg");
 
 		/*Light the number of current step*/
 		step_line_rg.classList.add("step_activeline_rg");
 		step_num_rg.classList.add("step_activenum_rg");
-		step_text_rg.classList.add("step_activenum_rg");
+		step_text_rg.classList.add("step_activetext_rg");
 		/*Light the number of current step*/
 		
 
@@ -556,14 +556,14 @@ function backStep(parentElement_id, step_rg_id, step_content_rg_id){
 
 		stepper_index--;
 
-		let step_line_rg = step_item_rg[stepper_index].querySelectorAll(".step_line_rg");
-		let step_num_rg = step_item_rg[stepper_index].querySelectorAll(".step_num_rg");
-		let step_text_rg = step_item_rg[stepper_index].querySelectorAll(".step_text_rg");
+		let step_line_rg = step_item_rg[stepper_index].querySelector(".step_line_rg");
+		let step_num_rg = step_item_rg[stepper_index].querySelector(".step_num_rg");
+		let step_text_rg = step_item_rg[stepper_index].querySelector(".step_text_rg");
 
 		/*Turn off light the number of current step*/
 		step_line_rg.classList.remove("step_activeline_rg");
 		step_num_rg.classList.remove("step_activenum_rg");
-		step_text_rg.classList.remove("step_activenum_rg");
+		step_text_rg.classList.remove("step_activetext_rg");
 		/*Turn off light the number of current step*/
 
 
@@ -599,14 +599,14 @@ function resetStep(parentElement_id, step_rg_id, step_content_rg_id){
 
 	for(let index=0; index < stepper_index; index++){
 
-		let step_line_rg = step_item_rg[index].children[0];
-		let step_num_rg = step_item_rg[index].children[1];
-		let step_text_rg = step_item_rg[index].children[2];
+		let step_line_rg = step_item_rg[index].querySelector(".step_line_rg");
+		let step_num_rg = step_item_rg[index].querySelector(".step_num_rg");
+		let step_text_rg = step_item_rg[index].querySelector(".step_text_rg");
 
 		/*Turn off light the number of current step*/
 		step_line_rg.classList.remove("step_activeline_rg");
 		step_num_rg.classList.remove("step_activenum_rg");
-		step_text_rg.classList.remove("step_activenum_rg");
+		step_text_rg.classList.remove("step_activetext_rg");
 		/*Turn off light the number of current step*/
 		
 		step_set_rg[index].style.display = "none";
