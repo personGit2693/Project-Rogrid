@@ -1031,8 +1031,8 @@
 	box-sizing: border-box;
 	overflow: visible;
 	width: 100%;
-	border-width: var(--step_line_rg_borderwidth);
-	border-color: var(--step_line_rg_bordercolor);
+	border-width: var(--step_line_rg_thickness);
+	border-color: var(--step_line_rg_color);
 	border-style: solid;
 }
 
@@ -1056,7 +1056,7 @@
 }
 
 .step_activeline_rg{
-	border-color: var(--step_activeline_rg_bordercolor);
+	border-color: var(--step_activeline_rg_color);
 }
 
 .step_activenum_rg{
@@ -1080,6 +1080,41 @@
 	display: none;
 }
 /*Stepper*/
+
+
+/*Blur*/
+.blur_rg{
+	position: fixed;
+	box-sizing: border-box;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	opacity: 0.5;
+}
+/*Blur*/
+
+
+/*Center Loading*/
+.cd_rg{
+	position: fixed;	
+	box-sizing: border-box;
+	overflow: visible;	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);	
+	width: var(--cd_rg_size);
+	height: var(--cd_rg_size);
+}
+
+.cd_img_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+/*Center Loading*/
 
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
