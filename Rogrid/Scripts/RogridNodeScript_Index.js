@@ -60,27 +60,6 @@ const capturePage = (captureElemId_Param, thisElem_Param) => {
 
 
 /****************************************************************************************************************************************************************************/ 
-/*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
-const showActionButtons = (masterBtnWrap) =>{	
-	masterBtnWrap.classList.toggle("masterBtnWrap_Animate_Class");
-
-	if(masterBtnWrap.classList.contains("masterBtnWrap_Animate_Class") === true){
-		masterBtnWrap.children[1].children[0].src = "./src/Chevron Up.png"; /*Editable action button arrow icon*/
-
-		masterBtnWrap.nextElementSibling.style.display = "block";
-	}else if(masterBtnWrap.classList.contains("masterBtnWrap_Animate_Class") === false){
-		masterBtnWrap.children[1].children[0].src = "./src/Chevron Down.png"; /*Editable action button arrow icon*/
-
-		masterBtnWrap.nextElementSibling.style.display = "none";
-	}	
-}
-/*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
-/****************************************************************************************************************************************************************************/ 
-
-
-
-
-/****************************************************************************************************************************************************************************/ 
 /*Draw Pie Chart*/
 function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
 	const data = google.visualization.arrayToDataTable(chartData_Array);
@@ -92,8 +71,6 @@ function drawPieChart(chartData_Array, chartOption_Obj, chartWrapperId){
 }
 /*Draw Pie Chart*/
 /****************************************************************************************************************************************************************************/ 
-
-
 
 
 /****************************************************************************************************************************************************************************/ 

@@ -285,21 +285,26 @@ const capturePage = (captureElemId_Param, thisElem_Param) => {
 
 
 /****************************************************************************************************************************************************************************/ 
-/*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
-const showActionButtons = (masterBtnWrap) =>{	
-	masterBtnWrap.classList.toggle("masterBtnWrap_Animate_Class");
+/*Button List*/
+function dropblist(blist_rg_id){
 
-	if(masterBtnWrap.classList.contains("masterBtnWrap_Animate_Class") === true){
-		masterBtnWrap.children[1].children[0].src = "../../src/Chevron Up.png"; /*Editable action button arrow icon*/
+	const blist_rg = document.getElementById(blist_rg_id);
+	const blist_icon_rg = blist_rg.querySelector(".blist_icon_rg");
+	const blist_opt_rg = blist_rg.querySelector(".blist_opt_rg");	
 
-		masterBtnWrap.nextElementSibling.style.display = "block";
-	}else if(masterBtnWrap.classList.contains("masterBtnWrap_Animate_Class") === false){
-		masterBtnWrap.children[1].children[0].src = "../../src/Chevron Down.png"; /*Editable action button arrow icon*/
+	if(blist_opt_rg.classList.contains("blist_active") === true){
 
-		masterBtnWrap.nextElementSibling.style.display = "none";
-	}	
+		blist_icon_rg.style.transform = "rotateX(180deg)";
+		blist_opt_rg.style.display = "block";
+	}else if(blist_opt_rg.classList.contains("blist_active") === false){
+
+		blist_icon_rg.style.transform = "rotateX(0deg)";		
+		blist_opt_rg.style.display = "none";
+	}
+
+	blist_opt_rg.classList.toggle("blist_active");	
 }
-/*Function for turning upside down the arrow of clickable action button and show the action list buttons*/
+/*Button List*/
 /****************************************************************************************************************************************************************************/ 
 
 

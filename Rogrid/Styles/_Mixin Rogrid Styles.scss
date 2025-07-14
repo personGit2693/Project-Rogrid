@@ -98,4 +98,19 @@
 	flex-flow: column nowrap; 
 }
 /*Date Range*/
+
+
+/*Button List*/
+@mixin blist_btn_rg_general{
+	position: relative;
+	display: block;
+	box-sizing: border-box;	
+	border: none;
+	outline: none;
+	width: 100%;
+	cursor: pointer;
+	color: var(--blist_rg_color);
+	background-color: var(--blist_rg_bgcolor);
+}
+/*Button List*/
 /***********************************************************************************************************************************************************************************************************/

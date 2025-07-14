@@ -13,6 +13,8 @@
 /*Side Navigation Menu*/
 /*Date Range*/
 /*Date Range*/
+/*Button List*/
+/*Button List*/
 /***********************************************************************************************************************************************************************************************************/
 /*Imports*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1059,6 +1061,89 @@
   height: 100%; }
 
 /*Center Loading*/
+/*Icon Button*/
+.icb_rg {
+  position: relative;
+  overflow: hidden;
+  width: var(--icb_rg_size);
+  height: var(--icb_rg_size);
+  background-color: var(--icb_rg_bgcolor);
+  background-image: var(--icb_rg_image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-origin: padding-box;
+  outline: none;
+  cursor: pointer; }
+
+.icb_rg:hover {
+  background-color: var(--icb_rg_active_bgcolor);
+  background-image: var(--icb_rg_active_image); }
+
+/*Icon Button*/
+/*Button List*/
+.blist_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+.blist_main_rg {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap; }
+
+.blist_mbtn_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  color: var(--blist_rg_color);
+  background-color: var(--blist_rg_bgcolor); }
+
+.blist_chevron_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: var(--blist_rg_bgcolor);
+  width: var(--blist_chevron_rg_size);
+  height: var(--blist_chevron_rg_size);
+  flex-shrink: 0;
+  cursor: pointer; }
+
+.blist_icon_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s linear; }
+
+.blist_opt_rg {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.blist_btn_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  color: var(--blist_rg_color);
+  background-color: var(--blist_rg_bgcolor); }
+
+.blist_btn_rg:hover {
+  color: var(--blist_rg_active_color);
+  background-color: var(--blist_rg_active_bgcolor); }
+
+/*Button List*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
