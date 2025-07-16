@@ -1196,6 +1196,72 @@
 /*Button List*/
 
 
+/*Section Spinner*/
+.boximg_rg{
+	position: relative;
+	display: flex; 
+	box-sizing: border-box;
+	overflow: hidden;
+	width: auto;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.boximg_icon_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	width: var(--boximg_icon_rg_size);
+	height: var(--boximg_icon_rg_size);
+}
+
+.boximg_img_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+/*Section Spinner*/
+
+
+/*Search Input*/
+.search_rg{
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	box-sizing: border-box;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	background-color: var(--search_rg_bgcolor);
+	border-style: solid;
+	border-width: var(--search_rg_borderwidth);
+	border-color: var(--search_rg_bordercolor);
+}
+
+.search_icon_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: var(--search_rg_size);
+	height: var(--search_rg_size);
+	flex-shrink: 0;
+	background-color: transparent;
+}
+
+.search_input_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	font-size: var(--search_rg_size);
+}
+/*Search Input*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 

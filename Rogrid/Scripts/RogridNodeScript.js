@@ -25,23 +25,6 @@ function input_rg_out(fcolor, inputId){
 
 
 /****************************************************************************************************************************************************************************/
-/*Display current date*/
-
-if(document.getElementsByClassName("currentDate_RoClass").length != 0){
-	/*currentDate_RoClass Element where to display current date*/
-	const currentDate_RoClass_Rogrid = document.getElementsByClassName("currentDate_RoClass")[0];
-
-	const dateInstance_Rogrid = new Date();
-
-	currentDate_RoClass_Rogrid.innerText = dateInstance_Rogrid.toDateString();
-	/*currentDate_RoClass Element where to display current date*/
-}
-
-/*Display current date*/
-/****************************************************************************************************************************************************************************/
-
-
-/****************************************************************************************************************************************************************************/
 /*Checkbox*/
 
 function checkcbox(cb_input_rg_id){
@@ -120,60 +103,6 @@ function closeMyMod(elemId){
 /*Function to close modal*/
 
 /*Modal (First Model)*/
-/****************************************************************************************************************************************************************************/
-
-
-/****************************************************************************************************************************************************************************/
-/*Spinning Loading*/
-
-/*Function for showing the spinner loading*/
-const showSpinningLoad = () => {
-	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
-	const spinnerLoad_RoClass_Rogrid = document.getElementsByClassName("spinnerLoad_RoClass")[0];
-
-	spinnerLoad_RoClass_Rogrid.style.display = "block";
-	thisIsJapan_Class_Rogrid.style.display = "block";
-}
-/*Function for showing the spinner loading*/
-
-
-/*Function for closing the spinner loading*/
-const removeSpinningLoad = () => {
-	const thisIsJapan_Class_Rogrid = document.getElementsByClassName("thisIsJapan_RoClass")[0];
-	const spinnerLoad_RoClass_Rogrid = document.getElementsByClassName("spinnerLoad_RoClass")[0];
-
-	spinnerLoad_RoClass_Rogrid.style.display = "none";
-	thisIsJapan_Class_Rogrid.style.display = "none";
-}
-/*Function for closing the spinner loading*/
-
-/*Spinning Loading*/
-/****************************************************************************************************************************************************************************/
-
-
-/****************************************************************************************************************************************************************************/
-/*Function for removing notification box*/
-const removeNotiBox = (notiBoxCloseImg_Rogrid_Param) =>{
-	const notiBoxElem_Rogrid = notiBoxCloseImg_Rogrid_Param.parentElement.parentElement;
-	notiBoxElem_Rogrid.remove();
-}
-/*Function for removing notification box*/
-/****************************************************************************************************************************************************************************/
-
-
-/****************************************************************************************************************************************************************************/
-/*Function to auto remove the Notification Box*/
-async function removeNotiBox_Timeout(notiboxImg_Param){	
-
-	const promiseRemoveNotibox_Obj = new Promise((removeNotiBox_Resolve) => {
-		setTimeout(function(){
-			removeNotiBox(notiboxImg_Param);
-		}, 3000);		
-	});
-
-	await promiseRemoveNotibox_Obj;
-}
-/*Function to auto remove the Notification Box*/
 /****************************************************************************************************************************************************************************/
 
 
@@ -269,18 +198,18 @@ function radioBoxSelected(radioId){
 
 
 /****************************************************************************************************************************************************************************/ 
-/*Capture webpage*/
-const capturePage = (captureElemId_Param, thisElem_Param) => {
+/*Capture*/
+const capturePage = (elem_id, savename) => {
 	
 	window.scrollTo(0, 0);
 	
-	html2canvas(document.getElementById(captureElemId_Param)).then(function (canvas) {		
+	html2canvas(document.getElementById(elem_id)).then(function (canvas) {		
 		canvas.toBlob(function(canvasBlob){
-			saveAs(canvasBlob, thisElem_Param.value);	
+			saveAs(canvasBlob, savename);	
 		});
 	});	
 }
-/*Capture webpage*/
+/*Capture*/
 /****************************************************************************************************************************************************************************/ 
 
 
@@ -483,13 +412,11 @@ function assignOptValue(select_rg_id, select_opt_rg_key, default_opt_bool){
 /****************************************************************************************************************************************************************************/ 
 /*Box Loader*/
 function displayBoxLoader(boxLoaderWrap){
-
 	boxLoaderWrap.style.display = "flex";
 }
 
 
 function hideBoxLoader(boxLoaderWrap){
-
 	boxLoaderWrap.style.display = "none";
 }
 /*Box Loader*/
