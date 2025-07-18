@@ -113,4 +113,22 @@
 	background-color: var(--blist_rg_bgcolor);
 }
 /*Button List*/
+
+
+/*Table*/
+@mixin tbl_head_rg_smart{
+	display: none;
+}
+
+@mixin tbl_td_rg_smart{
+	display: block;
+	text-align: right;
+}
+
+@mixin tbl_dlabel_rg_smart{
+	float: left;
+	content: attr(data-label);
+	font-weight: bold;
+}
+/*Table*/
 /***********************************************************************************************************************************************************************************************************/

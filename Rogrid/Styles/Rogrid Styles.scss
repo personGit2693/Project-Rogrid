@@ -1262,6 +1262,35 @@
 }
 /*Search Input*/
 
+
+/*Table*/
+.tbl_rg{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.tbl_rg thead{
+	position: sticky;
+	top: 0;
+	z-index: 1;  
+}
+
+.tbl_rg tbody tr:nth-child(odd){
+	background-color: var(--tbl_odd_rg_bgcolor);
+	color: var(--tbl_oddrow_rg_color);
+}
+
+.tbl_rg tbody tr:nth-child(even){
+	background-color: var(--tbl_even_rg_bgcolor);
+	color: var(--tbl_even_rg_color);
+}
+
+.tbl_rg tbody tr:hover{
+	background-color: var(--tbl_rg_active_bgcolor);
+	color: var(--tbl_rg_active_color);
+}
+/*Table*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -1288,6 +1317,21 @@
 		@include range_cmo_rg_smart;
 	}
 	/*Date Range*/
+
+
+	/*Table*/
+	.tbl_rg thead{
+		@include tbl_head_rg_smart;
+	}
+
+	.tbl_rg tbody tr td{
+		@include tbl_td_rg_smart;
+	}
+
+	.tbl_rg tbody tr td::before{
+		@include tbl_dlabel_rg_smart;
+	}
+	/*Table*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1312,6 +1356,21 @@
 		@include range_cmo_rg_smart;
 	}
 	/*Date Range*/
+
+
+	/*Table*/
+	.tbl_rg thead{
+		@include tbl_head_rg_smart;
+	}
+
+	.tbl_rg tbody tr td{
+		@include tbl_td_rg_smart;
+	}
+
+	.tbl_rg tbody tr td::before{
+		@include tbl_dlabel_rg_smart;
+	}
+	/*Table*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/
@@ -1338,6 +1397,24 @@
 		flex-flow: row nowrap;
 	}
 	/*Date Range*/
+
+
+	/*Table*/
+	.tbl_rg thead{
+		display: normal;
+	}
+
+	.tbl_rg tbody tr td{
+		display: normal;
+		text-align: center;
+	}
+
+	.tbl_rg tbody tr td::before{
+		float: none;
+		content: none;
+		font-weight: none;
+	}
+	/*Table*/
 }
 /*PC*/
 /***********************************************************************************************************************************************************************************************************/
