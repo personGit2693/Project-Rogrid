@@ -234,5 +234,24 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 }
 /*Function for clicking days on calender lite*/
 
+
+/*Assign cmo_value_rg*/
+function setcmoValue(cmo_year, cmo_month, cmo_day, cmo_rg_id){
+
+	const cmo_rg = document.getElementById(cmo_rg_id);
+	const cmo_value_rg = cmo_rg.querySelector(".cmo_value_rg");
+
+	if(cmo_month < 10){
+		cmo_month = "0"+cmo_month;
+	}
+	
+	if(cmo_day < 10){
+		cmo_day = "0"+cmo_day;
+	}
+
+	cmo_value_rg.value = `${cmo_year}-${cmo_month}-${cmo_year}`;
+}
+/*Assign cmo_value_rg*/
+
 /*Calendar Model One*/
 /****************************************************************************************************************************************************************************/
