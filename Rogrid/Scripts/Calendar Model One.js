@@ -238,6 +238,8 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 /*Assign cmo_value_rg*/
 function setcmoValue(cmo_year, cmo_month, cmo_day, cmo_rg_id){
 
+	cmo_month += 1;
+
 	const cmo_rg = document.getElementById(cmo_rg_id);
 	const cmo_value_rg = cmo_rg.querySelector(".cmo_value_rg");
 
@@ -249,7 +251,7 @@ function setcmoValue(cmo_year, cmo_month, cmo_day, cmo_rg_id){
 		cmo_day = "0"+cmo_day;
 	}
 
-	cmo_value_rg.value = `${cmo_year}-${cmo_month}-${cmo_year}`;
+	cmo_value_rg.value = `${cmo_year}-${cmo_month}-${cmo_day}`;
 }
 /*Assign cmo_value_rg*/
 
