@@ -9,7 +9,7 @@
 <body>
 
   <div class="test-container">
-    <div class="menu-toggle" onclick="toggleMenu()"> // binalik ko muna sa toggle menu, paturo ako bakit ayaw ng controller ko. 
+    <div class="menu-toggle" onclick="toggleMenu()">
       <div class="bar"><span></span></div>
       <div class="bar"><span></span></div>
       <div class="bar"><span></span></div>
