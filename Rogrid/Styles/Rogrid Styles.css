@@ -1264,6 +1264,76 @@
   text-align: left; }
 
 /*Table*/
+card_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 13px;
+  width: 350px;
+  border: 1px solid yellow; }
+
+.card_head_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow: hidden;
+  padding: 7px 7px 0px 7px; }
+
+.card_details_rg {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 7px 7px 7px; }
+
+.card_txt_rg {
+  position: relative;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow: visible;
+  width: 100%; }
+
+.card_icon_rg {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  background: transparent var(--card_icon_rg_img) center center no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px; }
+
+.card_more_rg {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  overflow: visible;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 7px;
+  border-top: 2px solid black; }
+
+.card_moreicon_rg {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  background: transparent var(--card_moreicon_rg_img) center center no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px; }
+
+.card_moretxt_rg {
+  position: relative;
+  overflow: visible;
+  box-sizing: border-box;
+  white-space: normal;
+  margin-left: 5px; }
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
