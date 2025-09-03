@@ -1264,15 +1264,16 @@
   text-align: left; }
 
 /*Table*/
-card_rg {
+/*Card Model One*/
+.cardm1_rg {
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-  border-radius: 13px;
-  width: 350px;
-  border: 1px solid yellow; }
+  border-radius: 7px;
+  width: auto;
+  background-color: var(--cardm1_rg_bgcolor); }
 
-.card_head_rg {
+.cardm1_head_rg {
   position: relative;
   display: block;
   box-sizing: border-box;
@@ -1280,7 +1281,7 @@ card_rg {
   overflow: hidden;
   padding: 7px 7px 0px 7px; }
 
-.card_details_rg {
+.cardm1_det_rg {
   position: relative;
   display: flex;
   overflow: hidden;
@@ -1290,24 +1291,24 @@ card_rg {
   align-items: center;
   padding: 0px 7px 7px 7px; }
 
-.card_txt_rg {
+.cardm1_txt_rg {
   position: relative;
   box-sizing: border-box;
   white-space: normal;
   overflow: visible;
   width: 100%; }
 
-.card_icon_rg {
+.cardm1_icon_rg {
   position: relative;
   overflow: visible;
   box-sizing: border-box;
-  background: transparent var(--card_icon_rg_img) center center no-repeat;
+  background: transparent var(--cardm1_icon_rg_img) center center no-repeat;
   background-size: contain;
   flex-shrink: 0;
-  width: 25px;
-  height: 25px; }
+  width: var(--cardm1_icon_rg_size);
+  height: var(--cardm1_icon_rg_size); }
 
-.card_more_rg {
+.cardm1_more_rg {
   position: relative;
   display: flex;
   box-sizing: border-box;
@@ -1315,25 +1316,29 @@ card_rg {
   flex-flow: row nowrap;
   align-items: center;
   padding: 7px;
-  border-top: 2px solid black; }
+  border-top-style: solid;
+  border-top-width: var(--cardm1_more_rg_linetopwidth);
+  border-top-color: var(--cardm1_more_rg_linetopcolor); }
 
-.card_moreicon_rg {
+.cardm1_moreicon_rg {
   position: relative;
   overflow: visible;
   box-sizing: border-box;
-  background: transparent var(--card_moreicon_rg_img) center center no-repeat;
+  background: transparent var(--cardm1_moreicon_rg_img) center center no-repeat;
   background-size: contain;
   flex-shrink: 0;
-  width: 22px;
-  height: 22px; }
+  width: var(--cardm1_moreicon_rg_size);
+  height: var(--cardm1_moreicon_rg_size); }
 
-.card_moretxt_rg {
+.cardm1_moretxt_rg {
   position: relative;
   overflow: visible;
   box-sizing: border-box;
   white-space: normal;
-  margin-left: 5px; }
+  margin-left: 5px;
+  width: 100%; }
 
+/*Card Model One*/
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
