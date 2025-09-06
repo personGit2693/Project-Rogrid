@@ -18,99 +18,120 @@
 	/* Font Colors */
 	--text-color-rg: white;          /* Default light text */
 	--dropdown-hover-text-rg: #003845; /* .dropdownRB link hover text */
-
-	/* Font Sizes */
-	--nav-font-size-rg: 16px;        /* Button text size */
-	--nav-font-size-dd-rg: 16px;	 /* Dropdown text size */
-	--nav-font-size-hover-rg: 16px;  /* hover text size */
-
-	/* Font Family */
-	--nav-font-family-rg: sans-serif; /* General font family */
-	--nav-font-fam-dd-rg: sans-serif; /* Dropdown font family */
-  	--nav-font-fam-hover-rg: sans-serif; /* hover font family */ 
 }
 
 /*Root*/
 /***********************************************************************************************************************************************************************************************************/
 
-
 /***********************************************************************************************************************************************************************************************************/
 /*General Styles*/
 
 /* Navigation Styles */
 
-.testwrap{
-	width: 1200px;
-	height: 100px;
-	position: absolute;
+.testwrap {
+    width: 1200px;
+    height: auto;
+    position: absolute;
 }
 
+/* Navbar */
 .navRB {
-	position: relative;
-	background-color: var(--nav-bg-rg);
-	color: var(--text-color-rg);
-	font-family: var(--nav-font-family-rg);
-	padding: 10px 0;
+    position: relative;
+    background-color: var(--nav-bg-rg);
+    color: var(--text-color-rg);
+    padding: 10px 0;
 }
 
 .nav-containerRB {
-	margin: auto;
-	padding: 0 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center; /* added to vertically align items */
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
 }
 
 .nav-itemRB {
- 	position: relative;
- 	margin: 10px;
+    position: relative;
+    margin: 10px;
 }
 
 .nav-itemRB > button {
- 	background: none;
- 	border: none;
- 	color: var(--text-color-rg);
- 	font-size: var(--nav-font-size-rg);
- 	font-family: var(--nav-font-family-rg);
- 	cursor: pointer;
- 	padding: 10px 15px;
+    background: none;
+    border: none;
+    color: var(--text-color-rg);
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    padding: 10px 15px;
 }
 
-.dropdownRB {
- 	display: none;
- 	position: absolute;
- 	background-color: var(--dropdown-bg-rg);
- 	min-width: 200px;
- 	z-index: 1000;
- 	top: 100%; /* make sure dropdown aligns right below the button */
- 	left: 0;
+/* Dropdown logic */
+.dropdownRB,
+.submenuRB {
+    display: none;
+    position: absolute;
+    background-color: var(--dropdown-bg-rg);
+    min-width: 200px;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
-.dropdownRB a {
- 	display: block;
- 	color: var(--text-color-rg);
- 	padding: 10px 15px;
- 	text-decoration: none;
- 	font-size: var(--nav-font-size-dd-rg);
- 	font-family: var(--nav-font-fam-dd-rg);
+.submenuRB {
+    top: 0;
+    left: 100%;
+    margin-left: 3px;
 }
 
-.dropdownRB a:hover {
- 	background-color: var(--dropdown-hover-bg-rg);
- 	color: var(--dropdown-hover-text-rg);
- 	font-size: var(--nav-font-size-hover-rg);
- 	font-family: var(--nav-font-fam-hover-rg);
+.dropdownRB li,
+.submenuRB li {
+    position: relative;
 }
 
-.nav-itemRB:hover .dropdownRB {
- 	display: block;
+.dropdownRB a,
+.submenuRB a {
+    display: block;
+    color: var(--text-color-rg);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-/* Navigation Styles */
+.dropdownRB a:hover,
+.submenuRB a:hover {
+    background-color: var(--dropdown-hover-bg-rg);
+    color: var(--dropdown-hover-text-rg);
+}
 
-/*General Styles*/
+/* Show dropdown on hover */
+.nav-itemRB:hover > .dropdownRB {
+    display: block;
+}
+
+/* Multi-level submenu logic */
+.submenuRB {
+    top: 0;
+    left: 100%;
+}
+
+.dropdownRB li:hover > .submenuRB {
+    display: block;
+}
+
+.dropdownRB li:has(.submenuRB) > a::after {
+    content: " ▸";   /* right arrow */
+    float: right;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+
+/* General Styles*/
 /***********************************************************************************************************************************************************************************************************/
-
 
 
 /***********************************************************************************************************************************************************************************************************/
@@ -118,26 +139,24 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Mobile*/
-@media all and (max-width:641px){
+@media all and (max-width:641px) {
+    .testwrap {
+        width: 500px;
+    }
 
-	.testwrap{
-		width: 500px;
-	}
+    .navRB .nav-containerRB {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-	.navRB .nav-containerRB {
-	 	flex-direction: column;
-	 	align-items: flex-start;
-	 	display: flex; /* make sure display:flex is set */
-	}
-
-	.navRB .nav-containerRB .nav-itemRB {
-	 	width: 100%;
-	}
-
-	.navRB .nav-containerRB .nav-itemRB .dropdownRB {
-	 	position: static;
-	 	width: 100%;
-	}
+    .dropdownRB,
+    .submenuRB {
+        position: static;
+        box-shadow: none;
+    }
+    .dropdownRB li:has(.submenuRB) > a::after {
+        content: " ▼";   /* down arrow */
+    }
 
 }
 /*Mobile*/
@@ -146,24 +165,25 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*PC*/
-@media all and (max-width:750px){
+@media all and (max-width: 1165px){
 
-	.navRB {
-		.nav-containerRB {
-			flex-direction: column;
-			align-items: flex-start;
+	.testwrap {
+        width: 500px;
+    }
 
-			.nav-itemRB {
-				width: 100%;
+    .navRB .nav-containerRB {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-				.dropdownRB {
-					position: static;
-					width: 100%;
-				}
-			}
-		}
-	}
-    
+    .dropdownRB,
+    .submenuRB {
+        position: static;
+        box-shadow: none;
+    }
+    .dropdownRB li:has(.submenuRB) > a::after {
+        content: " ▼";   /* down arrow on mobile */
+    }
 }
 /*PC*/
 /***********************************************************************************************************************************************************************************************************/
