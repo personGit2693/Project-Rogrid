@@ -7,3 +7,8 @@ export const toggleGroups = document.querySelectorAll('.toggle-options-RB');
 // Burger RB
 export const burgerButton = document.querySelector('.menu-toggle');
 export const burgerMenu = document.getElementById('burgerMenu');
+
+
+// NavigationRB Burger
+export const burgerRB = document.getElementById("burgerRB");
+export const navContainerRB = document.querySelector(".nav-containerRB");
