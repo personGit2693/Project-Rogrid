@@ -22,6 +22,51 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Toggle Button*/
+.switch_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: block;
+  width: var(--switch_rg_width);
+  border: 1px solid yellow; }
+
+.switch_rg input {
+  display: none; }
+
+.switch_rg label {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 3px;
+  border-radius: 15px;
+  border-width: var(--switch_rg_borderwidth);
+  border-style: solid;
+  border-color: var(--switch_rg_bordercolor);
+  cursor: pointer;
+  transition: 0.3s; }
+
+.switch_rg label::after {
+  content: "";
+  display: inherit;
+  width: var(--switch_pin_rg_size);
+  height: var(--switch_pin_rg_size);
+  border-radius: 50%;
+  background-color: var(--switch_pin_rg_color);
+  transition: 0.3s; }
+
+.switch_rg input:checked ~ label {
+  border-color: var(--switch_check_rg_bordercolor); }
+
+.switch_rg input:checked ~ label::after {
+  translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 12px) 0;
+  background-color: var(--switch_pincheck_rg_color); }
+
+.switch_rg input:disabled ~ label {
+  opacity: 0.5;
+  cursor: not-allowed; }
+
+/*Toggle Button*/
 /*Basic Button*/
 .btn_rg {
   position: relative;
