@@ -10,5 +10,5 @@ export const burgerMenu = document.getElementById('burgerMenu');
 
 
 // NavigationRB Burger
-export const burgerRB = document.getElementById("burgerRB");
+export const burgerRB_id = document.getElementById("burgerRB-id");
 export const navContainerRB = document.querySelector(".nav-containerRB");

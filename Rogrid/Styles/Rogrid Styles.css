@@ -46,6 +46,7 @@
   cursor: pointer;
   transition: 0.3s; }
 
+/**Pin*/
 .switch_rg label::after {
   content: "";
   display: inherit;
@@ -55,13 +56,18 @@
   background-color: var(--switch_pin_rg_color);
   transition: 0.3s; }
 
+/**Pin*/
+/**When Toggle Button is on*/
 .switch_rg input:checked ~ label {
   border-color: var(--switch_check_rg_bordercolor); }
 
+/***Pin*/
 .switch_rg input:checked ~ label::after {
   translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 12px) 0;
   background-color: var(--switch_pincheck_rg_color); }
 
+/***Pin*/
+/**When Toggle Button is on*/
 .switch_rg input:disabled ~ label {
   opacity: 0.5;
   cursor: not-allowed; }
