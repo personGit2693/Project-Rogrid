@@ -41,7 +41,14 @@
                                     <li><a href="#">Option 3</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Radiology</a></li>
+                            <li>
+                                <a href="#">Radiology</a>
+                                <ul class="submenuRB">
+                                    <li><a href="#">Specialists</a></li>
+                                    <li><a href="#">Wards</a></li>
+                                    <li><a href="#">Option 3</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
@@ -113,8 +120,6 @@
                 </div>
             </nav>
     </div>
-
-
 
     <script type="module" src="../Client Side/Controller_Btn_Burger.js"></script>
 </body>
