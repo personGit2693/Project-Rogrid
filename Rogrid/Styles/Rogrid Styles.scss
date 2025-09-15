@@ -15,7 +15,6 @@
 	overflow: hidden;
 	display: block;
 	width: var(--switch_rg_width);
-	border: 1px solid yellow;
 }
 
 .switch_rg input {
@@ -61,11 +60,11 @@
 /***Pin*/
 /**When Toggle Button is on*/
 
+
 .switch_rg input:disabled ~ label {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
-
 /*Toggle Button*/
 
 

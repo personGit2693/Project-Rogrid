@@ -28,8 +28,7 @@
   box-sizing: border-box;
   overflow: hidden;
   display: block;
-  width: var(--switch_rg_width);
-  border: 1px solid yellow; }
+  width: var(--switch_rg_width); }
 
 .switch_rg input {
   display: none; }
