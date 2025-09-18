@@ -35,6 +35,8 @@
 
 .switch_rg label {
   display: block;
+  position: relative;
+  box-sizing: border-box;
   width: auto;
   height: auto;
   padding: 3px;
@@ -62,7 +64,7 @@
 
 /***Pin*/
 .switch_rg input:checked ~ label::after {
-  translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 12px) 0;
+  translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 12px - 3.75px) 0;
   background-color: var(--switch_pincheck_rg_color); }
 
 /***Pin*/
