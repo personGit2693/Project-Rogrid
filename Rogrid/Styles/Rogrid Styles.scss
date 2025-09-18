@@ -17,11 +17,11 @@
 	width: var(--switch_rg_width);
 }
 
-.switch_rg input {
+.switch_rg .switch_input_rg {
 	display: none;
 }
 
-.switch_rg label {
+.switch_rg .switch_pin_rg {
 	display: block;
 	position: relative;
   	box-sizing: border-box;
@@ -37,7 +37,7 @@
 }
 
 /**Pin*/
-.switch_rg label::after {
+.switch_rg .switch_pin_rg::after {
 	content: "";
 	display: inherit;
 	width: var(--switch_pin_rg_size);
@@ -50,12 +50,12 @@
 
 
 /**When Toggle Button is on*/
-.switch_rg input:checked ~ label {
+.switch_rg .switch_input_rg:checked ~ .switch_pin_rg {
 	border-color: var(--switch_check_rg_bordercolor)
 }
 
 /***Pin*/
-.switch_rg input:checked ~ label::after {
+.switch_rg .switch_input_rg:checked ~ .switch_pin_rg::after {
 	translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 12px - 3.75px) 0;
 	background-color: var(--switch_pincheck_rg_color);
 }
@@ -63,7 +63,7 @@
 /**When Toggle Button is on*/
 
 
-.switch_rg input:disabled ~ label {
+.switch_rg .switch_input_rg:disabled ~ .switch_pin_rg {
 	opacity: 0.5;
 	cursor: not-allowed;
 }
