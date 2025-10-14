@@ -22,68 +22,66 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Horizontal Navigation*/
 .hnav_rg {
   position: relative;
   display: block;
   overflow: visible;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: var(--hnav_bgcolor); }
 
-.hnav_rg .hnav_ul_rg, .hnav_rg .hnav_li_rg {
+.hnav_ul_rg, .hnav_li_rg {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
 
-.hnav_rg .hnav_ul_rg {
-  background: gray;
+.hnav_ul_rg {
   list-style: none;
   width: 100%; }
 
-.hnav_rg .hnav_li_rg {
-  float: left;
+.hnav_li_rg {
+  display: inline-block;
   position: relative;
   width: auto; }
 
-.hnav_rg .hnav_link_rg {
+.hnav_link_rg {
   box-sizing: border-box;
-  background: #30A6E6;
+  background: transparent;
   color: #FFFFFF;
   display: block;
-  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease; }
 
-.hnav_rg .hnav_li_rg:hover .hnav_link_rg {
-  background: #000000; }
+.hnav_link_rg:hover {
+  background: var(--hnav_link_active_bgcolor);
+  color: var(--hnav_link_active_color); }
 
 .hnav_submenu_rg {
   left: 0;
   opacity: 0;
   position: absolute;
-  top: 35px;
+  top: 0px;
   visibility: hidden;
   z-index: 1; }
 
-.hnav_li_rg:hover .hnav_ul_rg.hnav_submenu_rg {
+.hnav_li_rg:hover .hnav_submenu_rg {
   opacity: 1;
-  top: 40px;
-  /* adjust this as per top nav padding top & bottom comes */
-  visibility: visible; }
+  bottom: 0;
+  visibility: visible;
+  transform: translateY(100%); }
 
-#hnav_submenu_rg .hnav_li_rg {
-  float: none;
-  width: 100%; }
+.hnav_submenu_rg .hnav_li_rg {
+  width: 100%;
+  background-color: var(--hnav_submenu_bgcolor); }
 
-.hnav_submenu_rg .hnav_link_rg:hover {
-  background: #DF4B05; }
-
-.hnav_submenu_rg .hnav_link_rg {
-  background-color: #000000; }
-
+/*Horizontal Navigation*/
 /*Toggle Button*/
 .switch_rg {
   position: relative;
