@@ -1,4 +1,30 @@
 /****************************************************************************************************************************************************************************/
+/*Bottom Popup Modal*/
+function popupBottomModal(bmodal_id){
+
+	const bmodal = document.getElementById(bmodal_id);
+
+	bmodal.style.display = 'flex'; /*Make modal visible*/
+
+	setTimeout(function() {
+		bmodal.classList.add('bmodal_popup_rg'); /*Trigger the slide-up animation*/
+	}, 10); /*Small delay to ensure styles are applied*/
+}
+
+function closeBottomModal(bmodal_id){
+
+	const bmodal = document.getElementById(bmodal_id);
+
+	bmodal.classList.remove('open'); /*Trigger the slide-down animation*/
+	setTimeout(function() {
+		bmodal.style.display = 'none'; /*Hide modal after animation*/
+	}, 300); /*Wait for the animation to finish (300ms)*/
+}
+/*Bottom Popup Modal*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Inputs*/
 
 function input_rg_focus(fcolor, inputId){
