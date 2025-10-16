@@ -1,5 +1,4 @@
-Version: 1.2
+Version: 1.2.1
 
 Updates:
-1. New Component (Bottom Popup Modal) (For documentation)
-2. New Component (Horizontal Navigation) (For documentation)
+1. Fixing Horizontal Navigation
