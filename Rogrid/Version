@@ -1,5 +1,5 @@
-Version: 1.1
+Version: 1.2
 
 Updates:
-1. Included toggle button without documentation.
-2. Rearranged toggle button codes
+1. New Component (Bottom Popup Modal) (For documentation)
+2. New Component (Horizontal Navigation) (For documentation)
