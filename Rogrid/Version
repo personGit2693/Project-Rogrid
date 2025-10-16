@@ -1,4 +1,5 @@
-Version: 1.2.1
+Version: 1.2.3
 
 Updates:
-1. Fixing Horizontal Navigation
+1. Fixed Horizontal Navigation compatibility.
+2. Enhanced Bottom Popup Modal.
