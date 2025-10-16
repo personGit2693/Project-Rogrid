@@ -19,8 +19,9 @@
 
 .hnav_ul_rg, .hnav_li_rg {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 0px;
+	overflow: visible;
 }
 
 .hnav_ul_rg {
@@ -31,7 +32,7 @@
 .hnav_li_rg {
 	display: inline-block;
 	position: relative;
-	width:auto;	
+	width: auto;	
 }
 
 .hnav_link_rg {
@@ -72,6 +73,7 @@
 }
 
 .hnav_submenu_rg .hnav_li_rg {
+	display: block;
 	width: 100%;
 	background-color: var(--hnav_submenu_bgcolor);
 }
