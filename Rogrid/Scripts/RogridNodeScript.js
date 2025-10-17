@@ -1,6 +1,8 @@
 /****************************************************************************************************************************************************************************/
 /*Dot Settings Menu*/
-function showDotSettingsMenu(dotset_menus_id){
+function showDotSettingsMenu(dotset_menus_id, e){
+
+	e.stopPropagation();
 
 	const dotset_menus = document.getElementById(dotset_menus_id);
 
