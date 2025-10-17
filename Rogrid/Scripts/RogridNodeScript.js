@@ -1,4 +1,26 @@
 /****************************************************************************************************************************************************************************/
+/*Dot Settings Menu*/
+function showDotSettingsMenu(dotset_menus_id){
+
+	const dotset_menus = document.getElementById(dotset_menus_id);
+
+	dotset_menus.style.display = dotset_menus.style.display === 'block' ? 'none' : 'block';
+}
+
+
+function closeDotSettingsMenu(){
+
+	const dotset_menus = document.querySelectorAll('.dotset_menus_rg');
+
+	dotset_menus.forEach(dotset_menu => {
+		dotset_menu.style.display = "none";
+	});
+}
+/*Dot Settings Menu*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Bottom Popup Modal*/
 function popupBottomModal(bmodal_id){
 

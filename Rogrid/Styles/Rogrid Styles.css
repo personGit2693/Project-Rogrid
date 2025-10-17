@@ -22,6 +22,56 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Dot Settings Menu*/
+.dotset_rg {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--dotset_width);
+  overflow: visible;
+  border: 1px solid yellow; }
+
+.dotset_btn_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%; }
+
+.dotset_menus_rg {
+  display: none;
+  position: absolute;
+  background-color: var(--dotset_menus_bgcolor);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px; }
+
+.dotset_menus_rg ul {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  width: auto; }
+
+.dotset_menus_rg ul li {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px; }
+
+.dotset_menus_rg ul li:hover {
+  background-color: var(--dotset_menus_active_bgcolor); }
+
+.dotset_menus_rg ul li a {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  width: 100%;
+  padding: 8px; }
+
+/*Dot Settings Menu*/
 /*Horizontal Navigation*/
 .hnav_rg {
   position: relative;

@@ -1,5 +1,4 @@
-Version: 1.2.3
+Version: 1.2.4
 
 Updates:
-1. Fixed Horizontal Navigation compatibility.
-2. Enhanced Bottom Popup Modal.
+1. New Component (Dot Settings Menu) (For documentation)
