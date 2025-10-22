@@ -1,4 +1,21 @@
 /****************************************************************************************************************************************************************************/
+/*Card Category*/
+function lightCardCategory(cardCategory_id, cardCategory_Class){
+
+	const cardCategory = document.getElementById(cardCategory_id);
+
+	const classname = `.${cardCategory_Class}`;
+	const cardCategories = document.querySelectorAll(classname);
+
+	cardCategories.forEach(cardCategory => cardCategory.classList.remove('cardcat_active_rg'));
+
+	cardCategory.classList.add('cardcat_active_rg');
+}
+/*Card Category*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Dot Settings Menu*/
 function showDotSettingsMenu(dotset_menus_id, e){
 

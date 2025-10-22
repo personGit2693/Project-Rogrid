@@ -22,6 +22,43 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Card Category*/
+.cardcat_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: var(--cardcat_bgcolor);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+.cardcat_rg:hover {
+  background-color: var(--cardcat_hover_bgcolor);
+  color: var(--cardcat_hover_color); }
+
+.cardcat_img_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: var(--cardcat_img_size);
+  height: var(--cardcat_img_size);
+  flex-shrink: 0; }
+
+.cardcat_label_rg {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%; }
+
+.cardcat_rg.cardcat_active_rg {
+  position: relative;
+  box-sizing: border-box;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: var(--cardcat_active_bordercolor);
+  background-color: var(--cardcat_active_bgcolor); }
+
+/*Card Category*/
 /*Dot Settings Menu*/
 .dotset_rg {
   position: relative;
