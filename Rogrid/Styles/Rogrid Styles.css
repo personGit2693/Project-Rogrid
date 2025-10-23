@@ -22,6 +22,62 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Tab Menu*/
+.tab_rg {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-start;
+  padding: 12px 6px;
+  color: var(--tab_color);
+  /*tab_rg Text Color*/
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--tab_bottom);
+  /*tab_rg Bottom Border Color*/ }
+
+.tab_rg.tab_active_rg {
+  color: var(--tab_active_color);
+  /*tab_rg Active Text Color*/
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--tab_active_bottom);
+  /*tab_rg Active Bottom Border Color*/ }
+
+.tab_badge_rg {
+  position: relative;
+  box-sizing: border-box;
+  top: -10px;
+  background-color: var(--tab_badge_bgcolor);
+  /*tab_badge_rg Background Color*/
+  color: var(--tab_badge_color);
+  /*tab_badge_rg Text Color*/
+  border-radius: 12px;
+  padding: 1px 6px;
+  font-weight: 500;
+  transition: 0.5s ease; }
+
+.tab_rg.tab_active_rg .tab_badge_rg {
+  background-color: var(--tab_active_badge_bgcolor);
+  /*tab_badge_rg Active Background Color*/
+  color: var(--tab_active_badge_color);
+  /*tab_badge_rg Active Text Color*/ }
+
+.tab_rg:hover {
+  color: var(--tab_hover_color);
+  /*tab_rg Hover Text Color*/
+  border-bottom-color: var(--tab_hover_bottom);
+  /*tab_rg Hover Bottom Border Color*/ }
+
+.tab_rg:hover .tab_badge_rg {
+  background-color: var(--tab_hover_badge_bgcolor);
+  /*tab_badge_rg Hover Background Color*/
+  color: var(--tab_hover_badge_color);
+  /*tab_badge_rg Hover Text Color*/ }
+
+/*Tab Menu*/
 /*Card Category*/
 .cardcat_rg {
   position: relative;

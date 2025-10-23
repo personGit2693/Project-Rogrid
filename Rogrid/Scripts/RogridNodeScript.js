@@ -1,4 +1,21 @@
 /****************************************************************************************************************************************************************************/
+/*Tab Menu*/
+function lightTabMenu(tab_rg_id, tab_rg_class){
+
+	const tab = document.getElementById(tab_rg_id);
+
+	const classname = `.${tab_rg_class}`;
+	const tabs = document.querySelectorAll(classname);
+
+	tabs.forEach(tab => tab.classList.remove('tab_active_rg'));
+
+	tab.classList.add('tab_active_rg');
+}
+/*Tab Menu*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Card Category*/
 function lightCardCategory(cardCategory_id, cardCategory_Class){
 
