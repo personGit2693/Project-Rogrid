@@ -22,6 +22,93 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Vertical Progress Tracker*/
+.vtprog_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal; }
+
+.vtprog_step_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch; }
+
+.vtprog_head_rg, .vtprog_body_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start; }
+
+.vtprog_head_rg {
+  align-items: center; }
+
+.vtprog_body_rg {
+  align-items: stretch;
+  flex-shrink: 0; }
+
+.vtprog_circle_rg {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--vtprog_circle_size);
+  height: var(--vtprog_circle_size);
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: var(--vtprog_circle_bordercolor);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--vtprog_circle_bgcolor);
+  background-image: var(--vtprog_circle_bgimage);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-origin: padding-box; }
+
+.vtprog_title_rg {
+  position: relative;
+  box-sizing: border-box;
+  white-space: normal;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 15px; }
+
+.vtprog_linebox_rg {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--vtprog_circle_size);
+  flex-shrink: 0; }
+
+.vtprog_line_rg {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 2px;
+  background-color: var(--vtprog_line_bgcolor);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%; }
+
+.vtprog_mess_rg {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0px;
+  margin-left: 5px;
+  font-size: 15px; }
+
+.vtprog_step_active_rg .vtprog_circle_rg {
+  border-color: var(--vtprog_circle_active_bordercolor);
+  background-color: var(--vtprog_circle_active_bgcolor);
+  background-image: var(--vtprog_circle_active_bgimage); }
+
+.vtprog_step_active_rg .vtprog_line_rg {
+  background-color: var(--vtprog_line_active_bgcolor);
+  border: none; }
+
+/*Vertical Progress Tracker*/
 /*Tab Menu*/
 .tab_rg {
   position: relative;

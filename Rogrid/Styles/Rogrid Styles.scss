@@ -14,7 +14,6 @@
 	box-sizing: border-box;
 	overflow: visible;
 	white-space: normal;
-	width: 350px; /*Remove*/
 }
 
 .vtprog_step_rg{
@@ -65,7 +64,6 @@
 .vtprog_title_rg{
 	position: relative;
 	box-sizing: border-box;
-	font-size: 10px; /*Remove*/
 	white-space: normal;
 	font-weight: bold;
 	margin-left: 5px;
@@ -99,12 +97,12 @@
 
 .vtprog_step_active_rg .vtprog_circle_rg{
 	border-color: var(--vtprog_circle_active_bordercolor);
-	background-color: var(--vtprog_circle_active_bgcolor); /*vtprog_circle_rg Active Background Color*/
-	background-image: var(--vtprog_circle_active_bgimage); /*vtprog_circle_rg Active Background Image*/
+	background-color: var(--vtprog_circle_active_bgcolor); 
+	background-image: var(--vtprog_circle_active_bgimage); 
 }
 
 .vtprog_step_active_rg .vtprog_line_rg{
-	background-color: var(--vtprog_line_active_bgcolor); /*vtprog_line_rg Active Background Color*/
+	background-color: var(--vtprog_line_active_bgcolor); 
 	border: none; 
 }
 /*Vertical Progress Tracker*/
