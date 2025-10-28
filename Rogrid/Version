@@ -1,4 +1,4 @@
-Version: 1.2.7
+Version: 1.2.8
 
 Updates:
-1. New Component (Vertical Progress Tracker) (For documentation)
+1. Remove guide border of Dot Settings Component
