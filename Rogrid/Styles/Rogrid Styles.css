@@ -223,7 +223,8 @@
   position: absolute;
   background-color: var(--dotset_menus_bgcolor);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 100%; }
 
 .dotset_menus_rg ul {
   position: relative;
