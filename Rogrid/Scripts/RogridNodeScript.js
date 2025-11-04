@@ -712,34 +712,9 @@ function collapseTable(tbl_row_id){
 	const tbl_row = document.getElementById(tbl_row_id);
 	const tbl_sub_rg = tbl_row.nextElementSibling;
 	const tbl_subcont_rg = tbl_sub_rg.querySelector(".tbl_subcont_rg");
-	
-	if(tbl_sub_rg.classList.contains("tbl_sub_rg")){
-		
-		tbl_sub_rg.classList.toggle("tbl_sub_rg");
-		tbl_sub_rg.classList.toggle("tbl_activesub_rg");
-		tbl_subcont_rg.classList.toggle("tbl_active_subcont_rg");
-	}else if(!tbl_sub_rg.classList.contains("tbl_sub_rg")){
 
-		tbl_subcont_rg.classList.toggle("tbl_active_subcont_rg");
-		tbl_sub_rg.classList.toggle("tbl_activesub_rg");		
-		delayRowCollapse(tbl_sub_rg);
-	}
+	tbl_sub_rg.classList.toggle("tbl_activesub_rg");
+	tbl_subcont_rg.classList.toggle("tbl_active_subcont_rg");
 }
-
-
-/*Table Asynchronous*/
-async function delayRowCollapse(tbl_sub_rg){
-
-	const promise_obj = new Promise((resolve) => {
-
-		setTimeout(function(){
-			tbl_sub_rg.classList.toggle("tbl_sub_rg");			
-			resolve();
-		}, 500);		
-	});
-	await promise_obj;
-}
-/*Table Asynchronous*/
-
 /*Table*/
 /****************************************************************************************************************************************************************************/

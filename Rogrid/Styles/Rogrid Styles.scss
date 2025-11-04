@@ -1696,11 +1696,12 @@
 
 /*Table*/
 .tbl_rg{
+	box-sizing: border-box;
 	width: 100%;
 	border-collapse: collapse;
 }
 
-.tbl_rg thead{
+.tbl_rg .tbl_head_rg{
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -1708,11 +1709,6 @@
 
 .tbl_head_rg{
 	background-color: var(--tbl_head_rg_bgcolor); 
-}
-
-.tbl_body_rg .tbl_row_rg:hover{
-	background-color: var(--tbl_rg_active_bgcolor);
-	color: var(--tbl_rg_active_color);
 }
 
 .tbl_row_rg:nth-child(odd){
@@ -1725,12 +1721,22 @@
 	color: var(--tbl_even_rg_color);
 }
 
+.tbl_row_rg:hover{
+	background-color: var(--tbl_rg_active_bgcolor);
+	color: var(--tbl_rg_active_color);
+}
+
 .tbl_sub_rg{
-	visibility: collapse;	
+	box-sizing: border-box;
+	visibility: collapse;
+	opacity: 0;
+	transition: 1s linear;
 }
 
 .tbl_activesub_rg{
+	visibility: visible;
 	border-style: solid;
+	opacity: 1;
 	border-width: var(--tbl_sub_rg_borderwidth);
 	border-color: var(--tbl_sub_rg_bordercolor);
 }
@@ -1740,7 +1746,7 @@
 	box-sizing: border-box;
 	overflow: hidden;
 	max-height: 0px;
-	transition: max-height 0.5s linear;
+	transition: max-height 2s linear;
 }
 
 .tbl_active_subcont_rg{
@@ -1876,15 +1882,15 @@
 
 
 	/*Table*/
-	.tbl_rg thead{
+	.tbl_rg .tbl_head_rg{
 		@include tbl_head_rg_smart;
 	}
 
-	.tbl_rg tbody tr td{
+	.tbl_rg .tbl_body_rg .tbl_row_rg td{
 		@include tbl_td_rg_smart;
 	}
 
-	.tbl_rg tbody tr td::before{
+	.tbl_rg .tbl_body_rg .tbl_row_rg td::before{
 		@include tbl_dlabel_rg_smart;
 	}
 	/*Table*/
@@ -1915,15 +1921,15 @@
 
 
 	/*Table*/
-	.tbl_rg thead{
+	.tbl_rg .tbl_head_rg{
 		@include tbl_head_rg_smart;
 	}
 
-	.tbl_rg tbody tr td{
+	.tbl_rg .tbl_body_rg .tbl_row_rg td{
 		@include tbl_td_rg_smart;
 	}
 
-	.tbl_rg tbody tr td::before{
+	.tbl_rg .tbl_body_rg .tbl_row_rg td::before{
 		@include tbl_dlabel_rg_smart;
 	}
 	/*Table*/
@@ -1956,16 +1962,16 @@
 
 
 	/*Table*/
-	.tbl_rg thead{
+	.tbl_rg .tbl_head_rg{
 		display: normal;
 	}
 
-	.tbl_rg tbody tr td{
+	.tbl_rg .tbl_body_rg .tbl_row_rg td{
 		display: normal;
 		text-align: normal;
 	}
 
-	.tbl_rg tbody tr td::before{
+	.tbl_rg .tbl_body_rg .tbl_row_rg td::before{
 		float: none;
 		content: none;
 		font-weight: none;
