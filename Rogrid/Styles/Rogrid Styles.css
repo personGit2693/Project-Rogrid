@@ -955,8 +955,7 @@
   flex-flow: row nowrap;
   align-items: center;
   background-color: var(--select_cr_rg_bgcolor);
-  height: 100%;
-  width: auto; }
+  height: 100%; }
 
 .select_icon_rg {
   position: relative;
@@ -1018,7 +1017,7 @@
   box-sizing: border-box;
   overflow: auto;
   max-height: 0;
-  width: auto;
+  width: 100%;
   background-color: var(--select_area_rg_bgcolor);
   -webkit-transition: max-height 1s;
   transition: max-height 1s; }
