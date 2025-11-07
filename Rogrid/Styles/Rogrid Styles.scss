@@ -976,6 +976,7 @@
 	flex-flow: row nowrap;
 	align-items: center;	
 	background-color: var(--select_cr_rg_bgcolor);
+	height: 100%;
 }
 
 .select_icon_rg{
@@ -1051,7 +1052,7 @@
 
 /* width */
 .select_area_rg::-webkit-scrollbar {
-	width: clamp(3px, 1vw, 6px);
+	width: var(--select_area_rg_scrollwidth);
 }
 
 /* Track */
