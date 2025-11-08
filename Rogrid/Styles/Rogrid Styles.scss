@@ -1144,6 +1144,9 @@
 	overflow: auto;
 	white-space: nowrap;	
 	background-color: var(--cmo_rg_bgcolor);
+	border-width: var(--cmo_rg_borderwidth);
+	border-style: solid;	
+	border-color: var(--cmo_rg_bordercolor);
 }
 
 .cmo_head_rg{
@@ -1248,8 +1251,11 @@
 	position: relative;	
 	overflow: visible;
 	box-sizing: border-box;	
-	width: auto;
+	width: var(--range_rg_width);
 	cursor: pointer;
+	border-style: solid;
+	border-width: var(--range_rg_borderwidth);
+	border-color: var(--range_rg_bordercolor);
 }
 
 .range_details_rg{
