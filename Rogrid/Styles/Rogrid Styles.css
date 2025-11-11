@@ -943,7 +943,8 @@
   position: relative;
   box-sizing: border-box;
   overflow: visible;
-  cursor: pointer; }
+  cursor: pointer;
+  width: var(--select_rg_width); }
 
 .select_crval_rg {
   /*This is just the input hidden*/ }
@@ -957,7 +958,7 @@
   align-items: center;
   background-color: var(--select_cr_rg_bgcolor);
   height: 100%;
-  width: var(--select_rg_width); }
+  width: 100%; }
 
 .select_icon_rg {
   position: relative;
@@ -1190,13 +1191,13 @@
   display: block;
   box-sizing: border-box;
   overflow: visible;
-  width: auto; }
+  width: var(--range_rg_width); }
 
 .range_head_rg {
   position: relative;
   overflow: visible;
   box-sizing: border-box;
-  width: var(--range_rg_width);
+  width: 100%;
   cursor: pointer;
   border-style: solid;
   border-width: var(--range_rg_borderwidth);

@@ -1,4 +1,5 @@
-Version: 1.3.6
+Version: 1.3.7
 
 Updates:
-1. Dot Settings li new property for cursor.
+1. Enhanced responsiveness of Select Dropdown.
+2. Enhanced responsiveness of Date Range.
