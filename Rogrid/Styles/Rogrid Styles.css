@@ -22,6 +22,85 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Input Suggestion*/
+.suggest_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible; }
+
+.suggest_search_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  border-style: solid;
+  border-width: var(--suggest_search_borderwidth);
+  border-color: var(--suggest_search_bordercolor); }
+
+.suggest_input_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none; }
+
+.suggest_btn_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  flex-shrink: 0;
+  background-color: var(--suggest_btn_bgcolor);
+  background-image: var(--suggest_btn_icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: var(--suggest_btn_size);
+  height: var(--suggest_btn_size);
+  border: none;
+  cursor: pointer; }
+
+.suggest_box_rg {
+  position: relative;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow: visible;
+  box-shadow: 0px 0px 6px var(--suggest_box_shadowcolor);
+  margin-top: 5px;
+  display: none;
+  max-height: var(--suggest_box_maxHeight); }
+
+.suggest_opt_rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  cursor: pointer; }
+
+.suggest_opt_rg:hover {
+  background-color: var(--hover_suggest_opt_bgcolor);
+  color: var(--hover_suggest_opt_color); }
+
+.suggest_opt_icon_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: var(--suggest_opt_icon_size);
+  height: var(--suggest_opt_icon_size);
+  flex-shrink: 0; }
+
+.suggest_opt_txt_rg {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  white-space: normal;
+  overflow: hidden; }
+
+/*Input Suggestion*/
 /*Vertical Progress Tracker*/
 .vtprog_rg {
   position: relative;

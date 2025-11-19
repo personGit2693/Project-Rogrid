@@ -1,5 +1,4 @@
-Version: 1.3.7
+Version: 1.4
 
 Updates:
-1. Enhanced responsiveness of Select Dropdown.
-2. Enhanced responsiveness of Date Range.
+1. New Component (Input Suggestion)

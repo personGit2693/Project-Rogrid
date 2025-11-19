@@ -1,4 +1,25 @@
 /****************************************************************************************************************************************************************************/
+/*Input Suggestion*/
+function showSuggestion(suggest_rg_id){
+
+	const suggest_rg = document.getElementById(suggest_rg_id);
+	const suggest_box_rg = suggest_rg.querySelector(".suggest_box_rg");
+
+	suggest_box_rg.style.display = "block";
+}
+
+function hideSuggestion(suggest_rg_id){
+
+	const suggest_rg = document.getElementById(suggest_rg_id);
+	const suggest_box_rg = suggest_rg.querySelector(".suggest_box_rg");
+	
+	suggest_box_rg.style.display = "none";
+}
+/*Input Suggestion*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Vertical Progress Tracker*/
 function markVtStep(vtprog_step_rg_id){
 
