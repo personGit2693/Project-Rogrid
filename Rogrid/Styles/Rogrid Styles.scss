@@ -24,6 +24,7 @@
 	border-style: solid;
 	border-width: var(--suggest_search_borderwidth);
 	border-color: var(--suggest_search_bordercolor); 
+	background-color: var(--suggest_search_bgcolor);
 }
 
 .suggest_input_rg{
@@ -52,7 +53,7 @@
 }
 
 .suggest_box_rg{
-	position: relative;
+	position: absolute;
 	box-sizing: border-box;
 	white-space: normal;
 	overflow: visible;
@@ -60,6 +61,8 @@
 	margin-top: 5px;
 	display: none;
 	max-height: var(--suggest_box_maxHeight);
+	width: 100%;
+	background-color: var(--suggest_box_bgcolor);
 }
 
 .suggest_opt_rg{
