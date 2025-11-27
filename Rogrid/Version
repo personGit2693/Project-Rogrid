@@ -1,5 +1,4 @@
-Version: 1.4.2
+Version: 1.5
 
 Updates:
-1. Additional variables (Input Suggestion)
-2. Auto scroll for suggestion box
+1. New Component (Stripe Button)
