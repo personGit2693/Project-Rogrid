@@ -22,6 +22,50 @@
 /***********************************************************************************************************************************************************************************************************/
 /***********************************************************************************************************************************************************************************************************/
 /*General*/
+/*Stripe Button*/
+.stripe-btn-rg {
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  background-color: var(--stripe-btn-label-bgcolor);
+  box-shadow: 0px 1px 5px 1px var(--stripe-btn-label-bgcolor), 0px 2px 5px 1px var(--stripe-btn-icon-bgcolor); }
+
+.stripe-btn-label-rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  white-space: normal;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  font-size: var(--stripe-btn-label-fsize);
+  padding: var(--stripe-btn-label-padding); }
+
+.stripe-btn-icon-rg {
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  background-color: var(--stripe-btn-icon-bgcolor);
+  background-repeat: no-repeat;
+  background-image: var(--stripe-btn-img);
+  background-position: right;
+  background-size: contain;
+  width: calc(var(--stripe-btn-icon-size) + var(--stripe-btn-label-fsize) + var(--stripe-btn-label-padding) * 2);
+  clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 0% 100%);
+  height: inherit;
+  padding-left: calc(var(--stripe-btn-label-padding) + var(--stripe-btn-label-fsize));
+  background-origin: content-box;
+  flex-shrink: 0; }
+
+.stripe-btn-rg:active {
+  box-shadow: none; }
+
+/*Stripe Button*/
 /*Input Suggestion*/
 .suggest_rg {
   position: relative;
@@ -1257,7 +1301,7 @@
   flex-flow: row nowrap;
   justify-content: space-around; }
 
-.cmo_daytxt_rg, .cmo_daywrap_rg {
+.cmo_daytxt_rg, .cmo_day_rg {
   position: relative;
   overflow: visible;
   box-sizing: border-box;
@@ -1270,8 +1314,7 @@
   position: relative;
   box-sizing: border-box;
   overflow: visible;
-  text-align: center;
-  width: auto; }
+  text-align: center; }
 
 /**Highlights, Clicked*/
 .cmo_day_rg_click {
