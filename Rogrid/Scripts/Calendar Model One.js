@@ -18,7 +18,6 @@ var cmo_cryear = new Date().getFullYear();
 
 /*Months Text Collection*/
 const cmo_months_array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var cmo_highlightdates_array = [];
 /*Months Text Collection*/
 
 
@@ -31,7 +30,7 @@ function getTotalDays(cmo_month, cmo_year){
 
 
 /*Function to Populate Calendar Lite*/
-function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
+function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightdates_array, controller){
 
 	const cmo_rg = document.getElementById(cmo_rg_id);
 	const cmo_monthtxt_rg = cmo_rg.querySelector(".cmo_monthtxt_rg");
@@ -87,8 +86,15 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		cmo_div_day.addEventListener("click", function(){
 
 			/*Event when date was selected*/
-			assigncmoValue(cmo_year, cmo_month+1, this, cmo_rg, cmo_value_rg);			
+			assigncmoValue(cmo_year, cmo_month+1, this, cmo_rg, cmo_value_rg);	
+
+			/**For additional day function*/
+			if(typeof controller === "function"){
+				controller();
+			}
+			/**For additional day function*/
 			/*Event when date was selected*/
+
 
 			/*For Date Range only*/			
 			if(cmo_rg.classList.contains("cmo_range_rg") === true){
@@ -119,7 +125,7 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		/***Setting Attribute per day number div*/		
 		
 		
-		if(cmo_highlightdates_array.includes(data_cmo_date)){
+		if(Array.isArray(cmo_highlightdates_array) && cmo_highlightdates_array.includes(data_cmo_date)){
 			cmo_div_day.classList.toggle("cmo_day_rg_high");			
 		}else if(data_cmo_date === cmo_value_rg.value){
 			cmo_div_day.classList.toggle("cmo_day_rg_click");
