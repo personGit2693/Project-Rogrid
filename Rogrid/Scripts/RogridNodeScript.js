@@ -728,6 +728,25 @@ function activateIcon(icb_rg_id){
 
 /****************************************************************************************************************************************************************************/
 /*Table*/
+function tbl_rg_colspan(win_width, tbl_rg_id, columnspan){	
+
+	if(win_width >= 1081){
+
+		const tbl_rg = document.getElementById(tbl_rg_id);
+		const tbl_subcont_rg = document.querySelector(".tbl_subcont_rg");
+
+		tbl_subcont_rg.setAttribute("colspan", columnspan);		
+	}else if(win_width <= 1080){
+		
+		const tbl_rg = document.getElementById(tbl_rg_id);
+		const tbl_subcont_rg = document.querySelector(".tbl_subcont_rg");
+
+		tbl_subcont_rg.removeAttribute("colspan");
+	}
+}
+
+
+
 function collapseTable(tbl_row_id){
 
 	const tbl_row = document.getElementById(tbl_row_id);
