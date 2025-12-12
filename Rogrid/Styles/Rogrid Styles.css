@@ -1301,10 +1301,11 @@
   flex-flow: row nowrap;
   justify-content: space-around; }
 
-.cmo_daytxt_rg, .cmo_day_rg {
+.cmo_daytxt_rg, .cmo_days_rg > div {
   position: relative;
-  overflow: visible;
   box-sizing: border-box;
+  flex-shrink: 1;
+  overflow: visible;
   width: var(--cmo_day_rg_width); }
 
 .cmo_daytxt_rg {
