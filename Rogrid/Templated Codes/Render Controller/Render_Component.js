@@ -1,6 +1,6 @@
 /*Import*/
 import {elements_Array, parent} from "Elements_Sample.js";
-import {keys_Name_Obj} from "Values_Sample.js";
+import {element_keyHolder_Obj} from "Values_Sample.js";
 import {response_sample} from "Request_Sample.js";
 /*Import*/
 
@@ -35,12 +35,12 @@ async function renderComponent(){
 
 
 		/*Check if the element should be created or update only*/		
-		if(keys_Name_Obj.keys.includes(response_Key_Base) === false){
+		if(element_keyHolder_Obj.keys.includes(response_Key_Base) === false){
 
 			/*Add new component*/						
 			let component = `<div data-key="value">Sample Component</div>`;
 			/*Add new component*/
-		}else if(keys_Name_Obj.keys.includes(response_Key_Base) === true){
+		}else if(element_keyHolder_Obj.keys.includes(response_Key_Base) === true){
 
 			for(let elemIndex=0; elemIndex < elements_Array.length; elemIndex++){
 
@@ -57,7 +57,7 @@ async function renderComponent(){
 
 
 	/*Remove Elements which are not exist anymore from new response (Comment these codes if you want to keep the elements)*/
-	const elemKeys_Base_Array = keys_Name_Obj.keys;
+	const elemKeys_Base_Array = element_keyHolder_Obj.keys;
 
 	elemKeys_Base_Array.forEach(elemKey_Base =>{
 
