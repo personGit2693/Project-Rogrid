@@ -1,7 +1,7 @@
 /*Import*/
 import {elements_Array} from "Elements_Sample.js";
 import {popElemsKey, element_keyHolder_Obj} from "Values_Sample.js";
-import renderSample from "Render_Sample.js";
+import renderComponent from "Render_Component.js";
 /*Import*/
 
 
@@ -12,7 +12,7 @@ function controller_Sample_RenderElement(){
 
 	if(elements_Array.length === 0){
 		
-		renderSample()
+		renderComponent()
 		.then(promiseRender => {			
 
 			popElemsKey(element_keyHolder_Obj, elements_Array);
@@ -23,7 +23,7 @@ function controller_Sample_RenderElement(){
 
 		popElemsKey(element_keyHolder_Obj, elements_Array);
 
-		renderSample()
+		renderComponent()
 		.then(promiseRender => {			
 			
 			/*Another render if any*/			
