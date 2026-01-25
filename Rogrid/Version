@@ -1,4 +1,4 @@
-Version: 1.6.2
+Version: 1.7
 
 Updates:
-1. Improved the responsiveness of Calendar Model One.
+1. Depreciated Render Component Framework.
