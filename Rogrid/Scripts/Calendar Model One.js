@@ -47,9 +47,9 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightd
 	/**Assign inital value for month button*/
 
 
-	/**Print Month and Year Inner Text*/	
-	cmo_monthtxt_rg.innerText = cmo_months_array[cmo_month];
-	cmo_yeartxt_rg.innerText = cmo_year;
+	/**Print Month and Year Inner Text*/
+	cmo_monthtxt_rg.value = cmo_months_array[cmo_month];
+	cmo_yeartxt_rg.value = cmo_year;
 	/**Print Month and Year Inner Text*/
 
 
@@ -239,6 +239,47 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 	/**Coloring bg and font selected day*/	
 }
 /*Function for clicking days on calender lite*/
+
+
+/*Apply typed month to calendar*/
+function applycmoMonth(cmo_rg_id){
+
+	const cmo_rg = document.getElementById(cmo_rg_id);
+	const cmo_monthtxt_rg = cmo_rg.querySelector(".cmo_monthtxt_rg");
+	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
+	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
+
+	const typed = cmo_monthtxt_rg.value.trim();
+	const matchIndex = cmo_months_array.findIndex(m => m.toLowerCase() === typed.toLowerCase());
+
+	if(matchIndex !== -1){
+		const cmo_year = parseInt(cmo_year_rg.value);
+		rendercmo(getTotalDays(matchIndex, cmo_year), matchIndex, cmo_year, cmo_rg_id);
+	}else{
+		cmo_monthtxt_rg.value = cmo_months_array[parseInt(cmo_month_rg.value)];
+	}
+}
+/*Apply typed month to calendar*/
+
+
+/*Apply typed year to calendar*/
+function applycmoYear(cmo_rg_id){
+
+	const cmo_rg = document.getElementById(cmo_rg_id);
+	const cmo_yeartxt_rg = cmo_rg.querySelector(".cmo_yeartxt_rg");
+	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
+	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
+
+	const typed = parseInt(cmo_yeartxt_rg.value.trim());
+
+	if(!isNaN(typed) && typed > 0){
+		const cmo_month = parseInt(cmo_month_rg.value);
+		rendercmo(getTotalDays(cmo_month, typed), cmo_month, typed, cmo_rg_id);
+	}else{
+		cmo_yeartxt_rg.value = cmo_year_rg.value;
+	}
+}
+/*Apply typed year to calendar*/
 
 
 /*Assign cmo_value_rg*/

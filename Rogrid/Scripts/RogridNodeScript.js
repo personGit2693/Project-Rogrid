@@ -421,15 +421,30 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 	if(select_area_rg.style.display != "block"){
 
 		select_area_rg.style.display = "block";
-		select_arrow_rg.style.transform = "rotateX(180deg)";		
+		select_arrow_rg.style.transform = "rotateX(180deg)";
+
+		const triggerRect = select_rg.getBoundingClientRect();
+		const dropdownHeight = Math.min(select_area_rg.scrollHeight, parseFloat(select_area_rg_height));
+
+		if(triggerRect.bottom + dropdownHeight >= window.innerHeight){
+			select_area_rg.style.top = "auto";
+			select_area_rg.style.bottom = "100%";
+		}else{
+			select_area_rg.style.top = "";
+			select_area_rg.style.bottom = "";
+		}
+
 		select_area_rg.style.maxHeight = select_area_rg_height;
+
 		select_find_rg.focus();
 	}else if(select_area_rg.style.display == "block"){
 
 		select_area_rg.style.maxHeight = "0";
 		select_area_rg.style.display = "none";
 		select_arrow_rg.style.transform = "rotateX(0deg)";
-	}	
+		select_area_rg.style.top = "";
+		select_area_rg.style.bottom = "";
+	}
 }
 
 
