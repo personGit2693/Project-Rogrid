@@ -429,9 +429,15 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 		if(triggerRect.bottom + dropdownHeight >= window.innerHeight){
 			select_area_rg.style.top = "auto";
 			select_area_rg.style.bottom = "100%";
+			select_area_rg.appendChild(select_find_rg);
+			select_find_rg.style.top = "auto";
+			select_find_rg.style.bottom = "0";
 		}else{
 			select_area_rg.style.top = "";
 			select_area_rg.style.bottom = "";
+			select_area_rg.insertBefore(select_find_rg, select_area_rg.firstChild);
+			select_find_rg.style.top = "";
+			select_find_rg.style.bottom = "";
 		}
 
 		select_area_rg.style.maxHeight = select_area_rg_height;
@@ -444,6 +450,9 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 		select_arrow_rg.style.transform = "rotateX(0deg)";
 		select_area_rg.style.top = "";
 		select_area_rg.style.bottom = "";
+		select_area_rg.insertBefore(select_find_rg, select_area_rg.firstChild);
+		select_find_rg.style.top = "";
+		select_find_rg.style.bottom = "";
 	}
 }
 

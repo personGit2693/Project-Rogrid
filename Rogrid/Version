@@ -1,5 +1,4 @@
-Version: 1.8
+Version: 1.8.1
 
 Updates:
-1. Select Dropdown options will be displayed on top when options height reached the bottom of the browser.
-2. Calendar Model One Month and Year are now editable.
+1. Select Dropdown options will be displayed on top and its search input will go down when options height reached the bottom of the browser.
