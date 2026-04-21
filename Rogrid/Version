@@ -1,4 +1,4 @@
-Version: 1.8.1
+Version: 1.8.2
 
 Updates:
-1. Select Dropdown options will be displayed on top and its search input will go down when options height reached the bottom of the browser.
+1. Fixed Calendar Model One Head responsiveness.

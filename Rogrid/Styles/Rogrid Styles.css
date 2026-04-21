@@ -1282,7 +1282,8 @@
   outline: none;
   text-align: center;
   cursor: text;
-  padding: 0; }
+  padding: 0;
+  width: 100%; }
 
 .cmo_btn_rg {
   position: relative;
@@ -1290,8 +1291,7 @@
   overflow: visible;
   width: var(--cmo_btn_rg_size);
   height: var(--cmo_btn_rg_size);
-  cursor: pointer;
-  flex-shrink: 0; }
+  cursor: pointer; }
 
 .cmo_btnimg_rg {
   position: relative;
