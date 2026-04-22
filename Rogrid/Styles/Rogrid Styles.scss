@@ -2034,6 +2034,350 @@
 }
 /*Card Model One*/
 
+
+/*Multiple Select Dropdown*/
+/**Current Selection Area*/
+.mselect_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	cursor: pointer;
+	width: var(--mselect_width);
+}
+
+.mselect_crval_rg{
+	/*This is just the input hidden*/
+}
+
+.mselect_cr_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 6px;
+	background-color: var(--mselect_cr_bgcolor);
+	border-style: solid;
+	border-width: var(--mselect_borderwidth);
+	border-color: var(--mselect_bordercolor);
+	border-radius: var(--mselect_borderradius);
+	padding: 6px 8px;
+	min-height: 44px;
+	width: 100%;
+	-webkit-transition: border-radius 0.3s;
+	transition: border-radius 0.3s;
+}
+
+.mselect_cr_open_rg{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.mselect_icon_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background: transparent var(--mselect_icon_img) center center no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+	width: var(--mselect_size);
+	height: var(--mselect_size);
+}
+
+.mselect_tags_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row wrap;
+	align-items: center;
+	gap: 4px;
+	flex: 1;
+	min-width: 0;
+}
+
+.mselect_placeholder_rg{
+	color: #94A3B8;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.mselect_tag_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 4px;
+	background-color: var(--mselect_tag_bgcolor);
+	color: var(--mselect_tag_color);
+	border-radius: 999px;
+	padding: 3px 8px 3px 10px;
+	font-size: var(--mselect_size);
+	white-space: nowrap;
+	max-width: 160px;
+}
+
+.mselect_tagtxt_rg{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.mselect_tagclose_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.25);
+	color: var(--mselect_tag_close_color);
+	font-size: var(--mselect_size);
+	line-height: 1;
+	-webkit-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+}
+
+.mselect_tagclose_rg:hover{
+	background-color: rgba(255,255,255,0.45);
+}
+
+.mselect_reset_rg{
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+	overflow: visible;
+	background: transparent var(--mselect_reset_img) center center no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+	width: var(--mselect_size);
+	height: var(--mselect_size);
+}
+
+.mselect_arrow_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background: transparent var(--mselect_arrow_img) center center no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+	width: var(--mselect_size);
+	height: var(--mselect_size);
+	transform: rotateX(0deg);
+	-webkit-transition: transform 0.4s;
+	transition: transform 0.4s;
+}
+/**Current Selection Area*/
+
+
+/**Options Area*/
+.mselect_area_rg{
+	position: absolute;
+	display: none;
+	box-sizing: border-box;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 0;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	background-color: var(--mselect_area_bgcolor);
+	border-style: solid;
+	border-width: 0 var(--mselect_borderwidth) var(--mselect_borderwidth) var(--mselect_borderwidth);
+	border-color: var(--mselect_bordercolor);
+	border-bottom-left-radius: var(--mselect_borderradius);
+	border-bottom-right-radius: var(--mselect_borderradius);
+	box-shadow: 0px 6px 16px var(--mselect_area_shadowcolor);
+	-webkit-transition: max-height 0.4s ease;
+	transition: max-height 0.4s ease;
+	z-index: 100;
+}
+
+.mselect_area_rg::-webkit-scrollbar{
+	width: var(--mselect_area_scrollwidth);
+}
+
+.mselect_area_rg::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 5px gray;
+	border-radius: 10px;
+}
+
+.mselect_area_rg::-webkit-scrollbar-thumb{
+	background: var(--mselect_area_scrollcolor);
+	border-radius: 10px;
+}
+
+.mselect_area_rg::-webkit-scrollbar-thumb:hover{
+	background: var(--mselect_area_hover_scrollcolor);
+}
+
+.mselect_searchbox_rg{
+	position: sticky;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 8px;
+	top: 0;
+	z-index: 1;
+	padding: 8px 10px;
+	background-color: var(--mselect_area_bgcolor);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: var(--mselect_searchbox_bordercolor);
+}
+
+.mselect_searchicon_rg{
+	position: relative;
+	box-sizing: border-box;
+	flex-shrink: 0;
+	width: var(--mselect_size);
+	height: var(--mselect_size);
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--mselect_searchicon_color);
+}
+
+.mselect_searchicon_rg::after{
+	content: "";
+	position: absolute;
+	bottom: -6px;
+	right: -5px;
+	width: 6px;
+	height: 2px;
+	background-color: var(--mselect_searchicon_color);
+	border-radius: 2px;
+	transform: rotate(45deg);
+	transform-origin: left center;
+}
+
+.mselect_find_rg{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: 100%;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--mselect_find_color);
+	font-size: var(--mselect_size);
+}
+
+.mselect_opts_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+}
+
+.mselect_opt_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 8px;
+	padding: 9px 12px;
+	cursor: pointer;
+	-webkit-transition: background-color 0.15s;
+	transition: background-color 0.15s;
+}
+
+.mselect_opt_rg:hover{
+	background-color: var(--mselect_hover_opt_bgcolor);
+	color: var(--mselect_hover_opt_color);
+}
+
+.mselect_opt_selected_rg{
+	background-color: var(--mselect_selected_opt_bgcolor);
+	color: var(--mselect_selected_opt_color);
+}
+
+.mselect_opt_hidden_rg{
+	display: none;
+}
+
+.mselect_opticon_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	background: transparent var(--mselect_opticon_img) center center no-repeat;
+	background-size: contain;
+	flex-shrink: 0;
+	width: var(--mselect_size);
+	height: var(--mselect_size);
+}
+
+.mselect_opttxt_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	flex: 1;
+	min-width: 0;
+	font-size: var(--mselect_size);
+}
+
+.mselect_optcb_rg{
+	position: relative;
+	display: flex;
+	box-sizing: border-box;
+	overflow: visible;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	width: var(--mselect_size);
+	height: var(--mselect_size);
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--mselect_optcb_bordercolor);
+	border-radius: 4px;
+	background-color: transparent;
+	margin-left: auto;
+	-webkit-transition: background-color 0.2s, border-color 0.2s;
+	transition: background-color 0.2s, border-color 0.2s;
+}
+
+.mselect_optcb_selected_rg{
+	background-color: var(--mselect_optcb_checked_bgcolor);
+	border-color: var(--mselect_optcb_checked_bordercolor);
+}
+
+.mselect_optcbcheck_rg{
+	position: relative;
+	box-sizing: border-box;
+	width: 5px;
+	height: 9px;
+	border-style: solid;
+	border-color: var(--mselect_optcbcheck_color);
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg) translateY(-1px);
+}
+
+.mselect_noopt_rg{
+	position: relative;
+	box-sizing: border-box;
+	overflow: visible;
+	padding: 12px;
+	text-align: center;
+	color: #94A3B8;
+	font-style: italic;
+}
+/**Options Area*/
+/*Multiple Select Dropdown*/
+
 /*General*/
 /***********************************************************************************************************************************************************************************************************/
 
@@ -2075,6 +2419,13 @@
 		@include tbl_dlabel_rg_smart;
 	}
 	/*Table*/
+
+
+	/*Multiple Select Dropdown*/
+	.mselect_rg{
+		width: 100%;
+	}
+	/*Multiple Select Dropdown*/
 }
 /*Mobile*/
 /***********************************************************************************************************************************************************************************************************/
@@ -2082,7 +2433,7 @@
 
 /***********************************************************************************************************************************************************************************************************/
 /*Tablet*/
-@media all and (min-width:642px) and (max-width:1080px){		
+@media all and (min-width:642px) and (max-width:1080px){
 	/*Page Layout (First Model)*/
 	.mone_burger_rg{
 		@include mone_burger_rg_smart;
@@ -2114,6 +2465,13 @@
 		@include tbl_dlabel_rg_smart;
 	}
 	/*Table*/
+
+
+	/*Multiple Select Dropdown*/
+	.mselect_rg{
+		width: 100%;
+	}
+	/*Multiple Select Dropdown*/
 }
 /*Tablet*/
 /***********************************************************************************************************************************************************************************************************/

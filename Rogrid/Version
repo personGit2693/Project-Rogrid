@@ -1,4 +1,5 @@
-Version: 1.8.2
+Version: 1.9
 
 Updates:
-1. Fixed Calendar Model One Head responsiveness.
+1. Improvements for date range and select dropdown display flexibilities.
+2. New Component! (Multiple Select Dropdown)
