@@ -428,9 +428,9 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 		const dropdownHeight = Math.min(select_area_rg.scrollHeight, parseFloat(select_area_rg_height));
 
 		let flipAbove = false;
-		if(triggerRect.bottom + dropdownHeight >= parentRect.bottom){
+		if(triggerRect.bottom + dropdownHeight >= window.innerHeight || triggerRect.bottom + dropdownHeight >= parentRect.bottom){
 			const estimatedTop = triggerRect.top - dropdownHeight;
-			if(estimatedTop > 0) flipAbove = true;
+			if(estimatedTop >= 0) flipAbove = true;
 		}
 
 		if(flipAbove){
@@ -724,19 +724,23 @@ function displayCalendars(range_rg_id){
 		/* Show arrowpad so it is included in the static position of range_cmo_rg */
 		range_arrowpad_rg.style.display = "flex";
 
+		/* Clear any stale flip position from a previous open that closed mid-transition */
+		range_cmo_rg.style.top = "";
+		range_cmo_rg.style.bottom = "";
+
 		/* Briefly expand without transition to read the actual bottom border position in the viewport */
 		range_cmo_rg.style.transition = "none";
 		range_cmo_rg.style.maxHeight = "1000px";
 		const cmoBottom = range_cmo_rg.getBoundingClientRect().bottom;
 
 		let flipAbove = false;
-		if(cmoBottom + headHeight >= parentRect.bottom){
+		if(cmoBottom + headHeight >= window.innerHeight || cmoBottom + headHeight >= parentRect.bottom){
 			range_cmo_rg.style.top = "auto";
 			range_cmo_rg.style.bottom = "100%";
 			const cmoTop = range_cmo_rg.getBoundingClientRect().top;
 			range_cmo_rg.style.top = "";
 			range_cmo_rg.style.bottom = "";
-			if(cmoTop > 0) flipAbove = true;
+			if(cmoTop >= 0) flipAbove = true;
 		}
 
 		range_cmo_rg.style.maxHeight = "0px";
@@ -853,6 +857,10 @@ function showMSelectArea(mselect_rg_id, mselect_area_rg_height, event){
 
 	if(mselect_rg.getAttribute("data-mopen") !== "true"){
 
+		/* Clear any stale flip position from a previous open that closed mid-transition */
+		mselect_area_rg.style.top = "";
+		mselect_area_rg.style.bottom = "";
+
 		/* Briefly show to read the actual bottom border position in the viewport */
 		mselect_area_rg.style.display = "block";
 		mselect_area_rg.style.transition = "none";
@@ -861,13 +869,13 @@ function showMSelectArea(mselect_rg_id, mselect_area_rg_height, event){
 		const areaBottom = mselect_area_rg.getBoundingClientRect().bottom;
 
 		let flipAbove = false;
-		if(areaBottom >= parentRect.bottom){
+		if(areaBottom >= window.innerHeight || areaBottom >= parentRect.bottom){
 			mselect_area_rg.style.top = "auto";
 			mselect_area_rg.style.bottom = "100%";
 			const areaTop = mselect_area_rg.getBoundingClientRect().top;
 			mselect_area_rg.style.top = "";
 			mselect_area_rg.style.bottom = "";
-			if(areaTop > parentRect.top) flipAbove = true;
+			if(areaTop >= 0) flipAbove = true;
 		}
 
 		mselect_area_rg.style.maxHeight = "0";

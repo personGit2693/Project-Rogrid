@@ -1,5 +1,4 @@
-Version: 1.9
+Version: 1.9.2
 
 Updates:
-1. Improvements for date range and select dropdown display flexibilities.
-2. New Component! (Multiple Select Dropdown)
+1. Improved components diplay positioning (Date Range Calendar, Multiple Select Dropdown, and Select Dropdown)
