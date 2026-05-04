@@ -409,7 +409,19 @@ function drawAreaChart(chartData_Array, chartOption_Obj, chartparentElementId){
 /****************************************************************************************************************************************************************************/ 
 
 
-/****************************************************************************************************************************************************************************/ 
+/****************************************************************************************************************************************************************************/
+/*Shared Utility*/
+function _hasScrollableOverflow(el){
+	const style = getComputedStyle(el);
+	const ov = style.overflow;
+	const ovY = style.overflowY;
+	return ov === "scroll" || ov === "auto" || ovY === "scroll" || ovY === "auto";
+}
+/*Shared Utility*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Select Dropdown*/
 function showSelectArea(select_rg_id, select_area_rg_height){
 
@@ -428,7 +440,7 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 		const dropdownHeight = Math.min(select_area_rg.scrollHeight, parseFloat(select_area_rg_height));
 
 		let flipAbove = false;
-		if(triggerRect.bottom + dropdownHeight >= window.innerHeight || triggerRect.bottom + dropdownHeight >= parentRect.bottom){
+		if(triggerRect.bottom + dropdownHeight >= window.innerHeight || (_hasScrollableOverflow(select_rg.parentElement) && triggerRect.bottom + dropdownHeight >= parentRect.bottom)){
 			const estimatedTop = triggerRect.top - dropdownHeight;
 			if(estimatedTop >= 0) flipAbove = true;
 		}
@@ -734,7 +746,7 @@ function displayCalendars(range_rg_id){
 		const cmoBottom = range_cmo_rg.getBoundingClientRect().bottom;
 
 		let flipAbove = false;
-		if(cmoBottom + headHeight >= window.innerHeight || cmoBottom + headHeight >= parentRect.bottom){
+		if(cmoBottom + headHeight >= window.innerHeight || (_hasScrollableOverflow(range_rg.parentElement) && cmoBottom + headHeight >= parentRect.bottom)){
 			range_cmo_rg.style.top = "auto";
 			range_cmo_rg.style.bottom = "100%";
 			const cmoTop = range_cmo_rg.getBoundingClientRect().top;
@@ -869,7 +881,7 @@ function showMSelectArea(mselect_rg_id, mselect_area_rg_height, event){
 		const areaBottom = mselect_area_rg.getBoundingClientRect().bottom;
 
 		let flipAbove = false;
-		if(areaBottom >= window.innerHeight || areaBottom >= parentRect.bottom){
+		if(areaBottom >= window.innerHeight || (_hasScrollableOverflow(mselect_rg.parentElement) && areaBottom >= parentRect.bottom)){
 			mselect_area_rg.style.top = "auto";
 			mselect_area_rg.style.bottom = "100%";
 			const areaTop = mselect_area_rg.getBoundingClientRect().top;

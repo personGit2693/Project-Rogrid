@@ -1,4 +1,4 @@
-Version: 1.9.2
+Version: 1.9.3
 
 Updates:
-1. Improved components diplay positioning (Date Range Calendar, Multiple Select Dropdown, and Select Dropdown)
+1. Addional condition for Flipping the mselect_area_rg, select_area_rg and range_cmo_rg to top aside from reaching their bottom, add to the condition if the parents overflow are scroll if not do not flip to top
