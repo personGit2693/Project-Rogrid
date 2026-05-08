@@ -1,4 +1,17 @@
-Version: 1.9.3
+Version: 1.9.4
 
 Updates:
-1. Addional condition for Flipping the mselect_area_rg, select_area_rg and range_cmo_rg to top aside from reaching their bottom, add to the condition if the parents overflow are scroll if not do not flip to top
+1. Rogrid Styles.scss — @keyframes
+- Removed display: none from from (it's not animatable anyway)
+- Added padding: 0px to from — animation starts fully collapsed
+- Added padding: var(--ntfone_rg_padding) to to — animation ends with the configured padding
+
+2. Rogrid Styles.scss — .ntfone_rg base rule
+- Added display: flex explicitly (the keyframe's display: flex in to isn't reliable since display snap-animates)
+- Added padding: 0px as the base/resting state — after a non-stay animation ends and reverts to this rule, no padding
+leaks through
+
+Result:
+- ntfone_rg_stay (animation-fill-mode: forwards): freezes at the to state → padding: 7px, fully visible ✓
+- Non-stay: after animation ends, reverts to base → padding: 0px + max-height: 0px → fully collapsed with no visible
+gap
