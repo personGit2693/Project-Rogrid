@@ -1459,21 +1459,18 @@
 /*Notification Model One*/
 @keyframes ntfone_rg_keyframes {
   from {
-    max-height: 0px;
-    padding: 0px; }
+    display: none;
+    max-height: 0px; }
   to {
     display: flex;
-    max-height: 1000px;
-    padding: var(--ntfone_rg_padding); } }
+    max-height: 1000px; } }
 .ntfone_rg {
   position: relative;
-  display: flex;
   box-sizing: border-box;
   overflow: hidden;
   flex-flow: row nowrap;
   background-color: var(--ntfone_rg_bgcolor);
   max-height: 0px;
-  padding: 0px;
   animation-name: ntfone_rg_keyframes;
   animation-duration: var(--ntfone_rg_duration); }
 
