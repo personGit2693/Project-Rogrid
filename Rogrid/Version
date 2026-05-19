@@ -1,4 +1,4 @@
-Version: 1.9.5
+Version: 1.9.6
 
 Updates:
-Revert last update
+Manually trigger the 'change' event for calendar model one to trigger the onchange event for every click on calendar day.

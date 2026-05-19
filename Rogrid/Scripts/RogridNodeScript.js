@@ -520,7 +520,7 @@ function assignOptValue(select_rg_id, select_opt_rg_key, default_opt_bool){
 	select_icon_rg.style.setProperty("--select_icon_rg_img", getComputedStyle(select_opticon_rg).getPropertyValue('--select_opticon_rg_img'));
 	select_text_rg.innerText = select_opttxt_rg.innerText.trim();	
 	/*Assigning value*/
-
+		
 
 	/*Show Reset Button*/
 	if(default_opt_bool !== undefined && default_opt_bool === true){

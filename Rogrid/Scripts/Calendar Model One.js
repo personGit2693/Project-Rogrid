@@ -220,7 +220,7 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 	cmo_value_rg.value = `${cmo_year}-${cmo_month}-${cmo_day}`;
 	
 
-	/**Coloring bg and font selected day*/
+	/*Coloring bg and font selected day*/
 	const cmo_day_rg_array = cmo_rg.querySelectorAll(".cmo_day_rg");
 
 	for(let index=0; index<cmo_day_rg_array.length; index++){
@@ -236,7 +236,12 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 			cmo_day_rg_array[index].classList.remove("cmo_day_rg_click");
 		}
 	}	
-	/**Coloring bg and font selected day*/	
+	/*Coloring bg and font selected day*/
+
+	/*Manually trigger the 'change' event*/
+	const event = new Event('change');
+	cmo_value_rg.dispatchEvent(event);
+	/*Manually trigger the 'change' event*/	
 }
 /*Function for clicking days on calender lite*/
 
