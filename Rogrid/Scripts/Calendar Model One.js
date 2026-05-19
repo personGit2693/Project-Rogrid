@@ -37,8 +37,14 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightd
 	const cmo_yeartxt_rg = cmo_rg.querySelector(".cmo_yeartxt_rg");
 	const cmo_days_rg = cmo_rg.querySelector(".cmo_days_rg");
 	const cmo_value_rg = cmo_rg.querySelector(".cmo_value_rg");
+	const cmo_highlightdates = cmo_rg.querySelector(".cmo_highlightdates");
 	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
 	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
+
+	let highlightdates_value = [];
+	if(cmo_highlightdates.value != ""){
+		highlightdates_value = JSON.parse(cmo_highlightdates.value);
+	}
 	
 
 	/**Assign inital value for month button*/
@@ -125,12 +131,11 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightd
 		/***Setting Attribute per day number div*/		
 		
 		
-		if(Array.isArray(cmo_highlightdates_array) && cmo_highlightdates_array.includes(data_cmo_date)){
+		if(Array.isArray(highlightdates_value) && highlightdates_value.includes(data_cmo_date)){
 			cmo_div_day.classList.toggle("cmo_day_rg_high");			
 		}else if(data_cmo_date === cmo_value_rg.value){
 			cmo_div_day.classList.toggle("cmo_day_rg_click");
 		}		
-
 
 		const cmo_date = `${cmo_months_array[cmo_month]} ${index}, ${cmo_year}`;		
 

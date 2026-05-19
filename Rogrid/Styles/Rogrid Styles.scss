@@ -1398,14 +1398,14 @@
 
 
 /**Highlights, Clicked*/
-.cmo_day_rg_click{
-	background-color: var(--cmo_day_rg_click_bgcolor);
-	color: var(--cmo_day_rg_click_color);
-}
-
 .cmo_day_rg_high{
 	background-color: var(--cmo_day_rg_high_bgcolor);
 	color: var(--cmo_day_rg_high_color);
+}
+
+.cmo_day_rg_click{
+	background-color: var(--cmo_day_rg_click_bgcolor);
+	color: var(--cmo_day_rg_click_color);
 }
 /**Highlights, Active, Clicked*/
 /*Calendar Model One*/

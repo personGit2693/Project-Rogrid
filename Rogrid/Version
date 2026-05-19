@@ -1,4 +1,5 @@
-Version: 1.9.6
+Version: 1.9.7
 
 Updates:
-Manually trigger the 'change' event for calendar model one to trigger the onchange event for every click on calendar day.
+1. Enhanced flexibility of calendar model one.
+2. New input element was added for html structure. "<input type="hidden" class="cmo_highlightdates"/> <!--Store array value with dates to highlight the day-->"
