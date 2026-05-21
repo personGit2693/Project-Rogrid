@@ -37,13 +37,13 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightd
 	const cmo_yeartxt_rg = cmo_rg.querySelector(".cmo_yeartxt_rg");
 	const cmo_days_rg = cmo_rg.querySelector(".cmo_days_rg");
 	const cmo_value_rg = cmo_rg.querySelector(".cmo_value_rg");
-	const cmo_highlightdates = cmo_rg.querySelector(".cmo_highlightdates");
+	const cmo_highlightdates_rg = cmo_rg.querySelector(".cmo_highlightdates_rg");
 	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
 	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
 
 	let highlightdates_value = [];
-	if(cmo_highlightdates.value != ""){
-		highlightdates_value = JSON.parse(cmo_highlightdates.value);
+	if(cmo_highlightdates_rg.value != ""){
+		highlightdates_value = JSON.parse(cmo_highlightdates_rg.value);
 	}
 	
 

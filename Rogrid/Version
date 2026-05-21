@@ -1,5 +1,4 @@
-Version: 1.9.7
+Version: 1.9.8
 
 Updates:
-1. Enhanced flexibility of calendar model one.
-2. New input element was added for html structure. "<input type="hidden" class="cmo_highlightdates"/> <!--Store array value with dates to highlight the day-->"
+1. Fixed bug on nested table component.
