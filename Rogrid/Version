@@ -1,4 +1,5 @@
-Version: 1.9.8
+Version: 1.9.9
 
 Updates:
-1. Fixed bug on nested table component.
+1. Fixed alignment on Calendar Model One
+2. Improved flexibility of Popup Bottom Modal

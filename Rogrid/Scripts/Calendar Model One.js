@@ -75,6 +75,7 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightd
 		const cmo_blankday = document.createTextNode("0");
 		const cmo_div_blankday = document.createElement("div");		
 		cmo_div_blankday.style.visibility = "hidden";
+		cmo_div_blankday.className = "cmo_day_rg";
 		cmo_div_blankday.appendChild(cmo_blankday);
 		cmo_days_rg.children[index].appendChild(cmo_div_blankday);
 	}
