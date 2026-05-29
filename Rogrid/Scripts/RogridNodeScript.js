@@ -105,9 +105,11 @@ function closeBottomModal(bmodal_id){
 
 	const bmodal = document.getElementById(bmodal_id);
 
+	bmodal.style.height = "0px";
+
 	setTimeout(function() {
-		bmodal.style.height = "0px";
-	}, 300); /*Wait for the animation to finish (300ms)*/
+		bmodal.style.display = "none";
+	}, 400); /*Wait for the animation to finish (300ms)*/
 }
 /*Bottom Popup Modal*/
 /****************************************************************************************************************************************************************************/
