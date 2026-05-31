@@ -1,5 +1,4 @@
-Version: 1.9.9
+Version: 1.10
 
 Updates:
-1. Fixed alignment on Calendar Model One
-2. Improved flexibility of Popup Bottom Modal
+1. New component (input text with show password)

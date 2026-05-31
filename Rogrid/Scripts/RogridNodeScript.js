@@ -137,6 +137,20 @@ function input_rg_out(fcolor, inputId){
 	}
 }
 
+function input_rg_showpassword(inputId, icb_rg_id){
+
+	const inputElem = document.getElementById(inputId);
+	const icb_rg = document.getElementById(icb_rg_id);
+
+	if(inputElem.type === "password"){
+		inputElem.type = "text";
+	}else{
+		inputElem.type = "password";
+	}
+
+	icb_rg.classList.toggle("icb_active_rg");
+}
+
 /*Inputs*/
 /****************************************************************************************************************************************************************************/
 

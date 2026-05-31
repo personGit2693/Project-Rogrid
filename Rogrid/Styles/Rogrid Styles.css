@@ -734,6 +734,24 @@
   transform: none;
   font-size: var(--input_rg_active_fsize); }
 
+/*Input Icon Button (e.g. password show/hide toggle) - sits at the very right inside input_rg*/
+.input_rg .input_icb_rg {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  transform: translateY(-50%);
+  width: var(--input_icb_rg_size);
+  height: var(--input_icb_rg_size);
+  background-color: transparent;
+  z-index: 1;
+  border: none; }
+
+.input_rg .input_icb_rg:hover {
+  background-color: transparent; }
+
+.input_rg:has(.input_icb_rg) input {
+  padding-right: calc(var(--input_icb_rg_size) + 12px); }
+
 /*Inputs*/
 /*Radio Button*/
 .radio_rg {
