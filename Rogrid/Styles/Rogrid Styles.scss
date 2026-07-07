@@ -582,7 +582,7 @@
 
 /***Pin*/
 .switch_rg .switch_input_rg:checked ~ .switch_pin_rg::after {
-	translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 12px - 3.75px) 0;
+	translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 10px) 0;
 	background-color: var(--switch_pincheck_rg_color);
 }
 /***Pin*/
