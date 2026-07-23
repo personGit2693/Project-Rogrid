@@ -544,6 +544,12 @@ function assignOptValue(select_rg_id, select_opt_rg_key, default_opt_bool){
 		select_reset_rg.style.display = "block";
 	}
 	/*Show Reset Button*/
+	
+
+	/*Manually trigger the 'change' event*/
+	const event = new Event('change');
+	select_crval_rg.dispatchEvent(event);
+	/*Manually trigger the 'change' event*/
 }
 /*Select Dropdown*/
 /****************************************************************************************************************************************************************************/ 

@@ -277,7 +277,8 @@
 	position: relative;
 	display: flex;
 	box-sizing: border-box;
-	align-items: flex-start;	
+	align-items: flex-start;
+	justify-content: center;	
 	padding: 12px 6px;
 	color: var(--tab_color); /*tab_rg Text Color*/
 	cursor: pointer;

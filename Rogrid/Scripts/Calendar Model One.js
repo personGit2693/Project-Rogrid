@@ -244,6 +244,7 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 	}	
 	/*Coloring bg and font selected day*/
 
+
 	/*Manually trigger the 'change' event*/
 	const event = new Event('change');
 	cmo_value_rg.dispatchEvent(event);
