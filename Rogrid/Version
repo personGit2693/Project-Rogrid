@@ -1,5 +1,4 @@
-Version: 1.1
+Version: 1.10.2
 
 Updates:
-1. Included toggle button without documentation.
-2. Rearranged toggle button codes
+1. Enhanced Select Dropdown (select_crval_rg has now onchange event trigger)

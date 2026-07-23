@@ -18,7 +18,6 @@ var cmo_cryear = new Date().getFullYear();
 
 /*Months Text Collection*/
 const cmo_months_array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var cmo_highlightdates_array = [];
 /*Months Text Collection*/
 
 
@@ -31,15 +30,21 @@ function getTotalDays(cmo_month, cmo_year){
 
 
 /*Function to Populate Calendar Lite*/
-function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
+function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id, cmo_highlightdates_array, controller){
 
 	const cmo_rg = document.getElementById(cmo_rg_id);
 	const cmo_monthtxt_rg = cmo_rg.querySelector(".cmo_monthtxt_rg");
 	const cmo_yeartxt_rg = cmo_rg.querySelector(".cmo_yeartxt_rg");
 	const cmo_days_rg = cmo_rg.querySelector(".cmo_days_rg");
 	const cmo_value_rg = cmo_rg.querySelector(".cmo_value_rg");
+	const cmo_highlightdates_rg = cmo_rg.querySelector(".cmo_highlightdates_rg");
 	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
 	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
+
+	let highlightdates_value = [];
+	if(cmo_highlightdates_rg.value != ""){
+		highlightdates_value = JSON.parse(cmo_highlightdates_rg.value);
+	}
 	
 
 	/**Assign inital value for month button*/
@@ -48,9 +53,9 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 	/**Assign inital value for month button*/
 
 
-	/**Print Month and Year Inner Text*/	
-	cmo_monthtxt_rg.innerText = cmo_months_array[cmo_month];
-	cmo_yeartxt_rg.innerText = cmo_year;
+	/**Print Month and Year Inner Text*/
+	cmo_monthtxt_rg.value = cmo_months_array[cmo_month];
+	cmo_yeartxt_rg.value = cmo_year;
 	/**Print Month and Year Inner Text*/
 
 
@@ -70,6 +75,7 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		const cmo_blankday = document.createTextNode("0");
 		const cmo_div_blankday = document.createElement("div");		
 		cmo_div_blankday.style.visibility = "hidden";
+		cmo_div_blankday.className = "cmo_day_rg";
 		cmo_div_blankday.appendChild(cmo_blankday);
 		cmo_days_rg.children[index].appendChild(cmo_div_blankday);
 	}
@@ -87,8 +93,15 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		cmo_div_day.addEventListener("click", function(){
 
 			/*Event when date was selected*/
-			assigncmoValue(cmo_year, cmo_month+1, this, cmo_rg, cmo_value_rg);			
+			assigncmoValue(cmo_year, cmo_month+1, this, cmo_rg, cmo_value_rg);	
+
+			/**For additional day function*/
+			if(typeof controller === "function"){
+				controller();
+			}
+			/**For additional day function*/
 			/*Event when date was selected*/
+
 
 			/*For Date Range only*/			
 			if(cmo_rg.classList.contains("cmo_range_rg") === true){
@@ -119,12 +132,11 @@ function rendercmo(cmo_totaldays, cmo_month, cmo_year, cmo_rg_id){
 		/***Setting Attribute per day number div*/		
 		
 		
-		if(cmo_highlightdates_array.includes(data_cmo_date)){
+		if(Array.isArray(highlightdates_value) && highlightdates_value.includes(data_cmo_date)){
 			cmo_div_day.classList.toggle("cmo_day_rg_high");			
 		}else if(data_cmo_date === cmo_value_rg.value){
 			cmo_div_day.classList.toggle("cmo_day_rg_click");
 		}		
-
 
 		const cmo_date = `${cmo_months_array[cmo_month]} ${index}, ${cmo_year}`;		
 
@@ -214,7 +226,7 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 	cmo_value_rg.value = `${cmo_year}-${cmo_month}-${cmo_day}`;
 	
 
-	/**Coloring bg and font selected day*/
+	/*Coloring bg and font selected day*/
 	const cmo_day_rg_array = cmo_rg.querySelectorAll(".cmo_day_rg");
 
 	for(let index=0; index<cmo_day_rg_array.length; index++){
@@ -230,9 +242,56 @@ function assigncmoValue(cmo_year, cmo_month, cmo_div_day, cmo_rg, cmo_value_rg){
 			cmo_day_rg_array[index].classList.remove("cmo_day_rg_click");
 		}
 	}	
-	/**Coloring bg and font selected day*/	
+	/*Coloring bg and font selected day*/
+
+
+	/*Manually trigger the 'change' event*/
+	const event = new Event('change');
+	cmo_value_rg.dispatchEvent(event);
+	/*Manually trigger the 'change' event*/	
 }
 /*Function for clicking days on calender lite*/
+
+
+/*Apply typed month to calendar*/
+function applycmoMonth(cmo_rg_id){
+
+	const cmo_rg = document.getElementById(cmo_rg_id);
+	const cmo_monthtxt_rg = cmo_rg.querySelector(".cmo_monthtxt_rg");
+	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
+	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
+
+	const typed = cmo_monthtxt_rg.value.trim();
+	const matchIndex = cmo_months_array.findIndex(m => m.toLowerCase() === typed.toLowerCase());
+
+	if(matchIndex !== -1){
+		const cmo_year = parseInt(cmo_year_rg.value);
+		rendercmo(getTotalDays(matchIndex, cmo_year), matchIndex, cmo_year, cmo_rg_id);
+	}else{
+		cmo_monthtxt_rg.value = cmo_months_array[parseInt(cmo_month_rg.value)];
+	}
+}
+/*Apply typed month to calendar*/
+
+
+/*Apply typed year to calendar*/
+function applycmoYear(cmo_rg_id){
+
+	const cmo_rg = document.getElementById(cmo_rg_id);
+	const cmo_yeartxt_rg = cmo_rg.querySelector(".cmo_yeartxt_rg");
+	const cmo_month_rg = cmo_rg.querySelector(".cmo_month_rg");
+	const cmo_year_rg = cmo_rg.querySelector(".cmo_year_rg");
+
+	const typed = parseInt(cmo_yeartxt_rg.value.trim());
+
+	if(!isNaN(typed) && typed > 0){
+		const cmo_month = parseInt(cmo_month_rg.value);
+		rendercmo(getTotalDays(cmo_month, typed), cmo_month, typed, cmo_rg_id);
+	}else{
+		cmo_yeartxt_rg.value = cmo_year_rg.value;
+	}
+}
+/*Apply typed year to calendar*/
 
 
 /*Assign cmo_value_rg*/

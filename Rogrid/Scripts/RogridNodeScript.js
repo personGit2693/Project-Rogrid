@@ -1,4 +1,121 @@
 /****************************************************************************************************************************************************************************/
+/*Input Suggestion*/
+function showSuggestion(suggest_rg_id){
+
+	const suggest_rg = document.getElementById(suggest_rg_id);
+	const suggest_box_rg = suggest_rg.querySelector(".suggest_box_rg");
+
+	suggest_box_rg.style.display = "block";
+}
+
+function hideSuggestion(suggest_rg_id){
+
+	const suggest_rg = document.getElementById(suggest_rg_id);
+	const suggest_box_rg = suggest_rg.querySelector(".suggest_box_rg");
+	
+	suggest_box_rg.style.display = "none";
+}
+/*Input Suggestion*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Vertical Progress Tracker*/
+function markVtStep(vtprog_step_rg_id){
+
+	const vtprog_step_rg = document.getElementById(vtprog_step_rg_id);
+	vtprog_step_rg.classList.toggle("vtprog_step_active_rg");
+}
+/*Vertical Progress Tracker*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Tab Menu*/
+function lightTabMenu(tab_rg_id, tab_rg_class){
+
+	const tab = document.getElementById(tab_rg_id);
+
+	const classname = `.${tab_rg_class}`;
+	const tabs = document.querySelectorAll(classname);
+
+	tabs.forEach(tab => tab.classList.remove('tab_active_rg'));
+
+	tab.classList.add('tab_active_rg');
+}
+/*Tab Menu*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Card Category*/
+function lightCardCategory(cardCategory_id, cardCategory_Class){
+
+	const cardCategory = document.getElementById(cardCategory_id);
+
+	const classname = `.${cardCategory_Class}`;
+	const cardCategories = document.querySelectorAll(classname);
+
+	cardCategories.forEach(cardCategory => cardCategory.classList.remove('cardcat_active_rg'));
+
+	cardCategory.classList.add('cardcat_active_rg');
+}
+/*Card Category*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Dot Settings Menu*/
+function showDotSettingsMenu(dotset_menus_id, e){
+
+	e.stopPropagation();
+
+	const dotset_menus = document.getElementById(dotset_menus_id);
+
+	dotset_menus.style.display = dotset_menus.style.display === 'block' ? 'none' : 'block';
+}
+
+
+function closeDotSettingsMenu(){
+
+	const dotset_menus = document.querySelectorAll('.dotset_menus_rg');
+
+	dotset_menus.forEach(dotset_menu => {
+		dotset_menu.style.display = "none";
+	});
+}
+/*Dot Settings Menu*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Bottom Popup Modal*/
+function popupBottomModal(bmodal_id, bmodal_height = "50%"){
+
+	const bmodal = document.getElementById(bmodal_id);
+
+	bmodal.style.display = 'flex'; /*Make modal visible*/
+
+	setTimeout(function() {
+		bmodal.style.height = bmodal_height; /*Trigger the slide-up animation*/
+	}, 10); /*Small delay to ensure styles are applied*/
+}
+
+function closeBottomModal(bmodal_id){
+
+	const bmodal = document.getElementById(bmodal_id);
+
+	bmodal.style.height = "0px";
+
+	setTimeout(function() {
+		bmodal.style.display = "none";
+	}, 400); /*Wait for the animation to finish (300ms)*/
+}
+/*Bottom Popup Modal*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Inputs*/
 
 function input_rg_focus(fcolor, inputId){
@@ -18,6 +135,20 @@ function input_rg_out(fcolor, inputId){
 		inputElem.parentElement.style.borderColor = fcolor;
 		inputElem.parentElement.children[1].style.color = fcolor;
 	}
+}
+
+function input_rg_showpassword(inputId, icb_rg_id){
+
+	const inputElem = document.getElementById(inputId);
+	const icb_rg = document.getElementById(icb_rg_id);
+
+	if(inputElem.type === "password"){
+		inputElem.type = "text";
+	}else{
+		inputElem.type = "password";
+	}
+
+	icb_rg.classList.toggle("icb_active_rg");
 }
 
 /*Inputs*/
@@ -293,7 +424,19 @@ function drawAreaChart(chartData_Array, chartOption_Obj, chartparentElementId){
 /****************************************************************************************************************************************************************************/ 
 
 
-/****************************************************************************************************************************************************************************/ 
+/****************************************************************************************************************************************************************************/
+/*Shared Utility*/
+function _hasScrollableOverflow(el){
+	const style = getComputedStyle(el);
+	const ov = style.overflow;
+	const ovY = style.overflowY;
+	return ov === "scroll" || ov === "auto" || ovY === "scroll" || ovY === "auto";
+}
+/*Shared Utility*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
 /*Select Dropdown*/
 function showSelectArea(select_rg_id, select_area_rg_height){
 
@@ -305,15 +448,46 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 	if(select_area_rg.style.display != "block"){
 
 		select_area_rg.style.display = "block";
-		select_arrow_rg.style.transform = "rotateX(180deg)";		
+		select_arrow_rg.style.transform = "rotateX(180deg)";
+
+		const parentRect = select_rg.parentElement.getBoundingClientRect();
+		const triggerRect = select_rg.getBoundingClientRect();
+		const dropdownHeight = Math.min(select_area_rg.scrollHeight, parseFloat(select_area_rg_height));
+
+		let flipAbove = false;
+		if(triggerRect.bottom + dropdownHeight >= window.innerHeight || (_hasScrollableOverflow(select_rg.parentElement) && triggerRect.bottom + dropdownHeight >= parentRect.bottom)){
+			const estimatedTop = triggerRect.top - dropdownHeight;
+			if(estimatedTop >= 0) flipAbove = true;
+		}
+
+		if(flipAbove){
+			select_area_rg.style.top = "auto";
+			select_area_rg.style.bottom = "100%";
+			select_area_rg.appendChild(select_find_rg);
+			select_find_rg.style.top = "auto";
+			select_find_rg.style.bottom = "0";
+		}else{
+			select_area_rg.style.top = "";
+			select_area_rg.style.bottom = "";
+			select_area_rg.insertBefore(select_find_rg, select_area_rg.firstChild);
+			select_find_rg.style.top = "";
+			select_find_rg.style.bottom = "";
+		}
+
 		select_area_rg.style.maxHeight = select_area_rg_height;
+
 		select_find_rg.focus();
 	}else if(select_area_rg.style.display == "block"){
 
 		select_area_rg.style.maxHeight = "0";
 		select_area_rg.style.display = "none";
 		select_arrow_rg.style.transform = "rotateX(0deg)";
-	}	
+		select_area_rg.style.top = "";
+		select_area_rg.style.bottom = "";
+		select_area_rg.insertBefore(select_find_rg, select_area_rg.firstChild);
+		select_find_rg.style.top = "";
+		select_find_rg.style.bottom = "";
+	}
 }
 
 
@@ -329,7 +503,7 @@ function uncollapseSelectAreas(){
 			select_area_rg.style.maxHeight = "0";
 			select_area_rg.style.display = "none";
 			select_arrow_rg.style.transform = "rotateX(0deg)";
-		}		
+		}
 	}
 }
 
@@ -361,7 +535,7 @@ function assignOptValue(select_rg_id, select_opt_rg_key, default_opt_bool){
 	select_icon_rg.style.setProperty("--select_icon_rg_img", getComputedStyle(select_opticon_rg).getPropertyValue('--select_opticon_rg_img'));
 	select_text_rg.innerText = select_opttxt_rg.innerText.trim();	
 	/*Assigning value*/
-
+		
 
 	/*Show Reset Button*/
 	if(default_opt_bool !== undefined && default_opt_bool === true){
@@ -370,6 +544,12 @@ function assignOptValue(select_rg_id, select_opt_rg_key, default_opt_bool){
 		select_reset_rg.style.display = "block";
 	}
 	/*Show Reset Button*/
+	
+
+	/*Manually trigger the 'change' event*/
+	const event = new Event('change');
+	select_crval_rg.dispatchEvent(event);
+	/*Manually trigger the 'change' event*/
 }
 /*Select Dropdown*/
 /****************************************************************************************************************************************************************************/ 
@@ -553,16 +733,67 @@ function displayCalendars(range_rg_id){
 	const range_arrow_rg = range_rg.querySelector(".range_arrow_rg");
 	const range_cmo_rg = range_rg.querySelector(".range_cmo_rg");
 
-	if(range_arrow_rg.style.display == "block"){	
+	if(range_arrow_rg.style.display == "block"){
 
 		range_cmo_rg.style.maxHeight = "0px";
 		range_arrow_rg.style.display = "none";
 		range_arrowpad_rg.style.display = "none";
+
+		/* Reset position only after the close animation fully completes */
+		range_cmo_rg.addEventListener("transitionend", function onClose(e){
+			if(e.propertyName === "max-height" && range_arrow_rg.style.display !== "block"){
+				range_cmo_rg.removeEventListener("transitionend", onClose);
+				range_cmo_rg.style.top = "";
+				range_cmo_rg.style.bottom = "";
+			}
+		});
+
 	}else if(range_arrow_rg.style.display != "block"){
 
-		range_cmo_rg.style.maxHeight = "1000px";
-		range_arrow_rg.style.display = "block";
+		const range_head_rg = range_rg.querySelector(".range_head_rg");
+		const headHeight = range_head_rg.getBoundingClientRect().height;
+		const parentRect = range_rg.parentElement.getBoundingClientRect();
+
+		/* Show arrowpad so it is included in the static position of range_cmo_rg */
 		range_arrowpad_rg.style.display = "flex";
+
+		/* Clear any stale flip position from a previous open that closed mid-transition */
+		range_cmo_rg.style.top = "";
+		range_cmo_rg.style.bottom = "";
+
+		/* Briefly expand without transition to read the actual bottom border position in the viewport */
+		range_cmo_rg.style.transition = "none";
+		range_cmo_rg.style.maxHeight = "1000px";
+		const cmoBottom = range_cmo_rg.getBoundingClientRect().bottom;
+
+		let flipAbove = false;
+		if(cmoBottom + headHeight >= window.innerHeight || (_hasScrollableOverflow(range_rg.parentElement) && cmoBottom + headHeight >= parentRect.bottom)){
+			range_cmo_rg.style.top = "auto";
+			range_cmo_rg.style.bottom = "100%";
+			const cmoTop = range_cmo_rg.getBoundingClientRect().top;
+			range_cmo_rg.style.top = "";
+			range_cmo_rg.style.bottom = "";
+			if(cmoTop >= 0) flipAbove = true;
+		}
+
+		range_cmo_rg.style.maxHeight = "0px";
+		range_arrowpad_rg.style.display = "none";
+		void range_cmo_rg.offsetHeight; // force reflow to commit 0px before restoring transition
+		range_cmo_rg.style.transition = "";
+
+		if(flipAbove){
+			range_cmo_rg.style.top = "auto";
+			range_cmo_rg.style.bottom = "100%";
+			range_cmo_rg.style.maxHeight = "1000px";
+			range_arrow_rg.style.display = "block";
+			range_arrowpad_rg.style.display = "none";
+		}else{
+			range_cmo_rg.style.top = "";
+			range_cmo_rg.style.bottom = "";
+			range_cmo_rg.style.maxHeight = "1000px";
+			range_arrow_rg.style.display = "block";
+			range_arrowpad_rg.style.display = "flex";
+		}
 	}
 }
 
@@ -612,39 +843,329 @@ function activateIcon(icb_rg_id){
 
 /****************************************************************************************************************************************************************************/
 /*Table*/
+function tbl_rg_colspan(win_width, tbl_rg_id, columnspan){
+
+	const tbl_rg = document.getElementById(tbl_rg_id);
+	const tbl_subcont_rg_all = tbl_rg.querySelectorAll(".tbl_subcont_rg");
+
+	if(win_width >= 1081){
+
+		tbl_subcont_rg_all.forEach(function(tbl_subcont_rg){
+			tbl_subcont_rg.setAttribute("colspan", columnspan);
+		});
+	}else if(win_width <= 1080){
+
+		tbl_subcont_rg_all.forEach(function(tbl_subcont_rg){
+			tbl_subcont_rg.removeAttribute("colspan");
+		});
+	}
+}
+
+
+
 function collapseTable(tbl_row_id){
 
 	const tbl_row = document.getElementById(tbl_row_id);
 	const tbl_sub_rg = tbl_row.nextElementSibling;
 	const tbl_subcont_rg = tbl_sub_rg.querySelector(".tbl_subcont_rg");
-	
-	if(tbl_sub_rg.classList.contains("tbl_sub_rg")){
-		
-		tbl_sub_rg.classList.toggle("tbl_sub_rg");
-		tbl_sub_rg.classList.toggle("tbl_activesub_rg");
-		tbl_subcont_rg.classList.toggle("tbl_active_subcont_rg");
-	}else if(!tbl_sub_rg.classList.contains("tbl_sub_rg")){
 
-		tbl_subcont_rg.classList.toggle("tbl_active_subcont_rg");
-		tbl_sub_rg.classList.toggle("tbl_activesub_rg");		
-		delayRowCollapse(tbl_sub_rg);
+	tbl_sub_rg.classList.toggle("tbl_activesub_rg");
+	tbl_subcont_rg.classList.toggle("tbl_active_subcont_rg");
+}
+/*Table*/
+/****************************************************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************************************************/
+/*Multiple Select Dropdown*/
+function showMSelectArea(mselect_rg_id, mselect_area_rg_height, event){
+
+	event.stopPropagation();
+
+	const mselect_rg = document.getElementById(mselect_rg_id);
+	const mselect_cr_rg = mselect_rg.querySelector(".mselect_cr_rg");
+	const mselect_area_rg = mselect_rg.querySelector(".mselect_area_rg");
+	const mselect_arrow_rg = mselect_rg.querySelector(".mselect_arrow_rg");
+	const mselect_find_rg = mselect_rg.querySelector(".mselect_find_rg");
+	const mselect_searchbox_rg = mselect_rg.querySelector(".mselect_searchbox_rg");
+
+	if(mselect_rg.getAttribute("data-mopen") !== "true"){
+
+		/* Clear any stale flip position from a previous open that closed mid-transition */
+		mselect_area_rg.style.top = "";
+		mselect_area_rg.style.bottom = "";
+
+		/* Briefly show to read the actual bottom border position in the viewport */
+		mselect_area_rg.style.display = "block";
+		mselect_area_rg.style.transition = "none";
+		mselect_area_rg.style.maxHeight = mselect_area_rg_height;
+		const parentRect = mselect_rg.parentElement.getBoundingClientRect();
+		const areaBottom = mselect_area_rg.getBoundingClientRect().bottom;
+
+		let flipAbove = false;
+		if(areaBottom >= window.innerHeight || (_hasScrollableOverflow(mselect_rg.parentElement) && areaBottom >= parentRect.bottom)){
+			mselect_area_rg.style.top = "auto";
+			mselect_area_rg.style.bottom = "100%";
+			const areaTop = mselect_area_rg.getBoundingClientRect().top;
+			mselect_area_rg.style.top = "";
+			mselect_area_rg.style.bottom = "";
+			if(areaTop >= 0) flipAbove = true;
+		}
+
+		mselect_area_rg.style.maxHeight = "0";
+		void mselect_area_rg.offsetHeight;
+		mselect_area_rg.style.transition = "";
+
+		if(flipAbove){
+
+			mselect_area_rg.style.display = "flex";
+			mselect_area_rg.style.top = "auto";
+			mselect_area_rg.style.bottom = "100%";
+			mselect_area_rg.style.flexFlow = "column-reverse nowrap";
+			mselect_area_rg.style.borderTopWidth = "var(--mselect_borderwidth)";
+			mselect_area_rg.style.borderBottomWidth = "0";
+			mselect_area_rg.style.borderTopLeftRadius = "var(--mselect_borderradius)";
+			mselect_area_rg.style.borderTopRightRadius = "var(--mselect_borderradius)";
+			mselect_area_rg.style.borderBottomLeftRadius = "0";
+			mselect_area_rg.style.borderBottomRightRadius = "0";
+			mselect_area_rg.style.boxShadow = "0px -6px 16px var(--mselect_area_shadowcolor)";
+			mselect_cr_rg.style.borderTopLeftRadius = "0";
+			mselect_cr_rg.style.borderTopRightRadius = "0";
+			mselect_cr_rg.style.borderBottomLeftRadius = "var(--mselect_borderradius)";
+			mselect_cr_rg.style.borderBottomRightRadius = "var(--mselect_borderradius)";
+			mselect_searchbox_rg.style.top = "auto";
+			mselect_searchbox_rg.style.bottom = "0";
+		}else{
+
+			mselect_area_rg.style.top = "";
+			mselect_area_rg.style.bottom = "";
+			mselect_area_rg.style.flexFlow = "";
+			mselect_area_rg.style.borderTopWidth = "0";
+			mselect_area_rg.style.borderBottomWidth = "";
+			mselect_area_rg.style.borderTopLeftRadius = "0";
+			mselect_area_rg.style.borderTopRightRadius = "0";
+			mselect_area_rg.style.borderBottomLeftRadius = "var(--mselect_borderradius)";
+			mselect_area_rg.style.borderBottomRightRadius = "var(--mselect_borderradius)";
+			mselect_area_rg.style.boxShadow = "";
+			mselect_cr_rg.style.borderTopLeftRadius = "";
+			mselect_cr_rg.style.borderTopRightRadius = "";
+			mselect_cr_rg.style.borderBottomLeftRadius = "0";
+			mselect_cr_rg.style.borderBottomRightRadius = "0";
+			mselect_searchbox_rg.style.top = "";
+			mselect_searchbox_rg.style.bottom = "";
+		}
+
+		mselect_cr_rg.classList.add("mselect_cr_open_rg");
+		mselect_arrow_rg.style.transform = "rotateX(180deg)";
+		mselect_area_rg.style.maxHeight = mselect_area_rg_height;
+		mselect_rg.setAttribute("data-mopen", "true");
+		mselect_find_rg.focus();
+
+	}else{
+
+		_closeMSelectArea(mselect_rg_id);
 	}
 }
 
 
-/*Table Asynchronous*/
-async function delayRowCollapse(tbl_sub_rg){
+function _closeMSelectArea(mselect_rg_id){
 
-	const promise_obj = new Promise((resolve) => {
+	const mselect_rg = document.getElementById(mselect_rg_id);
+	const mselect_cr_rg = mselect_rg.querySelector(".mselect_cr_rg");
+	const mselect_area_rg = mselect_rg.querySelector(".mselect_area_rg");
+	const mselect_arrow_rg = mselect_rg.querySelector(".mselect_arrow_rg");
+	const mselect_find_rg = mselect_rg.querySelector(".mselect_find_rg");
+	const mselect_noopt_rg = mselect_rg.querySelector(".mselect_noopt_rg");
+	const mselect_searchbox_rg = mselect_rg.querySelector(".mselect_searchbox_rg");
 
-		setTimeout(function(){
-			tbl_sub_rg.classList.toggle("tbl_sub_rg");			
-			resolve();
-		}, 500);		
+	mselect_area_rg.style.maxHeight = "0";
+	mselect_cr_rg.classList.remove("mselect_cr_open_rg");
+	mselect_arrow_rg.style.transform = "rotateX(0deg)";
+	mselect_rg.setAttribute("data-mopen", "false");
+	mselect_find_rg.value = "";
+	mselect_rg.querySelectorAll(".mselect_opt_rg").forEach(opt => opt.classList.remove("mselect_opt_hidden_rg"));
+	if(mselect_noopt_rg) mselect_noopt_rg.style.display = "none";
+
+	mselect_area_rg.addEventListener("transitionend", function onMClose(e){
+		if(e.propertyName === "max-height"){
+			mselect_area_rg.removeEventListener("transitionend", onMClose);
+			if(mselect_rg.getAttribute("data-mopen") !== "true"){
+				mselect_area_rg.style.display = "none";
+				mselect_area_rg.style.top = "";
+				mselect_area_rg.style.bottom = "";
+				mselect_area_rg.style.flexFlow = "";
+				mselect_area_rg.style.borderTopWidth = "";
+				mselect_area_rg.style.borderBottomWidth = "";
+				mselect_area_rg.style.borderTopLeftRadius = "";
+				mselect_area_rg.style.borderTopRightRadius = "";
+				mselect_area_rg.style.borderBottomLeftRadius = "";
+				mselect_area_rg.style.borderBottomRightRadius = "";
+				mselect_area_rg.style.boxShadow = "";
+				mselect_cr_rg.style.borderTopLeftRadius = "";
+				mselect_cr_rg.style.borderTopRightRadius = "";
+				mselect_cr_rg.style.borderBottomLeftRadius = "";
+				mselect_cr_rg.style.borderBottomRightRadius = "";
+				mselect_searchbox_rg.style.top = "";
+				mselect_searchbox_rg.style.bottom = "";
+			}
+		}
 	});
-	await promise_obj;
 }
-/*Table Asynchronous*/
 
-/*Table*/
+
+function toggleMSelectOpt(mselect_rg_id, mopt_key){
+
+	const mselect_rg = document.getElementById(mselect_rg_id);
+	const mselect_opt_rg = mselect_rg.querySelector(`[data-mopt-key="${mopt_key}"]`);
+	const mselect_optcb_rg = mselect_opt_rg.querySelector(".mselect_optcb_rg");
+	const mselect_optcbcheck_rg = mselect_opt_rg.querySelector(".mselect_optcbcheck_rg");
+
+	if(mselect_opt_rg.getAttribute("data-mselected") === "false"){
+
+		mselect_opt_rg.setAttribute("data-mselected", "true");
+		mselect_opt_rg.classList.add("mselect_opt_selected_rg");
+		mselect_optcb_rg.classList.add("mselect_optcb_selected_rg");
+		mselect_optcbcheck_rg.style.display = "block";
+	}else{
+
+		mselect_opt_rg.setAttribute("data-mselected", "false");
+		mselect_opt_rg.classList.remove("mselect_opt_selected_rg");
+		mselect_optcb_rg.classList.remove("mselect_optcb_selected_rg");
+		mselect_optcbcheck_rg.style.display = "none";
+	}
+
+	_updateMSelectTags(mselect_rg_id);
+}
+
+
+function _updateMSelectTags(mselect_rg_id){
+
+	const mselect_rg = document.getElementById(mselect_rg_id);
+	const mselect_tags_rg = mselect_rg.querySelector(".mselect_tags_rg");
+	const mselect_placeholder_rg = mselect_rg.querySelector(".mselect_placeholder_rg");
+	const mselect_crval_rg = mselect_rg.querySelector(".mselect_crval_rg");
+	const mselect_reset_rg = mselect_rg.querySelector(".mselect_reset_rg");
+
+	mselect_tags_rg.querySelectorAll(".mselect_tag_rg").forEach(tag => tag.remove());
+
+	const selectedOpts = mselect_rg.querySelectorAll("[data-mselected='true']");
+	const selectedValues = [];
+
+	if(selectedOpts.length === 0){
+
+		mselect_placeholder_rg.style.display = "block";
+		mselect_reset_rg.style.display = "none";
+		mselect_crval_rg.value = "";
+	}else{
+
+		mselect_placeholder_rg.style.display = "none";
+		mselect_reset_rg.style.display = "block";
+
+		selectedOpts.forEach(opt => {
+			const key = opt.getAttribute("data-mopt-key");
+			const value = opt.querySelector(".mselect_optval_rg").value;
+			const text = opt.querySelector(".mselect_opttxt_rg").innerText.trim();
+			selectedValues.push({key, value, text});
+
+			const tag = document.createElement("div");
+			tag.className = "mselect_tag_rg";
+			tag.innerHTML = `<span class="mselect_tagtxt_rg">${text}</span><span class="mselect_tagclose_rg" onclick="removeMSelectTag('${mselect_rg_id}','${key}',event)">&times;</span>`;
+			mselect_tags_rg.insertBefore(tag, mselect_placeholder_rg);
+		});
+
+		mselect_crval_rg.value = JSON.stringify(selectedValues);
+	}
+}
+
+
+function removeMSelectTag(mselect_rg_id, mopt_key, event){
+
+	event.stopPropagation();
+	const mselect_rg = document.getElementById(mselect_rg_id);
+	const mselect_opt_rg = mselect_rg.querySelector(`[data-mopt-key="${mopt_key}"]`);
+
+	mselect_opt_rg.setAttribute("data-mselected", "false");
+	mselect_opt_rg.classList.remove("mselect_opt_selected_rg");
+	mselect_opt_rg.querySelector(".mselect_optcb_rg").classList.remove("mselect_optcb_selected_rg");
+	mselect_opt_rg.querySelector(".mselect_optcbcheck_rg").style.display = "none";
+
+	_updateMSelectTags(mselect_rg_id);
+}
+
+
+function resetMSelect(mselect_rg_id, event){
+
+	event.stopPropagation();
+	const mselect_rg = document.getElementById(mselect_rg_id);
+
+	mselect_rg.querySelectorAll("[data-mselected='true']").forEach(opt => {
+		opt.setAttribute("data-mselected", "false");
+		opt.classList.remove("mselect_opt_selected_rg");
+		opt.querySelector(".mselect_optcb_rg").classList.remove("mselect_optcb_selected_rg");
+		opt.querySelector(".mselect_optcbcheck_rg").style.display = "none";
+	});
+
+	_updateMSelectTags(mselect_rg_id);
+}
+
+
+function searchMSelectOpts(mselect_rg_id){
+
+	const mselect_rg = document.getElementById(mselect_rg_id);
+	const keyword = mselect_rg.querySelector(".mselect_find_rg").value.trim().toLowerCase();
+	const mselect_opts = mselect_rg.querySelectorAll(".mselect_opt_rg");
+	const mselect_noopt_rg = mselect_rg.querySelector(".mselect_noopt_rg");
+	let visibleCount = 0;
+
+	mselect_opts.forEach(opt => {
+		const text = opt.querySelector(".mselect_opttxt_rg").innerText.trim().toLowerCase();
+		if(text.includes(keyword)){
+			opt.classList.remove("mselect_opt_hidden_rg");
+			visibleCount++;
+		}else{
+			opt.classList.add("mselect_opt_hidden_rg");
+		}
+	});
+
+	if(mselect_noopt_rg) mselect_noopt_rg.style.display = visibleCount === 0 ? "block" : "none";
+}
+
+
+function getMSelectValues(mselect_rg_id){
+	const val = document.getElementById(mselect_rg_id).querySelector(".mselect_crval_rg").value;
+	return val ? JSON.parse(val) : [];
+}
+
+
+function setMSelectOpts(mselect_rg_id, mopt_keys_array){
+
+	const mselect_rg = document.getElementById(mselect_rg_id);
+
+	mselect_rg.querySelectorAll(".mselect_opt_rg").forEach(opt => {
+		opt.setAttribute("data-mselected", "false");
+		opt.classList.remove("mselect_opt_selected_rg");
+		opt.querySelector(".mselect_optcb_rg").classList.remove("mselect_optcb_selected_rg");
+		opt.querySelector(".mselect_optcbcheck_rg").style.display = "none";
+	});
+
+	mopt_keys_array.forEach(key => {
+		const opt = mselect_rg.querySelector(`[data-mopt-key="${key}"]`);
+		if(opt){
+			opt.setAttribute("data-mselected", "true");
+			opt.classList.add("mselect_opt_selected_rg");
+			opt.querySelector(".mselect_optcb_rg").classList.add("mselect_optcb_selected_rg");
+			opt.querySelector(".mselect_optcbcheck_rg").style.display = "block";
+		}
+	});
+
+	_updateMSelectTags(mselect_rg_id);
+}
+
+
+function uncollapseMSelectAreas(event){
+	document.querySelectorAll(".mselect_rg[data-mopen='true']").forEach(mselect_rg => {
+		if(mselect_rg.id && !mselect_rg.contains(event.target)) _closeMSelectArea(mselect_rg.id);
+	});
+}
+/*Multiple Select Dropdown*/
 /****************************************************************************************************************************************************************************/
