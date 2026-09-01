@@ -1,4 +1,12 @@
-Version: 1.10.2
+Version: 1.10.3
 
 Updates:
-1. Enhanced Select Dropdown (select_crval_rg has now onchange event trigger)
+1. preventScroll stops the jump at its source; the scrollTop = 0 on close means a reopen starts at the top even if you'd
+  scrolled through the options before closing.
+
+  Notes on the flipped-above cases:
+  - Select moves select_find_rg to the end of the list and sticks it to the bottom — scrollTop = 0 still shows options
+  from the top, as asked.
+  - Multi-select uses flex-flow: column-reverse when flipped, whose natural resting scroll position is the bottom. The
+  explicit reset is doing real work there. If it ever still rests at the bottom in some browser, that's the reversed
+  scroll-origin quirk and the follow-up is a second reset on the open transition's transitionend.

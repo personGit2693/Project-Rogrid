@@ -476,11 +476,13 @@ function showSelectArea(select_rg_id, select_area_rg_height){
 
 		select_area_rg.style.maxHeight = select_area_rg_height;
 
-		select_find_rg.focus();
+		select_find_rg.focus({preventScroll: true});
+		select_area_rg.scrollTop = 0;
 	}else if(select_area_rg.style.display == "block"){
 
 		select_area_rg.style.maxHeight = "0";
 		select_area_rg.style.display = "none";
+		select_area_rg.scrollTop = 0;
 		select_arrow_rg.style.transform = "rotateX(0deg)";
 		select_area_rg.style.top = "";
 		select_area_rg.style.bottom = "";
@@ -502,6 +504,7 @@ function uncollapseSelectAreas(){
 
 			select_area_rg.style.maxHeight = "0";
 			select_area_rg.style.display = "none";
+			select_area_rg.scrollTop = 0;
 			select_arrow_rg.style.transform = "rotateX(0deg)";
 		}
 	}
@@ -959,7 +962,8 @@ function showMSelectArea(mselect_rg_id, mselect_area_rg_height, event){
 		mselect_arrow_rg.style.transform = "rotateX(180deg)";
 		mselect_area_rg.style.maxHeight = mselect_area_rg_height;
 		mselect_rg.setAttribute("data-mopen", "true");
-		mselect_find_rg.focus();
+		mselect_find_rg.focus({preventScroll: true});
+		mselect_area_rg.scrollTop = 0;
 
 	}else{
 
@@ -991,6 +995,7 @@ function _closeMSelectArea(mselect_rg_id){
 			mselect_area_rg.removeEventListener("transitionend", onMClose);
 			if(mselect_rg.getAttribute("data-mopen") !== "true"){
 				mselect_area_rg.style.display = "none";
+				mselect_area_rg.scrollTop = 0;
 				mselect_area_rg.style.top = "";
 				mselect_area_rg.style.bottom = "";
 				mselect_area_rg.style.flexFlow = "";
