@@ -569,6 +569,7 @@
 	display: inherit;
 	width: var(--switch_pin_rg_size);
 	height: var(--switch_pin_rg_size);
+	margin-left: 0;
 	border-radius: 50%;
 	background-color: var(--switch_pin_rg_color);
 	transition: 0.3s;
@@ -582,8 +583,9 @@
 }
 
 /***Pin*/
+/*100% resolves against the label content box, so the pin always stops at the inner right edge of the track whatever width, padding or border-width switch_rg actually renders at*/
 .switch_rg .switch_input_rg:checked ~ .switch_pin_rg::after {
-	translate: calc(var(--switch_rg_width) - var(--switch_pin_rg_size) - 10px) 0;
+	margin-left: calc(100% - var(--switch_pin_rg_size));
 	background-color: var(--switch_pincheck_rg_color);
 }
 /***Pin*/
