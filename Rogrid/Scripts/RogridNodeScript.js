@@ -48,7 +48,7 @@ function lightTabMenu(tab_rg_id, tab_rg_class){
 
 
 /****************************************************************************************************************************************************************************/
-/*Card Category*/
+/*List Card*/
 function lightCardCategory(cardCategory_id, cardCategory_Class){
 
 	const cardCategory = document.getElementById(cardCategory_id);
@@ -56,11 +56,21 @@ function lightCardCategory(cardCategory_id, cardCategory_Class){
 	const classname = `.${cardCategory_Class}`;
 	const cardCategories = document.querySelectorAll(classname);
 
-	cardCategories.forEach(cardCategory => cardCategory.classList.remove('cardcat_active_rg'));
+	cardCategories.forEach(perCardCategory => {
 
-	cardCategory.classList.add('cardcat_active_rg');
+		if(perCardCategory !== cardCategory){
+			perCardCategory.classList.remove('cardcat_active_rg');			
+		}
+	});
+
+
+	if(!cardCategory.classList.contains("cardcat_active_rg")){
+		cardCategory.classList.add('cardcat_active_rg');	
+	}else if(cardCategory.classList.contains("cardcat_active_rg")){
+		cardCategory.classList.remove('cardcat_active_rg');
+	}	
 }
-/*Card Category*/
+/*List Card*/
 /****************************************************************************************************************************************************************************/
 
 

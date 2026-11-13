@@ -1,4 +1,12 @@
-Version: 1.10.4
+Version: 1.11
 
 Updates:
-1. Enhanced the responsiveness of Toggle Button.
+1. New Components:
+1.1 List Card
+1.2 Multiple Select Dropdown
+1.3 Horizontal Navigation
+1.4 Bottom Popup Modal
+1.5 Stripe Button
+1.6 Input Suggestion
+1.7 Dot Settings
+1.8 Card Model One
